@@ -1,11 +1,13 @@
 package domain;
 
+import java.math.BigDecimal;
 import java.util.Calendar;
 
 /**
  * Created by Lenovo on 25/03/2015.
  */
 public class Payslip {
+
 
     public enum MONTH {
         JANUARY,
@@ -54,6 +56,10 @@ public class Payslip {
 
     public int getSuper(){
         return aSuper;
+    }
+
+    public static BigDecimal numberOfMonthsAsBigDecimal(){
+        return new BigDecimal(MONTH.values().length);
     }
 
 }

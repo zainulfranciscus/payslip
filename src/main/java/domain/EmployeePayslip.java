@@ -2,12 +2,17 @@ package domain;
 
 import java.math.BigDecimal;
 
+import static domain.Payslip.numberOfMonthsAsBigDecimal;
+
+
 /**
  * Created by Zainul Franciscus on 25/03/2015.
  */
 public class EmployeePayslip {
 
+
     public static final int ROUND_UP = BigDecimal.ROUND_UP;
+    public static final int ROUND_DOWN = BigDecimal.ROUND_DOWN;
     public static final int ZERO_ROUND_SCALE = 0;
 
     private Employee employee;
@@ -29,16 +34,16 @@ public class EmployeePayslip {
     }
 
     public int getGrossIncome() {
-        return employee.getSalary()/12;
+        return grossIncomeAsBigDecimal().intValue();
     }
 
-
+    public BigDecimal grossIncomeAsBigDecimal(){
+        return employee.salaryAsBigDecimal().divide(numberOfMonthsAsBigDecimal(),ZERO_ROUND_SCALE,ROUND_DOWN);
+    }
 
     public Payslip.MONTH getMonth() {
         return month;
     }
-
-
 
     public BigDecimal minIncomeAsBigDecimal(){
         return new BigDecimal(tax.getMinIncome());
@@ -62,6 +67,15 @@ public class EmployeePayslip {
     }
 
     public int getIncomeTax() {
-        return taxOnSalary().divide(new BigDecimal(Payslip.MONTH.values().length)).setScale(ZERO_ROUND_SCALE,ROUND_UP).intValue();
+        return incomeTaxAsBigDecimal().intValue();
     }
+
+    public BigDecimal incomeTaxAsBigDecimal(){
+        return taxOnSalary().divide(numberOfMonthsAsBigDecimal(), ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
+    }
+
+    public int netIncome() {
+        return grossIncomeAsBigDecimal().subtract(incomeTaxAsBigDecimal()).intValue();
+    }
+
 }

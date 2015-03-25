@@ -11,8 +11,9 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-import static domain.EmployeePayslip.ZERO_ROUND_SCALE;
 import static domain.EmployeePayslip.ROUND_UP;
+import static domain.EmployeePayslip.ZERO_ROUND_SCALE;
+import static domain.Payslip.numberOfMonthsAsBigDecimal;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -88,9 +89,15 @@ public class EmployeePayslipFactoryTest {
     @Test
     public void incomeTaxShouldBeTaxOnSalaryDividedByNumberOfMonthsRoundUpWith0Scale(){
 
-        BigDecimal incomeTax = employeePayslip.taxOnSalary().divide(new BigDecimal(Payslip.MONTH.values().length));
+        BigDecimal incomeTax = employeePayslip.taxOnSalary().divide(numberOfMonthsAsBigDecimal(), ZERO_ROUND_SCALE, ROUND_UP);
 
-       assertEquals(incomeTax.setScale(ZERO_ROUND_SCALE, ROUND_UP).intValue(),employeePayslip.getIncomeTax());
+       assertEquals(incomeTax.intValue(),employeePayslip.getIncomeTax());
+
+    }
+
+    @Test
+    public void netIncomeShouldBeGrossIncomeMinusIncomeTax(){
+        assertEquals(employeePayslip.grossIncomeAsBigDecimal().subtract(employeePayslip.incomeTaxAsBigDecimal()).intValue(),employeePayslip.netIncome());
 
     }
 }

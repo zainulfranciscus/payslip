@@ -30,43 +30,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EmployeePayslip.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeePayslip.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/EmployeePayslip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.7476099" vertical-offset="918" max-vertical-offset="1479">
+              <caret line="77" column="86" selection-start-line="77" selection-start-column="86" selection-end-line="77" selection-end-column="86" />
               <folding>
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1438#1439#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1738#1739#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1828#1829#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2137#2138#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeePayslipFactoryTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/factory/EmployeePayslipFactoryTest.java">
+      <file leaf-file-name="Payslip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Payslip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6304348" vertical-offset="1182" max-vertical-offset="1734">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="1037">
+              <caret line="60" column="55" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1702#1703#0" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeePayslipFactoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/factory/EmployeePayslipFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="1853">
+              <caret line="99" column="111" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="111" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1488#1489#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
+                <element signature="e#1699#1700#0" expanded="true" />
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1832#1833#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigDecimal.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/math/BigDecimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17730" max-vertical-offset="87652">
+              <caret line="1089" column="56" selection-start-line="1089" selection-start-column="56" selection-end-line="1089" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,9 +103,11 @@
       <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="935">
-              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="969">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
                 <element signature="e#1120#1121#0" expanded="true" />
                 <element signature="e#1170#1171#0" expanded="true" />
               </folding>
@@ -123,15 +154,15 @@
         <option value="$PROJECT_DIR$/src/main/java/builder/PayslipBuider.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/PayslipTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/EmployeePayslip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Payslip.java" />
         <option value="$PROJECT_DIR$/src/test/java/builder/PayslipBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/TaxTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/factory/EmployeePayslipFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/EmployeePayslipTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Tax.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Payslip.java" />
         <option value="$PROJECT_DIR$/src/test/java/factory/EmployeePayslipFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/EmployeePayslip.java" />
       </list>
@@ -390,39 +421,14 @@
       <recent name="builder" />
       <recent name="domain" />
     </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="domain.Payslip" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="builder" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeePayslipFactoryTest">
-    <configuration default="false" name="TaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.TaxTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.EmployeePayslipFactoryTest.netIncomeShouldBeGrossIncomeMinusIncomeTax">
     <configuration default="false" name="EmployeePayslipFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -528,6 +534,34 @@
       <option name="PACKAGE_NAME" value="factory" />
       <option name="MAIN_CLASS_NAME" value="factory.EmployeePayslipFactoryTest" />
       <option name="METHOD_NAME" value="amountOfTaxForEachTaxableDollarShouldBe5000" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeePayslipFactoryTest.netIncomeShouldBeGrossIncomeMinusIncomeTax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="factory" />
+      <option name="MAIN_CLASS_NAME" value="factory.EmployeePayslipFactoryTest" />
+      <option name="METHOD_NAME" value="netIncomeShouldBeGrossIncomeMinusIncomeTax" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -829,19 +863,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TaxTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxableIncomeShouldBe5000" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxDollarShouldBe1" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxForEachTaxableDollarShouldBe5000" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxableIncomeShouldBe5000" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxDollarShouldBe1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxForEachTaxableDollarShouldBe5000" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.netIncomeShouldBeGrossIncomeMinusIncomeTax" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxForEachTaxableDollarShouldBe5000" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxDollarShouldBe1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxableIncomeShouldBe5000" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TaxTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.netIncomeShouldBeGrossIncomeMinusIncomeTax" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxForEachTaxableDollarShouldBe5000" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxDollarShouldBe1" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest.amountOfTaxableIncomeShouldBe5000" />
       </list>
     </recent_temporary>
   </component>
@@ -852,16 +886,16 @@
       <created>1427258524492</created>
       <option name="number" value="Default" />
       <updated>1427258524492</updated>
-      <workItem from="1427258531186" duration="26823000" />
+      <workItem from="1427258531186" duration="29309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26823000" />
+    <option name="totallyTimeSpent" value="29309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -874,7 +908,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22786458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22786458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -997,25 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Payslip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45309734" vertical-offset="101" max-vertical-offset="1105">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="e#775#776#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#872#873#0" expanded="false" />
-            <element signature="e#905#906#0" expanded="false" />
-            <element signature="e#937#938#0" expanded="false" />
-            <element signature="e#970#971#0" expanded="false" />
-            <element signature="e#1002#1003#0" expanded="false" />
-            <element signature="e#1030#1031#0" expanded="false" />
-            <element signature="e#1059#1060#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/builder/PayslipBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3238938" vertical-offset="0" max-vertical-offset="1054">
@@ -1090,17 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="935">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding>
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Tax.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="935">
@@ -1124,39 +1128,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/EmployeePayslip.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/math/BigDecimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17730" max-vertical-offset="87652">
+          <caret line="1089" column="56" selection-start-line="1089" selection-start-column="56" selection-end-line="1089" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="969">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Payslip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="1037">
+          <caret line="60" column="55" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/factory/EmployeePayslipFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6304348" vertical-offset="1182" max-vertical-offset="1734">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="1853">
+          <caret line="99" column="111" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="111" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/EmployeePayslip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7476099" vertical-offset="918" max-vertical-offset="1479">
+          <caret line="77" column="86" selection-start-line="77" selection-start-column="86" selection-end-line="77" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
           </folding>
         </state>
       </provider>
