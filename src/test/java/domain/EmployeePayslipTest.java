@@ -17,35 +17,46 @@ public class EmployeePayslipTest {
     private Employee expectedEmployee;
     private Tax expectedTax;
     private Payslip.MONTH expectedMonth = AUGUST;
+    private String expectedFirstName;
+    private String expectedLastName;
+    private int expectedSalary;
+    private int expectedBaseTax;
+    private int expectedTaxPerDollar;
+    private int expectedMaxIncome;
+    private int expectedMinIncome;
 
     @Before
-    public void setup(){
+    public void setup() {
 
-        expectedEmployee = new EmployeeBuilder().withFirstName("Joe").withLastName("Blogg").withSalary(12000).build();
-        expectedTax = new TaxBuilder().withBaseTax(1000).withTaxPerDollar(50).withMaxIncome(3000).withMinIncome(100).build();
-        employeePayslip = new EmployeePayslip(expectedMonth,expectedEmployee,expectedTax);
+        expectedFirstName = "Joe";
+        expectedLastName = "Blogg";
+        expectedSalary = 12000;
+        expectedEmployee = new EmployeeBuilder().withFirstName(expectedFirstName).withLastName(expectedLastName).withSalary(expectedSalary).build();
+        expectedBaseTax = 1000;
+        expectedTaxPerDollar = 50;
+        expectedMaxIncome = 3000;
+        expectedMinIncome = 100;
+
+        expectedTax = new TaxBuilder().withBaseTax(expectedBaseTax)
+                .withTaxPerDollar(expectedTaxPerDollar)
+                .withMaxIncome(expectedMaxIncome)
+                .withMinIncome(expectedMinIncome)
+                .build();
+
+        employeePayslip = new EmployeePayslip(expectedMonth, expectedEmployee, expectedTax);
 
     }
 
     @Test
-    public void shouldReturnAPayslipForJoeBlogg(){
-       assertEquals(expectedEmployee.getFullName(), employeePayslip.name());
+    public void shouldReturnTheExpectedFirstNameFollowedByExpectedLastName() {
+        assertEquals(expectedFirstName + " " + expectedLastName, employeePayslip.name());
     }
 
     @Test
-    public void shouldReturnAPayslipFor1000AsGrossIncome(){
-        assertEquals(expectedEmployee.getSalary()/12,employeePayslip.getGrossIncome());
-    }
-
-    @Test
-    public void shouldReturnAPayslipForAugust(){
+    public void shouldReturnTheExpectedMonth() {
         assertEquals(expectedMonth, employeePayslip.month());
     }
 
-    @Test
-    public void shouldReturn2000AsIncomeTax(){
-        assertEquals(expectedEmployee.getSalary()/12, employeePayslip.getIncomeTax());
-    }
 
 
 }

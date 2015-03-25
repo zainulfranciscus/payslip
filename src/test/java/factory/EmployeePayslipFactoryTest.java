@@ -6,11 +6,13 @@ import domain.Employee;
 import domain.EmployeePayslip;
 import domain.Payslip;
 import domain.Tax;
+import factory.impl.EmployeePayslipFactoryImpl;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 
+import static domain.EmployeePayslip.ROUND_DOWN;
 import static domain.EmployeePayslip.ROUND_UP;
 import static domain.EmployeePayslip.ZERO_ROUND_SCALE;
 import static domain.Payslip.numberOfMonthsAsBigDecimal;
@@ -25,24 +27,16 @@ public class EmployeePayslipFactoryTest {
     private static Tax tax;
     private static Employee employee;
     private static Payslip.MONTH expectedMonth = Payslip.MONTH.OCTOBER;
-    private static int baseTax;
-    private static int maxIncome;
-    private static int minIncome;
-    private static int taxPerDollar;
-    private static int salary;
+
 
     @BeforeClass
     public static void setup() {
 
-        baseTax = 2000;
-        maxIncome = 13000;
-        minIncome = 7000;
-        taxPerDollar = 100;
-        salary = 12000;
+        tax = new TaxBuilder().withBaseTax(2000).withMaxIncome(13000).withMinIncome(7000).withTaxPerDollar(100).build();
+        employee = new EmployeeBuilder().withFirstName("Joe").withSalary(12000).build();
 
-        tax = new TaxBuilder().withBaseTax(baseTax).withMaxIncome(maxIncome).withMinIncome(minIncome).withTaxPerDollar(taxPerDollar).build();
-        employee = new EmployeeBuilder().withFirstName("Joe").withSalary(salary).build();
-        employeePayslip = EmployeePayslipFactory.createWith(expectedMonth, employee, tax);
+        EmployeePayslipFactory factory = new EmployeePayslipFactoryImpl();
+        employeePayslip = factory.createWith(expectedMonth, employee, tax);
 
     }
 
@@ -57,8 +51,8 @@ public class EmployeePayslipFactoryTest {
     }
 
     @Test
-    public void shouldReturn1000AsGrossIncome(){
-        assertEquals(salary/12, employeePayslip.getGrossIncome());
+    public void grossIncomeSholdBeSalaryDividedByMonthsInAYear(){
+        assertEquals(employee.salaryAsBigDecimal().divide(numberOfMonthsAsBigDecimal(),ZERO_ROUND_SCALE,ROUND_DOWN).intValue(), employeePayslip.getGrossIncome());
     }
 
     @Test
@@ -100,4 +94,10 @@ public class EmployeePayslipFactoryTest {
         assertEquals(employeePayslip.grossIncomeAsBigDecimal().subtract(employeePayslip.incomeTaxAsBigDecimal()).intValue(),employeePayslip.netIncome());
 
     }
+
+    @Test
+    public void superShouldBeGrossIncomeTimesSuperRate(){
+        assertEquals(employeePayslip.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue(), employeePayslip.getSuper());
+    }
+
 }

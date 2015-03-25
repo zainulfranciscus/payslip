@@ -7,14 +7,45 @@
     <groupId>org.myob</groupId>
     <artifactId>payslip</artifactId>
     <version>1.0</version>
+
+    <properties>
+        <concordion.version>1.4.7</concordion.version>
+        <junit.version>4.11</junit.version>
+        <mockito.version>1.10.8</mockito.version>
+        <maven.compiler.version>3.1</maven.compiler.version>
+        <maven.failsafe.version>2.13</maven.failsafe.version>
+        <maven.surefire.version>2.18.1</maven.surefire.version>
+        <maven.buildhelper.version>1.7</maven.buildhelper.version>
+    </properties>
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>org.concordion</groupId>
+            <artifactId>concordion</artifactId>
+            <version>${concordion.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+
+    </dependencies>
 
 </project>

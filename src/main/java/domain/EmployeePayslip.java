@@ -10,14 +10,13 @@ import static domain.Payslip.numberOfMonthsAsBigDecimal;
  */
 public class EmployeePayslip {
 
-
     public static final int ROUND_UP = BigDecimal.ROUND_UP;
     public static final int ROUND_DOWN = BigDecimal.ROUND_DOWN;
     public static final int ZERO_ROUND_SCALE = 0;
 
-    private Employee employee;
-    private Tax tax;
-    private Payslip.MONTH month;
+    private final Employee employee;
+    private final Tax tax;
+    private final Payslip.MONTH month;
 
     public EmployeePayslip(Payslip.MONTH month, Employee employee, Tax tax) {
         this.month = month;
@@ -30,7 +29,7 @@ public class EmployeePayslip {
     }
 
     public Payslip.MONTH month() {
-       return null;
+       return month;
     }
 
     public int getGrossIncome() {
@@ -78,4 +77,7 @@ public class EmployeePayslip {
         return grossIncomeAsBigDecimal().subtract(incomeTaxAsBigDecimal()).intValue();
     }
 
+    public int getSuper() {
+        return grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
+    }
 }
