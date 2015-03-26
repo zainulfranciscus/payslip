@@ -1,7 +1,7 @@
 package repository;
 
 import domain.Tax;
-import reader.TaxReader;
+import reader.Reader;
 
 import java.io.IOException;
 
@@ -13,5 +13,5 @@ public interface TaxRepository {
     Tax find(Criteria criteria) throws IOException;
 
 
-    void setTaxReader(TaxReader mockTaxReader);
+    void setReader(Reader mockReader);
 }

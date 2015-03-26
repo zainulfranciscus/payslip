@@ -9,10 +9,10 @@ public class Employee {
 
     public static BigDecimal DIVISOR_FOR_SUPER_RATE = new BigDecimal(100);
 
-    private String firstName;
-    private String lastName;
-    private int salary;
-    private int aSuper;
+    private final String firstName;
+    private final String lastName;
+    private final int salary;
+    private final int aSuper;
 
     public Employee(String firstName, String lastName, int salary, int aSuper) {
 
@@ -26,8 +26,6 @@ public class Employee {
         return firstName;
     }
 
-
-
     public String getLastName() {
         return lastName;
     }
@@ -36,7 +34,6 @@ public class Employee {
 
         return firstName + " " + lastName;
     }
-
 
     public int getSalary() {
         return salary;

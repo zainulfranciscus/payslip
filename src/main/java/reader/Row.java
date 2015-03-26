@@ -1,14 +1,27 @@
 package reader;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public interface Row {
+public abstract class Row {
 
-    static final String MIN_INCOME = "Min Income";
-    static final String MAX_INCOME = "Max Income";
-    static final String BASE_TAX = "Base Tax";
-    static final String TAX_PER_DOLLAR = "Tax per Dollar";
+    private final Map<RowHeader,String> values = new HashMap<RowHeader, String>();
 
-    int getInt(String columnName);
+    public String get(RowHeader header){
+        return values.get(header);
+    }
+
+    public int getInt(RowHeader header) {
+        return NumberUtils.toInt(get(header));
+    }
+
+    protected void put(RowHeader header, String value){
+        values.put(header,value);
+    }
+
 }

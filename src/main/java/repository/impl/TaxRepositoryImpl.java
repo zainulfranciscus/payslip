@@ -3,28 +3,30 @@ package repository.impl;
 import builder.TaxBuilder;
 import domain.Tax;
 import reader.Row;
-import reader.TaxReader;
+import reader.Reader;
+import reader.impl.TaxCsvRow;
 import repository.Criteria;
 import repository.TaxRepository;
 
 import java.io.IOException;
+import static reader.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
 public class TaxRepositoryImpl implements TaxRepository {
 
-    private TaxReader taxReader;
+    private Reader reader;
 
     @Override
     public Tax find(Criteria criteria) throws IOException {
         Row row = null;
 
-        while((row = taxReader.read()) != null) {
-            Tax tax = new TaxBuilder().withBaseTax(row.getInt(Row.BASE_TAX))
-                    .withMaxIncome(row.getInt(Row.MAX_INCOME))
-                    .withMinIncome(row.getInt(Row.MIN_INCOME))
-                    .withTaxPerDollar(row.getInt(Row.TAX_PER_DOLLAR)).build();
+        while((row = reader.read()) != null) {
+            Tax tax = new TaxBuilder().withBaseTax(row.getInt(BASE_TAX))
+                    .withMaxIncome(row.getInt(MAX_INCOME))
+                    .withMinIncome(row.getInt(MIN_INCOME))
+                    .withTaxPerDollar(row.getInt(TAX_PER_DOLLAR)).build();
             if (criteria.match(tax)) {
                 return tax;
             }
@@ -34,7 +36,7 @@ public class TaxRepositoryImpl implements TaxRepository {
     }
 
     @Override
-    public void setTaxReader(TaxReader taxReader) {
-        this.taxReader = taxReader;
+    public void setReader(Reader reader) {
+        this.reader = reader;
     }
 }

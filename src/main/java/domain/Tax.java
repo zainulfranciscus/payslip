@@ -7,10 +7,10 @@ import java.math.BigDecimal;
  */
 public class Tax {
 
-    private int baseTax;
-    private int minTaxableIncome;
-    private int maxTaxableIncome;
-    private int taxPerDollarInCents;
+    private final int baseTax;
+    private final int minTaxableIncome;
+    private final int maxTaxableIncome;
+    private final int taxPerDollarInCents;
 
     public Tax(int minTaxableIncome, int maxTaxableIncome, int taxPerDollarInCents, int baseTax) {
         this.minTaxableIncome = minTaxableIncome;

@@ -4,7 +4,8 @@ import domain.Tax;
 import org.junit.Before;
 import org.junit.Test;
 import reader.Row;
-import reader.TaxReader;
+import reader.Reader;
+import reader.impl.TaxCsvRow;
 import repository.impl.TaxCriteria;
 import repository.impl.TaxRepositoryImpl;
 
@@ -13,7 +14,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.*;
-
+import static reader.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -21,7 +22,7 @@ import static org.mockito.Mockito.*;
 public class TaxRepositoryTest {
 
     private TaxRepository taxRepository;
-    private TaxReader mockTaxReader;
+    private Reader mockReader;
     private Row mockRow;
     private Tax tax;
     private int expectedBaseTax;
@@ -41,11 +42,11 @@ public class TaxRepositoryTest {
 
         setMockRowBehavior();
 
-        mockTaxReader = mock(TaxReader.class);
-        when(mockTaxReader.read()).thenReturn(mockRow,null);
+        mockReader = mock(Reader.class);
+        when(mockReader.read()).thenReturn(mockRow,null);
 
         taxRepository = new TaxRepositoryImpl();
-        taxRepository.setTaxReader(mockTaxReader);
+        taxRepository.setReader(mockReader);
 
     }
 
@@ -70,7 +71,7 @@ public class TaxRepositoryTest {
     }
 
     @Test
-    public void shouldBeNullBecauseThereIsNoTaxForThisSalary() throws IOException {
+    public void shouldBeNullWhenSalaryIsNotWithinTaxBracket() throws IOException {
         Criteria aboveMaxIncome = new TaxCriteria(expectedMaxIncome + 1000);
         assertNull(taxRepository.find(aboveMaxIncome));
     }
@@ -78,10 +79,10 @@ public class TaxRepositoryTest {
     private void setMockRowBehavior(){
 
         mockRow = mock(Row.class);
-        when(mockRow.getInt(Row.BASE_TAX)).thenReturn(expectedBaseTax);
-        when(mockRow.getInt(Row.MAX_INCOME)).thenReturn(expectedMaxIncome);
-        when(mockRow.getInt(Row.MIN_INCOME)).thenReturn(expectedMinIncome);
-        when(mockRow.getInt(Row.TAX_PER_DOLLAR)).thenReturn(expectedTaxPerDollar);
+        when(mockRow.getInt(BASE_TAX)).thenReturn(expectedBaseTax);
+        when(mockRow.getInt(MAX_INCOME)).thenReturn(expectedMaxIncome);
+        when(mockRow.getInt(MIN_INCOME)).thenReturn(expectedMinIncome);
+        when(mockRow.getInt(TAX_PER_DOLLAR)).thenReturn(expectedTaxPerDollar);
     }
 
 }

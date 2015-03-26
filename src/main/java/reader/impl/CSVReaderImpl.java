@@ -1,26 +1,25 @@
 package reader.impl;
 
-import builder.CsvRowBuilder;
+import builder.TaxCsvRowBuilder;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
-import org.apache.commons.lang3.math.NumberUtils;
 import reader.Row;
-import reader.TaxReader;
+import reader.Reader;
+import reader.TaxHeader;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
+
+import static reader.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class CSVReaderImpl implements TaxReader{
+public class CSVReaderImpl implements Reader {
 
     private String fileName;
-    private Reader reader;
+    private java.io.Reader reader;
 
 
     public CSVReaderImpl(String fileName) {
@@ -39,11 +38,11 @@ public class CSVReaderImpl implements TaxReader{
             return null;
         }
         CSVRecord record = recordIterator.next();
-        Row row = new CsvRowBuilder()
-                .withBaseTax(asInt(record.get(Row.BASE_TAX)))
-                .withMaxIncome(asInt(record.get(Row.MAX_INCOME)))
-                .withMinIncome(asInt(record.get(Row.MIN_INCOME)))
-                .withTaxPerDollar(asInt(record.get(Row.TAX_PER_DOLLAR))).build();
+        Row row = new TaxCsvRowBuilder()
+                .withBaseTax(record.get(BASE_TAX.getLabel()))
+                .withMaxIncome(record.get(MAX_INCOME.getLabel()))
+                .withMinIncome(record.get(MIN_INCOME.getLabel()))
+                .withTaxPerDollar(record.get(TAX_PER_DOLLAR.getLabel())).build();
 
         return row;
     }
@@ -54,10 +53,4 @@ public class CSVReaderImpl implements TaxReader{
 
     }
 
-    private int asInt(String aRow){
-        if(NumberUtils.isNumber(aRow)){
-            return NumberUtils.createInteger(aRow);
-        }
-        return 0;
-    }
 }

@@ -24,11 +24,11 @@ public class Payslip {
         DECEMBER;
     }
 
-    private MONTH month;
-    private int grossIncome;
+    private final MONTH month;
+    private final int grossIncome;
     private final int incomeTax;
-    private int netIncome;
-    private int aSuper;
+    private final int netIncome;
+    private final int aSuper;
 
     public Payslip(MONTH month, int grossIncome, int incomeTax, int netIncome, int aSuper) {
         this.month = month;
