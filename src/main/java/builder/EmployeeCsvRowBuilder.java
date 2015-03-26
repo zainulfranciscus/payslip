@@ -1,5 +1,6 @@
 package builder;
 
+import employee.EmployeeBuilder;
 import reader.Row;
 import reader.impl.EmployeeCsvRow;
 
@@ -12,6 +13,12 @@ public class EmployeeCsvRowBuilder implements Builder<Row>{
     private String salary;
     private String superRate;
     private String paymentDate;
+    private String startOfPaymentDate;
+    private String startOfPaymentMonth;
+    private String startOfPaymentYear;
+    private String endOfPaymentDate;
+    private String endOfPaymentMonth;
+    private String endOfPaymentYear;
 
     public EmployeeCsvRowBuilder withFirstName(String firstName) {
         this.firstName = firstName;
@@ -38,7 +45,47 @@ public class EmployeeCsvRowBuilder implements Builder<Row>{
         return this;
     }
 
+    public EmployeeCsvRowBuilder withStartOfPaymentDate(String startOfPaymentDate) {
+        this.startOfPaymentDate = startOfPaymentDate;
+        return this;
+    }
+
+    public EmployeeCsvRowBuilder withStartOfPaymentMonth(String startOfPaymentMonth) {
+        this.startOfPaymentMonth = startOfPaymentMonth;
+        return this;
+    }
+
+    public EmployeeCsvRowBuilder withStartOfPaymentYear(String startOfPaymentYear) {
+        this.startOfPaymentYear = startOfPaymentYear;
+        return this;
+    }
+
+    public EmployeeCsvRowBuilder withEndOfPaymentDate(String endOfPaymentDate) {
+        this.endOfPaymentDate = endOfPaymentDate;
+        return this;
+    }
+
+    public EmployeeCsvRowBuilder withEndOfPaymentMonth(String endOfPaymentMonth) {
+        this.endOfPaymentMonth = endOfPaymentMonth;
+        return this;
+    }
+
+    public EmployeeCsvRowBuilder withEndOfPaymentYear(String endOfPaymentYear) {
+        this.endOfPaymentYear = endOfPaymentYear;
+        return this;
+    }
+
     public Row build() {
-        return new EmployeeCsvRow(this.firstName,this.lastName,this.paymentDate,this.salary,this.superRate);
+        return new EmployeeCsvRow(this.firstName,
+                this.lastName,
+                this.paymentDate,
+                this.salary,
+                this.superRate,
+                this.startOfPaymentDate,
+                this.startOfPaymentMonth,
+                this.startOfPaymentYear,
+                this.endOfPaymentDate,
+                this.endOfPaymentMonth,
+                this.endOfPaymentYear);
     }
 }

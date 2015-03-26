@@ -21,6 +21,10 @@ public class TaxCSVReaderImpl extends CSVReaderImpl{
                 .withBaseTax(record.get(BASE_TAX.getLabel()))
                 .withMaxIncome(record.get(MAX_INCOME.getLabel()))
                 .withMinIncome(record.get(MIN_INCOME.getLabel()))
-                .withTaxPerDollar(record.get(TAX_PER_DOLLAR.getLabel())).build();
+                .withTaxPerDollar(record.get(TAX_PER_DOLLAR.getLabel()))
+                .withStartingDay(record.get(STARTING_DAY.getLabel()))
+                .withStartingMonth(record.get(STARTING_MONTH.getLabel()))
+                .withStartingYear(record.get(STARTING_YEAR.getLabel()))
+                .build();
     }
 }

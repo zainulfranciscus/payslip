@@ -2,7 +2,7 @@ package reader.employee;
 
 import org.junit.Test;
 import reader.AbstractCSVReaderTest;
-import reader.EmployeeCSVFileReader;
+import reader.impl.EmployeeCSVFileReaderImpl;
 import reader.Reader;
 
 import static org.junit.Assert.assertEquals;
@@ -41,6 +41,6 @@ public class CSVReaderTestForEmployeeCSVFiles extends AbstractCSVReaderTest {
 
     @Override
     public Reader readerForCSV() {
-        return new EmployeeCSVFileReader( "employee/employee.csv");
+        return new EmployeeCSVFileReaderImpl( "employee/employee.csv");
     }
 }

@@ -1,7 +1,8 @@
-package reader;
+package reader.impl;
 
 import builder.EmployeeCsvRowBuilder;
 import org.apache.commons.csv.CSVRecord;
+import reader.Row;
 import reader.impl.CSVReaderImpl;
 
 import static reader.EmployeeHeader.*;
@@ -9,8 +10,8 @@ import static reader.EmployeeHeader.*;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class EmployeeCSVFileReader extends CSVReaderImpl {
-    public EmployeeCSVFileReader(String fileName) {
+public class EmployeeCSVFileReaderImpl extends CSVReaderImpl {
+    public EmployeeCSVFileReaderImpl(String fileName) {
         super(fileName);
     }
 

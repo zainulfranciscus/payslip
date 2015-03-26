@@ -2,22 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c086c9-8bab-47cb-8c52-b02e977d5ed9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/domain/Tax.class" afterPath="$PROJECT_DIR$/target/classes/domain/Tax.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/builder/TaxBuilder.class" afterPath="$PROJECT_DIR$/target/classes/builder/TaxBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/builder/TaxBuilderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/builder/TaxBuilderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/employee/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/Tax.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Tax.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/TaxHeader.java" afterPath="$PROJECT_DIR$/src/main/java/reader/TaxHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payslip.iml" afterPath="$PROJECT_DIR$/payslip.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\reader\EmployeeCSVFileReader.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\reader\EmployeeCSVFileReader.java" afterPath="$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCSVFileReaderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/reader/employee/CSVReaderTestForEmployeeCSVFiles.class" afterPath="$PROJECT_DIR$/target/test-classes/reader/employee/CSVReaderTestForEmployeeCSVFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.class" afterPath="$PROJECT_DIR$/target/test-classes/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/reader/impl/EmployeeCsvRow.class" afterPath="$PROJECT_DIR$/target/classes/reader/impl/EmployeeCsvRow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/builder/EmployeeCsvRowBuilder.class" afterPath="$PROJECT_DIR$/target/classes/builder/EmployeeCsvRowBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/builder/EmployeeCsvRowBuilderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/builder/EmployeeCsvRowBuilderTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/reader/EmployeeHeader.class" afterPath="$PROJECT_DIR$/target/classes/reader/EmployeeHeader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/reader/impl/TaxCSVReaderImpl.class" afterPath="$PROJECT_DIR$/target/classes/reader/impl/TaxCSVReaderImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.class" afterPath="$PROJECT_DIR$/target/test-classes/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/reader/employee/TestForEmptyEmployeeCSVFile.class" afterPath="$PROJECT_DIR$/target/test-classes/reader/employee/TestForEmptyEmployeeCSVFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/employee/CSVReaderTestForEmployeeCSVFiles.java" afterPath="$PROJECT_DIR$/src/test/java/reader/employee/CSVReaderTestForEmployeeCSVFiles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java" afterPath="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java" afterPath="$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.java" afterPath="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmptyEmployeeCSVFile.java" afterPath="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmptyEmployeeCSVFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv" afterPath="$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/tax/tax.csv" afterPath="$PROJECT_DIR$/src/test/resources/tax/tax.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tax/tax.csv" afterPath="$PROJECT_DIR$/target/test-classes/tax/tax.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/tax/taxTableWithNonNumericalValues.csv" afterPath="$PROJECT_DIR$/src/test/resources/tax/taxTableWithNonNumericalValues.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="payslip.iws" />
@@ -47,61 +55,207 @@
     <favorites_list name="payslip" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1615">
-              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
-              <folding>
-                <element signature="e#2113#2114#0" expanded="true" />
-                <element signature="e#2157#2158#0" expanded="true" />
-                <element signature="e#2200#2201#0" expanded="true" />
-                <element signature="e#2248#2249#0" expanded="true" />
-                <element signature="e#2290#2291#0" expanded="true" />
-                <element signature="e#2337#2338#0" expanded="true" />
-                <element signature="e#2377#2378#0" expanded="true" />
-                <element signature="e#2421#2422#0" expanded="true" />
-                <element signature="e#2462#2463#0" expanded="true" />
-                <element signature="e#2507#2508#0" expanded="true" />
-                <element signature="e#2547#2548#0" expanded="true" />
-                <element signature="e#2591#2592#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1547">
-              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeBuilderTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.114285715" vertical-offset="51" max-vertical-offset="1462">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaxBuilderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
-              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.8555377">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1615">
+                  <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#2113#2114#0" expanded="true" />
+                    <element signature="e#2157#2158#0" expanded="true" />
+                    <element signature="e#2200#2201#0" expanded="true" />
+                    <element signature="e#2248#2249#0" expanded="true" />
+                    <element signature="e#2290#2291#0" expanded="true" />
+                    <element signature="e#2337#2338#0" expanded="true" />
+                    <element signature="e#2377#2378#0" expanded="true" />
+                    <element signature="e#2421#2422#0" expanded="true" />
+                    <element signature="e#2462#2463#0" expanded="true" />
+                    <element signature="e#2507#2508#0" expanded="true" />
+                    <element signature="e#2547#2548#0" expanded="true" />
+                    <element signature="e#2591#2592#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RowHeader.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/RowHeader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+                  <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TaxHeader.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/TaxHeader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="493">
+                  <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EmployeeCsvRowBuilderTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="2023">
+                  <caret line="113" column="27" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#1973#1974#0" expanded="true" />
+                    <element signature="e#2043#2044#0" expanded="true" />
+                    <element signature="e#2098#2099#0" expanded="true" />
+                    <element signature="e#2166#2167#0" expanded="true" />
+                    <element signature="e#2219#2220#0" expanded="true" />
+                    <element signature="e#2289#2290#0" expanded="true" />
+                    <element signature="e#2345#2346#0" expanded="true" />
+                    <element signature="e#2415#2416#0" expanded="true" />
+                    <element signature="e#2473#2474#0" expanded="true" />
+                    <element signature="e#2548#2549#0" expanded="true" />
+                    <element signature="e#2609#2610#0" expanded="true" />
+                    <element signature="e#2689#2690#0" expanded="true" />
+                    <element signature="e#2751#2752#0" expanded="true" />
+                    <element signature="e#2832#2833#0" expanded="true" />
+                    <element signature="e#2893#2894#0" expanded="true" />
+                    <element signature="e#2972#2973#0" expanded="true" />
+                    <element signature="e#3031#3032#0" expanded="true" />
+                    <element signature="e#3107#3108#0" expanded="true" />
+                    <element signature="e#3167#3168#0" expanded="true" />
+                    <element signature="e#3245#3246#0" expanded="true" />
+                    <element signature="e#3304#3305#0" expanded="true" />
+                    <element signature="e#3380#3381#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CSVReaderTestForWellFormedTaxCSVFiles.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6626984" vertical-offset="363" max-vertical-offset="867">
+                  <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#950#951#0" expanded="true" />
+                    <element signature="e#1006#1007#0" expanded="true" />
+                    <element signature="e#1062#1063#0" expanded="true" />
+                    <element signature="e#1120#1121#0" expanded="true" />
+                    <element signature="e#1178#1179#0" expanded="true" />
+                    <element signature="e#1239#1240#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EmployeeCSVFileReaderImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCSVFileReaderImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
+                  <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TaxCSVReaderImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+                  <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EmployeeCsvRowBuilder.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1615">
+                  <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EmployeeCsvRow.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+                  <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EmployeeHeader.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+                  <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="tax.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/resources/tax/tax.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+                  <caret line="0" column="79" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="79" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="taxTableWithNonNumericalValues.csv" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/resources/tax/taxTableWithNonNumericalValues.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="136">
+                  <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="onlyHaveTaxHeaders.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+                  <caret line="0" column="79" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CSVReaderTestForTaxCSVFileWithNonNumericalValues.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForTaxCSVFileWithNonNumericalValues.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="578">
+                  <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#551#552#0" expanded="true" />
+                    <element signature="e#605#606#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,18 +263,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/reader/AbstractTestForCSVFileThatIsEmpty.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForEmptyTaxCSVFiles.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmployeeCSVReaderWithOnlyHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmployeeCSVThatOnlyHasHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/employee/CSVReaderTestForEmployeeCSVFiles.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/AbstractTestForCSVFileThatOnlyHasAHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/AbstractTestThatWillReturnNullRow.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/AbstractCSVReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/employee/emptyFile.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmptyTaxCSVFile.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmptyEmployeeCSVFile.java" />
         <option value="$PROJECT_DIR$/src/test/java/employee/EmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/employee/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/MONTH.java" />
@@ -160,6 +302,18 @@
         <option value="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java" />
+        <option value="$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/tax/tax.csv" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/EmployeeCSVFileReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/EmployeeCSVFileReaderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCSVFileReaderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv" />
+        <option value="$PROJECT_DIR$/src/test/resources/tax/taxTableWithNonNumericalValues.csv" />
       </list>
     </option>
   </component>
@@ -232,26 +386,8 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,7 +409,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -302,8 +464,60 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,6 +536,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payslip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,7 +724,35 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeBuilderTest">
+  <component name="RunManager" selected="JUnit.All in payslip">
+    <configuration default="false" name="EmployeeCsvRowBuilderTest.shouldReturnEndOfPaymentYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="builder" />
+      <option name="MAIN_CLASS_NAME" value="builder.EmployeeCsvRowBuilderTest" />
+      <option name="METHOD_NAME" value="shouldReturnEndOfPaymentYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="All in payslip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="payslip" />
@@ -448,25 +772,23 @@
       </option>
       <envs />
       <patterns />
-      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CSVReaderTestForWellFormedTaxCSVFiles.taxtStartingDateShouldBe1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="employee.*" />
+          <option name="PATTERN" value="reader.tax.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
-      <option name="METHOD_NAME" value="paymentStartMonthShouldBeThisMonth" />
+      <option name="PACKAGE_NAME" value="reader.tax" />
+      <option name="MAIN_CLASS_NAME" value="reader.tax.CSVReaderTestForWellFormedTaxCSVFiles" />
+      <option name="METHOD_NAME" value="taxtStartingDateShouldBe1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -482,76 +804,48 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CSVReaderTestForWellFormedTaxCSVFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="employee.*" />
+          <option name="PATTERN" value="reader.tax.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
-      <option name="METHOD_NAME" value="paymentStartingYearShouldBeThisYear" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
-      <option name="METHOD_NAME" value="endOfPaymentYearShouldBe2YearFromNow" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EmployeeBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
+      <option name="PACKAGE_NAME" value="reader.tax" />
+      <option name="MAIN_CLASS_NAME" value="reader.tax.CSVReaderTestForWellFormedTaxCSVFiles" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="reader in payslip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="reader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="reader" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -857,19 +1151,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeCsvRowBuilderTest.shouldReturnEndOfPaymentYear" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CSVReaderTestForWellFormedTaxCSVFiles.taxtStartingDateShouldBe1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CSVReaderTestForWellFormedTaxCSVFiles" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.reader in payslip" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.reader in payslip" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CSVReaderTestForWellFormedTaxCSVFiles" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CSVReaderTestForWellFormedTaxCSVFiles.taxtStartingDateShouldBe1" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeCsvRowBuilderTest.shouldReturnEndOfPaymentYear" />
       </list>
     </recent_temporary>
   </component>
@@ -884,16 +1178,16 @@
       <option name="number" value="Default" />
       <updated>1427258524492</updated>
       <workItem from="1427258531186" duration="36307000" />
-      <workItem from="1427321646020" duration="36838000" />
+      <workItem from="1427321646020" duration="39590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73145000" />
+    <option name="totallyTimeSpent" value="75897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -945,8 +1239,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/reader/EmployeeCSVFileReader.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCSVFileReaderImpl.java</url>
+          <line>19</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -966,129 +1260,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/tax/tax.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="544">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#305#306#0" expanded="false" />
-            <element signature="e#336#337#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="833">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/CSVReaderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="413" max-vertical-offset="1003">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/EmployeeCSVFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80504584" vertical-offset="23" max-vertical-offset="544">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reader/employee/TestForEmployeeCSVThatOnlyHasHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForTaxCSVFileWithNonNumericalValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="680">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="612">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/TestForCSVTaxWithOnlyHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/reader/AbstractCSVReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3096539" vertical-offset="0" max-vertical-offset="612">
@@ -1135,8 +1306,8 @@
           <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#320#321#0" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1157,8 +1328,8 @@
           <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1254,7 +1425,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1802">
           <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1399,12 +1570,12 @@
         <state vertical-scroll-proportion="0.789916" vertical-offset="40" max-vertical-offset="1088">
           <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="false" />
+            <element signature="e#1606#1607#0" expanded="false" />
+            <element signature="e#1643#1644#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+            <element signature="e#1720#1721#0" expanded="false" />
+            <element signature="e#1760#1761#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1433,14 +1604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/TaxHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4" vertical-offset="0" max-vertical-offset="595">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58419245" vertical-offset="0" max-vertical-offset="582">
@@ -1465,6 +1628,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1462">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/builder/EmployeeCsvRowBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1615">
+          <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/EmployeeHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCsvRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="2023">
+          <caret line="113" column="27" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
+          <folding>
+            <element signature="e#1973#1974#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2098#2099#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2219#2220#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
+            <element signature="e#2415#2416#0" expanded="true" />
+            <element signature="e#2473#2474#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2609#2610#0" expanded="true" />
+            <element signature="e#2689#2690#0" expanded="true" />
+            <element signature="e#2751#2752#0" expanded="true" />
+            <element signature="e#2832#2833#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
+            <element signature="e#3107#3108#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3245#3246#0" expanded="true" />
+            <element signature="e#3304#3305#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1615">
@@ -1486,10 +1714,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/RowHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.114285715" vertical-offset="51" max-vertical-offset="1462">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/TaxHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="493">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/EmployeeCSVFileReaderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCSVReaderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6626984" vertical-offset="363" max-vertical-offset="867">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/tax/tax.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <caret line="0" column="79" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="79" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForTaxCSVFileWithNonNumericalValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="578">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/tax/taxTableWithNonNumericalValues.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="136">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>

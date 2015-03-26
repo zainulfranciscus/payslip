@@ -37,4 +37,19 @@ public class CSVReaderTestForWellFormedTaxCSVFiles extends AbstractCSVReaderTest
         assertEquals(400,row.getInt(TAX_PER_DOLLAR));
     }
 
+    @Test
+    public void taxStartingDateShouldBe1(){
+        assertEquals(1,row.getInt(STARTING_DAY));
+    }
+
+    @Test
+    public void taxStartingMonthShouldBe3(){
+        assertEquals(3,row.getInt(STARTING_MONTH));
+    }
+
+    @Test
+    public void taxStartingYearShouldBe2015(){
+        assertEquals(2015, row.getInt(STARTING_YEAR));
+    }
+
 }

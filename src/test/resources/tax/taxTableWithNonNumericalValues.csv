@@ -1,2 +1,2 @@
-Min Income,Max Income,Base Tax,Tax per Dollar
-a,!,>,
+Min Income,Max Income,Base Tax,Tax per Dollar,Start Date,Start Month,Start Year
+a,!,>,b,&,*,-

@@ -1,2 +1,2 @@
-Min Income,Max Income,Base Tax,Tax per Dollar
-100,200,300,400
+Min Income,Max Income,Base Tax,Tax per Dollar,Start Date,Start Month,Start Year
+100,200,300,400,1,3,2015

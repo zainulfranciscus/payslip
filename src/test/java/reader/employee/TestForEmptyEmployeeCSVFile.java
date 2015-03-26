@@ -1,7 +1,7 @@
 package reader.employee;
 
 import reader.AbstractTestThatWillReturnNullRow;
-import reader.EmployeeCSVFileReader;
+import reader.impl.EmployeeCSVFileReaderImpl;
 import reader.Reader;
 
 /**
@@ -10,6 +10,6 @@ import reader.Reader;
 public class TestForEmptyEmployeeCSVFile extends AbstractTestThatWillReturnNullRow {
     @Override
     public Reader readerForCSV() {
-        return new EmployeeCSVFileReader("emptyFile.csv");
+        return new EmployeeCSVFileReaderImpl("emptyFile.csv");
     }
 }
