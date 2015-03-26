@@ -1,6 +1,8 @@
 package reader;
 
+import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import reader.impl.CSVReaderImpl;
 
@@ -11,20 +13,21 @@ import java.io.IOException;
  */
 public abstract class  AbstractCSVReaderTest {
 
-    protected static TaxReader reader;
-    protected static Row row;
+    protected TaxReader reader;
+    protected Row row;
 
 
-    @BeforeClass
-    public static void setup() throws IOException {
-        reader = new CSVReaderImpl("tax.csv");
+    @Before
+    public void setup() throws IOException {
+        reader = new CSVReaderImpl(csvFileName());
         row = reader.read();
     }
 
-    @AfterClass
-    public static void after() throws IOException {
+    @After
+    public void after() throws IOException {
         reader.close();
     }
 
     public abstract String csvFileName();
+
 }
