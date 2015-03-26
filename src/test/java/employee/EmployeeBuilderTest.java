@@ -1,5 +1,6 @@
 package employee;
 
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,10 +12,12 @@ import static org.junit.Assert.assertEquals;
 public class EmployeeBuilderTest {
 
     private EmployeeBuilder employeeBuilder;
+    private LocalDate localDate;
 
     @Before
     public void setup(){
         employeeBuilder = new EmployeeBuilder();
+        localDate = new LocalDate();
     }
 
     @Test
@@ -40,5 +43,42 @@ public class EmployeeBuilderTest {
     public void shouldCreateEmployeeWith1500AsSalary(){
         int expectedSalary = 1500;
         assertEquals(expectedSalary, employeeBuilder.withSalary(expectedSalary).build().getSalary());
+    }
+
+    @Test
+    public void paymentStartDateShouldBeTodaysDate(){
+        int todayDate = localDate.getDayOfMonth();
+        assertEquals(todayDate,employeeBuilder.withStartOfPaymentDate(todayDate).build().getStartOfPaymentDate());
+    }
+
+    @Test
+    public void paymentStartMonthShouldBeThisMonth(){
+        int thisMonth = localDate.getMonthOfYear();
+        assertEquals(thisMonth,employeeBuilder.withStartOfPaymentMonth(thisMonth).build().getStartOfPaymentMonth());
+    }
+
+    @Test
+    public void paymentStartingYearShouldBeThisYear(){
+        int thisYear = localDate.getYear();
+        assertEquals(thisYear, employeeBuilder.withStartOfPaymentYear(thisYear).build().getStartOfPaymentYear());
+    }
+
+    @Test
+    public void endOfPaymentYearShouldBe2YearFromNow(){
+        int twoYearFromNow = localDate.getYear() + 2;
+        assertEquals(twoYearFromNow, employeeBuilder.withEndOfPaymentYear(twoYearFromNow).build().getEndOfPaymentYear());
+    }
+
+    @Test
+    public void endPaymentMonthShouldBe1MonthFromNow(){
+        int aMonthFromNow = localDate.getMonthOfYear() + 1;
+        assertEquals(aMonthFromNow, employeeBuilder.withEndOfPaymentMonth(aMonthFromNow).build().getEndOfPaymentMonth());
+    }
+
+
+    @Test
+    public void endOfPaymentDateShouldBe3DaysFromNow(){
+        int threeDaysFromNow = localDate.getDayOfMonth() + 3;
+        assertEquals(threeDaysFromNow, employeeBuilder.withEndOfPaymentDate(threeDaysFromNow).build().getEndOfPaymentDate());
     }
 }

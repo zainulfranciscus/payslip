@@ -11,6 +11,12 @@ public class EmployeeBuilder implements Builder<Employee> {
     private String lastName;
     private int salary;
     private int aSuper;
+    private int paymentStartDate;
+    private int paymentStartingMonth;
+    private int paymentStartingYear;
+    private int endOfPaymentYear;
+    private int endOfPaymentMonth;
+    private int endOfPaymentDate;
 
 
     public EmployeeBuilder withFirstName(String firstName) {
@@ -33,8 +39,47 @@ public class EmployeeBuilder implements Builder<Employee> {
         return this;
     }
 
-    public Employee build() {
-        return new Employee(firstName,lastName,salary,aSuper);
+    public EmployeeBuilder withStartOfPaymentDate(int startDate) {
+        this.paymentStartDate = startDate;
+        return this;
     }
 
+
+    public EmployeeBuilder withStartOfPaymentMonth(int startingMonth) {
+        this.paymentStartingMonth = startingMonth;
+        return this;
+    }
+
+    public EmployeeBuilder withStartOfPaymentYear(int startingYear) {
+        this.paymentStartingYear = startingYear;
+        return this;
+    }
+
+    public EmployeeBuilder withEndOfPaymentYear(int endOfPaymentYear) {
+        this.endOfPaymentYear = endOfPaymentYear;
+        return this;
+    }
+
+    public EmployeeBuilder withEndOfPaymentMonth(int endOfPaymentMonth) {
+        this.endOfPaymentMonth = endOfPaymentMonth;
+        return this;
+    }
+
+    public Employee build() {
+        return new Employee(firstName,
+                lastName,
+                salary,
+                aSuper,
+                paymentStartDate,
+                paymentStartingMonth,
+                paymentStartingYear,
+                endOfPaymentYear,
+                endOfPaymentMonth,
+                endOfPaymentDate);
+    }
+
+    public EmployeeBuilder withEndOfPaymentDate(int endOfPaymentDate) {
+        this.endOfPaymentDate = endOfPaymentDate;
+        return this;
+    }
 }

@@ -18,9 +18,16 @@
         <maven.buildhelper.version>1.7</maven.buildhelper.version>
         <apache.common.csv.version>1.1</apache.common.csv.version>
         <apache.common.lang.version>3.3.2</apache.common.lang.version>
+        <jodatime.version>2.7</jodatime.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${jodatime.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>

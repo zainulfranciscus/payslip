@@ -13,13 +13,34 @@ public class Employee {
     private final String lastName;
     private final int salary;
     private final int aSuper;
+    private final int paymentStartingMonth;
+    private final int paymentStartingYear;
+    private final int endOfPaymentYear;
+    private final int endOfPaymentMonth;
+    private final int endOfPaymentDate;
+    private int paymentStartDate;
 
-    public Employee(String firstName, String lastName, int salary, int aSuper) {
+    public Employee(String firstName,
+                    String lastName,
+                    int salary,
+                    int aSuper,
+                    int paymentStartDate,
+                    int paymentStartingMonth,
+                    int paymentStartingYear,
+                    int endOfPaymentYear,
+                    int endOfPaymentMonth,
+                    int endOfPaymentDate) {
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.aSuper = aSuper;
+        this.paymentStartDate = paymentStartDate;
+        this.paymentStartingMonth = paymentStartingMonth;
+        this.paymentStartingYear = paymentStartingYear;
+        this.endOfPaymentYear = endOfPaymentYear;
+        this.endOfPaymentMonth = endOfPaymentMonth;
+        this.endOfPaymentDate = endOfPaymentDate;
     }
 
     public String getFirstName() {
@@ -56,4 +77,27 @@ public class Employee {
         return new BigDecimal(getSalary());
     }
 
+    public int getStartOfPaymentDate() {
+        return this.paymentStartDate;
+    }
+
+    public int getStartOfPaymentMonth() {
+        return this.paymentStartingMonth;
+    }
+
+    public int getStartOfPaymentYear() {
+        return this.paymentStartingYear;
+    }
+
+    public int getEndOfPaymentYear() {
+        return this.endOfPaymentYear;
+    }
+
+    public int getEndOfPaymentMonth() {
+        return this.endOfPaymentMonth;
+    }
+
+    public int getEndOfPaymentDate() {
+        return this.endOfPaymentDate;
+    }
 }

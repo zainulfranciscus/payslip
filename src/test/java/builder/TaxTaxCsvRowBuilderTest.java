@@ -20,6 +20,9 @@ public class TaxTaxCsvRowBuilderTest {
     private static String expectedMaxIncome;
     private static String expectedBaseTax;
     private static String expectedTaxPerDollar;
+    private static String expectedStartingYear;
+    private static String expectedStartingMonth;
+    private static String expectedStartingDay;
 
     @BeforeClass
     public static void setup(){
@@ -28,10 +31,17 @@ public class TaxTaxCsvRowBuilderTest {
         expectedMaxIncome = "200";
         expectedBaseTax = "300";
         expectedTaxPerDollar = "400";
+        expectedStartingDay = "1";
+        expectedStartingMonth = "3";
+        expectedStartingYear = "2015";
+
         row = taxCsvRowBuilder.withMinIncome(expectedMinIncome)
                 .withMaxIncome(expectedMaxIncome)
                 .withBaseTax(expectedBaseTax)
                 .withTaxPerDollar(expectedTaxPerDollar)
+                .withStartingYear(expectedStartingYear)
+                .withStartingMonth(expectedStartingMonth)
+                .withStartingDay(expectedStartingDay)
                 .build();
     }
 

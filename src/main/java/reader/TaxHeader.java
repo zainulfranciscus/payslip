@@ -9,7 +9,10 @@ public enum TaxHeader implements RowHeader{
     MIN_INCOME("Min Income"),
     MAX_INCOME("Max Income"),
     BASE_TAX("Base Tax"),
-    TAX_PER_DOLLAR("Tax per Dollar");
+    TAX_PER_DOLLAR("Tax per Dollar"),
+    STARTING_DAY("Start Date"),
+    STARTING_MONTH("Start Month"),
+    STARTING_YEAR("Start Year");
 
     private String label;
 

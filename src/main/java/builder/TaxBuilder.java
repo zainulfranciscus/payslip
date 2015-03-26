@@ -11,6 +11,9 @@ public class TaxBuilder implements Builder<Tax>{
     private int maxIncome;
     private int taxPerDollar;
     private int baseTax;
+    private int startingDay;
+    private int startingMonth;
+    private int startingYear;
 
     public TaxBuilder withMinIncome(int minIncome) {
         this.minIncome = minIncome;
@@ -19,7 +22,13 @@ public class TaxBuilder implements Builder<Tax>{
 
     @Override
     public Tax build() {
-        return new Tax(minIncome,maxIncome,taxPerDollar,baseTax);
+        return new Tax(minIncome,
+                maxIncome,
+                taxPerDollar,
+                baseTax,
+                startingDay,
+                startingMonth,
+                startingYear);
     }
 
     public TaxBuilder withMaxIncome(int maxIncome) {
@@ -34,6 +43,21 @@ public class TaxBuilder implements Builder<Tax>{
 
     public TaxBuilder withBaseTax(int baseTax) {
         this.baseTax = baseTax;
+        return this;
+    }
+
+    public TaxBuilder withStartingDay(int startingDay) {
+        this.startingDay = startingDay;
+        return this;
+    }
+
+    public TaxBuilder withStartingMonth(int startingMonth) {
+        this.startingMonth = startingMonth;
+        return this;
+    }
+
+    public TaxBuilder withStartingYear(int startingYear) {
+        this.startingYear = startingYear;
         return this;
     }
 }

@@ -1,5 +1,7 @@
 package builder;
 
+import org.joda.time.JodaTimePermission;
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +17,9 @@ public class TaxBuilderTest {
     private int expectedMaxIncome;
     private int expectedTaxPerDollar;
     private int expectedBaseTax;
+    private int startingDay;
+    private int startingMonth;
+    private int startingYear;
 
     @Before
     public void setUp() throws Exception {
@@ -22,6 +27,12 @@ public class TaxBuilderTest {
         expectedMaxIncome = 2000;
         expectedTaxPerDollar = 20;
         expectedBaseTax = 3000;
+
+        LocalDate today = new LocalDate();
+
+        startingDay = today.getDayOfMonth();
+        startingMonth = today.getMonthOfYear();
+        startingYear = today.getYear();
     }
 
     @Test
@@ -42,6 +53,21 @@ public class TaxBuilderTest {
     @Test
     public void shouldReturn3000AsBaseTax(){
         assertEquals(expectedBaseTax, builder.withBaseTax(expectedBaseTax).build().getBaseTax());
+    }
+
+    @Test
+    public void shouldReturnStartingDay(){
+        assertEquals(startingDay,builder.withStartingDay(startingDay).build().getStartingDay());
+    }
+
+    @Test
+    public void shouldReturnStartingMonth(){
+        assertEquals(startingMonth,builder.withStartingMonth(startingMonth).build().getStartingMonth());
+    }
+
+    @Test
+    public void shouldReturnStartingYear(){
+        assertEquals(startingYear,builder.withStartingYear(startingYear).build().getStartingYear());
     }
 
 }

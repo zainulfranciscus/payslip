@@ -2,45 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c086c9-8bab-47cb-8c52-b02e977d5ed9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/payslip/EmployeePayslipFactoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/payslip/EmployeePayslipImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/employee/service/EmployeeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/employee/service/impl/EmployeeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/employee/EmployeeServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/payslip/MONTH.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/builder/TaxCriteriaBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/builder/TaxCriteriaBuilderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmptyEmployeeCSVFile.java" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\src\main\java\factory\impl\EmployeePayslipFactoryImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\builder\EmployeeBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\domain\Employee.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\domain\EmployeePayslip.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\domain\Payslip$MONTH.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\factory\EmployeePayslipFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\builder\EmployeeBuilderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\domain\EmployeeTest.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\builder\EmployeeBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\builder\PayslipBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/payslip/PayslipBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\domain\Employee.java" afterPath="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\domain\EmployeePayslip.java" afterPath="$PROJECT_DIR$/src/main/java/employee/EmployeePayslip.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\domain\Payslip.java" afterPath="$PROJECT_DIR$/src/main/java/payslip/Payslip.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\factory\EmployeePayslipFactory.java" afterPath="$PROJECT_DIR$/src/main/java/employee/EmployeePayslipFactory.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\builder\EmployeeBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\builder\PayslipBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/payslip/PayslipBuilderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\domain\EmployeePayslipTest.java" afterPath="$PROJECT_DIR$/src/test/java/payslip/EmployeePayslipTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\domain\EmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/employee/EmployeeTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\factory\EmployeePayslipFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/payslip/EmployeePayslipFactoryTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\resources\tax\emptyTax.csv" afterPath="$PROJECT_DIR$/src/test/resources/emptyFile.csv" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\classes\factory\impl\EmployeePayslipFactoryImpl.class" afterPath="C:\workspace\payslip\target\classes\factory\impl\EmployeePayslipFactoryImpl.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\test-classes\factory\EmployeePayslipFactoryTest.class" afterPath="C:\workspace\payslip\target\test-classes\factory\EmployeePayslipFactoryTest.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\test-classes\domain\EmployeePayslipTest.class" afterPath="C:\workspace\payslip\target\test-classes\domain\EmployeePayslipTest.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\classes\domain\Payslip.class" afterPath="C:\workspace\payslip\target\classes\domain\Payslip.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\classes\builder\PayslipBuilder.class" afterPath="C:\workspace\payslip\target\classes\builder\PayslipBuilder.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\test-classes\builder\PayslipBuilderTest.class" afterPath="C:\workspace\payslip\target\test-classes\builder\PayslipBuilderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/domain/PayslipTest.class" afterPath="$PROJECT_DIR$/target/test-classes/domain/PayslipTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/AbstractCSVReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/reader/AbstractCSVReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/domain/PayslipTest.java" afterPath="$PROJECT_DIR$/src/test/java/domain/PayslipTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmptyTaxCSVFile.java" afterPath="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmptyTaxCSVFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/domain/Tax.class" afterPath="$PROJECT_DIR$/target/classes/domain/Tax.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/builder/TaxBuilder.class" afterPath="$PROJECT_DIR$/target/classes/builder/TaxBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/builder/TaxBuilderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/builder/TaxBuilderTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/employee/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/Tax.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Tax.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/reader/TaxHeader.java" afterPath="$PROJECT_DIR$/src/main/java/reader/TaxHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payslip.iml" afterPath="$PROJECT_DIR$/payslip.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="payslip.iws" />
@@ -70,7 +47,61 @@
     <favorites_list name="payslip" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1615">
+              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+              <folding>
+                <element signature="e#2113#2114#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2200#2201#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2337#2338#0" expanded="true" />
+                <element signature="e#2377#2378#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2507#2508#0" expanded="true" />
+                <element signature="e#2547#2548#0" expanded="true" />
+                <element signature="e#2591#2592#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1547">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeBuilderTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.114285715" vertical-offset="51" max-vertical-offset="1462">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaxBuilderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
+              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,15 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForWellFormedTaxCSVFiles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/reader/impl/CSVReaderImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/reader/EmployeeCSVFileReader.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/employee/employee.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/CSVReaderTestForEmployeeCSVFiles.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForTaxCSVFileWithOnlyHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForCSVTaxWithOnlyHeader.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/employee/onlyHaveEmployeeHeader.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/reader/AbstractCSVReaderTestForCSVFileWithOnlyHeader.java" />
         <option value="$PROJECT_DIR$/src/test/java/reader/AbstractTestForCSVFileThatIsEmpty.java" />
         <option value="$PROJECT_DIR$/src/test/java/reader/tax/CSVReaderTestForEmptyTaxCSVFiles.java" />
         <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmployeeCSVReaderWithOnlyHeader.java" />
@@ -99,8 +121,6 @@
         <option value="$PROJECT_DIR$/src/test/resources/employee/emptyFile.csv" />
         <option value="$PROJECT_DIR$/src/test/java/reader/tax/TestForEmptyTaxCSVFile.java" />
         <option value="$PROJECT_DIR$/src/test/java/reader/employee/TestForEmptyEmployeeCSVFile.java" />
-        <option value="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
         <option value="$PROJECT_DIR$/src/test/java/employee/EmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/employee/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/MONTH.java" />
@@ -129,6 +149,17 @@
         <option value="$PROJECT_DIR$/src/main/java/payslip/EmployeePayslipFactoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/payslip/EmployeePayslipTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/payslip/PayslipBuilder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Tax.java" />
+        <option value="$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/TaxHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java" />
+        <option value="$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/employee/Employee.java" />
       </list>
     </option>
   </component>
@@ -246,59 +277,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="employee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,85 +369,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="employee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,69 +428,7 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in payslip">
-    <configuration default="false" name="EmployeeServiceTest.shouldReturnAPayslipWithTheExpectedFullName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnAPayslipWithTheExpectedFullName" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EmployeeServiceTest.payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeServiceTest" />
-      <option name="METHOD_NAME" value="payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.EmployeeBuilderTest">
     <configuration default="false" name="All in payslip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="payslip" />
@@ -615,7 +454,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="employee.*" />
@@ -626,9 +465,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="employee" />
-      <option name="MAIN_CLASS_NAME" value="employee.EmployeeServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
+      <option name="METHOD_NAME" value="paymentStartMonthShouldBeThisMonth" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -643,18 +482,74 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeePayslipFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="factory.*" />
+          <option name="PATTERN" value="employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="payslip" />
-      <option name="MAIN_CLASS_NAME" value="payslip.EmployeePayslipFactoryTest" />
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
+      <option name="METHOD_NAME" value="paymentStartingYearShouldBeThisYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
+      <option name="METHOD_NAME" value="endOfPaymentYearShouldBe2YearFromNow" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="employee" />
+      <option name="MAIN_CLASS_NAME" value="employee.EmployeeBuilderTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -962,19 +857,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest.shouldReturnAPayslipWithTheExpectedFullName" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest.payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in payslip" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeePayslipFactoryTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest.payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeServiceTest.shouldReturnAPayslipWithTheExpectedFullName" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.endOfPaymentYearShouldBe2YearFromNow" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartingYearShouldBeThisYear" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeBuilderTest.paymentStartMonthShouldBeThisMonth" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.All in payslip" />
       </list>
     </recent_temporary>
   </component>
@@ -989,16 +884,16 @@
       <option name="number" value="Default" />
       <updated>1427258524492</updated>
       <workItem from="1427258531186" duration="36307000" />
-      <workItem from="1427321646020" duration="32767000" />
+      <workItem from="1427321646020" duration="36838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69074000" />
+    <option name="totallyTimeSpent" value="73145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1062,7 +957,7 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1071,62 +966,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/repository/TaxRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="718" max-vertical-offset="1360">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/builder/EmployeeCsvRowBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="701" max-vertical-offset="1241">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1251#1252#0" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/RowHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/Row.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="561">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/tax/onlyHaveTaxHeaders.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/tax/tax.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
@@ -1140,28 +979,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="748">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#831#832#0" expanded="false" />
-            <element signature="e#909#910#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1366,16 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="918">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="1003">
@@ -1397,14 +1204,6 @@
             <element signature="e#327#328#0" expanded="false" />
             <element signature="e#387#388#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,18 +1378,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/payslip/PayslipBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94285715" vertical-offset="119" max-vertical-offset="816">
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8" vertical-offset="0" max-vertical-offset="1224">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Tax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.789916" vertical-offset="40" max-vertical-offset="1088">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/builder/TaxBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4" vertical-offset="272" max-vertical-offset="1173">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/builder/TaxTaxCsvRowBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6857143" vertical-offset="204" max-vertical-offset="1020">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/builder/TaxCsvRowBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1037">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/TaxHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4" vertical-offset="0" max-vertical-offset="595">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/reader/impl/TaxCsvRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58419245" vertical-offset="0" max-vertical-offset="582">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/builder/TaxBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1258">
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/employee/EmployeeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1547">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/employee/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1615">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="e#2113#2114#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/employee/EmployeeBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.114285715" vertical-offset="51" max-vertical-offset="1462">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
