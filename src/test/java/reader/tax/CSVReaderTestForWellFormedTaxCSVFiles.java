@@ -1,18 +1,20 @@
-package reader;
+package reader.tax;
 
 import org.junit.Test;
-import reader.impl.TaxCsvRow;
+import reader.AbstractCSVReaderTest;
+import reader.Reader;
+import reader.impl.TaxCSVReaderImpl;
 
 import static org.junit.Assert.assertEquals;
 import static reader.TaxHeader.*;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class CSVReaderTestForWellFormedCSVFiles extends AbstractCSVReaderTest{
+public class CSVReaderTestForWellFormedTaxCSVFiles extends AbstractCSVReaderTest {
 
     @Override
-    public String csvFileName() {
-        return "tax.csv";
+    public Reader readerForCSV() {
+        return new TaxCSVReaderImpl("tax/tax.csv");
     }
 
     @Test

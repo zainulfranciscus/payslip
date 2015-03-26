@@ -1,11 +1,12 @@
 package builder;
 
+import reader.Row;
 import reader.impl.TaxCsvRow;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxCsvRowBuilder {
+public class TaxCsvRowBuilder implements Builder<Row>{
     private String minIncome;
     private String maxIncome;
     private String baseTax;
@@ -31,7 +32,7 @@ public class TaxCsvRowBuilder {
         return this;
     }
 
-    public TaxCsvRow build() {
+    public Row build() {
         return new TaxCsvRow(minIncome,maxIncome,baseTax,taxPerDollar);
     }
 }

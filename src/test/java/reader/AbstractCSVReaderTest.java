@@ -17,7 +17,7 @@ public abstract class  AbstractCSVReaderTest {
 
     @Before
     public void setup() throws IOException {
-        reader = new CSVReaderImpl(csvFileName());
+        reader = readerForCSV();
         row = reader.read();
     }
 
@@ -26,6 +26,6 @@ public abstract class  AbstractCSVReaderTest {
         reader.close();
     }
 
-    public abstract String csvFileName();
+    public abstract Reader readerForCSV();
 
 }

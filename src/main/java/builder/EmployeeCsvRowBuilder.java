@@ -6,7 +6,7 @@ import reader.impl.EmployeeCsvRow;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class EmployeeCsvRowBuilder {
+public class EmployeeCsvRowBuilder implements Builder<Row>{
     private String firstName;
     private String lastName;
     private String salary;
