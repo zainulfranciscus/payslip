@@ -1,6 +1,6 @@
 package org.myob.reader.impl;
 
-import org.myob.reader.CSVReaderImpl;
+import org.myob.reader.AbstractCsvReader;
 import org.myob.reader.Row;
 import org.myob.reader.TaxHeader;
 import org.myob.reader.factory.TaxCsvRowBuilder;
@@ -9,7 +9,7 @@ import org.apache.commons.csv.CSVRecord;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxCSVReaderImpl extends CSVReaderImpl {
+public class TaxCSVReaderImpl extends AbstractCsvReader {
 
     public TaxCSVReaderImpl(String fileName) {
         super(fileName);

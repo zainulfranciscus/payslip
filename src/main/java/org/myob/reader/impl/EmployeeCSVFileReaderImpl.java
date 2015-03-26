@@ -3,14 +3,14 @@ package org.myob.reader.impl;
 import org.myob.reader.factory.EmployeeCsvRowBuilder;
 import org.apache.commons.csv.CSVRecord;
 import org.myob.reader.Row;
-import org.myob.reader.CSVReaderImpl;
+import org.myob.reader.AbstractCsvReader;
 
 import static org.myob.reader.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class EmployeeCSVFileReaderImpl extends CSVReaderImpl {
+public class EmployeeCSVFileReaderImpl extends AbstractCsvReader {
     public EmployeeCSVFileReaderImpl(String fileName) {
         super(fileName);
     }

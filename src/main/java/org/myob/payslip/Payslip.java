@@ -5,24 +5,18 @@ package org.myob.payslip;
  */
 public class Payslip {
 
-    private final MONTH month;
     private final int grossIncome;
     private final int incomeTax;
     private final int netIncome;
     private final int aSuper;
 
 
-    public Payslip(MONTH month, int grossIncome, int incomeTax, int netIncome, int aSuper) {
-        this.month = month;
+    public Payslip(int grossIncome, int incomeTax, int netIncome, int aSuper) {
+
         this.grossIncome = grossIncome;
         this.incomeTax = incomeTax;
         this.netIncome = netIncome;
         this.aSuper = aSuper;
-    }
-
-
-    public MONTH getMonth() {
-        return month;
     }
 
 

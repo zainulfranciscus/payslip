@@ -7,19 +7,13 @@ import org.myob.builder.Builder;
  */
 public class PayslipBuilder implements Builder<Payslip> {
 
-    private MONTH month;
     private int grossIncome;
     private int incomeTax;
     private int netIncome;
     private int aSuper;
 
-    public PayslipBuilder withMonth(MONTH month) {
-        this.month = month;
-        return this;
-    }
-
     public Payslip build() {
-        return new Payslip(month,grossIncome,incomeTax,netIncome,aSuper);
+        return new Payslip(grossIncome,incomeTax,netIncome,aSuper);
     }
 
     public PayslipBuilder withGrossIncome(int grossIncome) {

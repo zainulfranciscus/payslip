@@ -1,13 +1,11 @@
 package org.myob.payslip;
 
 import org.joda.time.LocalDate;
-import org.myob.tax.Tax;
 import org.myob.employee.Employee;
 import org.myob.employee.EmployeePayslip;
+import org.myob.tax.Tax;
 
 import java.math.BigDecimal;
-
-import static org.myob.payslip.MONTH.numberOfMonthsAsBigDecimal;
 
 
 /**
@@ -17,6 +15,7 @@ public class EmployeePayslipImpl implements EmployeePayslip {
 
     private final Employee employee;
     private final Tax tax;
+
     private LocalDate startPeriod;
     private LocalDate endPeriod;
 
@@ -34,8 +33,13 @@ public class EmployeePayslipImpl implements EmployeePayslip {
     }
 
     @Override
-    public String timePeriod() {
-        return null;
+    public String paymentStartDate() {
+        return formatter.print(startPeriod);
+    }
+
+    @Override
+    public String paymentEndDate() {
+        return formatter.print(endPeriod);
     }
 
     @Override
@@ -45,7 +49,7 @@ public class EmployeePayslipImpl implements EmployeePayslip {
 
     @Override
     public BigDecimal grossIncomeAsBigDecimal(){
-        return employee.salaryAsBigDecimal().divide(numberOfMonthsAsBigDecimal(),ZERO_ROUND_SCALE,ROUND_DOWN);
+        return employee.salaryAsBigDecimal().divide(new BigDecimal(12),ZERO_ROUND_SCALE,ROUND_DOWN);
     }
 
     @Override
@@ -81,7 +85,7 @@ public class EmployeePayslipImpl implements EmployeePayslip {
 
     @Override
     public BigDecimal incomeTaxAsBigDecimal(){
-        return taxOnSalary().divide(numberOfMonthsAsBigDecimal(), ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
+        return taxOnSalary().divide(new BigDecimal(12), ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
     }
 
     @Override

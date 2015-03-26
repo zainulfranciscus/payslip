@@ -40,7 +40,7 @@ public class TaxCriteriaBuilderTest {
     }
 
     @Test
-    public void shouldCreateATaxCriteriaThatMatchesEmployeeWithSalaryOf12000(){
+    public void shouldBeTrueBecauseSalaryIsBetweenMinIncomeAndMaxIncome(){
         TaxCriteria taxCriteria = taxCriteriaBuilder.withEmployee(employeeBuilder.withSalary(12000).build()).build();
         assertTrue(taxCriteria.match(taxBuilder.withMinIncome(1000).withMaxIncome(20000).build()));
     }

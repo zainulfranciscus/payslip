@@ -10,12 +10,12 @@ import java.util.Iterator;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public abstract class CSVReaderImpl implements Reader {
+public abstract class AbstractCsvReader implements Reader {
 
     private String fileName;
     private java.io.Reader reader;
 
-    public CSVReaderImpl(String fileName) {
+    public AbstractCsvReader(String fileName) {
         this.fileName = fileName;
     }
 

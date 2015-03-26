@@ -1,5 +1,7 @@
 package org.myob.employee;
 
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.myob.payslip.MONTH;
 
 import java.math.BigDecimal;
@@ -11,10 +13,14 @@ public interface EmployeePayslip {
     int ROUND_UP = BigDecimal.ROUND_UP;
     int ROUND_DOWN = BigDecimal.ROUND_DOWN;
     int ZERO_ROUND_SCALE = 0;
+    public final static DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
 
     String name();
 
-    String timePeriod();
+    String paymentStartDate();
+
+    String paymentEndDate();
+
 
     int getGrossIncome();
 

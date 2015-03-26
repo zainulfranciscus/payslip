@@ -3,8 +3,6 @@ package org.myob.payslip;
 import org.myob.payslip.PayslipBuilder;
 import org.junit.Before;
 import org.junit.Test;
-import org.myob.payslip.MONTH;
-import org.myob.payslip.Payslip;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,7 +12,6 @@ import static org.junit.Assert.assertEquals;
 public class PayslipTest {
 
     private Payslip payslip;
-    private MONTH expectedMonth = MONTH.MARCH;
     private int expectedGrossIncome = 1000;
     private int expectedIncomeTax = 900;
     private int expectedNetIncome = 800;
@@ -23,32 +20,27 @@ public class PayslipTest {
     @Before
     public void setup() {
         PayslipBuilder builder = new PayslipBuilder();
-        payslip = builder.withMonth(expectedMonth).withGrossIncome(expectedGrossIncome).withIncomeTax(expectedIncomeTax).withNetIncome(expectedNetIncome).withSuper(expectedSuper).build();
+        payslip = builder.withGrossIncome(expectedGrossIncome).withIncomeTax(expectedIncomeTax).withNetIncome(expectedNetIncome).withSuper(expectedSuper).build();
 
     }
 
     @Test
-    public void shouldHaveMarchAsPayPeriod() {
-        assertEquals(expectedMonth, payslip.getMonth());
+    public void shouldBe1000AsGrossIncome() {
+        assertEquals(expectedGrossIncome, payslip.getGrossIncome());
     }
 
     @Test
-    public void shouldBe1000AsGrossIncome(){
-        assertEquals(expectedGrossIncome,payslip.getGrossIncome());
-    }
-
-    @Test
-    public void shouldBe900AsIncomeTax(){
+    public void shouldBe900AsIncomeTax() {
         assertEquals(expectedIncomeTax, payslip.getIncomeTax());
     }
 
     @Test
-    public void shouldBe800ForNetIncome(){
-        assertEquals(expectedNetIncome,payslip.getNetIncome());
+    public void shouldBe800ForNetIncome() {
+        assertEquals(expectedNetIncome, payslip.getNetIncome());
     }
 
     @Test
-    public void shouldBe700ForSuper(){
+    public void shouldBe700ForSuper() {
         assertEquals(expectedSuper, payslip.getSuper());
     }
 }
