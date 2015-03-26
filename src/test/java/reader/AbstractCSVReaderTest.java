@@ -2,7 +2,6 @@ package reader;
 
 import org.junit.After;
 import org.junit.Before;
-import reader.impl.CSVReaderImpl;
 
 import java.io.IOException;
 

@@ -1,9 +1,10 @@
 package domain;
 
-import builder.PayslipBuilder;
-import domain.Payslip.MONTH;
+import payslip.PayslipBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import payslip.MONTH;
+import payslip.Payslip;
 
 import static org.junit.Assert.assertEquals;
 

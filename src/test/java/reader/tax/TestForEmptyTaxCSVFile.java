@@ -11,7 +11,7 @@ public class TestForEmptyTaxCSVFile extends AbstractTestThatWillReturnNullRow {
 
     @Override
     public Reader readerForCSV() {
-        return new TaxCSVReaderImpl("tax/emptyTax.csv");
+        return new TaxCSVReaderImpl("emptyFile.csv");
     }
 
 }
