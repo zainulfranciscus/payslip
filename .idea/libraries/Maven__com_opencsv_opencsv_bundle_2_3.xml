@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.opencsv:opencsv:bundle:2.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/2.3/opencsv-2.3.bundle!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/2.3/opencsv-2.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/2.3/opencsv-2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

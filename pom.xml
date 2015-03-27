@@ -19,6 +19,7 @@
         <apache.common.csv.version>1.1</apache.common.csv.version>
         <apache.common.lang.version>3.3.2</apache.common.lang.version>
         <jodatime.version>2.7</jodatime.version>
+
     </properties>
 
     <dependencies>
@@ -28,6 +29,7 @@
             <artifactId>joda-time</artifactId>
             <version>${jodatime.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.apache.commons</groupId>

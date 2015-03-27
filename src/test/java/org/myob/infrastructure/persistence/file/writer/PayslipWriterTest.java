@@ -7,11 +7,11 @@ import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.model.employee.Payslip;
 import org.myob.domain.model.payslip.PayslipFactoryImpl;
-import org.myob.infrastructure.persistence.file.writer.PayslipWriterImpl;
-import org.myob.service.PayslipWriter;
 import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.tax.TaxBuilder;
+import org.myob.service.PayslipWriter;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 
@@ -38,10 +38,6 @@ public class PayslipWriterTest {
     @Before
     public void setup() {
 
-        writer = new StringWriter();
-
-        payslipWriter = new PayslipWriterImpl();
-        payslipWriter.setWriter(writer);
 
         firstName = "Joe";
         lastName = "blogg";
@@ -76,6 +72,13 @@ public class PayslipWriterTest {
 
     @Test
     public void fullName_payPeriod_grossIncome_incomeTax_netIncome_super_shouldBeSeparatedByCommaAndEndedWithNewLine() throws IOException {
+
+        writer = new StringWriter();
+
+        payslipWriter = new PayslipWriterImpl();
+        payslipWriter.setWriter(writer);
+
+
         Payslip payslip = new PayslipFactoryImpl().createWith(firstJan2015, thirty1stDec2015, employee, tax);
 
         String expectedOutput = payslip.getEmployeeName()
@@ -95,6 +98,15 @@ public class PayslipWriterTest {
 
         assertEquals(expectedOutput,writer.getBuffer().toString());
 
+    }
+
+    @Test
+    public void test() throws IOException {
+        payslipWriter = new PayslipWriterImpl();
+        payslipWriter.setWriter(new FileWriter("E:\\output.csv",true));
+
+        Payslip payslip = new PayslipFactoryImpl().createWith(firstJan2015, thirty1stDec2015, employee, tax);
+        payslipWriter.write(payslip);
     }
 
 

@@ -2,7 +2,7 @@ package org.myob.infrastructure.persistence.impl;
 
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
-import org.myob.infrastructure.persistence.EmployeeSpecification;
+import org.myob.service.EmployeeSpecification;
 import org.myob.infrastructure.persistence.Reader;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.domain.model.employee.EmployeeRepository;
@@ -54,5 +54,10 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         reader.close();
 
         return employees;
+    }
+
+    @Override
+    public int countNumberOfEmployees() {
+        return 0;
     }
 }

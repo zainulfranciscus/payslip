@@ -8,6 +8,7 @@ import org.myob.domain.model.employee.EmployeeRepository;
 import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.persistence.impl.EmployeeRepositoryImpl;
+import org.myob.service.EmployeeSpecification;
 
 import java.io.IOException;
 import java.util.ArrayList;

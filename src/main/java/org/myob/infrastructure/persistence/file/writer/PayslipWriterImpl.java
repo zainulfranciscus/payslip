@@ -30,6 +30,8 @@ public class PayslipWriterImpl implements PayslipWriter {
                 payslip.getIncomeTax(),
                 payslip.netIncome(),
                 payslip.getSuper());
+        csvPrinter.flush();
+        csvPrinter.close();
 
     }
 }

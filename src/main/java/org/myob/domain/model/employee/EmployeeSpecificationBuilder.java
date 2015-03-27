@@ -1,6 +1,6 @@
 package org.myob.domain.model.employee;
 
-import org.myob.infrastructure.persistence.EmployeeSpecification;
+import org.myob.service.EmployeeSpecification;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.
@@ -14,8 +14,6 @@ public class EmployeeSpecificationBuilder {
         this.numberOfLineRead = numberOfLineRead;
         return this;
     }
-
-
 
     public EmployeeSpecificationBuilder withMaxNumberOfLinesShouldBeRead(int maxNumberOfLineRead) {
         this.maxNumberOfLinesShouldBeRead = maxNumberOfLineRead;

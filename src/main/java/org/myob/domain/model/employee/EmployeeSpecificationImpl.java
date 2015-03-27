@@ -1,7 +1,7 @@
 package org.myob.domain.model.employee;
 
 import org.apache.commons.lang3.StringUtils;
-import org.myob.infrastructure.persistence.EmployeeSpecification;
+import org.myob.service.EmployeeSpecification;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.

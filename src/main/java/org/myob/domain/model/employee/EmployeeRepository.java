@@ -1,6 +1,6 @@
 package org.myob.domain.model.employee;
 
-import org.myob.infrastructure.persistence.EmployeeSpecification;
+import org.myob.service.EmployeeSpecification;
 import org.myob.infrastructure.persistence.Reader;
 
 import java.io.IOException;
@@ -14,4 +14,6 @@ public interface EmployeeRepository {
     void setReader(Reader reader);
 
     List<Employee> find(EmployeeSpecification specification) throws IOException;
+
+    int countNumberOfEmployees();
 }
