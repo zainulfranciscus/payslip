@@ -56,14 +56,12 @@ public class Employee {
     }
 
     public String getFullName() {
-
         return StringUtils.trimToEmpty(StringUtils.trimToEmpty(firstName) + " " + StringUtils.trimToEmpty(lastName));
     }
 
     public int getSalary() {
         return salary;
     }
-
 
     public int getSuper() {
         return aSuper;

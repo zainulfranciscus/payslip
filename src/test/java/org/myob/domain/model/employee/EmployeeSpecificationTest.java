@@ -12,11 +12,14 @@ import static org.junit.Assert.assertFalse;
  */
 public class EmployeeSpecificationTest {
 
-    private Specification<Employee> employeeSpecification = new EmployeeSpecificationImpl();
+    private Specification<Employee> employeeSpecification;
     private EmployeeBuilder employeeBuilder;
 
     @Before
     public void setup() {
+
+        employeeSpecification = new EmployeeSpecificationBuilder().withLineNumberOfRead(0).build();
+
         employeeBuilder = new EmployeeBuilder()
                 .withFirstName("Joe")
                 .withLastName("Blogg")

@@ -2,7 +2,7 @@ package org.myob.infrastructure.persistence.impl;
 
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
-import org.myob.domain.model.employee.EmployeeSpecificationImpl;
+import org.myob.infrastructure.persistence.EmployeeSpecification;
 import org.myob.infrastructure.persistence.Reader;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.domain.model.employee.EmployeeRepository;
@@ -26,12 +26,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> find(EmployeeSpecificationImpl specification) throws IOException {
+    public List<Employee> find(EmployeeSpecification specification) throws IOException {
         Row row = null;
 
         List<Employee> employees = new ArrayList<Employee>();
 
-        while((row = reader.read()) != null) {
+        while((row = reader.read()) != null && !specification.hasReadTheAllowedNumberOfLines()) {
             Employee employee = new EmployeeBuilder()
                     .withEndOfPaymentDate(row.getInt(END_PAYMENT_DATE))
                     .withEndOfPaymentMonth(row.getInt(END_PAYMENT_MONTH))
@@ -47,6 +47,8 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             if (specification.match(employee)) {
                 employees.add(employee);
             }
+
+            specification.incrementNumberOfLineRead();
         }
 
         reader.close();

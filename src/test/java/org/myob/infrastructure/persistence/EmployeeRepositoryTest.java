@@ -1,14 +1,16 @@
 package org.myob.infrastructure.persistence;
 
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeRepository;
-import org.myob.domain.model.employee.EmployeeSpecificationImpl;
+import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.persistence.impl.EmployeeRepositoryImpl;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -26,7 +28,7 @@ public class EmployeeRepositoryTest {
     private Row mockRow;
     private List<Employee> employees;
     private Employee employee;
-    private EmployeeSpecificationImpl employeeSpecification;
+    private EmployeeSpecification employeeSpecification;
 
     private int january;
     private int year2015;
@@ -39,6 +41,9 @@ public class EmployeeRepositoryTest {
     private String expectedLastName;
     private int expectedSuper;
 
+    private LocalDate expectedStartDate;
+    private LocalDate expectedEndDate;
+
     @Before
     public void setup() throws IOException {
 
@@ -48,6 +53,10 @@ public class EmployeeRepositoryTest {
         year2014 = 2014;
         thirty1st = 31;
         first = 1;
+
+        expectedStartDate = new LocalDate(year2014,january,first);
+        expectedEndDate = new LocalDate(year2015, december,thirty1st);
+
         expectedSalary = 12000;
         expectedFirstName = "Joe";
         expectedLastName = "Blogg";
@@ -56,77 +65,90 @@ public class EmployeeRepositoryTest {
         mockRow = mock(Row.class);
 
         when(mockRow.getInt(ANNUAL_SALARY)).thenReturn(expectedSalary);
-        when(mockRow.getInt(END_PAYMENT_DATE)).thenReturn(thirty1st);
-        when(mockRow.getInt(END_PAYMENT_MONTH)).thenReturn(december);
-        when(mockRow.getInt(END_PAYMENT_YEAR)).thenReturn(year2015);
-        when(mockRow.getInt(START_PAYMENT_DATE)).thenReturn(first);
-        when(mockRow.getInt(START_PAYMENT_MONTH)).thenReturn(january);
-        when(mockRow.getInt(START_PAYMENT_YEAR)).thenReturn(year2014);
+        when(mockRow.getInt(END_PAYMENT_DATE)).thenReturn(expectedEndDate.getDayOfMonth());
+        when(mockRow.getInt(END_PAYMENT_MONTH)).thenReturn(expectedEndDate.getMonthOfYear());
+        when(mockRow.getInt(END_PAYMENT_YEAR)).thenReturn(expectedEndDate.getYear());
+        when(mockRow.getInt(START_PAYMENT_DATE)).thenReturn(expectedStartDate.getDayOfMonth());
+        when(mockRow.getInt(START_PAYMENT_MONTH)).thenReturn(expectedStartDate.getMonthOfYear());
+        when(mockRow.getInt(START_PAYMENT_YEAR)).thenReturn(expectedStartDate.getYear());
         when(mockRow.get(FIRST_NAME)).thenReturn(expectedFirstName);
         when(mockRow.get(LAST_NAME)).thenReturn(expectedLastName);
         when(mockRow.get(SUPER_RATE)).thenReturn(String.valueOf(expectedSuper).concat("%"));
 
-
         mockReader = mock(Reader.class);
-        when(mockReader.read()).thenReturn(mockRow,null);
+
 
         employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(mockReader);
 
-        employeeSpecification = new EmployeeSpecificationImpl();
+    }
+
+    @Test
+    public void shouldHaveTheExpected_StartDate_EndDate_FirstName_LastName_Super_Salary_ForAll10Employees() throws IOException {
+
+        int numberOfMockRows = 20;
+        int maxNumberOfEmployeesThatShouldBeRead = 10;
+
+        when(mockReader.read()).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
+        employeeSpecification = new  EmployeeSpecificationBuilder().withMaxNumberOfLinesShouldBeRead(maxNumberOfEmployeesThatShouldBeRead).build();
         employees = employeeRepository.find(employeeSpecification);
-        employee = employees.get(0);
 
+        assertEquals(maxNumberOfEmployeesThatShouldBeRead, employees.size());
+        for(Employee employee: employees){
+
+            AssertThat assertThat = new AssertThat();
+            assertThat.hasExpectedEndDate(employee)
+                    .hasExpectedFirstName(employee)
+                    .hasExpectedLastName(employee)
+                    .hasExpectedSalary(employee)
+                    .hasExpectedStartDate(employee)
+                    .hasExpectedSuper(employee);
+        }
+        assertEquals(maxNumberOfEmployeesThatShouldBeRead,employeeSpecification.numberOfLineRead());
     }
 
-    @Test
-    public void shouldReturnJanuaryAsStartingMonth(){
-        assertEquals(january, employee.getStartOfPaymentMonth());
+    private Row[] listOfRowsWithNullObjectAsTheLastRow(int numberOfMockRow){
+
+        List<Row> mockRows = new ArrayList<Row>();
+        for(int i = 0; i < numberOfMockRow; i++){
+            mockRows.add(mockRow);
+        }
+        mockRows.add(null);
+
+
+        return mockRows.toArray(new Row[mockRows.size()]);
     }
 
-    @Test
-    public void shouldReturnDecemberAsEndMonth(){
-        assertEquals(december,employee.getEndOfPaymentMonth());
-    }
+    class AssertThat {
 
-    @Test
-    public void shouldReturnYear2014AsStartingYear(){
-        assertEquals(year2014, employee.getStartOfPaymentYear());
-    }
+        public AssertThat hasExpectedStartDate(Employee employee){
+            assertEquals(expectedStartDate,employee.getPaymentStartDate());
+            return this;
+        }
 
-    @Test
-    public void shouldReturnYear2015AsEndYear(){
-        assertEquals(year2015, employee.getEndOfPaymentYear());
-    }
+        public AssertThat hasExpectedEndDate(Employee employee){
+            assertEquals(expectedEndDate,employee.getPaymentEndDate());
+            return this;
+        }
 
-    @Test
-    public void shouldReturnThirty1stForEndPaymentDate(){
-        assertEquals(thirty1st, employee.getEndOfPaymentDate());
-    }
+        public AssertThat hasExpectedFirstName(Employee employee){
+            assertEquals(expectedFirstName,employee.getFirstName());
+            return this;
+        }
 
-    @Test
-    public void shouldReturnFirstForStartPaymentDate(){
-        assertEquals(first,employee.getStartOfPaymentDate());
-    }
+        public AssertThat hasExpectedLastName(Employee employee){
+            assertEquals(expectedLastName, employee.getLastName());
+            return this;
+        }
 
-    @Test
-    public void shouldReturnExpectedSalary(){
-        assertEquals(expectedSalary,employee.getSalary());
-    }
+        public AssertThat hasExpectedSuper(Employee employee){
+            assertEquals(expectedSuper, employee.getSuper());
+            return this;
+        }
 
-    @Test
-    public void shouldReturnExpectedFirstName(){
-        assertEquals(expectedFirstName,employee.getFirstName());
+        public AssertThat hasExpectedSalary(Employee employee){
+            assertEquals(expectedSalary,employee.getSalary());
+            return this;
+        }
     }
-
-    @Test
-    public void shouldReturnExpectedLastName(){
-        assertEquals(expectedLastName,employee.getLastName());
-    }
-
-    @Test
-    public void shouldReturnExpectedSuper(){
-        assertEquals(expectedSuper,employee.getSuper());
-    }
-
 }
