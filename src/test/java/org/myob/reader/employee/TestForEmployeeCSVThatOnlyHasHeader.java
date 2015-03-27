@@ -2,7 +2,7 @@ package org.myob.reader.employee;
 
 import org.myob.reader.AbstractTestThatWillReturnNullRow;
 import org.myob.reader.impl.EmployeeCSVFileReaderImpl;
-import org.myob.reader.Reader;
+import org.myob.repository.Reader;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.

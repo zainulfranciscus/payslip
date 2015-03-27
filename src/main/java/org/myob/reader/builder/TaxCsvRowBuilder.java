@@ -1,4 +1,4 @@
-package org.myob.reader.factory;
+package org.myob.reader.builder;
 
 import org.myob.builder.Builder;
 import org.myob.reader.Row;

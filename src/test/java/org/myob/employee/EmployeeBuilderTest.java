@@ -22,26 +22,26 @@ public class EmployeeBuilderTest {
     }
 
     @Test
-    public void shouldCreateEmployeeWithJoeAsFirstName(){
+    public void shouldCreateEmployeeWithTheExpectedFirstName(){
         String expectedFirstName = "Joe";
         assertEquals(expectedFirstName, employeeBuilder.withFirstName(expectedFirstName).build().getFirstName());
     }
 
     @Test
-    public void shouldCreateEmployeeWithBloggAsLastName(){
+    public void shouldCreateEmployeeWithTheExpectedLastName(){
         String expectedLastName = "Blogg";
         assertEquals(expectedLastName, employeeBuilder.withLastName(expectedLastName).build().getLastName());
     }
 
     @Test
-    public void shouldCreateEmployeeWith10AsSuper(){
+    public void shouldCreateEmployeeWithTheExpectedSuper(){
         int expectedSuper = 10;
         assertEquals(expectedSuper, employeeBuilder.withSuper(expectedSuper).build().getSuper());
 
     }
 
     @Test
-    public void shouldCreateEmployeeWith1500AsSalary(){
+    public void shouldCreateEmployeeWithTheExpectedSalary(){
         int expectedSalary = 1500;
         assertEquals(expectedSalary, employeeBuilder.withSalary(expectedSalary).build().getSalary());
     }
@@ -81,5 +81,23 @@ public class EmployeeBuilderTest {
     public void endOfPaymentDateShouldBe3DaysFromNow(){
         int threeDaysFromNow = localDate.getDayOfMonth() + 3;
         assertEquals(threeDaysFromNow, employeeBuilder.withEndOfPaymentDate(threeDaysFromNow).build().getEndOfPaymentDate());
+    }
+
+    @Test
+    public void shouldReturnTheNumericalValueOfTheExpectedSuper(){
+        String superRate = "10%";
+        assertEquals(10, employeeBuilder.withSuperRate(superRate).build().getSuper());
+    }
+
+    @Test
+    public void shouldReturnZeroWhenSuperIsBlank(){
+        String superRate = "";
+        assertEquals(0,employeeBuilder.withSuperRate(superRate).build().getSuper());
+    }
+
+    @Test
+    public void shouldReturnZeroWhenSuperIsNotANumber(){
+        String superRate = "abc";
+        assertEquals(0,employeeBuilder.withSuperRate(superRate).build().getSuper());
     }
 }

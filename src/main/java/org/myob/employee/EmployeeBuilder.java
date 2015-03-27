@@ -1,5 +1,7 @@
 package org.myob.employee;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.myob.builder.Builder;
 
 /**
@@ -65,6 +67,18 @@ public class EmployeeBuilder implements Builder<Employee> {
         return this;
     }
 
+    public EmployeeBuilder withEndOfPaymentDate(int endOfPaymentDate) {
+        this.endOfPaymentDate = endOfPaymentDate;
+        return this;
+    }
+
+    public EmployeeBuilder withSuperRate(String superRate) {
+        superRate = StringUtils.removePattern(superRate, "[^\\d+]");
+        int superRateAsInt = NumberUtils.toInt(superRate);
+        this.aSuper = superRateAsInt;
+        return this;
+    }
+
     public Employee build() {
         return new Employee(firstName,
                 lastName,
@@ -76,10 +90,5 @@ public class EmployeeBuilder implements Builder<Employee> {
                 endOfPaymentYear,
                 endOfPaymentMonth,
                 endOfPaymentDate);
-    }
-
-    public EmployeeBuilder withEndOfPaymentDate(int endOfPaymentDate) {
-        this.endOfPaymentDate = endOfPaymentDate;
-        return this;
     }
 }

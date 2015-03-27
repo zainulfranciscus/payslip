@@ -5,9 +5,8 @@ import org.myob.employee.EmployeeBuilder;
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.reader.Row;
-import org.myob.reader.Reader;
 import org.myob.repository.impl.TaxRepositoryImpl;
-import org.myob.tax.TaxCriteriaBuilder;
+import org.myob.tax.TaxSpecificationBuilder;
 
 import java.io.IOException;
 
@@ -28,7 +27,7 @@ public class TaxRepositoryTest {
     private int maxIncomeForThisTax;
     private int minIncomeForThisTax;
     private int taxPerDollarForThisTax;
-    private Criteria taxFor15000AsSalary;
+    private Specification taxFor15000AsSalary;
     private EmployeeBuilder employeeBuilder;
 
     @Before
@@ -48,7 +47,7 @@ public class TaxRepositoryTest {
 
         Employee employee = employeeBuilder.withSalary(15000).build();
 
-        taxFor15000AsSalary = new TaxCriteriaBuilder().withEmployee(employee).build();
+        taxFor15000AsSalary = new TaxSpecificationBuilder().withEmployee(employee).build();
 
         setMockRowBehavior();
 
@@ -83,7 +82,7 @@ public class TaxRepositoryTest {
     @Test
     public void shouldBeNullWhenSalaryIsAboveMaxIncomeForThisTax() throws IOException {
         Employee employee = employeeBuilder.withSalary(maxIncomeForThisTax + 2000).build();
-        Criteria aboveMaxIncome = new TaxCriteriaBuilder().withEmployee(employee).build();
+        Specification aboveMaxIncome = new TaxSpecificationBuilder().withEmployee(employee).build();
         assertNull(taxRepository.find(aboveMaxIncome));
     }
 

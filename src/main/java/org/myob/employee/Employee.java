@@ -1,5 +1,8 @@
 package org.myob.employee;
 
+import org.apache.commons.lang3.StringUtils;
+import org.joda.time.LocalDate;
+
 import java.math.BigDecimal;
 
 /**
@@ -53,7 +56,7 @@ public class Employee {
 
     public String getFullName() {
 
-        return firstName + " " + lastName;
+        return StringUtils.trimToEmpty(StringUtils.trimToEmpty(firstName) + " " + StringUtils.trimToEmpty(lastName));
     }
 
     public int getSalary() {
@@ -99,5 +102,13 @@ public class Employee {
 
     public int getEndOfPaymentDate() {
         return this.endOfPaymentDate;
+    }
+
+    public LocalDate getPaymentStartDate(){
+        return new LocalDate(this.paymentStartingYear, this.paymentStartingMonth, this.paymentStartDate);
+    }
+
+    public LocalDate getPaymentEndDate() {
+        return new LocalDate(this.endOfPaymentYear, this.endOfPaymentMonth, this.endOfPaymentDate);
     }
 }

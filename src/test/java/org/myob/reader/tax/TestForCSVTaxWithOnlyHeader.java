@@ -1,7 +1,7 @@
 package org.myob.reader.tax;
 
 import org.myob.reader.AbstractTestThatWillReturnNullRow;
-import org.myob.reader.Reader;
+import org.myob.repository.Reader;
 import org.myob.reader.impl.TaxCSVReaderImpl;
 
 import static org.junit.Assert.assertNull;

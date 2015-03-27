@@ -2,6 +2,7 @@ package org.myob.reader;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.myob.repository.Reader;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

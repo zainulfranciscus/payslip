@@ -3,7 +3,7 @@ package org.myob.reader.employee;
 import org.junit.Test;
 import org.myob.reader.AbstractCSVReaderTest;
 import org.myob.reader.impl.EmployeeCSVFileReaderImpl;
-import org.myob.reader.Reader;
+import org.myob.repository.Reader;
 
 import static org.junit.Assert.assertEquals;
 import static org.myob.reader.EmployeeHeader.*;

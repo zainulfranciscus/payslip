@@ -28,8 +28,9 @@ public class EmployeePayslipImpl implements EmployeePayslip {
     }
 
     @Override
-    public String name() {
-        return employee.getFullName();
+    public String payPeriod() {
+
+        return paymentStartDate() + " " + paymentEndDate();
     }
 
     @Override

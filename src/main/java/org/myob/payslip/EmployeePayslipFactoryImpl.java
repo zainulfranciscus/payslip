@@ -16,4 +16,5 @@ public class EmployeePayslipFactoryImpl implements EmployeePayslipFactory {
     public EmployeePayslip createWith(LocalDate startPeriod, LocalDate endPeriod, Employee employee, Tax tax) {
         return new EmployeePayslipImpl(startPeriod,endPeriod,employee,tax);
     }
+
 }

@@ -1,4 +1,6 @@
-package org.myob.reader;
+package org.myob.repository;
+
+import org.myob.reader.Row;
 
 import java.io.IOException;
 

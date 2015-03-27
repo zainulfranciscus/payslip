@@ -34,7 +34,7 @@ public class EmployeePayslipFactoryTest {
     public static void setup() {
 
         tax = new TaxBuilder().withBaseTax(2000).withMaxIncome(13000).withMinIncome(7000).withTaxPerDollar(100).build();
-        employee = new EmployeeBuilder().withFirstName("Joe").withSalary(12000).build();
+        employee = new EmployeeBuilder().withFirstName("Joe").withLastName("Blogg").withSalary(12000).build();
 
         startPeriod = new LocalDate(2015, 01, 01);
         endPeriod = new LocalDate(2015, 10, 31);
@@ -50,7 +50,7 @@ public class EmployeePayslipFactoryTest {
     }
 
     @Test
-    public void grossIncomeSholdBeSalaryDividedByMonthsInAYear() {
+    public void grossIncomeShouldBeSalaryDividedByMonthsInAYear() {
         assertEquals(employee.salaryAsBigDecimal().divide(new BigDecimal(12), ZERO_ROUND_SCALE, ROUND_DOWN).intValue(), employeePayslip.getGrossIncome());
     }
 

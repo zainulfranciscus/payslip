@@ -1,6 +1,6 @@
 package org.myob.reader.impl;
 
-import org.myob.reader.factory.EmployeeCsvRowBuilder;
+import org.myob.reader.builder.EmployeeCsvRowBuilder;
 import org.apache.commons.csv.CSVRecord;
 import org.myob.reader.Row;
 import org.myob.reader.AbstractCsvReader;

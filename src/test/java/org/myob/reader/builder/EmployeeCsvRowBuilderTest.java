@@ -1,9 +1,8 @@
-package org.myob.reader.factory;
+package org.myob.reader.builder;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.reader.Row;
-import org.myob.reader.factory.EmployeeCsvRowBuilder;
 
 import static org.junit.Assert.assertEquals;
 import static org.myob.reader.EmployeeHeader.*;

@@ -1,19 +1,18 @@
-package org.myob.repository.impl;
+package org.myob.tax;
 
 import org.joda.time.LocalDate;
-import org.myob.tax.Tax;
-import org.myob.repository.Criteria;
+import org.myob.repository.Specification;
 
 /**
- * Created by Lenovo on 26/03/2015.
+ * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxCriteria implements Criteria {
+public class TaxSpecificationImpl implements Specification<Tax> {
 
     private int salary;
     private LocalDate employeePaymentStartDate;
     private LocalDate employeePaymentEndDate;
 
-    public TaxCriteria(int salary, LocalDate startDate, LocalDate endDate){
+    public TaxSpecificationImpl(int salary, LocalDate startDate, LocalDate endDate){
         this.salary = salary;
         this.employeePaymentEndDate=endDate;
         this.employeePaymentStartDate=startDate;

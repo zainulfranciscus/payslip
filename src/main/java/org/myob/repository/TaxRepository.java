@@ -1,7 +1,6 @@
 package org.myob.repository;
 
 import org.myob.tax.Tax;
-import org.myob.reader.Reader;
 
 import java.io.IOException;
 
@@ -10,8 +9,7 @@ import java.io.IOException;
  */
 public interface TaxRepository {
 
-    Tax find(Criteria criteria) throws IOException;
+    Tax find(Specification specification) throws IOException;
 
-
-    void setReader(Reader mockReader);
+    void setReader(Reader reader);
 }

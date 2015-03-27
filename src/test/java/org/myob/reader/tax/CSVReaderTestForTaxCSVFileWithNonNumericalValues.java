@@ -2,7 +2,7 @@ package org.myob.reader.tax;
 
 import org.junit.Test;
 import org.myob.reader.AbstractCSVReaderTest;
-import org.myob.reader.Reader;
+import org.myob.repository.Reader;
 import org.myob.reader.impl.TaxCSVReaderImpl;
 
 import static org.junit.Assert.assertEquals;

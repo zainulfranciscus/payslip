@@ -3,8 +3,8 @@ package org.myob.repository.impl;
 import org.myob.tax.TaxBuilder;
 import org.myob.tax.Tax;
 import org.myob.reader.Row;
-import org.myob.reader.Reader;
-import org.myob.repository.Criteria;
+import org.myob.repository.Reader;
+import org.myob.repository.Specification;
 import org.myob.repository.TaxRepository;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class TaxRepositoryImpl implements TaxRepository {
     private Reader reader;
 
     @Override
-    public Tax find(Criteria criteria) throws IOException {
+    public Tax find(Specification specification) throws IOException {
         Row row = null;
 
         while((row = reader.read()) != null) {
@@ -30,10 +30,11 @@ public class TaxRepositoryImpl implements TaxRepository {
                     .withStartingMonth(row.getInt(STARTING_MONTH))
                     .withStartingYear(row.getInt(STARTING_YEAR))
                     .build();
-            if (criteria.match(tax)) {
+            if (specification.match(tax)) {
                 return tax;
             }
         }
+        reader.close();
 
         return null;
     }

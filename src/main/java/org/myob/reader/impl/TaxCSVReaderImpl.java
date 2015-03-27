@@ -3,7 +3,7 @@ package org.myob.reader.impl;
 import org.myob.reader.AbstractCsvReader;
 import org.myob.reader.Row;
 import org.myob.reader.TaxHeader;
-import org.myob.reader.factory.TaxCsvRowBuilder;
+import org.myob.reader.builder.TaxCsvRowBuilder;
 import org.apache.commons.csv.CSVRecord;
 
 /**

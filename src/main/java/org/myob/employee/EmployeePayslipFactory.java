@@ -1,7 +1,6 @@
 package org.myob.employee;
 
 import org.joda.time.LocalDate;
-import org.myob.payslip.MONTH;
 import org.myob.tax.Tax;
 
 /**

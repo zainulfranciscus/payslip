@@ -2,8 +2,7 @@ package org.myob.reader;
 
 import org.junit.After;
 import org.junit.Before;
-import org.myob.reader.Reader;
-import org.myob.reader.Row;
+import org.myob.repository.Reader;
 
 import java.io.IOException;
 

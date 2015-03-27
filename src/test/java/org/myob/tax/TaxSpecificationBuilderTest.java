@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.myob.employee.Employee;
 import org.myob.employee.EmployeeBuilder;
 import org.junit.Test;
-import org.myob.repository.impl.TaxCriteria;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -12,16 +11,16 @@ import static org.junit.Assert.assertFalse;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxCriteriaBuilderTest {
+public class TaxSpecificationBuilderTest {
 
-    private TaxCriteriaBuilder taxCriteriaBuilder;
+    private TaxSpecificationBuilder taxSpecificationBuilder;
     private TaxBuilder taxBuilder;
     private EmployeeBuilder employeeBuilder;
 
     @Before
     public void setup(){
 
-        taxCriteriaBuilder = new TaxCriteriaBuilder();
+        taxSpecificationBuilder = new TaxSpecificationBuilder();
 
         employeeBuilder = new EmployeeBuilder()
                 .withEndOfPaymentDate(31)
@@ -41,13 +40,13 @@ public class TaxCriteriaBuilderTest {
 
     @Test
     public void shouldBeTrueBecauseSalaryIsBetweenMinIncomeAndMaxIncome(){
-        TaxCriteria taxCriteria = taxCriteriaBuilder.withEmployee(employeeBuilder.withSalary(12000).build()).build();
+        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(12000).build()).build();
         assertTrue(taxCriteria.match(taxBuilder.withMinIncome(1000).withMaxIncome(20000).build()));
     }
 
     @Test
     public void shouldNotMatchTaxBecauseSalaryIsAboveMaxIncome(){
-        TaxCriteria taxCriteria = taxCriteriaBuilder.withEmployee(employeeBuilder.withSalary(15000).build()).build();
+        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(15000).build()).build();
         assertFalse(taxCriteria.match(taxBuilder.withMinIncome(500).withMaxIncome(1000).build()));
     }
 
@@ -63,7 +62,7 @@ public class TaxCriteriaBuilderTest {
                 .withStartingYear(2015)
                 .build();
 
-        TaxCriteria taxCriteria = taxCriteriaBuilder.withEmployee(employee).build();
+        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employee).build();
         assertTrue(taxCriteria.match(tax));
     }
 

@@ -1,7 +1,7 @@
 package org.myob.service;
 
 import org.joda.time.LocalDate;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.myob.employee.Employee;
@@ -9,14 +9,13 @@ import org.myob.employee.EmployeeBuilder;
 import org.myob.employee.EmployeePayslip;
 import org.myob.employee.EmployeePayslipFactory;
 import org.myob.payslip.EmployeePayslipFactoryImpl;
-import org.myob.payslip.MONTH;
-import org.myob.repository.Criteria;
+import org.myob.repository.Specification;
 import org.myob.repository.TaxRepository;
-import org.myob.repository.impl.TaxCriteria;
+import org.myob.tax.TaxSpecificationImpl;
 import org.myob.service.impl.EmployeeServiceImpl;
 import org.myob.tax.Tax;
 import org.myob.tax.TaxBuilder;
-import org.myob.tax.TaxCriteriaBuilder;
+import org.myob.tax.TaxSpecificationBuilder;
 
 import java.io.IOException;
 
@@ -28,18 +27,19 @@ import static org.mockito.Mockito.*;
  */
 public class EmployeeServiceTest {
 
-    private EmployeeService employeeService;
-    private TaxRepository mockTaxRepository;
-    private EmployeeBuilder employeeBuilder = new EmployeeBuilder();
-    private Employee employee;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private static EmployeeService employeeService;
+    private static TaxRepository mockTaxRepository;
+    private static EmployeeBuilder employeeBuilder = new EmployeeBuilder();
+    private static Employee employee;
+    private static LocalDate startDate;
+    private static LocalDate endDate;
+    private static EmployeePayslip employeePayslip;
 
-    @Before
-    public void setup(){
+    @BeforeClass
+    public static void setup() throws IOException {
 
-        startDate = new LocalDate(2015,01,01);
-        endDate = new LocalDate(2015,10,01);
+        startDate = new LocalDate(2015, 01, 01);
+        endDate = new LocalDate(2015, 10, 01);
 
         mockTaxRepository = mock(TaxRepository.class);
         employeeBuilder = new EmployeeBuilder();
@@ -58,37 +58,33 @@ public class EmployeeServiceTest {
                 .withEndOfPaymentYear(2015)
                 .build();
 
+        employeePayslip = employeeService.payslip(startDate, endDate, employee);
+
     }
 
     @Test
     public void shouldReturnAPayslipWithTheExpectedFullName() throws IOException {
+        assertEquals(employeeBuilder.build().getFullName(), employeePayslip.getEmployeeName());
+    }
 
-        EmployeePayslip payslip = employeeService.payslip(startDate,endDate,employee);
-        assertEquals(employeeBuilder.build().getFullName(), payslip.getEmployeeName());
-
+    @Test
+    public void shouldHavePayPeriodFromStartDateToEndDate() {
+        assertEquals(EmployeePayslip.formatter.print(startDate) + " " + EmployeePayslip.formatter.print(endDate), employeePayslip.payPeriod());
     }
 
     @Test
     public void payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months() throws IOException {
 
         Tax expectedTaxForThisEmployee = new TaxBuilder().withMaxIncome(20000).withMinIncome(10).withBaseTax(2500).build();
-        TaxCriteria expectedCriteriaUsedByRepository = new TaxCriteriaBuilder().withEmployee(employee).build();
-
-        LocalDate startDate = new LocalDate(2015,01,01);
-        LocalDate endDate = new LocalDate(2015,10,01);
+        TaxSpecificationImpl expectedCriteriaUsedByRepository = new TaxSpecificationBuilder().withEmployee(employee).build();
 
         EmployeePayslipFactory payslipFactory = new EmployeePayslipFactoryImpl();
-        EmployeePayslip employeePayslip = payslipFactory.createWith(startDate,endDate, employee,expectedTaxForThisEmployee);
+        EmployeePayslip employeePayslip = payslipFactory.createWith(startDate, endDate, employee, expectedTaxForThisEmployee);
 
         when(mockTaxRepository.find(expectedCriteriaUsedByRepository)).thenReturn(expectedTaxForThisEmployee);
 
-        EmployeePayslip payslip = employeeService.payslip(startDate,endDate,employee);
-
-        assertEquals(employeePayslip.getGrossIncome(), payslip.getGrossIncome());
-        verify(mockTaxRepository, times(1)).find(Mockito.any(Criteria.class));
+        assertEquals(employeePayslip.getGrossIncome(), employeePayslip.getGrossIncome());
+        verify(mockTaxRepository, times(1)).find(Mockito.any(Specification.class));
 
     }
-
-
-
 }

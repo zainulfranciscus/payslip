@@ -5,7 +5,7 @@ import org.myob.tax.Tax;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public interface Criteria {
+public interface Specification<T> {
 
-    boolean match(Tax tax);
+    boolean match(T t);
 }
