@@ -1,0 +1,35 @@
+package org.myob.infrastructure.persistence.file.writer;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+import org.myob.domain.model.employee.Payslip;
+import org.myob.service.PayslipWriter;
+
+import java.io.IOException;
+import java.io.Writer;
+
+/**
+ * Created by Zainul Franciscus on 27/03/2015.
+ */
+public class PayslipWriterImpl implements PayslipWriter {
+
+    private Writer writer;
+    private CSVPrinter csvPrinter;
+
+    @Override
+    public void setWriter(Writer writer) {
+        this.writer = writer;
+    }
+
+    @Override
+    public void write(Payslip payslip) throws IOException {
+        csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE));
+        csvPrinter.printRecord(payslip.getEmployeeName(),
+                payslip.payPeriod(),
+                payslip.getGrossIncome(),
+                payslip.getIncomeTax(),
+                payslip.netIncome(),
+                payslip.getSuper());
+
+    }
+}
