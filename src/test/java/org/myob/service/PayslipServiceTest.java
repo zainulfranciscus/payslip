@@ -12,7 +12,7 @@ import org.myob.payslip.EmployeePayslipFactoryImpl;
 import org.myob.repository.Specification;
 import org.myob.repository.TaxRepository;
 import org.myob.tax.TaxSpecificationImpl;
-import org.myob.service.impl.EmployeeServiceImpl;
+import org.myob.service.impl.PayslipServiceImpl;
 import org.myob.tax.Tax;
 import org.myob.tax.TaxBuilder;
 import org.myob.tax.TaxSpecificationBuilder;
@@ -25,15 +25,17 @@ import static org.mockito.Mockito.*;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class EmployeeServiceTest {
+public class PayslipServiceTest {
 
-    private static EmployeeService employeeService;
+    private static PayslipService payslipService;
     private static TaxRepository mockTaxRepository;
     private static EmployeeBuilder employeeBuilder = new EmployeeBuilder();
     private static Employee employee;
     private static LocalDate startDate;
     private static LocalDate endDate;
     private static EmployeePayslip employeePayslip;
+    private static Tax tax;
+    private static EmployeePayslip payslipFromPayslipService;
 
     @BeforeClass
     public static void setup() throws IOException {
@@ -41,11 +43,7 @@ public class EmployeeServiceTest {
         startDate = new LocalDate(2015, 01, 01);
         endDate = new LocalDate(2015, 10, 01);
 
-        mockTaxRepository = mock(TaxRepository.class);
         employeeBuilder = new EmployeeBuilder();
-
-        employeeService = new EmployeeServiceImpl();
-        employeeService.setTaxRepository(mockTaxRepository);
 
         employee = employeeBuilder.withFirstName("Joe")
                 .withLastName("Blogg")
@@ -58,7 +56,18 @@ public class EmployeeServiceTest {
                 .withEndOfPaymentYear(2015)
                 .build();
 
-        employeePayslip = employeeService.payslip(startDate, endDate, employee);
+
+        tax = new TaxBuilder().withMaxIncome(20000).withMinIncome(10).withBaseTax(2500).build();
+
+        EmployeePayslipFactory payslipFactory = new EmployeePayslipFactoryImpl();
+        employeePayslip = payslipFactory.createWith(startDate, endDate, employee, tax);
+
+        mockTaxRepository = mock(TaxRepository.class);
+        when(mockTaxRepository.find(Mockito.any(Specification.class))).thenReturn(tax);
+
+        payslipService = new PayslipServiceImpl();
+        payslipService.setTaxRepository(mockTaxRepository);
+        payslipFromPayslipService =  payslipService.payslip(startDate, endDate, employee);
 
     }
 
@@ -73,18 +82,22 @@ public class EmployeeServiceTest {
     }
 
     @Test
-    public void payslipShouldHaveGrossIncomeEqualToAnnualSalaryDividedBy12Months() throws IOException {
+    public void grossIncomeShouldBeEmployeePayslipGrossIncome() throws IOException {
+        assertEquals(employeePayslip.getGrossIncome(), payslipFromPayslipService.getGrossIncome());
+    }
 
-        Tax expectedTaxForThisEmployee = new TaxBuilder().withMaxIncome(20000).withMinIncome(10).withBaseTax(2500).build();
-        TaxSpecificationImpl expectedCriteriaUsedByRepository = new TaxSpecificationBuilder().withEmployee(employee).build();
+    @Test
+    public void incomeTaxShouldBeEmployeePayslipIncomeTax(){
+        assertEquals(employeePayslip.getIncomeTax(), payslipFromPayslipService.getIncomeTax());
+    }
 
-        EmployeePayslipFactory payslipFactory = new EmployeePayslipFactoryImpl();
-        EmployeePayslip employeePayslip = payslipFactory.createWith(startDate, endDate, employee, expectedTaxForThisEmployee);
+    @Test
+    public void netIncomeShouldBeEmployeePayslipNetIncome(){
+        assertEquals(employeePayslip.netIncome(),payslipFromPayslipService.netIncome());
+    }
 
-        when(mockTaxRepository.find(expectedCriteriaUsedByRepository)).thenReturn(expectedTaxForThisEmployee);
-
-        assertEquals(employeePayslip.getGrossIncome(), employeePayslip.getGrossIncome());
-        verify(mockTaxRepository, times(1)).find(Mockito.any(Specification.class));
-
+    @Test
+    public void superShouldBeEmployeePayslipSuper(){
+        assertEquals(employeePayslip.getSuper(),payslipFromPayslipService.getSuper());
     }
 }

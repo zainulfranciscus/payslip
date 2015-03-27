@@ -13,7 +13,7 @@ public class TaxSpecificationBuilder implements Builder<Specification<Tax>> {
     private Employee employee;
 
     @Override
-    public TaxSpecificationImpl build() {
+    public Specification<Tax> build() {
         LocalDate startDate = new LocalDate(employee.getStartOfPaymentYear(),employee.getStartOfPaymentMonth(), employee.getStartOfPaymentDate());
         LocalDate endDate = new LocalDate(employee.getEndOfPaymentYear(), employee.getEndOfPaymentMonth(), employee.getEndOfPaymentDate());
 

@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.myob.employee.Employee;
 import org.myob.employee.EmployeeBuilder;
 import org.junit.Test;
+import org.myob.repository.Specification;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -40,13 +41,13 @@ public class TaxSpecificationBuilderTest {
 
     @Test
     public void shouldBeTrueBecauseSalaryIsBetweenMinIncomeAndMaxIncome(){
-        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(12000).build()).build();
+        Specification<Tax> taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(12000).build()).build();
         assertTrue(taxCriteria.match(taxBuilder.withMinIncome(1000).withMaxIncome(20000).build()));
     }
 
     @Test
     public void shouldNotMatchTaxBecauseSalaryIsAboveMaxIncome(){
-        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(15000).build()).build();
+        Specification<Tax> taxCriteria = taxSpecificationBuilder.withEmployee(employeeBuilder.withSalary(15000).build()).build();
         assertFalse(taxCriteria.match(taxBuilder.withMinIncome(500).withMaxIncome(1000).build()));
     }
 
@@ -62,7 +63,7 @@ public class TaxSpecificationBuilderTest {
                 .withStartingYear(2015)
                 .build();
 
-        TaxSpecificationImpl taxCriteria = taxSpecificationBuilder.withEmployee(employee).build();
+        Specification<Tax> taxCriteria = taxSpecificationBuilder.withEmployee(employee).build();
         assertTrue(taxCriteria.match(tax));
     }
 

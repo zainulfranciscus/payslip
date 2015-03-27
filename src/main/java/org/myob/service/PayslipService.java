@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public interface EmployeeService {
+public interface PayslipService {
 
     EmployeePayslip payslip(LocalDate startDate, LocalDate endDate, Employee employee) throws IOException;
     void setTaxRepository(TaxRepository taxRepository);
