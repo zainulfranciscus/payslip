@@ -2,13 +2,12 @@ package org.myob.domain.model.tax;
 
 import org.joda.time.LocalDate;
 import org.myob.domain.model.employee.Employee;
-import org.myob.infrastructure.persistence.Specification;
-import org.myob.infrastructure.persistence.TaxSpecification;
+import org.myob.infrastructure.repository.Specification;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxSpecificationImpl implements TaxSpecification {
+public class TaxSpecificationImpl implements Specification<Tax> {
 
     private Employee employee;
 
@@ -25,8 +24,4 @@ public class TaxSpecificationImpl implements TaxSpecification {
                 && (employee.getPaymentStartDate().isBefore(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
     }
 
-    @Override
-    public Employee employee() {
-        return employee;
-    }
 }

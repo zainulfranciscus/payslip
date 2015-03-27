@@ -11,7 +11,7 @@ public class EmployeeSpecificationBuilderTest {
     private EmployeeSpecificationBuilder employeeSpecificationBuilder = new EmployeeSpecificationBuilder();
 
     @Test
-    public void numberOfLineReadShouldBe10(){
-        assertEquals(10, employeeSpecificationBuilder.withLineNumberOfRead(10).build().numberOfLineRead());
+    public void numberOfLineReadShouldBe0(){
+        assertEquals(0, employeeSpecificationBuilder.build().numberOfEmployeesLoadedToMemory());
     }
 }

@@ -25,5 +25,8 @@
         <module name="payslip" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="payslip" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

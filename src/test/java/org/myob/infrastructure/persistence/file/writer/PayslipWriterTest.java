@@ -9,14 +9,14 @@ import org.myob.domain.model.employee.Payslip;
 import org.myob.domain.model.payslip.PayslipFactoryImpl;
 import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.tax.TaxBuilder;
-import org.myob.service.PayslipWriter;
+import org.myob.infrastructure.repository.PayslipWriter;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 
 import static org.junit.Assert.assertEquals;
-import static org.myob.service.PayslipWriter.NEW_LINE;
+import static org.myob.infrastructure.repository.PayslipWriter.NEW_LINE;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.

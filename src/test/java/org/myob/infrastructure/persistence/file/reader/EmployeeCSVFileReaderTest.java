@@ -2,7 +2,7 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.junit.After;
 import org.junit.Test;
-import org.myob.infrastructure.persistence.Reader;
+import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.persistence.file.reader.impl.EmployeeCSVFileReaderImpl;
 
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class EmployeeCSVFileReaderTest {
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveFirstName("Joe")
                 .shouldHaveLastName("Blogg")
-                .shouldHavePaymentDate("01 March – 31 March")
+                .shouldHavePaymentDate("01 March - 31 March")
                 .shouldHaveSalary("12000")
                 .shouldHaveSuperRate("10%");
 

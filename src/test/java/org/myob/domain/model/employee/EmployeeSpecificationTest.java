@@ -2,7 +2,7 @@ package org.myob.domain.model.employee;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.myob.infrastructure.persistence.Specification;
+import org.myob.infrastructure.repository.Specification;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -18,7 +18,7 @@ public class EmployeeSpecificationTest {
     @Before
     public void setup() {
 
-        employeeSpecification = new EmployeeSpecificationBuilder().withLineNumberOfRead(0).build();
+        employeeSpecification = new EmployeeSpecificationBuilder().build();
 
         employeeBuilder = new EmployeeBuilder()
                 .withFirstName("Joe")

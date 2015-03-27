@@ -2,7 +2,7 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.junit.After;
 import org.junit.Test;
-import org.myob.infrastructure.persistence.Reader;
+import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.persistence.file.reader.impl.TaxCSVReaderImpl;
 
 import java.io.IOException;

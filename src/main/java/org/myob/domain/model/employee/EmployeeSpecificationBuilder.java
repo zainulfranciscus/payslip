@@ -1,26 +1,22 @@
 package org.myob.domain.model.employee;
 
-import org.myob.service.EmployeeSpecification;
+import org.myob.domain.service.EmployeeSpecification;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.
  */
 public class EmployeeSpecificationBuilder {
 
-    private int numberOfLineRead;
-    private int maxNumberOfLinesShouldBeRead;
 
-    public EmployeeSpecificationBuilder withLineNumberOfRead(int numberOfLineRead) {
-        this.numberOfLineRead = numberOfLineRead;
-        return this;
-    }
+    private int maxNumberOfEmployeesThatCanBeLoadedToMemory;
 
-    public EmployeeSpecificationBuilder withMaxNumberOfLinesShouldBeRead(int maxNumberOfLineRead) {
-        this.maxNumberOfLinesShouldBeRead = maxNumberOfLineRead;
+
+    public EmployeeSpecificationBuilder withMaxNumberOfEmployeesThatCanBePutIntoMemory(int maxNumberOfLineRead) {
+        this.maxNumberOfEmployeesThatCanBeLoadedToMemory = maxNumberOfLineRead;
         return this;
     }
 
     public EmployeeSpecification build(){
-        return new EmployeeSpecificationImpl(numberOfLineRead,maxNumberOfLinesShouldBeRead);
+        return new EmployeeSpecificationImpl(maxNumberOfEmployeesThatCanBeLoadedToMemory);
     }
 }

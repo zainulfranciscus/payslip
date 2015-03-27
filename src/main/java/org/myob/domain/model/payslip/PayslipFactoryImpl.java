@@ -5,7 +5,7 @@ import org.joda.time.LocalDate;
 import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.Payslip;
-import org.myob.domain.model.employee.PayslipFactory;
+import org.myob.infrastructure.repository.PayslipFactory;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.

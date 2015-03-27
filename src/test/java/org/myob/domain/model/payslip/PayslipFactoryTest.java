@@ -1,7 +1,6 @@
 package org.myob.domain.model.payslip;
 
 import org.joda.time.LocalDate;
-import org.myob.domain.model.payslip.PayslipFactoryImpl;
 import org.myob.domain.model.tax.TaxBuilder;
 import org.myob.domain.model.tax.Tax;
 import org.junit.BeforeClass;
@@ -9,7 +8,7 @@ import org.junit.Test;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.model.employee.Payslip;
-import org.myob.domain.model.employee.PayslipFactory;
+import org.myob.infrastructure.repository.PayslipFactory;
 
 import java.math.BigDecimal;
 

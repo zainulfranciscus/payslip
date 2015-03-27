@@ -3,7 +3,7 @@ package org.myob.infrastructure.persistence.file.writer;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.myob.domain.model.employee.Payslip;
-import org.myob.service.PayslipWriter;
+import org.myob.infrastructure.repository.PayslipWriter;
 
 import java.io.IOException;
 import java.io.Writer;
