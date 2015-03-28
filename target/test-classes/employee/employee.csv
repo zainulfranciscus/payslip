@@ -1,2 +1,2 @@
-first name,last name,annual salary,super rate,payment start date
-Joe,Blogg,12000,10%,01 March - 31 March
+first name,last name,annual salary,super rate,payment start date,payment start month,payment start year,payment end date,payment end month,payment end year
+Joe,Blogg,12000,10%,01,March,2015,31,December,2015

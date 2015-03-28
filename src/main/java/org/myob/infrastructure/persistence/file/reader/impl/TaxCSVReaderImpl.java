@@ -4,17 +4,13 @@ import org.apache.commons.csv.CSVRecord;
 import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.AbstractCsvReader;
 import org.myob.infrastructure.persistence.file.reader.Row;
-import org.myob.infrastructure.persistence.file.reader.TaxHeader;
+import org.myob.infrastructure.persistence.mapping.impl.TaxHeader;
 import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
 public class TaxCSVReaderImpl extends AbstractCsvReader {
-
-    public TaxCSVReaderImpl(String fileName) {
-        super(fileName);
-    }
 
     @Override
     public Row make(CSVRecord record) {

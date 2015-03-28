@@ -8,7 +8,7 @@ import org.myob.infrastructure.repository.Specification;
 import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.repository.TaxRepository;
 
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -36,7 +36,7 @@ public class TaxRepositoryImpl implements TaxRepository {
                 return tax;
             }
         }
-        reader.close();
+        //reader.close();
 
         return null;
     }

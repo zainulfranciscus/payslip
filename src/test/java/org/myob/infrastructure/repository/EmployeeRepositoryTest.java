@@ -7,7 +7,6 @@ import org.mockito.Mockito;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
 import org.myob.domain.service.EmployeeSpecification;
-import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.impl.EmployeeRepositoryImpl;
 import org.myob.infrastructure.service.EmployeeRepository;
@@ -19,7 +18,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.myob.infrastructure.persistence.file.reader.EmployeeHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.

@@ -1,10 +1,12 @@
-package org.myob.infrastructure.persistence.file.reader;
+package org.myob.infrastructure.persistence.mapping.impl;
+
+import org.myob.infrastructure.persistence.mapping.RowHeader;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
 
-public enum TaxHeader implements RowHeader{
+public enum TaxHeader implements RowHeader {
 
     MIN_INCOME("Min Income"),
     MAX_INCOME("Max Income"),

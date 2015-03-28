@@ -2,15 +2,15 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.junit.After;
 import org.junit.Test;
-import org.myob.domain.service.EmployeeSpecification;
 import org.myob.infrastructure.persistence.file.EmployeeRowSpecification;
-import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.persistence.file.reader.impl.EmployeeCSVFileReaderImpl;
 
+import java.io.FileReader;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.myob.infrastructure.persistence.file.reader.EmployeeHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -27,13 +27,13 @@ public class EmployeeCSVFileReaderTest {
 
     @Test
     public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws Exception {
-        reader = new EmployeeCSVFileReaderImpl( "employee/employee.csv");
+        reader = new EmployeeCSVFileReaderImpl();
+        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("employee/employee.csv"));
         row = reader.read(new EmployeeRowSpecification());
 
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveFirstName("Joe")
                 .shouldHaveLastName("Blogg")
-                .shouldHavePaymentDate("01 March - 31 March")
                 .shouldHaveSalary("12000")
                 .shouldHaveSuperRate("10%");
 
@@ -41,13 +41,16 @@ public class EmployeeCSVFileReaderTest {
 
     @Test
     public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws Exception {
-        reader = new EmployeeCSVFileReaderImpl("employee/onlyHaveEmployeeHeader.csv");
+        reader = new EmployeeCSVFileReaderImpl();
+        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("employee/onlyHaveEmployeeHeader.csv"));
+
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
 
     @Test
     public void rowShouldBeNullBecauseFileIsEmpty() throws Exception {
-        reader = new EmployeeCSVFileReaderImpl("emptyFile.csv");
+        reader = new EmployeeCSVFileReaderImpl();
+        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("emptyFile.csv"));
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
     class AssertThat{
@@ -72,9 +75,5 @@ public class EmployeeCSVFileReaderTest {
             return this;
         }
 
-        AssertThat shouldHavePaymentDate(String expectedPaymentDate){
-            assertEquals(expectedPaymentDate,row.get(PAYMENT_DATE));
-            return this;
-        }
     }
 }

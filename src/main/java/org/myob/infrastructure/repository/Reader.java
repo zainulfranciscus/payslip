@@ -9,6 +9,7 @@ public interface Reader {
 
     Row read(RowSpecification specification) throws Exception;
     void close() throws Exception;
+    void setDataSourceReader(java.io.Reader reader);
 
 
 }

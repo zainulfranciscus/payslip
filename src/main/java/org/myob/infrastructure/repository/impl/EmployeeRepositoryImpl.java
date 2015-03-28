@@ -4,7 +4,6 @@ import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.service.EmployeeSpecification;
 import org.myob.infrastructure.persistence.file.EmployeeRowSpecification;
-import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.service.EmployeeRepository;
@@ -12,7 +11,7 @@ import org.myob.infrastructure.service.EmployeeRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.myob.infrastructure.persistence.file.reader.EmployeeHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 27/03/2015.
@@ -53,7 +52,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             specification.incrementNumberOfLineRead();
         }
 
-        reader.close();
+        //reader.close();
 
         return employees;
     }

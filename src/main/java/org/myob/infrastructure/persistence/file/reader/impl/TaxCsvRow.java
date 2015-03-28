@@ -3,7 +3,7 @@ package org.myob.infrastructure.persistence.file.reader.impl;
 import org.joda.time.LocalDate;
 import org.myob.infrastructure.persistence.file.reader.Row;
 
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.TaxHeader.*;
 
 
 /**
@@ -27,6 +27,20 @@ public class TaxCsvRow extends Row {
         put(STARTING_DAY,startingDay);
         put(STARTING_MONTH,startingMonth);
         put(STARTING_YEAR,startingYear);
+    }
+
+    public LocalDate getDate(){
+
+        LocalDate date = null;
+
+        try {
+            date =  format().parseLocalDate(get(STARTING_DAY) + " " + get(STARTING_MONTH) + " " + get(STARTING_YEAR));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return date;
+
     }
 
 

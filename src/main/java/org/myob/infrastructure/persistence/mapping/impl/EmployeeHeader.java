@@ -1,4 +1,6 @@
-package org.myob.infrastructure.persistence.file.reader;
+package org.myob.infrastructure.persistence.mapping.impl;
+
+import org.myob.infrastructure.persistence.mapping.RowHeader;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.

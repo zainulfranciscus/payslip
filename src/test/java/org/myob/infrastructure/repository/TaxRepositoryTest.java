@@ -9,14 +9,14 @@ import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.tax.TaxSpecificationBuilder;
 import org.myob.infrastructure.persistence.file.TaxRowSpecification;
-import org.myob.infrastructure.persistence.file.reader.Row;
+import org.myob.infrastructure.persistence.file.reader.impl.TaxCsvRow;
 import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -25,7 +25,7 @@ public class TaxRepositoryTest {
 
     private TaxRepository taxRepository;
     private Reader mockReader;
-    private Row mockRow;
+    private TaxCsvRow mockRow;
     private int baseTax;
     private int maxIncomeForThisTax;
     private int minIncomeForThisTax;
@@ -97,7 +97,7 @@ public class TaxRepositoryTest {
 
     private void setMockRowBehavior(){
 
-        mockRow = mock(Row.class);
+        mockRow = mock(TaxCsvRow.class);
         when(mockRow.getInt(BASE_TAX)).thenReturn(baseTax);
         when(mockRow.getInt(MAX_INCOME)).thenReturn(maxIncomeForThisTax);
         when(mockRow.getInt(MIN_INCOME)).thenReturn(minIncomeForThisTax);

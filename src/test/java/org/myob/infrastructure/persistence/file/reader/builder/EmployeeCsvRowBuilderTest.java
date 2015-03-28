@@ -3,10 +3,10 @@ package org.myob.infrastructure.persistence.file.reader.builder;
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.infrastructure.persistence.file.reader.Row;
-import org.myob.infrastructure.persistence.file.reader.builder.EmployeeCsvRowBuilder;
 
 import static org.junit.Assert.assertEquals;
-import static org.myob.infrastructure.persistence.file.reader.EmployeeHeader.*;
+import static org.junit.Assert.assertNull;
+import static org.myob.infrastructure.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -114,6 +114,11 @@ public class EmployeeCsvRowBuilderTest {
     @Test
     public void shouldReturnEndOfPaymentYear(){
         assertEquals(endOfPaymentYear, csvRow.get(END_PAYMENT_YEAR));
+    }
+
+    @Test
+    public void shouldReturnNullPaymentStartDate_BecauseDateIsInvalid(){
+        assertNull(employeeCsvRowBuilder.withStartOfPaymentDate("third of october").build().getPaymentStartDate());
     }
 
 }

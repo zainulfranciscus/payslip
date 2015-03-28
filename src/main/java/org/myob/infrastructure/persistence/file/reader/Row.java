@@ -2,17 +2,13 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+import org.myob.infrastructure.persistence.mapping.RowHeader;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.STARTING_DAY;
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.STARTING_MONTH;
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.STARTING_YEAR;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -53,17 +49,5 @@ public abstract class Row {
         return DateTimeFormat.forPattern(DATE_FORMAT_DD_MMM_YYYY);
     }
 
-    public LocalDate getDate(){
 
-        LocalDate date = null;
-
-        try {
-            date =  format().parseLocalDate(get(STARTING_DAY) + " " + get(STARTING_MONTH) + " " + get(STARTING_YEAR));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return date;
-
-    }
 }

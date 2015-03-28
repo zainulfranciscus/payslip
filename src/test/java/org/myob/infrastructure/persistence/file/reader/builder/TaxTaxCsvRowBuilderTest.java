@@ -3,11 +3,10 @@ package org.myob.infrastructure.persistence.file.reader.builder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.myob.infrastructure.persistence.file.reader.Row;
-import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
+import static org.myob.infrastructure.persistence.mapping.impl.TaxHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -23,6 +22,7 @@ public class TaxTaxCsvRowBuilderTest {
     private static String expectedStartingYear;
     private static String expectedStartingMonth;
     private static String expectedStartingDay;
+    private static int expectedStartingMonthAsInt;
     private static TaxCsvRowBuilder taxCsvRowBuilder;
 
     @BeforeClass
@@ -34,6 +34,7 @@ public class TaxTaxCsvRowBuilderTest {
         expectedTaxPerDollar = "400";
         expectedStartingDay = "1";
         expectedStartingMonth = "March";
+        expectedStartingMonthAsInt= 3;
         expectedStartingYear = "2015";
 
         taxCsvRowBuilder = taxCsvRowBuilder.withMinIncome(expectedMinIncome)
@@ -54,7 +55,8 @@ public class TaxTaxCsvRowBuilderTest {
         assertThat.shouldHaveTheExpectedBaseTax()
                 .shouldHaveTheExpectedMaxIncome()
                 .shouldHaveTheExpectedMinIncome()
-                .shouldHaveTheExpectedTaxPerDollar();
+                .shouldHaveTheExpectedTaxPerDollar()
+                .shouldHaveTheExpectedMonth();
 
     }
 
@@ -76,6 +78,11 @@ public class TaxTaxCsvRowBuilderTest {
 
         public AssertThat shouldHaveTheExpectedTaxPerDollar(){
             assertEquals(expectedTaxPerDollar, row.get(TAX_PER_DOLLAR));
+            return this;
+        }
+
+        public AssertThat shouldHaveTheExpectedMonth() {
+            assertEquals(expectedStartingMonthAsInt,row.getMonthAsInt(STARTING_MONTH));
             return this;
         }
     }

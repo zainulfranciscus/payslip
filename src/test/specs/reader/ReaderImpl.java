@@ -39,6 +39,11 @@ public class ReaderImpl implements Reader {
         index = 0;
     }
 
+    @Override
+    public void setDataSourceReader(java.io.Reader reader) {
+
+    }
+
     public void add(Row row) {
         rows.add(row);
     }

@@ -11,6 +11,7 @@ import org.myob.infrastructure.repository.impl.PayslipRepositoryImpl;
 import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
 import org.myob.infrastructure.service.EmployeeRepository;
 import org.myob.infrastructure.service.PayslipRepository;
+import org.myob.infrastructure.service.PayslipServiceBuilder;
 import org.myob.infrastructure.service.PayslipServiceImpl;
 import reader.ReaderImpl;
 
@@ -78,6 +79,7 @@ public class PayslipFixture {
     }
 
     public List<Payslip> payslip() throws Exception {
+
 
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(employeeReader);

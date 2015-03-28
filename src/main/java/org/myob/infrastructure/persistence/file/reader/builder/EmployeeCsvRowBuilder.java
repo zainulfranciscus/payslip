@@ -74,7 +74,7 @@ public class EmployeeCsvRowBuilder {
         return this;
     }
 
-    public Row build() {
+    public EmployeeCsvRow build() {
         return new EmployeeCsvRow(this.firstName,
                 this.lastName,
                 this.paymentDate,
