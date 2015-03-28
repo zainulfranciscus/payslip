@@ -13,37 +13,44 @@ import static org.junit.Assert.assertEquals;
 public class TaxTest {
 
     private Tax tax;
-    private int expectedBaseTax;
-    private int expectedTaxPerDollar;
-    private int expectedMaxIncome;
-    private int expectedMinIncome;
+    private double expectedBaseTax;
+    private double expectedTaxPerDollar;
+    private double expectedMaxIncome;
+    private double expectedMinIncome;
+    private double expectedTaxPerDollarOver;
 
     @Before
     public void setup(){
-        expectedBaseTax = 10;
-        expectedTaxPerDollar = 20;
-        expectedMaxIncome = 30;
-        expectedMinIncome = 5;
-        tax = new TaxBuilder().withBaseTax(expectedBaseTax).withTaxPerDollar(expectedTaxPerDollar).withMaxIncome(expectedMaxIncome).withMinIncome(expectedMinIncome).build();
+        expectedBaseTax = 10.55;
+        expectedTaxPerDollar = 20.87;
+        expectedMaxIncome = 30.75;
+        expectedMinIncome = 5.5;
+        expectedTaxPerDollarOver = 7.8;
+        tax = new TaxBuilder().withBaseTax(expectedBaseTax)
+                .withTaxPerDollar(expectedTaxPerDollar)
+                .withMaxIncome(expectedMaxIncome)
+                .withMinIncome(expectedMinIncome)
+                .withTaxPerDollarOver(expectedTaxPerDollarOver)
+                .build();
     }
 
     @Test
-    public void shouldReturn10AsBaseTax(){
-        assertEquals(expectedBaseTax,tax.getBaseTax());
+    public void shouldReturnTheExpectedBaseTaxAsBaseTax(){
+        assertEquals(new Double(expectedBaseTax),new Double(tax.getBaseTax()));
     }
 
     @Test
-    public void shouldReturn20AsTaxPerDollar(){
+    public void shouldReturnTheExpectedTaxPerDollarAsTaxPerDollar(){
         assertEquals(new Double(expectedTaxPerDollar), new Double(tax.getTaxPerDollarInCents()));
     }
 
     @Test
-    public void shouldReturn30AsMaxIncome(){
-        assertEquals(expectedMaxIncome,tax.getMaxIncome());
+    public void shouldReturnTheExpectedMaxIncomeAsMaxIncome(){
+        assertEquals(new Double(expectedMaxIncome),new Double(tax.getMaxIncome()));
     }
 
     @Test
-    public void shouldReturn5AsMinIncome(){
-        assertEquals(expectedMinIncome, tax.getMinIncome());
+    public void shouldReturnTheExpectedMinIncomeAsMinIncome(){
+        assertEquals(new Double(expectedMinIncome), new Double(tax.getMinIncome()));
     }
 }

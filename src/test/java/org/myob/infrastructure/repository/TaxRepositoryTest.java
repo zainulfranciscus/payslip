@@ -63,17 +63,17 @@ public class TaxRepositoryTest {
 
     @Test
     public void shouldHaveTheBaseTax() throws Exception {
-        assertEquals(baseTax,taxRepository.find(taxFor15000AsSalary).getBaseTax());
+        assertEquals(new Double(baseTax),new Double(taxRepository.find(taxFor15000AsSalary).getBaseTax()));
     }
 
     @Test
     public void shouldBeMaxIncomeForThisTax() throws Exception {
-        assertEquals(maxIncomeForThisTax, taxRepository.find(taxFor15000AsSalary).getMaxIncome());
+        assertEquals(new Double(maxIncomeForThisTax), new Double(taxRepository.find(taxFor15000AsSalary).getMaxIncome()));
     }
 
     @Test
     public void shouldBeMinIncomeForThisTax() throws Exception {
-        assertEquals(minIncomeForThisTax, taxRepository.find(taxFor15000AsSalary).getMinIncome());
+        assertEquals(new Double(minIncomeForThisTax), new Double(taxRepository.find(taxFor15000AsSalary).getMinIncome()));
     }
 
     @Test

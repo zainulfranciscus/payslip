@@ -5,16 +5,16 @@ package org.myob.domain.model.tax;
  */
 public class TaxBuilder {
 
-    private int minIncome;
-    private int maxIncome;
+    private double minIncome;
+    private double maxIncome;
     private double taxPerDollar;
-    private int baseTax;
+    private double baseTax;
     private int startingDay;
     private int startingMonth;
     private int startingYear;
-    private int taxPerDollarOver;
+    private double taxPerDollarOver;
 
-    public TaxBuilder withMinIncome(int minIncome) {
+    public TaxBuilder withMinIncome(double minIncome) {
         this.minIncome = minIncome;
         return this;
     }
@@ -30,7 +30,7 @@ public class TaxBuilder {
                 startingYear);
     }
 
-    public TaxBuilder withMaxIncome(int maxIncome) {
+    public TaxBuilder withMaxIncome(double maxIncome) {
         this.maxIncome = maxIncome;
         return this;
     }
@@ -40,7 +40,7 @@ public class TaxBuilder {
         return this;
     }
 
-    public TaxBuilder withBaseTax(int baseTax) {
+    public TaxBuilder withBaseTax(double baseTax) {
         this.baseTax = baseTax;
         return this;
     }
@@ -60,7 +60,7 @@ public class TaxBuilder {
         return this;
     }
 
-    public TaxBuilder withTaxPerDollarOver(int taxPerDollarOver) {
+    public TaxBuilder withTaxPerDollarOver(double taxPerDollarOver) {
         this.taxPerDollarOver = taxPerDollarOver;
         return this;
     }

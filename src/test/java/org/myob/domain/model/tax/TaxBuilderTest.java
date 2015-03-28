@@ -37,12 +37,12 @@ public class TaxBuilderTest {
 
     @Test
     public void shouldReturnTaxWithMinIncomeOf1000(){
-        assertEquals(expectedMinIncome, builder.withMinIncome(expectedMinIncome).build().getMinIncome());
+        assertEquals(new Double(expectedMinIncome), new Double(builder.withMinIncome(expectedMinIncome).build().getMinIncome()));
     }
 
     @Test
     public void shouldReturnTaxWithMaxIncomeOf2000(){
-        assertEquals(expectedMaxIncome, builder.withMaxIncome(expectedMaxIncome).build().getMaxIncome());
+        assertEquals(new Double(expectedMaxIncome), new Double(builder.withMaxIncome(expectedMaxIncome).build().getMaxIncome()));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class TaxBuilderTest {
 
     @Test
     public void shouldReturn3000AsBaseTax(){
-        assertEquals(expectedBaseTax, builder.withBaseTax(expectedBaseTax).build().getBaseTax());
+        assertEquals(new Double(expectedBaseTax), new Double(builder.withBaseTax(expectedBaseTax).build().getBaseTax()));
     }
 
     @Test

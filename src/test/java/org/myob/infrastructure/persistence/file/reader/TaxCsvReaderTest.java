@@ -36,11 +36,11 @@ public class TaxCsvReaderTest {
         row = reader.read();
 
         AssertThat assertThat = new AssertThat();
-        assertThat.shouldHaveBaseTax(300)
-                .shouldHaveMaxIncome(200)
-                .shouldHaveMinIncome(100)
-                .shouldHaveTaxPerDollar(400)
-                .shouldHaveTaxPerDollarOver(500)
+        assertThat.shouldHaveBaseTax(300.87)
+                .shouldHaveMaxIncome(200.65)
+                .shouldHaveMinIncome(100.76)
+                .shouldHaveTaxPerDollar(400.18)
+                .shouldHaveTaxPerDollarOver(500.07)
                 .shouldHaveStartingDate(1)
                 .shouldHaveStartingMonth(3)
                 .shouldHaveStartingYear(2015);
@@ -60,23 +60,23 @@ public class TaxCsvReaderTest {
 
     class AssertThat {
 
-        AssertThat shouldHaveMinIncome(int expectedValue){
-            assertEquals(expectedValue,row.getInt(MIN_INCOME));
+        AssertThat shouldHaveMinIncome(double expectedValue){
+            assertEquals(new Double(expectedValue),new Double(row.getDouble(MIN_INCOME)));
             return this;
         }
 
-        AssertThat shouldHaveMaxIncome(int expectedValue){
-            assertEquals(expectedValue,row.getInt(MAX_INCOME));
+        AssertThat shouldHaveMaxIncome(double expectedValue){
+            assertEquals(new Double(expectedValue),new Double(row.getDouble(MAX_INCOME)));
             return this;
         }
 
-        AssertThat shouldHaveBaseTax(int expectedValue){
-            assertEquals(expectedValue,row.getInt(BASE_TAX));
+        AssertThat shouldHaveBaseTax(double expectedValue){
+            assertEquals(new Double(expectedValue),new Double(row.getDouble(BASE_TAX)));
             return this;
         }
 
-        AssertThat shouldHaveTaxPerDollar(int expectedValue){
-            assertEquals(expectedValue,row.getInt(TAX_PER_DOLLAR));
+        AssertThat shouldHaveTaxPerDollar(double expectedValue){
+            assertEquals(new Double(expectedValue),new Double(row.getDouble(TAX_PER_DOLLAR)));
             return this;
         }
 
@@ -95,8 +95,8 @@ public class TaxCsvReaderTest {
             return this;
         }
 
-        public AssertThat shouldHaveTaxPerDollarOver(int expectedTaxPerDollarOver) {
-            assertEquals(expectedTaxPerDollarOver,row.getInt(TAX_PER_DOLLAR_OVER));
+        public AssertThat shouldHaveTaxPerDollarOver(double expectedTaxPerDollarOver) {
+            assertEquals(new Double(expectedTaxPerDollarOver),new Double(row.getDouble(TAX_PER_DOLLAR_OVER)));
             return this;
         }
     }

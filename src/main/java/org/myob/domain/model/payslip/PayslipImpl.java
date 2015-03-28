@@ -7,6 +7,8 @@ import org.myob.domain.model.tax.Tax;
 
 import java.math.BigDecimal;
 
+import static java.math.BigDecimal.ROUND_HALF_UP;
+
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
@@ -93,7 +95,7 @@ public class PayslipImpl implements Payslip {
 
     @Override
     public BigDecimal incomeTaxAsBigDecimal(){
-        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
+        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP).setScale(ZERO_ROUND_SCALE, ROUND_HALF_UP);
     }
 
     @Override
@@ -103,7 +105,7 @@ public class PayslipImpl implements Payslip {
 
     @Override
     public int getSuper() {
-        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
+        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
     }
 
     @Override

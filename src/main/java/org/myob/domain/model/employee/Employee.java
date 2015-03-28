@@ -5,7 +5,7 @@ import org.joda.time.LocalDate;
 
 import java.math.BigDecimal;
 
-import static org.myob.domain.model.employee.Payslip.ROUND_DOWN;
+import static java.math.BigDecimal.ROUND_HALF_UP;
 import static org.myob.domain.model.employee.Payslip.TWELVE_MONTHS;
 import static org.myob.domain.model.employee.Payslip.ZERO_ROUND_SCALE;
 
@@ -84,7 +84,7 @@ public class Employee {
     }
 
     public BigDecimal grossIncomeAsBigDecimal(){
-        return salaryAsBigDecimal().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_DOWN);
+        return salaryAsBigDecimal().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP);
     }
 
     public int getStartOfPaymentDate() {

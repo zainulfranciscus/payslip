@@ -7,20 +7,20 @@ import java.math.BigDecimal;
  */
 public class Tax {
 
-    private final int baseTax;
-    private final int minTaxableIncome;
-    private final int maxTaxableIncome;
+    private final double baseTax;
+    private final double minTaxableIncome;
+    private final double maxTaxableIncome;
     private final double taxPerDollarInCents;
     private int startingDay;
     private int startingMonth;
     private int startingYear;
-    private int taxPerDollarOver;
+    private double taxPerDollarOver;
 
-    public Tax(int minTaxableIncome,
-               int taxPerDollarOver,
-               int maxTaxableIncome,
+    public Tax(double minTaxableIncome,
+               double taxPerDollarOver,
+               double maxTaxableIncome,
                double taxPerDollarInCents,
-               int baseTax,
+               double baseTax,
                int startingDay,
                int startingMonth,
                int startingYear) {
@@ -34,11 +34,11 @@ public class Tax {
         this.startingYear = startingYear;
     }
 
-    public int getMinIncome() {
+    public double getMinIncome() {
         return minTaxableIncome;
     }
 
-    public int getMaxIncome() {
+    public double getMaxIncome() {
         return maxTaxableIncome;
     }
 
@@ -46,7 +46,7 @@ public class Tax {
         return taxPerDollarInCents;
     }
 
-    public int getBaseTax() {
+    public double getBaseTax() {
         return baseTax;
     }
 
@@ -73,7 +73,7 @@ public class Tax {
         return this.startingYear;
     }
 
-    public int getTaxPerDollarOver() {
+    public double getTaxPerDollarOver() {
         return this.taxPerDollarOver;
     }
 }

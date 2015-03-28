@@ -19,8 +19,8 @@ import java.util.List;
 @RunWith(ConcordionRunner.class)
 public class PayslipFixture {
 
-    private ReaderImpl taxReader;
-    private ReaderImpl employeeReader;
+    private ReaderImpl taxReader = new ReaderImpl();
+    private ReaderImpl employeeReader = new ReaderImpl();
 
     public void setUpTax(String minIncome,
                          String maxIncome,
@@ -31,7 +31,7 @@ public class PayslipFixture {
                          String month,
                          String year){
 
-        taxReader = new ReaderImpl();
+
         TaxCsvRowBuilder taxCsvRowBuilder = new TaxCsvRowBuilder();
         taxCsvRowBuilder.withBaseTax(baseTax);
         taxCsvRowBuilder.withMaxIncome(maxIncome);
@@ -61,7 +61,7 @@ public class PayslipFixture {
                               String paymentEndMonth,
                               String paymentEndYear){
 
-        employeeReader = new ReaderImpl();
+
         EmployeeCsvRowBuilder employeeCsvRowBuilder = new EmployeeCsvRowBuilder();
         employeeCsvRowBuilder.withEndOfPaymentDate(paymentEndDate)
                 .withEndOfPaymentMonth(paymentEndMonth)
@@ -93,6 +93,15 @@ public class PayslipFixture {
         payslipService.setPayslipRepository(payslipRepository);
 
         return payslipService.createPayslips(employeeRepository.find(new EmployeeSpecificationBuilder().build()));
+    }
+
+    public void cleanUpData(){
+        taxReader = new ReaderImpl();
+        cleanUpEmployeeData();
+    }
+
+    public void cleanUpEmployeeData(){
+        employeeReader = new ReaderImpl();
     }
 
 }

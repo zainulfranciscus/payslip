@@ -11,8 +11,6 @@ import java.util.List;
  */
 public interface Payslip {
 
-    static final int ROUND_UP = BigDecimal.ROUND_UP;
-    static final int ROUND_DOWN = BigDecimal.ROUND_DOWN;
     static final int ZERO_ROUND_SCALE = 0;
     static final DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
     static final BigDecimal DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR = new BigDecimal(100);
