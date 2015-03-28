@@ -9,7 +9,7 @@ import static org.junit.Assert.assertFalse;
 /**
  * Created by Zainul Franciscus on 28/03/2015.
  */
-public class RowSpecificationTest {
+public class TaxCsvRowSpecificationTest {
 
     private TaxCsvRowBuilder taxCsvRowBuilder = new TaxCsvRowBuilder();
     private TaxRowSpecification rowSpecification = new TaxRowSpecification();
