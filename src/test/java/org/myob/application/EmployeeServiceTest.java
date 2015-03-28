@@ -3,9 +3,6 @@ package org.myob.application;
 import org.junit.Test;
 import org.myob.application.service.EmployeeService;
 import org.myob.application.service.impl.EmployeeServiceImpl;
-import org.myob.infrastructure.persistence.file.reader.FileReaderType;
-import org.myob.infrastructure.service.PayslipServiceImpl;
-
 import static org.junit.Assert.assertFalse;
 
 /**

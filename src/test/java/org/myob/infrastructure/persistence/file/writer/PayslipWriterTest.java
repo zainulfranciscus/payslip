@@ -100,14 +100,4 @@ public class PayslipWriterTest {
 
     }
 
-    @Test
-    public void test() throws IOException {
-        payslipWriter = new PayslipWriterImpl();
-        payslipWriter.setWriter(new FileWriter("E:\\output.csv",true));
-
-        Payslip payslip = new PayslipFactoryImpl().createWith(firstJan2015, thirty1stDec2015, employee, tax);
-        payslipWriter.write(payslip);
-    }
-
-
 }

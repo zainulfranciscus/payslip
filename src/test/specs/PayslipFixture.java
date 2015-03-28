@@ -1,19 +1,15 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
+import org.myob.application.service.PayslipServiceBuilder;
 import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
 import org.myob.domain.model.employee.Payslip;
 import org.myob.domain.service.PayslipService;
 import org.myob.infrastructure.persistence.file.reader.builder.EmployeeCsvRowBuilder;
 import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
 import org.myob.infrastructure.repository.TaxRepository;
-import org.myob.infrastructure.repository.impl.EmployeeRepositoryImpl;
-import org.myob.infrastructure.repository.impl.PayslipRepositoryImpl;
 import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
-import org.myob.infrastructure.service.EmployeeRepository;
-import org.myob.infrastructure.service.PayslipRepository;
-import org.myob.infrastructure.service.PayslipServiceBuilder;
-import org.myob.infrastructure.service.PayslipServiceImpl;
 import reader.ReaderImpl;
+import service.PayslipServiceBuilderImpl;
 
 import java.util.List;
 
@@ -30,7 +26,7 @@ public class PayslipFixture {
                          String taxPerDollarOver,
                          String date,
                          String month,
-                         String year){
+                         String year) {
 
 
         TaxCsvRowBuilder taxCsvRowBuilder = new TaxCsvRowBuilder();
@@ -60,7 +56,7 @@ public class PayslipFixture {
                               String paymentStartYear,
                               String paymentEndDate,
                               String paymentEndMonth,
-                              String paymentEndYear){
+                              String paymentEndYear) {
 
 
         EmployeeCsvRowBuilder employeeCsvRowBuilder = new EmployeeCsvRowBuilder();
@@ -80,30 +76,22 @@ public class PayslipFixture {
 
     public List<Payslip> payslip() throws Exception {
 
+        PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
+        payslipServiceBuilder.setReaderForEmployeeRepository(employeeReader);
+        payslipServiceBuilder.setReaderForTaxRepository(taxReader);
+        PayslipService payslipService = payslipServiceBuilder.build();
 
-        EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
-        employeeRepository.setReader(employeeReader);
-
-        TaxRepository taxRepository = new TaxRepositoryImpl();
-        taxRepository.setReader(taxReader);
-
-        PayslipRepository payslipRepository = new PayslipRepositoryImpl();
-        payslipRepository.setTaxRepository(taxRepository);
-
-        PayslipService payslipService = new PayslipServiceImpl();
-        payslipService.setEmployeeRepository(employeeRepository);
-        payslipService.setPayslipRepository(payslipRepository);
-
-        return payslipService.createPayslips(employeeRepository.find(new EmployeeSpecificationBuilder().build()));
+        return payslipService.createPayslips(payslipServiceBuilder.createEmployeeRepository().find(new EmployeeSpecificationBuilder().build()));
     }
 
-    public void cleanUpData(){
+    public void cleanUpData() {
         taxReader = new ReaderImpl();
         cleanUpEmployeeData();
     }
 
-    public void cleanUpEmployeeData(){
+    public void cleanUpEmployeeData() {
         employeeReader = new ReaderImpl();
     }
+
 
 }

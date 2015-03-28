@@ -2,7 +2,6 @@ package org.myob.infrastructure.service;
 
 import org.junit.Test;
 import org.myob.domain.service.PayslipService;
-import org.myob.infrastructure.persistence.file.reader.FileReaderType;
 
 import java.io.IOException;
 
@@ -15,13 +14,13 @@ import static org.myob.infrastructure.persistence.file.reader.FileReaderType.CLA
  */
 public class PayslipServiceBuilderTest {
 
-    private PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
+    private PayslipServiceBuilderImpl payslipServiceBuilder = new PayslipServiceBuilderImpl();
 
     @Test
-    public void shouldNotReturnNull_withACLassLoaderReader() throws IOException {
+    public void shouldNotReturnNull_withACLassLoaderReader() throws Exception {
         PayslipService payslipService = payslipServiceBuilder.withEmployeeFileName("employee/employee.csv")
                 .withTaxFileName("tax/tax.csv")
-                .withStringWriter()
+                .withPayslipFileName("payslip.csv")
                 .fileReaderType(CLASSLOADER)
                 .build();
 
