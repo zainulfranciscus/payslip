@@ -19,12 +19,12 @@ public class TaxCsvReaderTest {
     private Row row;
 
     @After
-    public void after() throws IOException {
+    public void after() throws Exception {
         reader.close();
     }
 
     @Test
-    public void shouldHave0ForMinIncome_MaxIncome_BaseTax_TaxPerDollar() throws IOException {
+    public void shouldHave0ForMinIncome_MaxIncome_BaseTax_TaxPerDollar() throws Exception {
         reader = new TaxCSVReaderImpl("tax/taxTableWithNonNumericalValues.csv");
         row = reader.read();
 
@@ -33,7 +33,7 @@ public class TaxCsvReaderTest {
     }
 
     @Test
-    public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws IOException {
+    public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
         reader = new TaxCSVReaderImpl("tax/tax.csv");
         row = reader.read();
 
@@ -48,13 +48,13 @@ public class TaxCsvReaderTest {
     }
 
     @Test
-    public void rowShouldBeNullBecauseCSVFileOnlyHasHeader() throws IOException {
+    public void rowShouldBeNullBecauseCSVFileOnlyHasHeader() throws Exception {
         reader = new TaxCSVReaderImpl("tax/onlyHaveTaxHeaders.csv");
         assertNull(reader.read());
     }
 
     @Test
-    public void rowShouldBeNullBecauseCSVFileIsEmpty() throws IOException {
+    public void rowShouldBeNullBecauseCSVFileIsEmpty() throws Exception {
         reader = new TaxCSVReaderImpl("emptyFile.csv");
         assertNull(reader.read());
     }

@@ -25,10 +25,10 @@ public class PayslipWriterImpl implements PayslipWriter {
     public void write(Payslip payslip) throws IOException {
         csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE));
         csvPrinter.printRecord(payslip.getEmployeeName(),
-                payslip.payPeriod(),
+                payslip.getPayPeriod(),
                 payslip.getGrossIncome(),
                 payslip.getIncomeTax(),
-                payslip.netIncome(),
+                payslip.getNetIncome(),
                 payslip.getSuper());
         csvPrinter.flush();
         csvPrinter.close();

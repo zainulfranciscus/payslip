@@ -23,12 +23,12 @@ public class PayslipServiceImpl implements PayslipService {
     }
 
     @Override
-    public void writePayslips(EmployeeSpecification employeeSpecification) throws IOException {
+    public void writePayslips(EmployeeSpecification employeeSpecification) throws Exception {
 
         List<Employee> employees = new ArrayList<>();
 
         while((employees = employeeRepository.find(employeeSpecification)).size() > 0) {
-            List<Payslip> payslips = payslipRepository.createPayslips(employees);
+            List<Payslip> payslips = createPayslips(employees);
             payslipRepository.savePayslips(payslips);
         }
     }
@@ -36,6 +36,12 @@ public class PayslipServiceImpl implements PayslipService {
     @Override
     public void setPayslipRepository(PayslipRepository payslipRepository) {
         this.payslipRepository = payslipRepository;
+    }
+
+    @Override
+    public List<Payslip> createPayslips(List<Employee> employees) throws Exception {
+        List<Payslip> payslips = payslipRepository.createPayslips(employees);
+        return payslips;
     }
 }
 

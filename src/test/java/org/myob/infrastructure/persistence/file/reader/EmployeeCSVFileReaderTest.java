@@ -20,12 +20,12 @@ public class EmployeeCSVFileReaderTest {
     private Row row;
 
     @After
-    public void after() throws IOException {
+    public void after() throws Exception {
         reader.close();
     }
 
     @Test
-    public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws IOException {
+    public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws Exception {
         reader = new EmployeeCSVFileReaderImpl( "employee/employee.csv");
         row = reader.read();
 
@@ -39,13 +39,13 @@ public class EmployeeCSVFileReaderTest {
     }
 
     @Test
-    public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws IOException {
+    public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws Exception {
         reader = new EmployeeCSVFileReaderImpl("employee/onlyHaveEmployeeHeader.csv");
         assertNull(reader.read());
     }
 
     @Test
-    public void rowShouldBeNullBecauseFileIsEmpty() throws IOException {
+    public void rowShouldBeNullBecauseFileIsEmpty() throws Exception {
         reader = new EmployeeCSVFileReaderImpl("emptyFile.csv");
         assertNull(reader.read());
     }

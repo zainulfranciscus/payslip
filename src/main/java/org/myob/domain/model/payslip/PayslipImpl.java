@@ -28,55 +28,62 @@ public class PayslipImpl implements Payslip {
     }
 
     @Override
-    public String payPeriod() {
+    public String getPayPeriod() {
 
-        return paymentStartDate() + " " + paymentEndDate();
+        return getPaymentStartDate() + " - " + getPaymentEndDate();
     }
 
     @Override
-    public String paymentStartDate() {
+    public String getPaymentStartDate() {
         return formatter.print(startPeriod);
     }
 
     @Override
-    public String paymentEndDate() {
+    public String getPaymentEndDate() {
         return formatter.print(endPeriod);
     }
 
     @Override
     public int getGrossIncome() {
-        return grossIncomeAsBigDecimal().intValue();
-    }
-
-    @Override
-    public BigDecimal grossIncomeAsBigDecimal(){
-        return employee.salaryAsBigDecimal().divide(new BigDecimal(12),ZERO_ROUND_SCALE,ROUND_DOWN);
+        return employee.grossIncomeAsBigDecimal().intValue();
     }
 
     @Override
     public BigDecimal minIncomeAsBigDecimal(){
+        if(tax == null){
+            return new BigDecimal(0);
+        }
         return new BigDecimal(tax.getMinIncome());
     }
 
 
     @Override
     public BigDecimal getAmountOfTaxableIncome() {
+        if(minIncomeAsBigDecimal().intValue() == 0){
+            return ZERO_TAX;
+        }
         return employee.salaryAsBigDecimal().subtract(minIncomeAsBigDecimal());
     }
 
     @Override
     public BigDecimal taxPerDollarInBigDecimal() {
-        return tax.taxDollarInCentsAsBigDecimal().divide(new BigDecimal(100));
+        if(tax == null){
+            return ZERO_TAX;
+        }
+        return tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_FOR_TAX_PER_DOLLAR);
     }
 
     @Override
-    public BigDecimal amountOfTaxForEachTaxableDollar() {
+    public BigDecimal taxForEachTaxableDollar() {
         return getAmountOfTaxableIncome().multiply(taxPerDollarInBigDecimal());
     }
 
     @Override
     public BigDecimal taxOnSalary() {
-        return amountOfTaxForEachTaxableDollar().add(tax.baseTaxAsBigDecimal());
+        if(tax == null){
+            return ZERO_TAX;
+        }
+        return taxForEachTaxableDollar().add(tax.baseTaxAsBigDecimal());
     }
 
     @Override
@@ -90,13 +97,13 @@ public class PayslipImpl implements Payslip {
     }
 
     @Override
-    public int netIncome() {
-        return grossIncomeAsBigDecimal().subtract(incomeTaxAsBigDecimal()).intValue();
+    public int getNetIncome() {
+        return employee.grossIncomeAsBigDecimal().subtract(incomeTaxAsBigDecimal()).intValue();
     }
 
     @Override
     public int getSuper() {
-        return grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
+        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
     }
 
     @Override

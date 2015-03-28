@@ -38,7 +38,7 @@ public class PayslipRepositoryTest {
     private static Tax tax;
 
     @BeforeClass
-    public static void setup() throws IOException {
+    public static void setup() throws Exception {
 
         startDate = new LocalDate(2015, 01, 01);
         endDate = new LocalDate(2015, 10, 01);
@@ -69,7 +69,7 @@ public class PayslipRepositoryTest {
 
 
     @Test
-    public void shouldCreateAListOfPayslips_With_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper() throws IOException {
+    public void shouldCreateAListOfPayslips_With_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper() throws Exception {
 
         List<Employee> employees = new ArrayList<Employee>();
         employees.add(employee);
@@ -80,14 +80,14 @@ public class PayslipRepositoryTest {
             assertThat.hasGrossIncome(payslip.getGrossIncome())
                     .hasIncomeTax(payslip.getIncomeTax())
                     .hasName(payslip.getEmployeeName())
-                    .hasNetIncome(payslip.netIncome())
-                    .hasPayPeriod(payslip.payPeriod())
+                    .hasNetIncome(payslip.getNetIncome())
+                    .hasPayPeriod(payslip.getPayPeriod())
                     .hasSuper(payslip.getSuper());
         }
     }
 
     @Test
-    public void payslipShouldHaveTheRight_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper() throws IOException {
+    public void payslipShouldHaveTheRight_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper() throws Exception {
 
         payslip = payslipRepository.create(employee);
 
@@ -95,8 +95,8 @@ public class PayslipRepositoryTest {
         assertThat.hasGrossIncome(payslip.getGrossIncome())
                 .hasIncomeTax(payslip.getIncomeTax())
                 .hasName(payslip.getEmployeeName())
-                .hasNetIncome(payslip.netIncome())
-                .hasPayPeriod(payslip.payPeriod())
+                .hasNetIncome(payslip.getNetIncome())
+                .hasPayPeriod(payslip.getPayPeriod())
                 .hasSuper(payslip.getSuper());
     }
 
@@ -142,7 +142,7 @@ public class PayslipRepositoryTest {
         }
 
         AssertThat hasPayPeriod(String payPeriod) {
-            assertEquals(payslip.payPeriod(), payPeriod);
+            assertEquals(payslip.getPayPeriod(), payPeriod);
             return this;
         }
 
@@ -157,7 +157,7 @@ public class PayslipRepositoryTest {
         }
 
         AssertThat hasNetIncome(int netIncome){
-            assertEquals(payslip.netIncome(),netIncome);
+            assertEquals(payslip.getNetIncome(),netIncome);
             return this;
         }
 

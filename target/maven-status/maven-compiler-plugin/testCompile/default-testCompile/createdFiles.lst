@@ -1,4 +1,5 @@
 org\myob\infrastructure\repository\EmployeeRepositoryTest$AssertThat.class
+PayslipFixture.class
 org\myob\infrastructure\repository\TaxRepositoryTest.class
 org\myob\domain\model\employee\EmployeeTest.class
 org\myob\domain\model\tax\TaxBuilderTest.class
@@ -12,6 +13,7 @@ org\myob\domain\model\tax\TaxTest.class
 org\myob\infrastructure\persistence\file\reader\EmployeeCSVFileReaderTest$AssertThat.class
 org\myob\infrastructure\persistence\file\reader\TaxCsvReaderTest.class
 org\myob\infrastructure\service\PayslipServiceTest$1.class
+reader\ReaderImpl.class
 org\myob\infrastructure\persistence\file\reader\EmployeeCSVFileReaderTest.class
 org\myob\infrastructure\persistence\file\reader\TaxCsvReaderTest$AssertThat.class
 org\myob\infrastructure\repository\EmployeeRepositoryTest.class

@@ -7,9 +7,7 @@ import org.myob.domain.service.EmployeeSpecification;
  */
 public class EmployeeSpecificationBuilder {
 
-
-    private int maxNumberOfEmployeesThatCanBeLoadedToMemory;
-
+    private int maxNumberOfEmployeesThatCanBeLoadedToMemory = 10;
 
     public EmployeeSpecificationBuilder withMaxNumberOfEmployeesThatCanBePutIntoMemory(int maxNumberOfLineRead) {
         this.maxNumberOfEmployeesThatCanBeLoadedToMemory = maxNumberOfLineRead;

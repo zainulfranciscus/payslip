@@ -1,6 +1,7 @@
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\persistence\file\reader\EmployeeCSVFileReaderTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\persistence\file\reader\builder\EmployeeCsvRowBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\repository\PayslipRepositoryTest.java
+C:\workspace\payslip\src\test\specs\PayslipFixture.java
 C:\workspace\payslip\src\test\java\org\myob\domain\model\employee\EmployeeSpecificationBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\domain\model\payslip\PayslipFactoryTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\service\PayslipServiceTest.java
@@ -10,6 +11,7 @@ C:\workspace\payslip\src\test\java\org\myob\domain\model\tax\TaxSpecificationBui
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\persistence\file\reader\builder\TaxTaxCsvRowBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\persistence\file\writer\PayslipWriterTest.java
 C:\workspace\payslip\src\test\java\org\myob\domain\model\tax\TaxBuilderTest.java
+C:\workspace\payslip\src\test\specs\reader\ReaderImpl.java
 C:\workspace\payslip\src\test\java\org\myob\domain\model\tax\TaxTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\repository\EmployeeRepositoryTest.java
 C:\workspace\payslip\src\test\java\org\myob\infrastructure\repository\TaxRepositoryTest.java

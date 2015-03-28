@@ -13,5 +13,5 @@ import java.util.List;
  */
 public interface EmployeeRepository {
     void setReader(Reader reader);
-    List<Employee> find(EmployeeSpecification specification) throws IOException;
+    List<Employee> find(EmployeeSpecification specification) throws Exception;
 }

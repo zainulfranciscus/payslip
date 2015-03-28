@@ -9,6 +9,8 @@ import java.io.IOException;
  */
 public interface Reader {
 
-    Row read() throws IOException;
-    void close() throws IOException;
+    Row read() throws Exception;
+    void close() throws Exception;
+
+
 }

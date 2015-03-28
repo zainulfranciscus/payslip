@@ -1,19 +1,20 @@
 package org.myob.infrastructure.repository;
 
-import org.myob.domain.model.tax.Tax;
-import org.myob.domain.model.employee.Employee;
-import org.myob.domain.model.employee.EmployeeBuilder;
 import org.junit.Before;
 import org.junit.Test;
-import org.myob.infrastructure.persistence.file.reader.Row;
+import org.myob.domain.model.employee.Employee;
+import org.myob.domain.model.employee.EmployeeBuilder;
+import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.tax.TaxSpecificationBuilder;
+import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
 
 import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
 
 /**
@@ -32,7 +33,7 @@ public class TaxRepositoryTest {
     private EmployeeBuilder employeeBuilder;
 
     @Before
-    public void setup() throws IOException {
+    public void setup() throws Exception {
 
         baseTax = 1000;
         maxIncomeForThisTax = 20000;
@@ -61,27 +62,27 @@ public class TaxRepositoryTest {
     }
 
     @Test
-    public void shouldHaveTheBaseTax() throws IOException {
+    public void shouldHaveTheBaseTax() throws Exception {
         assertEquals(baseTax,taxRepository.find(taxFor15000AsSalary).getBaseTax());
     }
 
     @Test
-    public void shouldBeMaxIncomeForThisTax() throws IOException {
+    public void shouldBeMaxIncomeForThisTax() throws Exception {
         assertEquals(maxIncomeForThisTax, taxRepository.find(taxFor15000AsSalary).getMaxIncome());
     }
 
     @Test
-    public void shouldBeMinIncomeForThisTax() throws IOException {
+    public void shouldBeMinIncomeForThisTax() throws Exception {
         assertEquals(minIncomeForThisTax, taxRepository.find(taxFor15000AsSalary).getMinIncome());
     }
 
     @Test
-    public void shouldBeTaxPerDollarForThisTax() throws IOException {
+    public void shouldBeTaxPerDollarForThisTax() throws Exception {
         assertEquals(taxPerDollarForThisTax, taxRepository.find(taxFor15000AsSalary).getTaxPerDollarInCents());
     }
 
     @Test
-    public void shouldBeNullWhenSalaryIsAboveMaxIncomeForThisTax() throws IOException {
+    public void shouldBeNullWhenSalaryIsAboveMaxIncomeForThisTax() throws Exception {
         Employee employee = employeeBuilder.withSalary(maxIncomeForThisTax + 2000).build();
         Specification aboveMaxIncome = new TaxSpecificationBuilder().withEmployee(employee).build();
         assertNull(taxRepository.find(aboveMaxIncome));

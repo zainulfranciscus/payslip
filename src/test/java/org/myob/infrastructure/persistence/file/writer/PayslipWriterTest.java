@@ -83,13 +83,13 @@ public class PayslipWriterTest {
 
         String expectedOutput = payslip.getEmployeeName()
                 .concat(COMMA_DELIMITER)
-                .concat(payslip.payPeriod())
+                .concat(payslip.getPayPeriod())
                 .concat(COMMA_DELIMITER)
                 .concat(String.valueOf(payslip.getGrossIncome()))
                 .concat(COMMA_DELIMITER)
                 .concat(String.valueOf(payslip.getIncomeTax()))
                 .concat(COMMA_DELIMITER)
-                .concat(String.valueOf(payslip.netIncome()))
+                .concat(String.valueOf(payslip.getNetIncome()))
                 .concat(COMMA_DELIMITER)
                 .concat(String.valueOf(payslip.getSuper()))
                 .concat(NEW_LINE);

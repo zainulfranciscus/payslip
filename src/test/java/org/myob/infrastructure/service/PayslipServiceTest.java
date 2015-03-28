@@ -35,7 +35,7 @@ public class PayslipServiceTest {
     }
 
     @Test
-    public void shouldCallFind4Times_Because() throws IOException {
+    public void shouldCallFind4Times_Because() throws Exception {
 
         int numberOfEmployeesThatCanBeRetrievedIntoMemory = 5;
 
@@ -62,7 +62,7 @@ public class PayslipServiceTest {
 
     }
 
-    private EmployeeSpecification setNumberOfEmployeesThatCanBePutIntoMemory(final int maxNumberOfLines) throws IOException {
+    private EmployeeSpecification setNumberOfEmployeesThatCanBePutIntoMemory(final int maxNumberOfLines) throws Exception {
         final EmployeeSpecification employeeSpecification = new EmployeeSpecificationBuilder().withMaxNumberOfEmployeesThatCanBePutIntoMemory(maxNumberOfLines).build();
 
         when(mockEmployeeRepository.find(employeeSpecification)).thenAnswer(new Answer() {

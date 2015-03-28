@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface PayslipRepository {
 
-    Payslip create(Employee employee) throws IOException;
+    Payslip create(Employee employee) throws Exception;
 
     void setTaxRepository(TaxRepository taxRepository);
 
@@ -21,7 +21,7 @@ public interface PayslipRepository {
 
     void save(Payslip payslip) throws IOException;
 
-    List<Payslip> createPayslips(List<Employee> employees) throws IOException;
+    List<Payslip> createPayslips(List<Employee> employees) throws Exception;
 
     void savePayslips(List<Payslip> payslips) throws IOException;
 }

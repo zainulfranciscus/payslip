@@ -23,7 +23,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
     private PayslipWriter payslipWriter;
 
     @Override
-    public List<Payslip> createPayslips(List<Employee> employees) throws IOException {
+    public List<Payslip> createPayslips(List<Employee> employees) throws Exception {
 
         List<Payslip> payslips = new ArrayList<Payslip>();
         for(Employee employee:employees){
@@ -35,7 +35,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
 
 
     @Override
-    public Payslip create(Employee employee) throws IOException {
+    public Payslip create(Employee employee) throws Exception {
 
         Tax tax = taxRepository.find( new TaxSpecificationBuilder().withEmployee(employee).build());
         PayslipFactory payslipFactory = new PayslipFactoryImpl();

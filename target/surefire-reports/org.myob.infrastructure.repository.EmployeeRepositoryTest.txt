@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.myob.infrastructure.repository.EmployeeRepositoryTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 sec - in org.myob.infrastructure.repository.EmployeeRepositoryTest

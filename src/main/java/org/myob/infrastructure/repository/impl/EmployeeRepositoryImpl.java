@@ -26,7 +26,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> find(EmployeeSpecification specification) throws IOException {
+    public List<Employee> find(EmployeeSpecification specification) throws Exception {
         Row row = null;
 
         List<Employee> employees = new ArrayList<Employee>();

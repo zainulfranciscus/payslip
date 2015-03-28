@@ -1,0 +1,90 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<link href="./concordion.css" rel="stylesheet" type="text/css"/>
+<body>
+    <div class="example">
+        <p>
+            Given this tax table: <br/>
+
+            <table concordion:execute="setUpTax(#minIncome,#maxIncome,#baseTax,#taxPerDollar,#startDate,#startMonth,#startYear)">
+                <tr>
+                    <th concordion:set="#minIncome">Min Income</th>
+                    <th concordion:set="#maxIncome">Max Income</th>
+                    <th concordion:set="#baseTax">Base Tax</th>
+                    <th concordion:set="#taxPerDollar">Tax Per Dollar</th>
+                    <th concordion:set="#startDate">Date</th>
+                    <th concordion:set="#startMonth">Month</th>
+                    <th concordion:set="#startYear">Year</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>18200</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2015</td>
+                </tr>
+            </table>
+
+        </p>
+
+        <p>
+            When an employee is:
+
+        <table concordion:execute="setUpEmployee(#firstName,#lastName,#annualSalary,#superRate,#paymentStartDate,#paymentStartMonth,#paymentStartYear,#paymentEndDate,#paymentEndMonth,#paymentEndYear)">
+            <tr>
+                <th concordion:set="#firstName">Min Income</th>
+                <th concordion:set="#lastName">Max Income</th>
+                <th concordion:set="#annualSalary">Base Tax</th>
+                <th concordion:set="#superRate">Tax Per Dollar</th>
+                <th concordion:set="#paymentStartDate">Start Date</th>
+                <th concordion:set="#paymentStartMonth">Start Month</th>
+                <th concordion:set="#paymentStartYear">Start Year</th>
+                <th concordion:set="#paymentEndDate">End Date</th>
+                <th concordion:set="#paymentEndMonth">End Month</th>
+                <th concordion:set="#paymentEndYear">End Year</th>
+            </tr>
+            <tr>
+                <td>David</td>
+                <td>Rudd</td>
+                <td>60050</td>
+                <td>9%</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2015</td>
+                <td>31</td>
+                <td>3</td>
+                <td>2015</td>
+            </tr>
+        </table>
+
+        </p>
+
+        <p>
+            Then this payslip should be printed:
+
+            <table concordion:verifyRows="#payslip:payslip()">
+                <tr>
+                    <th concordion:assertEquals="#payslip.employeeName">Name</th>
+                    <th concordion:assertEquals="#payslip.payPeriod">Pay Period</th>
+                    <th concordion:assertEquals="#payslip.grossIncome">Gross Income</th>
+                    <th concordion:assertEquals="#payslip.incomeTax">Income Tax</th>
+                    <th concordion:assertEquals="#payslip.netIncome">Net Income</th>
+                    <th concordion:assertEquals="#payslip.super">Super</th>
+                </tr>
+                <tr>
+                    <td>David Rudd</td>
+                    <td>01 March 2015 - 31 March 2015</td>
+                    <td>5004</td>
+                    <td>922</td>
+                    <td>4082</td>
+                    <td>450</td>
+                </tr>
+            </table>
+
+        </p>
+
+
+    </div>
+</body>
+</html>

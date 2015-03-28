@@ -11,18 +11,31 @@ import java.util.List;
  */
 public interface Payslip {
 
-    final static int ROUND_UP = BigDecimal.ROUND_UP;
-    final static int ROUND_DOWN = BigDecimal.ROUND_DOWN;
-    final static int ZERO_ROUND_SCALE = 0;
-    final static DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
+    static final int ROUND_UP = BigDecimal.ROUND_UP;
+    static final int ROUND_DOWN = BigDecimal.ROUND_DOWN;
+    static final int ZERO_ROUND_SCALE = 0;
+    static final DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
+    static final BigDecimal DIVISOR_FOR_TAX_PER_DOLLAR = new BigDecimal(100);
+    static final BigDecimal TWELVE_MONTHS = new BigDecimal(12);
+    static final BigDecimal ZERO_TAX = new BigDecimal(0) ;
 
-    String paymentStartDate();
+    String getPaymentStartDate();
 
-    String paymentEndDate();
+    String getPaymentEndDate();
 
     int getGrossIncome();
 
-    BigDecimal grossIncomeAsBigDecimal();
+    int getIncomeTax();
+
+    int getNetIncome();
+
+    int getSuper();
+
+    String getEmployeeName();
+
+    String getPayPeriod();
+
+
 
     BigDecimal minIncomeAsBigDecimal();
 
@@ -30,21 +43,10 @@ public interface Payslip {
 
     BigDecimal taxPerDollarInBigDecimal();
 
-    BigDecimal amountOfTaxForEachTaxableDollar();
+    BigDecimal taxForEachTaxableDollar();
 
     BigDecimal taxOnSalary();
 
-    int getIncomeTax();
-
     BigDecimal incomeTaxAsBigDecimal();
-
-    int netIncome();
-
-    int getSuper();
-
-    String getEmployeeName();
-
-    String payPeriod();
-
 
 }

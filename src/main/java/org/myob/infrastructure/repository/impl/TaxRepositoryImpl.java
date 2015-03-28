@@ -18,7 +18,7 @@ public class TaxRepositoryImpl implements TaxRepository {
     private Reader reader;
 
     @Override
-    public Tax find(Specification specification) throws IOException {
+    public Tax find(Specification specification) throws Exception {
         Row row = null;
 
         while((row = reader.read()) != null) {

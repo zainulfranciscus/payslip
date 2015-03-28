@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public interface TaxRepository {
 
-    Tax find(Specification specification) throws IOException;
+    Tax find(Specification specification) throws Exception;
 
     void setReader(Reader reader);
 }

@@ -85,7 +85,7 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    public void shouldHaveTheExpected_StartDate_EndDate_FirstName_LastName_Super_Salary_ForAll10Employees() throws IOException {
+    public void shouldHaveTheExpected_StartDate_EndDate_FirstName_LastName_Super_Salary_ForAll10Employees() throws Exception {
 
         int numberOfMockRows = 20;
         int maxNumberOfEmployeesThatShouldBeRead = 10;
