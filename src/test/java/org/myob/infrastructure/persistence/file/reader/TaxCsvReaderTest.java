@@ -2,6 +2,7 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.junit.After;
 import org.junit.Test;
+import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.impl.TaxCSVReaderImpl;
 import org.myob.infrastructure.repository.Reader;
 
@@ -24,7 +25,7 @@ public class TaxCsvReaderTest {
     @Test
     public void shouldHave0ForMinIncome_MaxIncome_BaseTax_TaxPerDollar() throws Exception {
         reader = new TaxCSVReaderImpl("tax/taxTableWithNonNumericalValues.csv");
-        row = reader.read();
+        row = reader.read(new TaxRowSpecification());
 
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveBaseTax(0).shouldHaveMaxIncome(0).shouldHaveMinIncome(0).shouldHaveTaxPerDollar(0);
@@ -33,7 +34,7 @@ public class TaxCsvReaderTest {
     @Test
     public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_500ForTaxPerDollarOver_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
         reader = new TaxCSVReaderImpl("tax/tax.csv");
-        row = reader.read();
+        row = reader.read(new TaxRowSpecification());
 
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveBaseTax(300.87)
@@ -42,20 +43,26 @@ public class TaxCsvReaderTest {
                 .shouldHaveTaxPerDollar(400.18)
                 .shouldHaveTaxPerDollarOver(500.07)
                 .shouldHaveStartingDate(1)
-                .shouldHaveStartingMonth(3)
+                .shouldHaveStartingMonth("March")
                 .shouldHaveStartingYear(2015);
     }
 
     @Test
     public void rowShouldBeNullBecauseCSVFileOnlyHasHeader() throws Exception {
         reader = new TaxCSVReaderImpl("tax/onlyHaveTaxHeaders.csv");
-        assertNull(reader.read());
+        assertNull(reader.read(new TaxRowSpecification()));
     }
 
     @Test
     public void rowShouldBeNullBecauseCSVFileIsEmpty() throws Exception {
         reader = new TaxCSVReaderImpl("emptyFile.csv");
-        assertNull(reader.read());
+        assertNull(reader.read(new TaxRowSpecification()));
+    }
+
+    @Test
+    public void rowShouldBeNullBecauseMonthYearAndDate_IsInvalid() throws Exception {
+        reader = new TaxCSVReaderImpl("tax/taxWithInvalidDates.csv");
+        assertNull(reader.read(new TaxRowSpecification()));
     }
 
     class AssertThat {
@@ -85,8 +92,8 @@ public class TaxCsvReaderTest {
             return this;
         }
 
-        AssertThat shouldHaveStartingMonth(int expectedValue){
-            assertEquals(expectedValue,row.getInt(STARTING_MONTH));
+        AssertThat shouldHaveStartingMonth(String expectedValue){
+            assertEquals(expectedValue,row.get(STARTING_MONTH));
             return this;
         }
 

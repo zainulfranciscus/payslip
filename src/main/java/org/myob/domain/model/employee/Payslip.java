@@ -32,7 +32,7 @@ public interface Payslip {
     String getEmployeeName();
 
     String getPayPeriod();
-    
+
     BigDecimal minIncomeAsBigDecimal();
 
     BigDecimal getAmountOfTaxableIncome();

@@ -6,6 +6,7 @@ import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
 
 /**
@@ -13,7 +14,7 @@ import static org.myob.infrastructure.persistence.file.reader.TaxHeader.*;
  */
 public class TaxTaxCsvRowBuilderTest {
 
-    private static TaxCsvRowBuilder taxCsvRowBuilder;
+
     private static Row row;
     private static String expectedMinIncome;
     private static String expectedMaxIncome;
@@ -22,6 +23,7 @@ public class TaxTaxCsvRowBuilderTest {
     private static String expectedStartingYear;
     private static String expectedStartingMonth;
     private static String expectedStartingDay;
+    private static TaxCsvRowBuilder taxCsvRowBuilder;
 
     @BeforeClass
     public static void setup(){
@@ -31,42 +33,51 @@ public class TaxTaxCsvRowBuilderTest {
         expectedBaseTax = "300";
         expectedTaxPerDollar = "400";
         expectedStartingDay = "1";
-        expectedStartingMonth = "3";
+        expectedStartingMonth = "March";
         expectedStartingYear = "2015";
 
-        row = taxCsvRowBuilder.withMinIncome(expectedMinIncome)
+        taxCsvRowBuilder = taxCsvRowBuilder.withMinIncome(expectedMinIncome)
                 .withMaxIncome(expectedMaxIncome)
                 .withBaseTax(expectedBaseTax)
                 .withTaxPerDollar(expectedTaxPerDollar)
                 .withStartingYear(expectedStartingYear)
                 .withStartingMonth(expectedStartingMonth)
-                .withStartingDay(expectedStartingDay)
-                .build();
+                .withStartingDay(expectedStartingDay);
+
     }
 
     @Test
-    public void shouldBeTheExpectedMinIncome(){
-        assertEquals(expectedMinIncome,row.get(MIN_INCOME));
+    public void shouldHaveTheExpected_MinIncome_MaxIncome_BaseTax_TaxPerDollar(){
+
+        row = taxCsvRowBuilder.build();
+        AssertThat assertThat = new AssertThat();
+        assertThat.shouldHaveTheExpectedBaseTax()
+                .shouldHaveTheExpectedMaxIncome()
+                .shouldHaveTheExpectedMinIncome()
+                .shouldHaveTheExpectedTaxPerDollar();
+
     }
 
-    @Test
-    public void shouldBeTheExpectedMaxIncome(){
-        assertEquals(expectedMaxIncome,row.get(MAX_INCOME));
-    }
+    class AssertThat{
+        public AssertThat shouldHaveTheExpectedMinIncome(){
+            assertEquals(expectedMinIncome,row.get(MIN_INCOME));
+            return this;
+        }
 
-    @Test
-    public void shouldBeTheExpectedBaseTax(){
-        assertEquals(expectedBaseTax, row.get(BASE_TAX));
-    }
+        public AssertThat shouldHaveTheExpectedMaxIncome(){
+            assertEquals(expectedMaxIncome,row.get(MAX_INCOME));
+            return this;
+        }
 
-    @Test
-    public void shouldBeTheExpectedTaxPerDollar(){
-        assertEquals(expectedTaxPerDollar, row.get(TAX_PER_DOLLAR));
-    }
+        public AssertThat shouldHaveTheExpectedBaseTax(){
+            assertEquals(expectedBaseTax, row.get(BASE_TAX));
+            return this;
+        }
 
-    @Test
-    public void shouldReturnTaxPerDollarInDecimal(){
-        assertEquals(new Double(32.5),new Double(taxCsvRowBuilder.withTaxPerDollar("32.5").build().getDouble(TAX_PER_DOLLAR)));
+        public AssertThat shouldHaveTheExpectedTaxPerDollar(){
+            assertEquals(expectedTaxPerDollar, row.get(TAX_PER_DOLLAR));
+            return this;
+        }
     }
 
 

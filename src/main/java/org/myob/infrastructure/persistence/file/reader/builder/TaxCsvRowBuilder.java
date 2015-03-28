@@ -36,7 +36,7 @@ public class TaxCsvRowBuilder  {
         return this;
     }
 
-    public Row build() {
+    public TaxCsvRow build() {
         return new TaxCsvRow(minIncome,maxIncome,baseTax,taxPerDollar,taxPerDollarOver,startingYear,startingMonth,startingDay);
     }
 

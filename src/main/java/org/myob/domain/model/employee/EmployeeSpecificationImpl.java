@@ -38,6 +38,7 @@ public class EmployeeSpecificationImpl implements EmployeeSpecification{
         try {
             employee.getPaymentStartDate();
         }catch(Exception ex){
+            ex.printStackTrace();
             exceptionForGettingPaymentStartDate = true;
         }
 
@@ -46,6 +47,7 @@ public class EmployeeSpecificationImpl implements EmployeeSpecification{
         try{
             employee.getPaymentEndDate();
         }catch(Exception ex){
+            ex.printStackTrace();
             exceptionForGettingPaymentEndDate = true;
         }
         return StringUtils.isNotBlank(employee.getFullName()) && !exceptionForGettingPaymentStartDate && !exceptionForGettingPaymentEndDate;

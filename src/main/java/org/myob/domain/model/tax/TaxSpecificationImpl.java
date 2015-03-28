@@ -11,16 +11,25 @@ public class TaxSpecificationImpl implements Specification<Tax> {
 
     private Employee employee;
 
-    public TaxSpecificationImpl(Employee employee){
-        this.employee= employee;
+    public TaxSpecificationImpl(Employee employee) {
+        this.employee = employee;
     }
 
     @Override
     public boolean match(Tax tax) {
-        LocalDate taxStartDate = new LocalDate(tax.getStartingYear(),tax.getStartingMonth(),tax.getStartingDay());
+        LocalDate taxStartDate = null;
+        boolean isValidDate = true;
 
-        return tax.getMinIncome() <= employee.getSalary()
-                && tax.getMaxIncome() >=  employee.getSalary()
+        try {
+            taxStartDate = new LocalDate(tax.getStartingYear(), tax.getStartingMonth(), tax.getStartingDay());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            isValidDate = false;
+        }
+
+        return isValidDate
+                && tax.getMinIncome() <= employee.getSalary()
+                && tax.getMaxIncome() >= employee.getSalary()
                 && (employee.getPaymentStartDate().isAfter(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
     }
 

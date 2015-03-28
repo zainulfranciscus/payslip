@@ -1,2 +1,2 @@
 Min Income,Max Income,Base Tax,Tax per Dollar,Tax per Dollar Over,Start Date,Start Month,Start Year
-a,!,>,b,&,*,-,+
+a,!,>,b,&,1,March,2015

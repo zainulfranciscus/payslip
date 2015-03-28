@@ -3,12 +3,14 @@ package org.myob.infrastructure.repository;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.myob.domain.model.employee.Employee;
-import org.myob.infrastructure.service.EmployeeRepository;
 import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
+import org.myob.domain.service.EmployeeSpecification;
+import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.impl.EmployeeRepositoryImpl;
-import org.myob.domain.service.EmployeeSpecification;
+import org.myob.infrastructure.service.EmployeeRepository;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +30,6 @@ public class EmployeeRepositoryTest {
     private Reader mockReader;
     private Row mockRow;
     private List<Employee> employees;
-    private Employee employee;
     private EmployeeSpecification employeeSpecification;
 
     private int january;
@@ -67,10 +68,10 @@ public class EmployeeRepositoryTest {
 
         when(mockRow.getInt(ANNUAL_SALARY)).thenReturn(expectedSalary);
         when(mockRow.getInt(END_PAYMENT_DATE)).thenReturn(expectedEndDate.getDayOfMonth());
-        when(mockRow.getInt(END_PAYMENT_MONTH)).thenReturn(expectedEndDate.getMonthOfYear());
+        when(mockRow.getMonthAsInt(END_PAYMENT_MONTH)).thenReturn(expectedEndDate.getMonthOfYear());
         when(mockRow.getInt(END_PAYMENT_YEAR)).thenReturn(expectedEndDate.getYear());
         when(mockRow.getInt(START_PAYMENT_DATE)).thenReturn(expectedStartDate.getDayOfMonth());
-        when(mockRow.getInt(START_PAYMENT_MONTH)).thenReturn(expectedStartDate.getMonthOfYear());
+        when(mockRow.getMonthAsInt(START_PAYMENT_MONTH)).thenReturn(expectedStartDate.getMonthOfYear());
         when(mockRow.getInt(START_PAYMENT_YEAR)).thenReturn(expectedStartDate.getYear());
         when(mockRow.get(FIRST_NAME)).thenReturn(expectedFirstName);
         when(mockRow.get(LAST_NAME)).thenReturn(expectedLastName);
@@ -90,7 +91,7 @@ public class EmployeeRepositoryTest {
         int numberOfMockRows = 20;
         int maxNumberOfEmployeesThatShouldBeRead = 10;
 
-        when(mockReader.read()).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
+        when(mockReader.read(Mockito.isA(RowSpecification.class))).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
         employeeSpecification = new  EmployeeSpecificationBuilder().withMaxNumberOfEmployeesThatCanBePutIntoMemory(maxNumberOfEmployeesThatShouldBeRead).build();
         employees = employeeRepository.find(employeeSpecification);
 
@@ -143,12 +144,12 @@ public class EmployeeRepositoryTest {
         }
 
         public AssertThat hasExpectedSuper(Employee employee){
-            assertEquals(expectedSuper, employee.getSuper());
+            assertEquals(new Double(expectedSuper), new Double(employee.getSuper()));
             return this;
         }
 
         public AssertThat hasExpectedSalary(Employee employee){
-            assertEquals(expectedSalary,employee.getSalary());
+            assertEquals(new Double(expectedSalary),new Double(employee.getSalary()));
             return this;
         }
     }

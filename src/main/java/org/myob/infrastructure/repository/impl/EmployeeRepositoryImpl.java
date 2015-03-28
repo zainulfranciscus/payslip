@@ -3,11 +3,12 @@ package org.myob.infrastructure.repository.impl;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.service.EmployeeSpecification;
+import org.myob.infrastructure.persistence.file.EmployeeRowSpecification;
+import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.service.EmployeeRepository;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,13 +32,14 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         List<Employee> employees = new ArrayList<Employee>();
 
-        while((row = reader.read()) != null && !specification.hasReadTheAllowedNumberOfLines()) {
+
+        while((row = reader.read(new EmployeeRowSpecification())) != null && !specification.hasReadTheAllowedNumberOfLines()) {
             Employee employee = new EmployeeBuilder()
                     .withEndOfPaymentDate(row.getInt(END_PAYMENT_DATE))
-                    .withEndOfPaymentMonth(row.getInt(END_PAYMENT_MONTH))
+                    .withEndOfPaymentMonth(row.getMonthAsInt(END_PAYMENT_MONTH))
                     .withEndOfPaymentYear(row.getInt(END_PAYMENT_YEAR))
                     .withStartOfPaymentDate(row.getInt(START_PAYMENT_DATE))
-                    .withStartOfPaymentMonth(row.getInt(START_PAYMENT_MONTH))
+                    .withStartOfPaymentMonth(row.getMonthAsInt(START_PAYMENT_MONTH))
                     .withStartOfPaymentYear(row.getInt(START_PAYMENT_YEAR))
                     .withFirstName(row.get(FIRST_NAME))
                     .withLastName(row.get(LAST_NAME))

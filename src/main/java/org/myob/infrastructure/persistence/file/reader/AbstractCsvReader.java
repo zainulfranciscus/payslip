@@ -2,6 +2,7 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.myob.infrastructure.repository.RowSpecification;
 import org.myob.infrastructure.repository.Reader;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public abstract class AbstractCsvReader implements Reader {
     }
 
     @Override
-    public Row read() throws IOException {
+    public Row read(RowSpecification specification) throws IOException {
         reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName));
         Iterable<CSVRecord> records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
         Iterator<CSVRecord> recordIterator = records.iterator();
@@ -32,10 +33,17 @@ public abstract class AbstractCsvReader implements Reader {
             return null;
         }
 
-        CSVRecord record = recordIterator.next();
+        CSVRecord record = null;
+        Row row = null;
 
-        return make(record);
+        while((row = make(recordIterator.next())) != null){
 
+            if(specification.isValid(row)){
+                break;
+            }
+        }
+
+        return row;
     }
 
     @Override

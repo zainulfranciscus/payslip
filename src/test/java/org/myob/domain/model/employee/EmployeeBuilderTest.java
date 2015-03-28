@@ -86,18 +86,18 @@ public class EmployeeBuilderTest {
     @Test
     public void shouldReturnTheNumericalValueOfTheExpectedSuper(){
         String superRate = "10%";
-        assertEquals(10, employeeBuilder.withSuperRate(superRate).build().getSuper());
+        assertEquals(new Double(10), new Double(employeeBuilder.withSuperRate(superRate).build().getSuper()));
     }
 
     @Test
     public void shouldReturnZeroWhenSuperIsBlank(){
         String superRate = "";
-        assertEquals(0,employeeBuilder.withSuperRate(superRate).build().getSuper());
+        assertEquals(new Double(0),new Double(employeeBuilder.withSuperRate(superRate).build().getSuper()));
     }
 
     @Test
     public void shouldReturnZeroWhenSuperIsNotANumber(){
         String superRate = "abc";
-        assertEquals(0,employeeBuilder.withSuperRate(superRate).build().getSuper());
+        assertEquals(new Double(0),new Double(employeeBuilder.withSuperRate(superRate).build().getSuper()));
     }
 }

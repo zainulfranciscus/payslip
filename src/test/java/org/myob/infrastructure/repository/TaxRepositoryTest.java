@@ -1,15 +1,16 @@
 package org.myob.infrastructure.repository;
 
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.myob.domain.model.employee.Employee;
 import org.myob.domain.model.employee.EmployeeBuilder;
 import org.myob.domain.model.tax.Tax;
 import org.myob.domain.model.tax.TaxSpecificationBuilder;
+import org.myob.infrastructure.persistence.file.TaxRowSpecification;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
-
-import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -54,7 +55,7 @@ public class TaxRepositoryTest {
         setMockRowBehavior();
 
         mockReader = mock(Reader.class);
-        when(mockReader.read()).thenReturn(mockRow,null);
+        when(mockReader.read(Mockito.isA(TaxRowSpecification.class))).thenReturn(mockRow,null);
 
         taxRepository = new TaxRepositoryImpl();
         taxRepository.setReader(mockReader);
@@ -88,6 +89,12 @@ public class TaxRepositoryTest {
         assertNull(taxRepository.find(aboveMaxIncome));
     }
 
+    @Test
+    public void shouldReturnNullTax_BecauseMonthIsAnInvalidCalendarMonth() throws Exception {
+        when(mockRow.getMonthAsInt(STARTING_MONTH)).thenReturn(13);
+        assertNull(taxRepository.find(taxFor15000AsSalary));
+    }
+
     private void setMockRowBehavior(){
 
         mockRow = mock(Row.class);
@@ -95,8 +102,9 @@ public class TaxRepositoryTest {
         when(mockRow.getInt(MAX_INCOME)).thenReturn(maxIncomeForThisTax);
         when(mockRow.getInt(MIN_INCOME)).thenReturn(minIncomeForThisTax);
         when(mockRow.getDouble(TAX_PER_DOLLAR)).thenReturn(taxPerDollarForThisTax);
-        when(mockRow.getInt(STARTING_DAY)).thenReturn(01);
-        when(mockRow.getInt(STARTING_MONTH)).thenReturn(01);
+        when(mockRow.getInt(STARTING_DAY)).thenReturn(1);
+        when(mockRow.getMonthAsInt(STARTING_MONTH)).thenReturn(1);
+        when(mockRow.getDate()).thenReturn(new LocalDate());
         when(mockRow.getInt(STARTING_YEAR)).thenReturn(2015);
 
     }
