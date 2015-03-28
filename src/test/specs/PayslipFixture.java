@@ -19,17 +19,19 @@ import java.util.List;
 @RunWith(ConcordionRunner.class)
 public class PayslipFixture {
 
-    private ReaderImpl taxReader = new ReaderImpl();
-    private ReaderImpl employeeReader = new ReaderImpl();
+    private ReaderImpl taxReader;
+    private ReaderImpl employeeReader;
 
     public void setUpTax(String minIncome,
                          String maxIncome,
                          String baseTax,
                          String taxPerDollar,
+                         String taxPerDollarOver,
                          String date,
                          String month,
                          String year){
 
+        taxReader = new ReaderImpl();
         TaxCsvRowBuilder taxCsvRowBuilder = new TaxCsvRowBuilder();
         taxCsvRowBuilder.withBaseTax(baseTax);
         taxCsvRowBuilder.withMaxIncome(maxIncome);
@@ -38,6 +40,8 @@ public class PayslipFixture {
         taxCsvRowBuilder.withStartingMonth(month);
         taxCsvRowBuilder.withStartingYear(year);
         taxCsvRowBuilder.withTaxPerDollar(taxPerDollar);
+        taxCsvRowBuilder.withTaxPerDollarOver(taxPerDollarOver);
+
 
         taxReader.add(taxCsvRowBuilder.build());
 
@@ -57,6 +61,7 @@ public class PayslipFixture {
                               String paymentEndMonth,
                               String paymentEndYear){
 
+        employeeReader = new ReaderImpl();
         EmployeeCsvRowBuilder employeeCsvRowBuilder = new EmployeeCsvRowBuilder();
         employeeCsvRowBuilder.withEndOfPaymentDate(paymentEndDate)
                 .withEndOfPaymentMonth(paymentEndMonth)

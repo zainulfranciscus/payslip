@@ -25,10 +25,11 @@ public class TaxRepositoryImpl implements TaxRepository {
             Tax tax = new TaxBuilder().withBaseTax(row.getInt(BASE_TAX))
                     .withMaxIncome(row.getInt(MAX_INCOME))
                     .withMinIncome(row.getInt(MIN_INCOME))
-                    .withTaxPerDollar(row.getInt(TAX_PER_DOLLAR))
+                    .withTaxPerDollar(row.getDouble(TAX_PER_DOLLAR))
                     .withStartingDay(row.getInt(STARTING_DAY))
                     .withStartingMonth(row.getInt(STARTING_MONTH))
                     .withStartingYear(row.getInt(STARTING_YEAR))
+                    .withTaxPerDollarOver(row.getInt(TAX_PER_DOLLAR_OVER))
                     .build();
             if (specification.match(tax)) {
                 return tax;

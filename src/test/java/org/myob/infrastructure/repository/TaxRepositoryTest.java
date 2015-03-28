@@ -28,7 +28,7 @@ public class TaxRepositoryTest {
     private int baseTax;
     private int maxIncomeForThisTax;
     private int minIncomeForThisTax;
-    private int taxPerDollarForThisTax;
+    private double taxPerDollarForThisTax;
     private Specification<Tax> taxFor15000AsSalary;
     private EmployeeBuilder employeeBuilder;
 
@@ -78,7 +78,7 @@ public class TaxRepositoryTest {
 
     @Test
     public void shouldBeTaxPerDollarForThisTax() throws Exception {
-        assertEquals(taxPerDollarForThisTax, taxRepository.find(taxFor15000AsSalary).getTaxPerDollarInCents());
+        assertEquals(new Double(taxPerDollarForThisTax), new Double(taxRepository.find(taxFor15000AsSalary).getTaxPerDollarInCents()));
     }
 
     @Test
@@ -94,7 +94,7 @@ public class TaxRepositoryTest {
         when(mockRow.getInt(BASE_TAX)).thenReturn(baseTax);
         when(mockRow.getInt(MAX_INCOME)).thenReturn(maxIncomeForThisTax);
         when(mockRow.getInt(MIN_INCOME)).thenReturn(minIncomeForThisTax);
-        when(mockRow.getInt(TAX_PER_DOLLAR)).thenReturn(taxPerDollarForThisTax);
+        when(mockRow.getDouble(TAX_PER_DOLLAR)).thenReturn(taxPerDollarForThisTax);
         when(mockRow.getInt(STARTING_DAY)).thenReturn(01);
         when(mockRow.getInt(STARTING_MONTH)).thenReturn(01);
         when(mockRow.getInt(STARTING_YEAR)).thenReturn(2015);

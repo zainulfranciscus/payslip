@@ -14,6 +14,7 @@ public class TaxCsvRowBuilder  {
     private String startingYear;
     private String startingMonth;
     private String startingDay;
+    private String taxPerDollarOver;
 
     public TaxCsvRowBuilder withMinIncome(String minIncome) {
         this.minIncome = minIncome;
@@ -36,7 +37,7 @@ public class TaxCsvRowBuilder  {
     }
 
     public Row build() {
-        return new TaxCsvRow(minIncome,maxIncome,baseTax,taxPerDollar,startingYear,startingMonth,startingDay);
+        return new TaxCsvRow(minIncome,maxIncome,baseTax,taxPerDollar,taxPerDollarOver,startingYear,startingMonth,startingDay);
     }
 
     public TaxCsvRowBuilder withStartingYear(String startingYear) {
@@ -51,6 +52,11 @@ public class TaxCsvRowBuilder  {
 
     public TaxCsvRowBuilder withStartingDay(String startingDay) {
         this.startingDay = startingDay;
+        return this;
+    }
+
+    public TaxCsvRowBuilder withTaxPerDollarOver(String taxPerDollarOver) {
+        this.taxPerDollarOver = taxPerDollarOver;
         return this;
     }
 }

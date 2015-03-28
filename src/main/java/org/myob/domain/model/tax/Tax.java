@@ -10,19 +10,22 @@ public class Tax {
     private final int baseTax;
     private final int minTaxableIncome;
     private final int maxTaxableIncome;
-    private final int taxPerDollarInCents;
+    private final double taxPerDollarInCents;
     private int startingDay;
     private int startingMonth;
     private int startingYear;
+    private int taxPerDollarOver;
 
     public Tax(int minTaxableIncome,
+               int taxPerDollarOver,
                int maxTaxableIncome,
-               int taxPerDollarInCents,
+               double taxPerDollarInCents,
                int baseTax,
                int startingDay,
                int startingMonth,
                int startingYear) {
         this.minTaxableIncome = minTaxableIncome;
+        this.taxPerDollarOver = taxPerDollarOver;
         this.maxTaxableIncome = maxTaxableIncome;
         this.taxPerDollarInCents = taxPerDollarInCents;
         this.baseTax = baseTax;
@@ -39,7 +42,7 @@ public class Tax {
         return maxTaxableIncome;
     }
 
-    public int getTaxPerDollarInCents() {
+    public double getTaxPerDollarInCents() {
         return taxPerDollarInCents;
     }
 
@@ -55,7 +58,7 @@ public class Tax {
         return new BigDecimal(baseTax);
     }
     public BigDecimal minTaxableIncomeAsBigDecimal(){
-        return new BigDecimal(minTaxableIncome);
+        return new BigDecimal(taxPerDollarOver);
     }
 
     public int getStartingDay() {
@@ -68,5 +71,9 @@ public class Tax {
 
     public int getStartingYear() {
         return this.startingYear;
+    }
+
+    public int getTaxPerDollarOver() {
+        return this.taxPerDollarOver;
     }
 }

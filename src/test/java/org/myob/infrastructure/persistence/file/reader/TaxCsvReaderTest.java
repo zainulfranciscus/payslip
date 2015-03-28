@@ -2,10 +2,8 @@ package org.myob.infrastructure.persistence.file.reader;
 
 import org.junit.After;
 import org.junit.Test;
-import org.myob.infrastructure.repository.Reader;
 import org.myob.infrastructure.persistence.file.reader.impl.TaxCSVReaderImpl;
-
-import java.io.IOException;
+import org.myob.infrastructure.repository.Reader;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -33,7 +31,7 @@ public class TaxCsvReaderTest {
     }
 
     @Test
-    public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
+    public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_500ForTaxPerDollarOver_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
         reader = new TaxCSVReaderImpl("tax/tax.csv");
         row = reader.read();
 
@@ -42,6 +40,7 @@ public class TaxCsvReaderTest {
                 .shouldHaveMaxIncome(200)
                 .shouldHaveMinIncome(100)
                 .shouldHaveTaxPerDollar(400)
+                .shouldHaveTaxPerDollarOver(500)
                 .shouldHaveStartingDate(1)
                 .shouldHaveStartingMonth(3)
                 .shouldHaveStartingYear(2015);
@@ -93,6 +92,11 @@ public class TaxCsvReaderTest {
 
         AssertThat shouldHaveStartingYear(int expectedValue){
             assertEquals(expectedValue,row.getInt(STARTING_YEAR));
+            return this;
+        }
+
+        public AssertThat shouldHaveTaxPerDollarOver(int expectedTaxPerDollarOver) {
+            assertEquals(expectedTaxPerDollarOver,row.getInt(TAX_PER_DOLLAR_OVER));
             return this;
         }
     }

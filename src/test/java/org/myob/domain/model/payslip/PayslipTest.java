@@ -1,7 +1,6 @@
 package org.myob.domain.model.payslip;
 
 import org.joda.time.LocalDate;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.domain.model.employee.Employee;
@@ -15,14 +14,13 @@ import java.math.BigDecimal;
 
 import static org.junit.Assert.assertEquals;
 import static org.myob.domain.model.employee.Payslip.*;
-import static org.myob.domain.model.employee.Payslip.DIVISOR_FOR_TAX_PER_DOLLAR;
+import static org.myob.domain.model.employee.Payslip.DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR;
 import static org.myob.domain.model.employee.Payslip.TWELVE_MONTHS;
-import static org.myob.domain.model.payslip.PayslipImpl.*;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
  */
-public class PayslipFactoryTest {
+public class PayslipTest {
 
     private Payslip payslip;
     private Tax tax;
@@ -98,41 +96,62 @@ public class PayslipFactoryTest {
 
     @Test
     public void shouldHave_Name_TaxableIncome_TaxOnEachDollar_TaxForEachTaxableIncome_TaxOnSalary_IncomeTax_NetIncome_super_startAndEndPeriod() {
-        tax = new TaxBuilder().withBaseTax(2000).withMaxIncome(13000).withMinIncome(7000).withTaxPerDollar(100).build();
+        tax = new TaxBuilder().withBaseTax(2000).withMaxIncome(13000).withMinIncome(7001).withTaxPerDollarOver(7000).withTaxPerDollar(100).build();
 
         PayslipFactory factory = new PayslipFactoryImpl();
         payslip = factory.createWith(startPeriod, endPeriod, employee, tax);
 
         AssertThat assertThat = new AssertThat();
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
-                .grossIncomeShouldBe(salaryDividedBy12Months())
-                .taxableIncomeShouldBe(employee.salaryAsBigDecimal().subtract(tax.minTaxableIncomeAsBigDecimal()))
-                .taxOnEachDollarShouldBe(tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_FOR_TAX_PER_DOLLAR))
+                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedDown())
+                .taxableIncomeShouldBe(salaryMinusMinTaxableIncome())
+                .taxOnEachDollarShouldBe(tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR))
                 .taxForEachTaxableDollarShouldBe(payslip.getAmountOfTaxableIncome().multiply(payslip.taxPerDollarInBigDecimal()))
                 .taxOnSalaryShouldBe(payslip.taxForEachTaxableDollar().add(tax.baseTaxAsBigDecimal()))
-                .incomeTaxShouldBe(payslip.taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_UP).intValue())
-                .netIncomeShouldBe(employee.grossIncomeAsBigDecimal().subtract(payslip.incomeTaxAsBigDecimal()).intValue())
-                .superShouldBe(employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue())
+                .incomeTaxShouldBe(taxOnSalaryDividedByTwelveMonths_RoundedUp())
+                .netIncomeShouldBe(grossIncomeMinusIncomeTax())
+                .superShouldBe(grossIncomeMultiplyBySuper_RoundedDown())
                 .startPeriodShouldBe(formatter.print(startPeriod))
                 .endPeriodShouldBe(formatter.print(endPeriod));
     }
 
+
+
     @Test
-    public void shouldHave0Tax_BecauseTaxIsNull() {
+    public void shouldHave0TaxOnIncome_NetIncomeIsEqualToSalary_BecauseTaxIsNull() {
         PayslipFactory factory = new PayslipFactoryImpl();
         payslip = factory.createWith(startPeriod, endPeriod, employee, tax);
 
         AssertThat assertThat = new AssertThat();
 
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
-                .grossIncomeShouldBe(salaryDividedBy12Months())
+                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedDown())
                 .taxableIncomeShouldBe(ZERO_TAX)
                 .taxOnEachDollarShouldBe(ZERO_TAX)
-                .taxOnSalaryShouldBe(ZERO_TAX);
+                .taxOnSalaryShouldBe(ZERO_TAX)
+                .incomeTaxShouldBe(ZERO_TAX.intValue())
+                .netIncomeShouldBe(grossIncomeMinusIncomeTax())
+                .superShouldBe(grossIncomeMultiplyBySuper_RoundedDown());
     }
 
-    private int salaryDividedBy12Months() {
+    private int salaryDividedBy12Months_RoundedDown() {
         return employee.salaryAsBigDecimal().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
+    }
+
+    private int grossIncomeMinusIncomeTax(){
+        return employee.grossIncomeAsBigDecimal().subtract(payslip.incomeTaxAsBigDecimal()).intValue();
+    }
+
+    private int grossIncomeMultiplyBySuper_RoundedDown(){
+        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_DOWN).intValue();
+    }
+
+    private BigDecimal salaryMinusMinTaxableIncome(){
+        return employee.salaryAsBigDecimal().subtract(tax.minTaxableIncomeAsBigDecimal());
+    }
+
+    private int taxOnSalaryDividedByTwelveMonths_RoundedUp(){
+        return payslip.taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_UP).intValue();
     }
 
 

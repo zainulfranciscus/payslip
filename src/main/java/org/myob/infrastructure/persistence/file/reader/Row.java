@@ -20,6 +20,10 @@ public abstract class Row {
         return NumberUtils.toInt(get(header));
     }
 
+    public double getDouble(RowHeader header){
+        return NumberUtils.toDouble(get(header));
+    }
+
     protected void put(RowHeader header, String value){
         values.put(header,value);
     }

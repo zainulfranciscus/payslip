@@ -15,7 +15,7 @@ public interface Payslip {
     static final int ROUND_DOWN = BigDecimal.ROUND_DOWN;
     static final int ZERO_ROUND_SCALE = 0;
     static final DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
-    static final BigDecimal DIVISOR_FOR_TAX_PER_DOLLAR = new BigDecimal(100);
+    static final BigDecimal DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR = new BigDecimal(100);
     static final BigDecimal TWELVE_MONTHS = new BigDecimal(12);
     static final BigDecimal ZERO_TAX = new BigDecimal(0) ;
 

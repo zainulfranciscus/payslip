@@ -64,5 +64,10 @@ public class TaxTaxCsvRowBuilderTest {
         assertEquals(expectedTaxPerDollar, row.get(TAX_PER_DOLLAR));
     }
 
+    @Test
+    public void shouldReturnTaxPerDollarInDecimal(){
+        assertEquals(new Double(32.5),new Double(taxCsvRowBuilder.withTaxPerDollar("32.5").build().getDouble(TAX_PER_DOLLAR)));
+    }
+
 
 }

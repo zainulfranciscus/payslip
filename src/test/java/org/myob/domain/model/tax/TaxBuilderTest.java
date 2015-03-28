@@ -15,7 +15,7 @@ public class TaxBuilderTest {
     private TaxBuilder builder = new TaxBuilder();
     private int expectedMinIncome;
     private int expectedMaxIncome;
-    private int expectedTaxPerDollar;
+    private double expectedTaxPerDollar;
     private int expectedBaseTax;
     private int startingDay;
     private int startingMonth;
@@ -47,7 +47,7 @@ public class TaxBuilderTest {
 
     @Test
     public void shouldReturn20AsTaxPerDollar(){
-        assertEquals(expectedTaxPerDollar, builder.withTaxPerDollar(expectedTaxPerDollar).build().getTaxPerDollarInCents());
+        assertEquals(new Double(expectedTaxPerDollar), new Double(builder.withTaxPerDollar(expectedTaxPerDollar).build().getTaxPerDollarInCents()));
     }
 
     @Test

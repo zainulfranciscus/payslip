@@ -21,7 +21,7 @@ public class TaxSpecificationImpl implements Specification<Tax> {
 
         return tax.getMinIncome() <= employee.getSalary()
                 && tax.getMaxIncome() >=  employee.getSalary()
-                && (employee.getPaymentStartDate().isBefore(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
+                && (employee.getPaymentStartDate().isAfter(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
     }
 
 }

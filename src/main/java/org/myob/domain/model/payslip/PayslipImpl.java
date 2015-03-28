@@ -53,7 +53,7 @@ public class PayslipImpl implements Payslip {
         if(tax == null){
             return new BigDecimal(0);
         }
-        return new BigDecimal(tax.getMinIncome());
+        return new BigDecimal(tax.getTaxPerDollarOver());
     }
 
 
@@ -70,7 +70,7 @@ public class PayslipImpl implements Payslip {
         if(tax == null){
             return ZERO_TAX;
         }
-        return tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_FOR_TAX_PER_DOLLAR);
+        return tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR);
     }
 
     @Override
@@ -93,7 +93,7 @@ public class PayslipImpl implements Payslip {
 
     @Override
     public BigDecimal incomeTaxAsBigDecimal(){
-        return taxOnSalary().divide(new BigDecimal(12), ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
+        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_UP).setScale(ZERO_ROUND_SCALE, ROUND_UP);
     }
 
     @Override

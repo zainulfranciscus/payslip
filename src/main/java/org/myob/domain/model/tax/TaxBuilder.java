@@ -7,11 +7,12 @@ public class TaxBuilder {
 
     private int minIncome;
     private int maxIncome;
-    private int taxPerDollar;
+    private double taxPerDollar;
     private int baseTax;
     private int startingDay;
     private int startingMonth;
     private int startingYear;
+    private int taxPerDollarOver;
 
     public TaxBuilder withMinIncome(int minIncome) {
         this.minIncome = minIncome;
@@ -20,6 +21,7 @@ public class TaxBuilder {
 
     public Tax build() {
         return new Tax(minIncome,
+                taxPerDollarOver,
                 maxIncome,
                 taxPerDollar,
                 baseTax,
@@ -33,7 +35,7 @@ public class TaxBuilder {
         return this;
     }
 
-    public TaxBuilder withTaxPerDollar(int taxPerDollar) {
+    public TaxBuilder withTaxPerDollar(double taxPerDollar) {
         this.taxPerDollar = taxPerDollar;
         return this;
     }
@@ -55,6 +57,11 @@ public class TaxBuilder {
 
     public TaxBuilder withStartingYear(int startingYear) {
         this.startingYear = startingYear;
+        return this;
+    }
+
+    public TaxBuilder withTaxPerDollarOver(int taxPerDollarOver) {
+        this.taxPerDollarOver = taxPerDollarOver;
         return this;
     }
 }

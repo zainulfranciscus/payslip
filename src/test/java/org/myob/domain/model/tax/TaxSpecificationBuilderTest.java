@@ -54,12 +54,16 @@ public class TaxSpecificationBuilderTest {
     @Test
     public void shouldMatchTheCriteriaEmployeePayPeriodFallsWithinTaxStartDate(){
 
-        Employee employee = employeeBuilder.withSalary(10000).build();
+        Employee employee = employeeBuilder.withSalary(10000)
+                .withStartOfPaymentDate(2)
+                .withStartOfPaymentMonth(4)
+                .withStartOfPaymentYear(2015)
+                .build();
 
         Tax tax = taxBuilder.withMinIncome(1000)
                 .withMaxIncome(20000)
-                .withStartingDay(2)
-                .withStartingMonth(3)
+                .withStartingDay(1)
+                .withStartingMonth(4)
                 .withStartingYear(2015)
                 .build();
 

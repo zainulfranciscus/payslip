@@ -34,7 +34,7 @@ public class TaxTest {
 
     @Test
     public void shouldReturn20AsTaxPerDollar(){
-        assertEquals(expectedTaxPerDollar, tax.getTaxPerDollarInCents());
+        assertEquals(new Double(expectedTaxPerDollar), new Double(tax.getTaxPerDollarInCents()));
     }
 
     @Test

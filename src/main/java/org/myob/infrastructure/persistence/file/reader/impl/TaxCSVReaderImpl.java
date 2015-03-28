@@ -1,10 +1,10 @@
 package org.myob.infrastructure.persistence.file.reader.impl;
 
-import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
+import org.apache.commons.csv.CSVRecord;
 import org.myob.infrastructure.persistence.file.reader.AbstractCsvReader;
 import org.myob.infrastructure.persistence.file.reader.Row;
 import org.myob.infrastructure.persistence.file.reader.TaxHeader;
-import org.apache.commons.csv.CSVRecord;
+import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -22,6 +22,7 @@ public class TaxCSVReaderImpl extends AbstractCsvReader {
                 .withMaxIncome(record.get(TaxHeader.MAX_INCOME.getLabel()))
                 .withMinIncome(record.get(TaxHeader.MIN_INCOME.getLabel()))
                 .withTaxPerDollar(record.get(TaxHeader.TAX_PER_DOLLAR.getLabel()))
+                .withTaxPerDollarOver(record.get(TaxHeader.TAX_PER_DOLLAR_OVER.getLabel()))
                 .withStartingDay(record.get(TaxHeader.STARTING_DAY.getLabel()))
                 .withStartingMonth(record.get(TaxHeader.STARTING_MONTH.getLabel()))
                 .withStartingYear(record.get(TaxHeader.STARTING_YEAR.getLabel()))
