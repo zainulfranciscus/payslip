@@ -36,14 +36,14 @@ public class EmployeeBuilderTest {
     @Test
     public void shouldCreateEmployeeWithTheExpectedSuper(){
         int expectedSuper = 10;
-        assertEquals(expectedSuper, employeeBuilder.withSuper(expectedSuper).build().getSuper());
+        assertEquals(new Double(expectedSuper), new Double(employeeBuilder.withSuper(expectedSuper).build().getSuper()));
 
     }
 
     @Test
     public void shouldCreateEmployeeWithTheExpectedSalary(){
         int expectedSalary = 1500;
-        assertEquals(expectedSalary, employeeBuilder.withSalary(expectedSalary).build().getSalary());
+        assertEquals(new Double(expectedSalary), new Double(employeeBuilder.withSalary(expectedSalary).build().getSalary()));
     }
 
     @Test

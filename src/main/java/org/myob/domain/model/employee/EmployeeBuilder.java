@@ -10,8 +10,8 @@ public class EmployeeBuilder {
 
     private String firstName;
     private String lastName;
-    private int salary;
-    private int aSuper;
+    private double salary;
+    private double aSuper;
     private int paymentStartDate;
     private int paymentStartingMonth;
     private int paymentStartingYear;
@@ -30,12 +30,12 @@ public class EmployeeBuilder {
         return this;
     }
 
-    public EmployeeBuilder withSuper(int aSuper) {
+    public EmployeeBuilder withSuper(double aSuper) {
         this.aSuper = aSuper;
         return this;
     }
 
-    public EmployeeBuilder withSalary(int salary) {
+    public EmployeeBuilder withSalary(double salary) {
         this.salary = salary;
         return this;
     }

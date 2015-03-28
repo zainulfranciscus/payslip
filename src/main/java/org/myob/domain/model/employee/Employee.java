@@ -18,8 +18,8 @@ public class Employee {
 
     private final String firstName;
     private final String lastName;
-    private final int salary;
-    private final int aSuper;
+    private final double salary;
+    private final double aSuper;
     private final int paymentStartDate;
     private final int paymentStartingMonth;
     private final int paymentStartingYear;
@@ -30,8 +30,8 @@ public class Employee {
 
     public Employee(String firstName,
                     String lastName,
-                    int salary,
-                    int aSuper,
+                    double salary,
+                    double aSuper,
                     int paymentStartDate,
                     int paymentStartingMonth,
                     int paymentStartingYear,
@@ -63,11 +63,11 @@ public class Employee {
         return StringUtils.trimToEmpty(StringUtils.trimToEmpty(firstName) + " " + StringUtils.trimToEmpty(lastName));
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public int getSuper() {
+    public double getSuper() {
         return aSuper;
     }
 

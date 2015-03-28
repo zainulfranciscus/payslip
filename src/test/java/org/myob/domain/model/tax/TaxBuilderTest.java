@@ -13,20 +13,20 @@ import static org.junit.Assert.assertEquals;
 public class TaxBuilderTest {
 
     private TaxBuilder builder = new TaxBuilder();
-    private int expectedMinIncome;
-    private int expectedMaxIncome;
+    private double expectedMinIncome;
+    private double expectedMaxIncome;
     private double expectedTaxPerDollar;
-    private int expectedBaseTax;
+    private double expectedBaseTax;
     private int startingDay;
     private int startingMonth;
     private int startingYear;
 
     @Before
     public void setUp() throws Exception {
-        expectedMinIncome = 1000;
-        expectedMaxIncome = 2000;
+        expectedMinIncome = 1000.45;
+        expectedMaxIncome = 2700.956;
         expectedTaxPerDollar = 20;
-        expectedBaseTax = 3000;
+        expectedBaseTax = 3500.89;
 
         LocalDate today = new LocalDate();
 
@@ -36,22 +36,22 @@ public class TaxBuilderTest {
     }
 
     @Test
-    public void shouldReturnTaxWithMinIncomeOf1000(){
+    public void shouldReturnTaxWithTheExpectedMinIncome(){
         assertEquals(new Double(expectedMinIncome), new Double(builder.withMinIncome(expectedMinIncome).build().getMinIncome()));
     }
 
     @Test
-    public void shouldReturnTaxWithMaxIncomeOf2000(){
+    public void shouldReturnTaxWithTheExpectedMaxIncome(){
         assertEquals(new Double(expectedMaxIncome), new Double(builder.withMaxIncome(expectedMaxIncome).build().getMaxIncome()));
     }
 
     @Test
-    public void shouldReturn20AsTaxPerDollar(){
+    public void shouldReturnTheExpectedTaxPerDollar(){
         assertEquals(new Double(expectedTaxPerDollar), new Double(builder.withTaxPerDollar(expectedTaxPerDollar).build().getTaxPerDollarInCents()));
     }
 
     @Test
-    public void shouldReturn3000AsBaseTax(){
+    public void shouldReturnTheExpectedBaseTax(){
         assertEquals(new Double(expectedBaseTax), new Double(builder.withBaseTax(expectedBaseTax).build().getBaseTax()));
     }
 

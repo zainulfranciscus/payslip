@@ -16,8 +16,8 @@ public class EmployeeTest {
     private Employee employee;
     private String expectedFirstName = "Joe";
     private String expectedLastName = "Blogg";
-    private int expectedSalary = 1000;
-    private int expectedSuper = 25;
+    private double expectedSalary = 1750.89;
+    private double expectedSuper = 25.44;
 
     @Before
     public void setup() {
@@ -48,12 +48,12 @@ public class EmployeeTest {
 
     @Test
     public void employeeSalaryShouldBeTheExpectedSalary() {
-        assertEquals(expectedSalary, employee.getSalary());
+        assertEquals(new Double(expectedSalary), new Double(employee.getSalary()));
     }
 
     @Test
     public void employeeSuperShouldBeTheExpectedSuper() {
-        assertEquals(expectedSuper, employee.getSuper());
+        assertEquals(new Double(expectedSuper), new Double(employee.getSuper()));
 
     }
 
