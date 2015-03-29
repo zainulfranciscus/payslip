@@ -57,7 +57,7 @@ public class PayslipServiceTest {
 
 
         payslipService.writePayslips(employeeSpecification);
-        assertEquals(5, employeeSpecification.numberOfEmployeesLoadedToMemory());
+        assertEquals(0, employeeSpecification.numberOfEmployeesLoadedToMemory());
 
         verify(mockEmployeeRepository,times(5)).find(employeeSpecification);
         verify(mockPayslipRepository,times(4)).savePayslips(payslips);

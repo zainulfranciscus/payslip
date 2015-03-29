@@ -85,8 +85,13 @@ public class PayslipRepositoryTest {
 
     @Test
     public void shouldCallMockTaxRepositoryClose1Time() throws Exception {
+        PayslipWriter mockWriter = mock(PayslipWriter.class);
+
+        payslipRepository.setWriter(mockWriter);
         payslipRepository.close();
+
         verify(mockTaxRepository, times(1)).close();
+        verify(mockWriter, times(1)).close();
     }
 
     @Test
