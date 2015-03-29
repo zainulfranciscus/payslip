@@ -6,8 +6,8 @@ import org.joda.time.LocalDate;
 import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
-import static org.myob.model.payslip.Payslip.TWELVE_MONTHS;
-import static org.myob.model.payslip.Payslip.ZERO_ROUND_SCALE;
+import static org.myob.service.PayslipCalculator.TWELVE_MONTHS;
+import static org.myob.service.PayslipCalculator.ZERO_ROUND_SCALE;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.

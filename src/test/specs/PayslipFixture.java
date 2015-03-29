@@ -1,6 +1,7 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
+import org.myob.service.PayslipCalculator;
 import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.AbstractPayslipServiceBuilder;

@@ -3,6 +3,7 @@ package org.myob.repository;
 import org.myob.model.employee.Employee;
 import org.myob.model.payslip.Payslip;
 import org.myob.persistence.writer.PayslipWriter;
+import org.myob.service.PayslipCalculator;
 
 import java.io.IOException;
 import java.util.List;

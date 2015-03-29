@@ -1,4 +1,4 @@
-package org.myob.model.payslip;
+package org.myob.service;
 
 import org.joda.time.LocalDate;
 import org.junit.Before;
@@ -8,26 +8,22 @@ import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 
-
 import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
 import static org.junit.Assert.assertEquals;
-import static org.myob.model.payslip.Payslip.*;
-import static org.myob.model.payslip.Payslip.DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR;
-import static org.myob.model.payslip.Payslip.TWELVE_MONTHS;
+import static org.myob.service.PayslipCalculator.*;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
  */
-public class PayslipTest {
+public class PayslipCalculatorTest {
 
-    private Payslip payslip;
+    private PayslipCalculator payslip;
     private Tax tax;
     private Employee employee;
     private LocalDate startPeriod;
     private LocalDate endPeriod;
-    private PayslipBuilder payslipBuilder;
 
 
     @Before
@@ -35,7 +31,6 @@ public class PayslipTest {
         startPeriod = new LocalDate(2015, 01, 01);
         endPeriod = new LocalDate(2015, 10, 31);
         employee = new EmployeeBuilder().withFirstName("Joe").withLastName("Blogg").withSalary(12000).withStartPaymentPeriod(2015, 01, 01).withEndPaymentPeriod(2015, 10, 31).build();
-        payslipBuilder = new PayslipBuilder();
     }
 
     @Test
@@ -49,7 +44,7 @@ public class PayslipTest {
                 .build();
 
 
-        payslip =  payslipBuilder.withEmployee(employee).withTax(tax).build();
+        payslip =  new PayslipCalculator(employee,tax);
 
         AssertThat assertThat = new AssertThat();
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
@@ -68,7 +63,7 @@ public class PayslipTest {
     @Test
     public void shouldHave0TaxOnIncome_NetIncomeIsEqualToSalary_BecauseTaxIsNull() {
 
-        payslip =  payslipBuilder.withEmployee(employee).withTax(null).build();
+        payslip =  new PayslipCalculator(employee,null);
 
         AssertThat assertThat = new AssertThat();
 

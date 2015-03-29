@@ -123,7 +123,7 @@
         <span concordion:execute="writePayslip()"/>
     <table concordion:verifyRows="#payslip:readPayslips()">
         <tr>
-            <th concordion:assertEquals="#payslip.name">Name</th>
+            <th concordion:assertEquals="#payslip.employeeName">Name</th>
             <th concordion:assertEquals="#payslip.payPeriod">Pay Period</th>
             <th concordion:assertEquals="#payslip.grossIncome">Gross Income</th>
             <th concordion:assertEquals="#payslip.incomeTax">Income Tax</th>

@@ -47,7 +47,7 @@ public class PayslipServiceTest {
             employees.add(new EmployeeBuilder().build());
         }
 
-        ArrayList<Payslip> payslips = new ArrayList<Payslip>();
+        ArrayList<Payslip> payslips = new ArrayList<>();
         when(mockPayslipRepository.createPayslips(Mockito.anyList())).thenReturn(payslips);
 
 

@@ -13,6 +13,7 @@ import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.impl.PayslipRepositoryImpl;
 import org.myob.repository.specification.TaxSpecification;
+import org.myob.service.PayslipCalculator;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -127,9 +128,7 @@ public class PayslipRepositoryTest {
         payslipRepository.setWriter(mockWriter);
 
         List<Payslip> payslips = new ArrayList<Payslip>();
-        payslips.add(new PayslipBuilder()
-                .withEmployee(employee)
-                .withTax(tax).build());
+        payslips.add(new PayslipBuilder().withName("Joe").withGrossIncome(1000).build());
 
         payslipRepository.savePayslips(payslips);
         verify(mockWriter, times(1)).write(payslips.get(0));
@@ -137,12 +136,10 @@ public class PayslipRepositoryTest {
 
     class AssertThat {
 
-        Payslip payslip;
+        PayslipCalculator payslip;
 
         AssertThat() {
-            payslip = new PayslipBuilder()
-                    .withEmployee(employee)
-                    .withTax(tax).build();
+            payslip = new PayslipCalculator(employee,tax);
         }
 
         AssertThat hasName(String name) {

@@ -9,6 +9,7 @@ import org.myob.model.payslip.Payslip;
 import org.myob.model.payslip.PayslipBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
+import org.myob.service.PayslipCalculator;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -71,8 +72,14 @@ public class PayslipWriterTest {
         payslipWriter.setWriter(writer);
 
 
-        Payslip payslip = new PayslipBuilder().withEmployee(employee)
-                .withTax(tax).build();
+        Payslip payslip = new PayslipBuilder()
+                .withGrossIncome(1000)
+                .withIncomeTax(2000)
+                .withName("Joe Blogg")
+                .withNetIncome(3000)
+                .withPayPeriod("01 March 2015 - 31 December 2015")
+                .withSuper(20)
+                .build();
 
         String expectedOutput = payslip.getEmployeeName()
                 .concat(COMMA_DELIMITER)
