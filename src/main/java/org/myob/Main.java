@@ -9,14 +9,13 @@ import org.myob.service.PayslipService;
 import org.myob.service.builder.PayslipServiceBuilder;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * Created by Zainul Franciscus on 29/03/2015.
  */
 public class Main {
 
-    private static final String DEFAULT_TAX_TABLE = "ATO_tax_table.csv";
+
     String employeeFileName;
     String taxFileName;
     String payslipFileName;
@@ -54,9 +53,7 @@ public class Main {
         PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
         payslipServiceBuilder.withEmployeeFileName(employeeFileName);
         payslipServiceBuilder.withPayslipFileName(payslipFileName);
-
-        String taxFile = StringUtils.isBlank(taxFileName) ? loadFromClassPath(DEFAULT_TAX_TABLE) : taxFileName;
-        payslipServiceBuilder.withTaxFileName(taxFile);
+        payslipServiceBuilder.withTaxFileName(taxFileName);
 
         PayslipService payslipService = payslipServiceBuilder.build();
         payslipService.writePayslips(new EmployeeSpecification());
@@ -64,7 +61,4 @@ public class Main {
 
     }
 
-    public String loadFromClassPath(String fileName) {
-        return getClass().getClassLoader().getResource(fileName).getPath();
-    }
 }

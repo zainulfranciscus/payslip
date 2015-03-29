@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.internal.util.collections.ListUtil;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.payslip.Payslip;
@@ -12,7 +11,7 @@ import org.myob.model.payslip.PayslipBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.mapping.impl.PayslipHeader;
-import org.myob.service.PayslipCalculator;
+import org.myob.persistence.writer.impl.PayslipWriterImpl;
 
 import java.io.IOException;
 import java.io.StringWriter;

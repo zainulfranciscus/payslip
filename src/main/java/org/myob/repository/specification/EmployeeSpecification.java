@@ -29,7 +29,7 @@ public class EmployeeSpecification {
         numberOfEmployeesThatHasBeenLoadedToMemory += 1;
     }
 
-    public boolean hasReadTheAllowedNumberOfLines() {
+    public boolean hasLoadTheAllowedNumberOfEmployeesToMemory() {
         return numberOfEmployeesThatHasBeenLoadedToMemory != 0 && numberOfEmployeesThatHasBeenLoadedToMemory % maxNumberOfEmployeesThatCanBeLoadedToMemory == 0;
     }
 

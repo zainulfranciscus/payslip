@@ -8,7 +8,7 @@ import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.PayslipRepository;
 import org.myob.repository.TaxRepository;
 import org.myob.repository.specification.TaxSpecification;
-import org.myob.service.PayslipCalculator;
+import org.myob.repository.PayslipCalculator;
 
 import java.io.IOException;
 import java.util.ArrayList;

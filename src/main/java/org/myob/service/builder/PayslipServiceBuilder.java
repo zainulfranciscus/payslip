@@ -5,7 +5,7 @@ import org.myob.persistence.reader.Reader;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
 import org.myob.persistence.writer.PayslipWriter;
-import org.myob.persistence.writer.PayslipWriterImpl;
+import org.myob.persistence.writer.impl.PayslipWriterImpl;
 import org.myob.repository.EmployeeRepository;
 import org.myob.repository.PayslipRepository;
 import org.myob.repository.TaxRepository;
@@ -29,7 +29,7 @@ public class PayslipServiceBuilder {
     protected Reader taxReader;
     protected Reader employeeReader;
 
-    public PayslipServiceBuilder(){
+    public PayslipServiceBuilder() {
         this.taxReader = new TaxCSVReaderImpl();
         this.employeeReader = new EmployeeCSVFileReaderImpl();
     }
@@ -60,31 +60,36 @@ public class PayslipServiceBuilder {
         return this;
     }
 
-
-    public TaxRepository createTaxRepository() throws Exception {
-
-        if(StringUtils.isNotBlank(taxFileName)) {
-            this.taxReader.setFileName(taxFileName);
-        }
-
-        TaxRepository taxRepository = new TaxRepositoryImpl();
-        taxRepository.setReader(this.taxReader);
-        return taxRepository;
-    }
-
-
     public EmployeeRepository createEmployeeRepository() throws Exception {
 
-        if(StringUtils.isNotBlank(employeeFileName)) {
-            this.employeeReader.setFileName(employeeFileName);
-        }
+        this.employeeReader.setFileName(employeeFileName);
+        this.employeeReader.initializeFileReader();
 
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(this.employeeReader);
         return employeeRepository;
     }
 
-    public PayslipRepository createPayslipRepository() throws Exception {
+    public PayslipService build() throws Exception {
+
+        PayslipService payslipService = new PayslipServiceImpl();
+        payslipService.setEmployeeRepository(createEmployeeRepository());
+        payslipService.setPayslipRepository(createPayslipRepository());
+
+        return payslipService;
+    }
+
+    private TaxRepository createTaxRepository() throws Exception {
+
+        this.taxReader.setFileName(taxFileName);
+        this.taxReader.initializeFileReader();
+
+        TaxRepository taxRepository = new TaxRepositoryImpl();
+        taxRepository.setReader(this.taxReader);
+        return taxRepository;
+    }
+
+    private PayslipRepository createPayslipRepository() throws Exception {
 
         PayslipRepository payslipRepository = new PayslipRepositoryImpl();
         payslipRepository.setTaxRepository(createTaxRepository());
@@ -97,15 +102,5 @@ public class PayslipServiceBuilder {
         }
 
         return payslipRepository;
-    }
-
-
-    public PayslipService build() throws Exception {
-
-        PayslipService payslipService = new PayslipServiceImpl();
-        payslipService.setEmployeeRepository(createEmployeeRepository());
-        payslipService.setPayslipRepository(createPayslipRepository());
-
-        return payslipService;
     }
 }

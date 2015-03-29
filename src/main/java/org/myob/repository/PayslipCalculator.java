@@ -1,4 +1,4 @@
-package org.myob.service;
+package org.myob.repository;
 
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;

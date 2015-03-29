@@ -2,11 +2,13 @@ package org.myob.persistence.reader;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.lang3.StringUtils;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 
 /**
@@ -14,21 +16,29 @@ import java.util.Iterator;
  */
 public abstract class AbstractCsvReader implements Reader {
 
-    protected String datasource;
+    protected String csvFileName;
     protected java.io.Reader reader;
-    private Iterable<CSVRecord> records;
+    protected Iterable<CSVRecord> records;
 
-    public void setFileName(String datasource) throws IOException {
-        this.datasource = datasource;
-        initializeFileReader();
-
+    @Override
+    public void setFileName(String csvFileName) throws IOException {
+        this.csvFileName = csvFileName;
     }
 
     @Override
     public void initializeFileReader() throws IOException {
-        this.reader = new FileReader(datasource);
+
+        if(StringUtils.isNotBlank(csvFileName)) {
+            this.reader = new FileReader(csvFileName);
+        }else{
+            this.reader =  loadCsvFileFromClasspath();
+        }
         records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
+
     }
+
+    protected abstract InputStreamReader loadCsvFileFromClasspath();
+
 
     @Override
     public Row read(RowSpecification specification) throws IOException {

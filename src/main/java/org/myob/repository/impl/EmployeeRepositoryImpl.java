@@ -2,7 +2,6 @@ package org.myob.repository.impl;
 
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
-import org.myob.persistence.mapping.impl.EmployeeHeader;
 import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 import org.myob.persistence.row.Row;
@@ -32,13 +31,15 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         List<Employee> employees = new ArrayList<Employee>();
 
-        while((row = reader.read(new EmployeeRowSpecification())) != null && !specification.hasReadTheAllowedNumberOfLines()) {
+        while((row = reader.read(new EmployeeRowSpecification())) != null && !specification.hasLoadTheAllowedNumberOfEmployeesToMemory()) {
 
             Employee employee = new EmployeeBuilder()
-                    .withStartPaymentPeriod(row.getInt(START_PAYMENT_YEAR),
+                    .withStartPaymentPeriod(
+                            row.getInt(START_PAYMENT_YEAR),
                             row.getMonthAsInt(START_PAYMENT_MONTH),
                             row.getInt(START_PAYMENT_DATE))
-                    .withEndPaymentPeriod(row.getInt(END_PAYMENT_YEAR),
+                    .withEndPaymentPeriod(
+                            row.getInt(END_PAYMENT_YEAR),
                             row.getMonthAsInt(END_PAYMENT_MONTH),
                             row.getInt(END_PAYMENT_DATE))
                     .withFirstName(row.get(FIRST_NAME))
@@ -48,8 +49,6 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                     .build();
 
             employees.add(employee);
-
-
             specification.incrementNumberOfLineRead();
         }
 

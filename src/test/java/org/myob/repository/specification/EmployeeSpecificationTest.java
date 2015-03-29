@@ -21,7 +21,7 @@ public class EmployeeSpecificationTest {
         EmployeeSpecification employeeSpecification = new EmployeeSpecification(1);
         employeeSpecification.incrementNumberOfLineRead();
 
-        assertTrue(employeeSpecification.hasReadTheAllowedNumberOfLines());
+        assertTrue(employeeSpecification.hasLoadTheAllowedNumberOfEmployeesToMemory());
     }
 
 

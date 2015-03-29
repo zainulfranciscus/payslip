@@ -5,12 +5,21 @@ import org.myob.persistence.reader.AbstractCsvReader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
 
+import java.io.InputStreamReader;
+
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
 public class EmployeeCSVFileReaderImpl extends AbstractCsvReader {
+
+    private static final String DEFAULT_EMPLOYEE_CSV_FILE = "sample_employee.csv";
+
+    @Override
+    protected InputStreamReader loadCsvFileFromClasspath() {
+        return new InputStreamReader(getClass().getClassLoader().getResourceAsStream(DEFAULT_EMPLOYEE_CSV_FILE));
+    }
 
     @Override
     public Row make(CSVRecord record) {

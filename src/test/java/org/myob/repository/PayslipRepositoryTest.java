@@ -13,7 +13,6 @@ import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.impl.PayslipRepositoryImpl;
 import org.myob.repository.specification.TaxSpecification;
-import org.myob.service.PayslipCalculator;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package org.myob.service;
+package org.myob.repository;
 
 import org.joda.time.LocalDate;
 import org.junit.Before;
@@ -7,12 +7,13 @@ import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
+import org.myob.repository.PayslipCalculator;
 
 import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
 import static org.junit.Assert.assertEquals;
-import static org.myob.service.PayslipCalculator.*;
+import static org.myob.repository.PayslipCalculator.*;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
@@ -152,13 +153,5 @@ public class PayslipCalculatorTest {
             assertEquals(endPeriod, payslip.getPaymentEndDate());
             return this;
         }
-    }
-
-
-    public static void main (String[]args){
-        Employee employee = new EmployeeBuilder().withEndPaymentPeriod(2015,3,31).withSalary(120200).withStartPaymentPeriod(2015,3,1).withSuperRate("10%").build();
-        Tax tax = new TaxBuilder().withMinIncome(80001).withMaxIncome(180000).withBaseTax(17547).withTaxPerDollar(37).withTaxPerDollarOver(80000).withStartPeriod(2012,7,1).build();
-        PayslipCalculator calculator = new PayslipCalculator(employee,tax);
-        System.out.println(calculator.getIncomeTax());
     }
 }
