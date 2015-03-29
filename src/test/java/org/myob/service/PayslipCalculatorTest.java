@@ -155,4 +155,10 @@ public class PayslipCalculatorTest {
     }
 
 
+    public static void main (String[]args){
+        Employee employee = new EmployeeBuilder().withEndPaymentPeriod(2015,3,31).withSalary(120200).withStartPaymentPeriod(2015,3,1).withSuperRate("10%").build();
+        Tax tax = new TaxBuilder().withMinIncome(80001).withMaxIncome(180000).withBaseTax(17547).withTaxPerDollar(37).withTaxPerDollarOver(80000).withStartPeriod(2012,7,1).build();
+        PayslipCalculator calculator = new PayslipCalculator(employee,tax);
+        System.out.println(calculator.getIncomeTax());
+    }
 }

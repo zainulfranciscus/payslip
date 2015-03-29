@@ -6,8 +6,6 @@ import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 
-import java.io.InputStreamReader;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
@@ -29,7 +27,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(loadFromClassPath("employee/employee.csv"));
+        reader.setFileName(loadFromClassPath("employee/employee.csv"));
         row = reader.read(new EmployeeRowSpecification());
         
         AssertThat assertThat = new AssertThat();
@@ -43,7 +41,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(loadFromClassPath("employee/onlyHaveEmployeeHeader.csv"));
+        reader.setFileName(loadFromClassPath("employee/onlyHaveEmployeeHeader.csv"));
 
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
@@ -51,7 +49,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void rowShouldBeNullBecauseFileIsEmpty() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(loadFromClassPath("emptyFile.csv"));
+        reader.setFileName(loadFromClassPath("emptyFile.csv"));
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
 
@@ -79,7 +77,7 @@ public class EmployeeCSVFileReaderTest {
 
     }
 
-    private java.io.Reader loadFromClassPath(String fileName) {
-        return new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName));
+    private String loadFromClassPath(String fileName) {
+        return getClass().getClassLoader().getResource(fileName).getPath();
     }
 }

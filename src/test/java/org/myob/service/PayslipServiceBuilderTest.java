@@ -31,8 +31,8 @@ public class PayslipServiceBuilderTest {
                 .build();
 
         assertNotNull(payslipService);
-        verify(mockEmployeeCsvReader,times(1)).setDataSourceReader(Mockito.isA(java.io.Reader.class));
-        verify(mockEmployeeCsvReader,times(1)).setDataSourceReader(Mockito.isA(java.io.Reader.class));
+        verify(mockEmployeeCsvReader,times(1)).setFileName(Mockito.anyString());
+        verify(mockEmployeeCsvReader,times(1)).setFileName(Mockito.anyString());
     }
 
     private String loadFromClassPath(String fileName) {

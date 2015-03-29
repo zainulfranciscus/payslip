@@ -19,7 +19,9 @@ public class TaxRepositoryImpl implements TaxRepository {
 
     @Override
     public Tax find(TaxSpecification specification) throws Exception {
-        Row row = null;
+
+        Row row;
+        Tax matchingTax = null;
         TaxRowSpecification rowSpecification = new TaxRowSpecification();
         while((row = reader.read(rowSpecification)) != null) {
 
@@ -34,11 +36,13 @@ public class TaxRepositoryImpl implements TaxRepository {
                     .withTaxPerDollarOver(row.getInt(TAX_PER_DOLLAR_OVER))
                     .build();
             if (specification.match(tax)) {
-                return tax;
+                matchingTax = tax;
+                break;
             }
         }
 
-        return null;
+        reader.initializeFileReader();
+        return matchingTax;
     }
 
     @Override

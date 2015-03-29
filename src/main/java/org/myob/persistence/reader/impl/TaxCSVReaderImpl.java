@@ -8,13 +8,15 @@ import org.myob.persistence.row.Row;
 import org.myob.persistence.mapping.impl.TaxHeader;
 import org.myob.persistence.row.builder.TaxCsvRowBuilder;
 
+import java.io.IOException;
+
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
 public class TaxCSVReaderImpl extends AbstractCsvReader {
 
     @Override
-    public Row make(CSVRecord record) {
+    public Row make(CSVRecord record) throws IOException {
 
         TaxCsvRow row = new TaxCsvRowBuilder()
                 .withBaseTax(record.get(TaxHeader.BASE_TAX.getLabel()))

@@ -15,7 +15,6 @@ import org.myob.repository.impl.TaxRepositoryImpl;
 import org.myob.service.PayslipService;
 import org.myob.service.impl.PayslipServiceImpl;
 
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -65,7 +64,7 @@ public class PayslipServiceBuilder {
     public TaxRepository createTaxRepository() throws Exception {
 
         if(StringUtils.isNotBlank(taxFileName)) {
-            this.taxReader.setDataSourceReader(new FileReader(taxFileName));
+            this.taxReader.setFileName(taxFileName);
         }
 
         TaxRepository taxRepository = new TaxRepositoryImpl();
@@ -77,7 +76,7 @@ public class PayslipServiceBuilder {
     public EmployeeRepository createEmployeeRepository() throws Exception {
 
         if(StringUtils.isNotBlank(employeeFileName)) {
-            this.employeeReader.setDataSourceReader(new FileReader(employeeFileName));
+            this.employeeReader.setFileName(employeeFileName);
         }
 
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();

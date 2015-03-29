@@ -5,6 +5,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -13,11 +14,19 @@ import java.util.Iterator;
  */
 public abstract class AbstractCsvReader implements Reader {
 
-    private java.io.Reader reader;
+    protected String datasource;
+    protected java.io.Reader reader;
     private Iterable<CSVRecord> records;
 
-    public void setDataSourceReader(java.io.Reader inputStreamReader) throws IOException {
-        this.reader = inputStreamReader;
+    public void setFileName(String datasource) throws IOException {
+        this.datasource = datasource;
+        initializeFileReader();
+
+    }
+
+    @Override
+    public void initializeFileReader() throws IOException {
+        this.reader = new FileReader(datasource);
         records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
     }
 
@@ -49,6 +58,6 @@ public abstract class AbstractCsvReader implements Reader {
 
     }
 
-    public abstract Row make(CSVRecord record);
+    public abstract Row make(CSVRecord record) throws IOException;
 
 }

@@ -4,6 +4,8 @@ import org.myob.persistence.row.Row;
 import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.specification.RowSpecification;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,8 +41,13 @@ public class ReaderImpl implements Reader {
     }
 
     @Override
-    public void setDataSourceReader(java.io.Reader reader) {
+    public void setFileName(String datasource) {
         return;
+    }
+
+    @Override
+    public void initializeFileReader() throws IOException {
+        index=0;
     }
 
     public void add(Row row) {
