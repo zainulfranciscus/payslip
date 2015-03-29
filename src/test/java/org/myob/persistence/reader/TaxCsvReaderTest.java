@@ -9,6 +9,7 @@ import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.myob.persistence.mapping.impl.TaxHeader.*;
+import static org.myob.persistence.reader.FileReaderType.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -26,18 +27,21 @@ public class TaxCsvReaderTest {
     @Test
     public void shouldHave0ForMinIncome_MaxIncome_BaseTax_TaxPerDollar() throws Exception {
         reader = new TaxCSVReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("tax/taxTableWithNonNumericalValues.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("tax/taxTableWithNonNumericalValues.csv"));
 
         row = reader.read(new TaxRowSpecification());
 
         AssertThat assertThat = new AssertThat();
-        assertThat.shouldHaveBaseTax(0).shouldHaveMaxIncome(0).shouldHaveMinIncome(0).shouldHaveTaxPerDollar(0);
+        assertThat.shouldHaveBaseTax(0)
+                .shouldHaveMaxIncome(0)
+                .shouldHaveMinIncome(0)
+                .shouldHaveTaxPerDollar(0);
     }
 
     @Test
     public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_500ForTaxPerDollarOver_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
         reader = new TaxCSVReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("tax/tax.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("tax/tax.csv"));
         row = reader.read(new TaxRowSpecification());
 
         AssertThat assertThat = new AssertThat();
@@ -54,21 +58,21 @@ public class TaxCsvReaderTest {
     @Test
     public void rowShouldBeNullBecauseCSVFileOnlyHasHeader() throws Exception {
         reader = new TaxCSVReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("tax/onlyHaveTaxHeaders.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("tax/onlyHaveTaxHeaders.csv"));
         assertNull(reader.read(new TaxRowSpecification()));
     }
 
     @Test
     public void rowShouldBeNullBecauseCSVFileIsEmpty() throws Exception {
         reader = new TaxCSVReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("emptyFile.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("emptyFile.csv"));
         assertNull(reader.read(new TaxRowSpecification()));
     }
 
     @Test
     public void rowShouldBeNullBecauseMonthYearAndDate_IsInvalid() throws Exception {
         reader = new TaxCSVReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("tax/taxWithInvalidDates.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("tax/taxWithInvalidDates.csv"));
         assertNull(reader.read(new TaxRowSpecification()));
     }
 

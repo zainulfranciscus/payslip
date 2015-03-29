@@ -17,8 +17,7 @@ import org.myob.repository.impl.TaxRepositoryImpl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.myob.persistence.mapping.impl.TaxHeader.*;
 
 /**
@@ -45,15 +44,11 @@ public class TaxRepositoryTest {
         taxPerDollarForThisTax = 50;
 
         employeeBuilder = new EmployeeBuilder().withStartOfPaymentDate(1)
-                .withStartOfPaymentMonth(1)
-                .withStartOfPaymentYear(2015)
-                .withEndOfPaymentDate(01)
-                .withEndOfPaymentMonth(12)
-                .withEndOfPaymentYear(2015);
+                .withEndPaymentPeriod(2015, 12, 31)
+                .withStartPaymentPeriod(2015, 1, 1);
 
-        Employee employee = employeeBuilder.withSalary(15000).build();
-
-        taxFor15000AsSalary = new TaxSpecificationBuilder().withEmployee(employee).build();
+        Employee employeeWithSalaryOf15000 = employeeBuilder.withSalary(15000).build();
+        taxFor15000AsSalary = new TaxSpecificationBuilder().withEmployee(employeeWithSalaryOf15000).build();
 
         setMockRowBehavior();
 
@@ -93,9 +88,9 @@ public class TaxRepositoryTest {
     }
 
     @Test
-    public void shouldReturnNullTax_BecauseMonthIsAnInvalidCalendarMonth() throws Exception {
-        when(mockRow.getMonthAsInt(STARTING_MONTH)).thenReturn(13);
-        assertNull(taxRepository.find(taxFor15000AsSalary));
+    public void shouldCallMockReaderClose1Time() throws Exception {
+        taxRepository.close();
+        verify(mockReader,times(1)).close();
     }
 
     private void setMockRowBehavior(){

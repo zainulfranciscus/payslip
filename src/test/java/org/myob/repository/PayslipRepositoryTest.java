@@ -1,13 +1,13 @@
 package org.myob.repository;
 
 import org.joda.time.LocalDate;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.payslip.Payslip;
-import org.myob.model.payslip.PayslipFactory;
+import org.myob.model.payslip.PayslipBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.writer.PayslipWriter;
@@ -27,18 +27,18 @@ import static org.mockito.Mockito.*;
  */
 public class PayslipRepositoryTest {
 
-    private static PayslipRepository payslipRepository;
+    private PayslipRepository payslipRepository;
 
-    private static TaxRepository mockTaxRepository;
-    private static EmployeeBuilder employeeBuilder = new EmployeeBuilder();
-    private static Employee employee;
-    private static LocalDate startDate;
-    private static LocalDate endDate;
-    private static Payslip payslip;
-    private static Tax tax;
+    private TaxRepository mockTaxRepository;
+    private EmployeeBuilder employeeBuilder = new EmployeeBuilder();
+    private Employee employee;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Payslip payslip;
+    private Tax tax;
 
-    @BeforeClass
-    public static void setup() throws Exception {
+    @Before
+    public void setup() throws Exception {
 
         startDate = new LocalDate(2015, 01, 01);
         endDate = new LocalDate(2015, 10, 01);
@@ -48,12 +48,8 @@ public class PayslipRepositoryTest {
         employee = employeeBuilder.withFirstName("Joe")
                 .withLastName("Blogg")
                 .withSalary(12000)
-                .withEndOfPaymentDate(endDate.getDayOfMonth())
-                .withEndOfPaymentMonth(endDate.getMonthOfYear())
-                .withEndOfPaymentYear(endDate.getYear())
-                .withStartOfPaymentDate(startDate.getDayOfMonth())
-                .withStartOfPaymentMonth(startDate.getMonthOfYear())
-                .withStartOfPaymentYear(startDate.getYear())
+                .withEndPaymentPeriod(2015, 12, 31)
+                .withStartPaymentPeriod(2015, 1, 1)
                 .build();
 
 
@@ -75,7 +71,7 @@ public class PayslipRepositoryTest {
         employees.add(employee);
         List<Payslip> payslips = payslipRepository.createPayslips(employees);
 
-        for(Payslip payslip: payslips){
+        for (Payslip payslip : payslips) {
             AssertThat assertThat = new AssertThat();
             assertThat.hasGrossIncome(payslip.getGrossIncome())
                     .hasIncomeTax(payslip.getIncomeTax())
@@ -84,6 +80,13 @@ public class PayslipRepositoryTest {
                     .hasPayPeriod(payslip.getPayPeriod())
                     .hasSuper(payslip.getSuper());
         }
+    }
+
+
+    @Test
+    public void shouldCallMockTaxRepositoryClose1Time() throws Exception {
+        payslipRepository.close();
+        verify(mockTaxRepository, times(1)).close();
     }
 
     @Test
@@ -101,14 +104,14 @@ public class PayslipRepositoryTest {
     }
 
     @Test
-     public void payslipWriterShouldBeCalledWhenSaveIsCalled() throws IOException {
+    public void payslipWriterShouldBeCalledWhenSaveIsCalled() throws IOException {
         PayslipWriter mockWriter = mock(PayslipWriter.class);
 
         doNothing().when(mockWriter).write(payslip);
         payslipRepository.setWriter(mockWriter);
 
         payslipRepository.save(payslip);
-        verify(mockWriter,times(1)).write(payslip);
+        verify(mockWriter, times(1)).write(payslip);
     }
 
     @Test
@@ -119,10 +122,12 @@ public class PayslipRepositoryTest {
         payslipRepository.setWriter(mockWriter);
 
         List<Payslip> payslips = new ArrayList<Payslip>();
-        payslips.add(PayslipFactory.createWith(startDate, endDate, employee, tax));
+        payslips.add(new PayslipBuilder()
+                .withEmployee(employee)
+                .withTax(tax).build());
 
         payslipRepository.savePayslips(payslips);
-        verify(mockWriter,times(1)).write(payslips.get(0));
+        verify(mockWriter, times(1)).write(payslips.get(0));
     }
 
     class AssertThat {
@@ -130,7 +135,9 @@ public class PayslipRepositoryTest {
         Payslip payslip;
 
         AssertThat() {
-            payslip = PayslipFactory.createWith(startDate, endDate, employee, tax);
+            payslip = new PayslipBuilder()
+                    .withEmployee(employee)
+                    .withTax(tax).build();
         }
 
         AssertThat hasName(String name) {
@@ -154,13 +161,13 @@ public class PayslipRepositoryTest {
             return this;
         }
 
-        AssertThat hasNetIncome(int netIncome){
-            assertEquals(payslip.getNetIncome(),netIncome);
+        AssertThat hasNetIncome(int netIncome) {
+            assertEquals(payslip.getNetIncome(), netIncome);
             return this;
         }
 
-        AssertThat hasSuper(int aSuper){
-            assertEquals(payslip.getSuper(),aSuper);
+        AssertThat hasSuper(int aSuper) {
+            assertEquals(payslip.getSuper(), aSuper);
             return this;
         }
     }

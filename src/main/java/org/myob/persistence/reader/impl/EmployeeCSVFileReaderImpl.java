@@ -1,7 +1,6 @@
 package org.myob.persistence.reader.impl;
 
 import org.apache.commons.csv.CSVRecord;
-import org.myob.persistence.mapping.impl.EmployeeHeader;
 import org.myob.persistence.reader.AbstractCsvReader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;

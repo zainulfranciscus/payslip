@@ -18,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
 
 /**
@@ -108,6 +107,12 @@ public class EmployeeRepositoryTest {
                     .hasExpectedSuper(employee);
         }
         assertEquals(maxNumberOfEmployeesThatShouldBeRead,employeeSpecification.numberOfEmployeesLoadedToMemory());
+    }
+
+    @Test
+    public void shouldCallMockReaderClose1Time() throws Exception {
+        employeeRepository.close();
+        verify(mockReader,times(1)).close();
     }
 
     private Row[] listOfRowsWithNullObjectAsTheLastRow(int numberOfMockRow){

@@ -1,6 +1,7 @@
 package org.myob.model.tax;
 
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -16,28 +17,25 @@ public class Tax {
     private final double minTaxableIncome;
     private final double maxTaxableIncome;
     private final double taxPerDollarInCents;
-    private int startingDay;
-    private int startingMonth;
-    private int startingYear;
     private double taxPerDollarOver;
+
+    private LocalDate startPeriod;
+
 
     public Tax(double minTaxableIncome,
                double taxPerDollarOver,
                double maxTaxableIncome,
                double taxPerDollarInCents,
                double baseTax,
-               int startingDay,
-               int startingMonth,
-               int startingYear) {
+               LocalDate startPeriod) {
         this.minTaxableIncome = minTaxableIncome;
         this.taxPerDollarOver = taxPerDollarOver;
         this.maxTaxableIncome = maxTaxableIncome;
         this.taxPerDollarInCents = taxPerDollarInCents;
         this.baseTax = baseTax;
-        this.startingDay = startingDay;
-        this.startingMonth = startingMonth;
-        this.startingYear = startingYear;
+        this.startPeriod = startPeriod;
     }
+
 
     public double getMinIncome() {
         return minTaxableIncome;
@@ -55,30 +53,23 @@ public class Tax {
         return baseTax;
     }
 
-    public BigDecimal taxDollarInCentsAsBigDecimal(){
+    public BigDecimal taxDollarInCentsAsBigDecimal() {
         return new BigDecimal(taxPerDollarInCents);
     }
 
-    public BigDecimal baseTaxAsBigDecimal(){
+    public BigDecimal baseTaxAsBigDecimal() {
         return new BigDecimal(baseTax);
     }
-    public BigDecimal minTaxableIncomeAsBigDecimal(){
+
+    public BigDecimal minTaxableIncomeAsBigDecimal() {
         return new BigDecimal(taxPerDollarOver);
-    }
-
-    public int getStartingDay() {
-        return this.startingDay;
-    }
-
-    public int getStartingMonth() {
-        return this.startingMonth;
-    }
-
-    public int getStartingYear() {
-        return this.startingYear;
     }
 
     public double getTaxPerDollarOver() {
         return this.taxPerDollarOver;
+    }
+
+    public LocalDate getStartPeriod() {
+        return startPeriod;
     }
 }

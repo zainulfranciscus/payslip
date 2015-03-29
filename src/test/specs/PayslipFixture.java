@@ -77,8 +77,8 @@ public class PayslipFixture {
     public List<Payslip> payslip() throws Exception {
 
         PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
-        payslipServiceBuilder.setReaderForEmployeeRepository(employeeReader);
-        payslipServiceBuilder.setReaderForTaxRepository(taxReader);
+        payslipServiceBuilder.withReaderForEmployeeRepository(employeeReader);
+        payslipServiceBuilder.withReaderForTaxRepository(taxReader);
         PayslipService payslipService = payslipServiceBuilder.build();
 
         return payslipService.createPayslips(payslipServiceBuilder.createEmployeeRepository().find(new EmployeeSpecificationBuilder().build()));

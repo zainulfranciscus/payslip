@@ -1,12 +1,10 @@
-package org.myob.model;
+package org.myob.model.payslip;
 
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
-import org.myob.model.payslip.Payslip;
-import org.myob.model.payslip.PayslipFactory;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 
@@ -29,14 +27,15 @@ public class PayslipTest {
     private Employee employee;
     private LocalDate startPeriod;
     private LocalDate endPeriod;
+    private PayslipBuilder payslipBuilder;
 
 
     @Before
     public void setup() {
         startPeriod = new LocalDate(2015, 01, 01);
         endPeriod = new LocalDate(2015, 10, 31);
-        employee = new EmployeeBuilder().withFirstName("Joe").withLastName("Blogg").withSalary(12000).build();
-
+        employee = new EmployeeBuilder().withFirstName("Joe").withLastName("Blogg").withSalary(12000).withStartPaymentPeriod(2015, 01, 01).withEndPaymentPeriod(2015, 10, 31).build();
+        payslipBuilder = new PayslipBuilder();
     }
 
     @Test
@@ -49,7 +48,8 @@ public class PayslipTest {
                 .withTaxPerDollar(100)
                 .build();
 
-        payslip = PayslipFactory.createWith(startPeriod, endPeriod, employee, tax);
+
+        payslip =  payslipBuilder.withEmployee(employee).withTax(tax).build();
 
         AssertThat assertThat = new AssertThat();
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
@@ -68,7 +68,7 @@ public class PayslipTest {
     @Test
     public void shouldHave0TaxOnIncome_NetIncomeIsEqualToSalary_BecauseTaxIsNull() {
 
-        payslip = PayslipFactory.createWith(startPeriod, endPeriod, employee, tax);
+        payslip =  payslipBuilder.withEmployee(employee).withTax(null).build();
 
         AssertThat assertThat = new AssertThat();
 

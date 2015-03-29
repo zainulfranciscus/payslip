@@ -24,12 +24,9 @@ public class EmployeeSpecificationTest {
         employeeBuilder = new EmployeeBuilder()
                 .withFirstName("Joe")
                 .withLastName("Blogg")
-                .withEndOfPaymentDate(31)
-                .withEndOfPaymentMonth(12)
-                .withEndOfPaymentYear(2015)
-                .withStartOfPaymentDate(1)
-                .withStartOfPaymentMonth(1)
-                .withStartOfPaymentYear(2015);
+                .withEndPaymentPeriod(2015, 12, 31)
+                .withStartPaymentPeriod(2015, 1, 1);
+
     }
 
     @Test
@@ -52,13 +49,4 @@ public class EmployeeSpecificationTest {
 
     }
 
-    @Test
-    public void employeeWithInvalidStartPaymentDateShouldBeFalse() {
-        assertFalse(employeeSpecification.match(employeeBuilder.withStartOfPaymentDate(0).build()));
-    }
-
-    @Test
-    public void employeeWithInvalidEndPaymentDateShouldBeFalse() {
-        assertFalse(employeeSpecification.match(employeeBuilder.withEndOfPaymentDate(0).build()));
-    }
 }

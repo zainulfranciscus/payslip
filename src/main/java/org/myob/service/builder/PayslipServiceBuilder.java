@@ -40,17 +40,17 @@ public abstract class PayslipServiceBuilder {
         return this;
     }
 
-    public PayslipServiceBuilder fileReaderType(FileReaderType readerType) {
+    public PayslipServiceBuilder withFileReaderType(FileReaderType readerType) {
         this.readerType = readerType;
         return this;
     }
 
-    public PayslipServiceBuilder setReaderForTaxRepository(Reader reader) {
+    public PayslipServiceBuilder withReaderForTaxRepository(Reader reader) {
         this.taxReader = reader;
         return this;
     }
 
-    public PayslipServiceBuilder setReaderForEmployeeRepository(Reader reader) {
+    public PayslipServiceBuilder withReaderForEmployeeRepository(Reader reader) {
         this.employeeReader = reader;
         return this;
     }

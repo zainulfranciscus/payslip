@@ -1,5 +1,7 @@
 package org.myob.model.tax;
 
+import org.joda.time.LocalDate;
+
 /**
  * Created by Zainul Franciscus on 25/03/2015.
  */
@@ -13,6 +15,7 @@ public class TaxBuilder {
     private int startingMonth;
     private int startingYear;
     private double taxPerDollarOver;
+    private LocalDate startPeriod;
 
     public TaxBuilder withMinIncome(double minIncome) {
         this.minIncome = minIncome;
@@ -25,9 +28,7 @@ public class TaxBuilder {
                 maxIncome,
                 taxPerDollar,
                 baseTax,
-                startingDay,
-                startingMonth,
-                startingYear);
+                startPeriod);
     }
 
     public TaxBuilder withMaxIncome(double maxIncome) {
@@ -43,6 +44,11 @@ public class TaxBuilder {
     public TaxBuilder withBaseTax(double baseTax) {
         this.baseTax = baseTax;
         return this;
+    }
+
+    public TaxBuilder withStartPeriod(int year, int month, int date){
+        this.startPeriod = new LocalDate(year,month,date);
+        return  this;
     }
 
     public TaxBuilder withStartingDay(int startingDay) {

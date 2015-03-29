@@ -15,7 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void createPayslips(String employeeFileName,String taxFileName, String payslipFileName) throws Exception {
 
         /*PayslipServiceBuilder builder = new PayslipServiceBuilderImpl();
-        builder.fileReaderType(FileReaderType.CLASSLOADER);
+        builder.withFileReaderType(FileReaderType.CLASSLOADER);
         builder.withEmployeeFileName(employeeFileName);
         builder.withTaxFileName(taxFileName);
         builder.withPayslipFileName(payslipFileName);*/

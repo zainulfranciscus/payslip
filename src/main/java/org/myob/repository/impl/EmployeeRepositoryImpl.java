@@ -32,15 +32,15 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         List<Employee> employees = new ArrayList<Employee>();
 
-
         while((row = reader.read(new EmployeeRowSpecification())) != null && !specification.hasReadTheAllowedNumberOfLines()) {
             Employee employee = new EmployeeBuilder()
                     .withEndOfPaymentDate(row.getInt(END_PAYMENT_DATE))
-                    .withEndOfPaymentMonth(row.getMonthAsInt(END_PAYMENT_MONTH))
-                    .withEndOfPaymentYear(row.getInt(END_PAYMENT_YEAR))
-                    .withStartOfPaymentDate(row.getInt(START_PAYMENT_DATE))
-                    .withStartOfPaymentMonth(row.getMonthAsInt(START_PAYMENT_MONTH))
-                    .withStartOfPaymentYear(row.getInt(START_PAYMENT_YEAR))
+                    .withStartPaymentPeriod(row.getInt(START_PAYMENT_YEAR),
+                            row.getMonthAsInt(START_PAYMENT_MONTH),
+                            row.getInt(START_PAYMENT_DATE))
+                    .withEndPaymentPeriod(row.getInt(END_PAYMENT_YEAR),
+                            row.getMonthAsInt(END_PAYMENT_MONTH),
+                            row.getInt(END_PAYMENT_DATE))
                     .withFirstName(row.get(FIRST_NAME))
                     .withLastName(row.get(LAST_NAME))
                     .withSalary(row.getInt(ANNUAL_SALARY))
@@ -52,8 +52,6 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
             specification.incrementNumberOfLineRead();
         }
-
-        //reader.close();
 
         return employees;
     }

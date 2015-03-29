@@ -2,6 +2,7 @@ package org.myob.model.employee;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.joda.time.LocalDate;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
@@ -18,6 +19,8 @@ public class EmployeeBuilder {
     private int endOfPaymentYear;
     private int endOfPaymentMonth;
     private int endOfPaymentDate;
+    private LocalDate paymentStartPeriod;
+    private LocalDate paymentEndPeriod;
 
 
     public EmployeeBuilder withFirstName(String firstName) {
@@ -78,16 +81,21 @@ public class EmployeeBuilder {
         return this;
     }
 
+    public EmployeeBuilder withStartPaymentPeriod(int year, int month, int date){
+        this.paymentStartPeriod = new LocalDate(year,month,date);
+        return this;
+    }
+
+    public EmployeeBuilder withEndPaymentPeriod(int year, int month, int date){
+        this.paymentEndPeriod = new LocalDate(year,month,date);
+        return this;
+    }
     public Employee build() {
         return new Employee(firstName,
                 lastName,
                 salary,
                 aSuper,
-                paymentStartDate,
-                paymentStartingMonth,
-                paymentStartingYear,
-                endOfPaymentYear,
-                endOfPaymentMonth,
-                endOfPaymentDate);
+                paymentStartPeriod,
+                paymentEndPeriod);
     }
 }

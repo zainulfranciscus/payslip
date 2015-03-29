@@ -2,7 +2,7 @@ package org.myob.repository.impl;
 
 import org.myob.model.employee.Employee;
 import org.myob.model.payslip.Payslip;
-import org.myob.model.payslip.PayslipFactory;
+import org.myob.model.payslip.PayslipBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.PayslipRepository;
@@ -25,7 +25,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
     public List<Payslip> createPayslips(List<Employee> employees) throws Exception {
 
         List<Payslip> payslips = new ArrayList<Payslip>();
-        for(Employee employee:employees){
+        for (Employee employee : employees) {
             payslips.add(create(employee));
         }
 
@@ -36,14 +36,17 @@ public class PayslipRepositoryImpl implements PayslipRepository {
     @Override
     public Payslip create(Employee employee) throws Exception {
 
-        Tax tax = taxRepository.find( new TaxSpecificationBuilder().withEmployee(employee).build());
+        Tax tax = taxRepository.find(new TaxSpecificationBuilder().withEmployee(employee).build());
 
-        return PayslipFactory.createWith(employee.getPaymentStartDate(), employee.getPaymentEndDate(), employee, tax);
+        return new PayslipBuilder()
+                .withEmployee(employee)
+                .withTax(tax)
+                .build();
     }
 
     @Override
     public void savePayslips(List<Payslip> payslips) throws IOException {
-        for(Payslip payslip:payslips){
+        for (Payslip payslip : payslips) {
             save(payslip);
         }
     }

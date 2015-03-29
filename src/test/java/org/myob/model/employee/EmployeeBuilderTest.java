@@ -47,41 +47,22 @@ public class EmployeeBuilderTest {
     }
 
     @Test
-    public void paymentStartDateShouldBeTodaysDate(){
-        int todayDate = localDate.getDayOfMonth();
-        assertEquals(todayDate,employeeBuilder.withStartOfPaymentDate(todayDate).build().getStartOfPaymentDate());
+    public void shouldCreateEmployeeWithTheExpectedStartDate(){
+        int date = 1;
+        int month = 1;
+        int year = 2015;
+        assertEquals(new LocalDate(2015,1,1), employeeBuilder.withStartPaymentPeriod(year,month,date).build().getPaymentStartDate());
     }
 
     @Test
-    public void paymentStartMonthShouldBeThisMonth(){
-        int thisMonth = localDate.getMonthOfYear();
-        assertEquals(thisMonth,employeeBuilder.withStartOfPaymentMonth(thisMonth).build().getStartOfPaymentMonth());
+    public void shouldCreateEmployeeWithTheExpectedEndDate(){
+        int date = 1;
+        int month = 1;
+        int year = 2014;
+
+        assertEquals(new LocalDate(2014,1,1), employeeBuilder.withEndPaymentPeriod(year,month,date).build().getPaymentEndDate());
     }
 
-    @Test
-    public void paymentStartingYearShouldBeThisYear(){
-        int thisYear = localDate.getYear();
-        assertEquals(thisYear, employeeBuilder.withStartOfPaymentYear(thisYear).build().getStartOfPaymentYear());
-    }
-
-    @Test
-    public void endOfPaymentYearShouldBe2YearFromNow(){
-        int twoYearFromNow = localDate.getYear() + 2;
-        assertEquals(twoYearFromNow, employeeBuilder.withEndOfPaymentYear(twoYearFromNow).build().getEndOfPaymentYear());
-    }
-
-    @Test
-    public void endPaymentMonthShouldBe1MonthFromNow(){
-        int aMonthFromNow = localDate.getMonthOfYear() + 1;
-        assertEquals(aMonthFromNow, employeeBuilder.withEndOfPaymentMonth(aMonthFromNow).build().getEndOfPaymentMonth());
-    }
-
-
-    @Test
-    public void endOfPaymentDateShouldBe3DaysFromNow(){
-        int threeDaysFromNow = localDate.getDayOfMonth() + 3;
-        assertEquals(threeDaysFromNow, employeeBuilder.withEndOfPaymentDate(threeDaysFromNow).build().getEndOfPaymentDate());
-    }
 
     @Test
     public void shouldReturnTheNumericalValueOfTheExpectedSuper(){

@@ -22,7 +22,7 @@ public class TaxSpecificationImpl implements Specification<Tax> {
         boolean isValidDate = true;
 
         try {
-            taxStartDate = new LocalDate(tax.getStartingYear(), tax.getStartingMonth(), tax.getStartingDay());
+            taxStartDate = tax.getStartPeriod();
         } catch (Exception ex) {
             ex.printStackTrace();
             isValidDate = false;

@@ -33,6 +33,9 @@ public class PayslipServiceTest {
     public void setup(){
         mockEmployeeRepository = mock(EmployeeRepository.class);
         mockPayslipRepository = mock(PayslipRepository.class);
+
+        payslipService.setPayslipRepository(mockPayslipRepository);
+        payslipService.setEmployeeRepository(mockEmployeeRepository);
     }
 
     @Test
@@ -52,8 +55,7 @@ public class PayslipServiceTest {
         final EmployeeSpecification employeeSpecification = setNumberOfEmployeesThatCanBePutIntoMemory(numberOfEmployeesThatCanBeRetrievedIntoMemory);
         when(mockEmployeeRepository.find(employeeSpecification)).thenReturn(employees,employees,employees,employees, new ArrayList<Employee>());
 
-        payslipService.setPayslipRepository(mockPayslipRepository);
-        payslipService.setEmployeeRepository(mockEmployeeRepository);
+
         payslipService.writePayslips(employeeSpecification);
         assertEquals(5, employeeSpecification.numberOfEmployeesLoadedToMemory());
 
@@ -61,6 +63,13 @@ public class PayslipServiceTest {
         verify(mockPayslipRepository,times(4)).savePayslips(payslips);
 
 
+    }
+
+    @Test
+    public void shouldCall_TaxRepository_EmployeeRepositoryClose_1time() throws Exception {
+        payslipService.close();
+        verify(mockEmployeeRepository,times(1)).close();
+        verify(mockPayslipRepository,times(1)).close();
     }
 
 

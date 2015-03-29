@@ -55,18 +55,10 @@ public class TaxBuilderTest {
     }
 
     @Test
-    public void shouldReturnStartingDay(){
-        assertEquals(startingDay,builder.withStartingDay(startingDay).build().getStartingDay());
-    }
-
-    @Test
-    public void shouldReturnStartingMonth(){
-        assertEquals(startingMonth,builder.withStartingMonth(startingMonth).build().getStartingMonth());
-    }
-
-    @Test
-    public void shouldReturnStartingYear(){
-        assertEquals(startingYear,builder.withStartingYear(startingYear).build().getStartingYear());
+    public void shouldReturnFirstJan2015(){
+        LocalDate firstJan2015 = new LocalDate(2015,1,1);
+        builder.withStartPeriod(firstJan2015.getYear(),firstJan2015.getMonthOfYear(),firstJan2015.getDayOfMonth());
+        assertEquals(firstJan2015, builder.build().getStartPeriod());
     }
 
 }

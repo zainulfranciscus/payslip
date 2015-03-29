@@ -6,7 +6,8 @@ import org.joda.time.LocalDate;
 import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
-import static org.myob.model.payslip.Payslip.*;
+import static org.myob.model.payslip.Payslip.TWELVE_MONTHS;
+import static org.myob.model.payslip.Payslip.ZERO_ROUND_SCALE;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
@@ -19,36 +20,25 @@ public class Employee {
     private final String lastName;
     private final double salary;
     private final double aSuper;
-    private final int paymentStartDate;
-    private final int paymentStartingMonth;
-    private final int paymentStartingYear;
-    private final int endOfPaymentYear;
-    private final int endOfPaymentMonth;
-    private final int endOfPaymentDate;
-
+    private LocalDate startPaymentDate;
+    private LocalDate endPaymentDate;
 
     public Employee(String firstName,
                     String lastName,
                     double salary,
                     double aSuper,
-                    int paymentStartDate,
-                    int paymentStartingMonth,
-                    int paymentStartingYear,
-                    int endOfPaymentYear,
-                    int endOfPaymentMonth,
-                    int endOfPaymentDate) {
+                    LocalDate startPaymentDate,
+                    LocalDate endPaymentDate) {
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.aSuper = aSuper;
-        this.paymentStartDate = paymentStartDate;
-        this.paymentStartingMonth = paymentStartingMonth;
-        this.paymentStartingYear = paymentStartingYear;
-        this.endOfPaymentYear = endOfPaymentYear;
-        this.endOfPaymentMonth = endOfPaymentMonth;
-        this.endOfPaymentDate = endOfPaymentDate;
+        this.startPaymentDate = startPaymentDate;
+        this.endPaymentDate = endPaymentDate;
+
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -70,7 +60,7 @@ public class Employee {
         return aSuper;
     }
 
-    public BigDecimal getSuperAsBigDecimal(){
+    public BigDecimal getSuperAsBigDecimal() {
         return new BigDecimal(aSuper);
     }
 
@@ -78,43 +68,19 @@ public class Employee {
         return getSuperAsBigDecimal().divide(DIVISOR_FOR_SUPER_RATE);
     }
 
-    public BigDecimal salaryAsBigDecimal(){
+    public BigDecimal salaryAsBigDecimal() {
         return new BigDecimal(getSalary());
     }
 
-    public BigDecimal grossIncomeAsBigDecimal(){
+    public BigDecimal grossIncomeAsBigDecimal() {
         return salaryAsBigDecimal().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP);
     }
 
-    public int getStartOfPaymentDate() {
-        return this.paymentStartDate;
-    }
-
-    public int getStartOfPaymentMonth() {
-        return this.paymentStartingMonth;
-    }
-
-    public int getStartOfPaymentYear() {
-        return this.paymentStartingYear;
-    }
-
-    public int getEndOfPaymentYear() {
-        return this.endOfPaymentYear;
-    }
-
-    public int getEndOfPaymentMonth() {
-        return this.endOfPaymentMonth;
-    }
-
-    public int getEndOfPaymentDate() {
-        return this.endOfPaymentDate;
-    }
-
-    public LocalDate getPaymentStartDate(){
-        return new LocalDate(this.paymentStartingYear, this.paymentStartingMonth, this.paymentStartDate);
+    public LocalDate getPaymentStartDate() {
+        return startPaymentDate;
     }
 
     public LocalDate getPaymentEndDate() {
-        return new LocalDate(this.endOfPaymentYear, this.endOfPaymentMonth, this.endOfPaymentDate);
+        return endPaymentDate;
     }
 }

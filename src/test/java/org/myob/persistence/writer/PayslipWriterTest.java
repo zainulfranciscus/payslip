@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.payslip.Payslip;
-import org.myob.model.payslip.PayslipFactory;
+import org.myob.model.payslip.PayslipBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 
@@ -36,22 +36,16 @@ public class PayslipWriterTest {
     @Before
     public void setup() {
 
-
         firstName = "Joe";
         lastName = "blogg";
-
         firstJan2015 = new LocalDate(2015, 01, 01);
         thirty1stDec2015 = new LocalDate(2015, 12, 31);
-
         salary = 12000;
         superRate = 10;
 
         employee = new EmployeeBuilder().withEndOfPaymentDate(thirty1stDec2015.getDayOfMonth())
-                .withEndOfPaymentMonth(thirty1stDec2015.getMonthOfYear())
-                .withEndOfPaymentYear((thirty1stDec2015.getYear()))
-                .withStartOfPaymentDate(firstJan2015.getDayOfMonth())
-                .withStartOfPaymentMonth(firstJan2015.getMonthOfYear())
-                .withStartOfPaymentYear(firstJan2015.getYear())
+                .withEndPaymentPeriod(thirty1stDec2015.getYear(),thirty1stDec2015.getMonthOfYear(), thirty1stDec2015.getDayOfMonth())
+                .withStartPaymentPeriod(firstJan2015.getYear(), firstJan2015.getMonthOfYear(), firstJan2015.getDayOfMonth())
                 .withFirstName(firstName)
                 .withLastName(lastName)
                 .withSalary(salary)
@@ -77,7 +71,8 @@ public class PayslipWriterTest {
         payslipWriter.setWriter(writer);
 
 
-        Payslip payslip = PayslipFactory.createWith(firstJan2015, thirty1stDec2015, employee, tax);
+        Payslip payslip = new PayslipBuilder().withEmployee(employee)
+                .withTax(tax).build();
 
         String expectedOutput = payslip.getEmployeeName()
                 .concat(COMMA_DELIMITER)
@@ -94,7 +89,7 @@ public class PayslipWriterTest {
 
         payslipWriter.write(payslip);
 
-        assertEquals(expectedOutput,writer.getBuffer().toString());
+        assertEquals(expectedOutput, writer.getBuffer().toString());
 
     }
 

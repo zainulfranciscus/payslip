@@ -9,6 +9,7 @@ import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
+import static org.myob.persistence.reader.FileReaderType.*;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
@@ -26,7 +27,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("employee/employee.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("employee/employee.csv"));
         row = reader.read(new EmployeeRowSpecification());
 
         AssertThat assertThat = new AssertThat();
@@ -40,7 +41,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("employee/onlyHaveEmployeeHeader.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("employee/onlyHaveEmployeeHeader.csv"));
 
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
@@ -48,7 +49,7 @@ public class EmployeeCSVFileReaderTest {
     @Test
     public void rowShouldBeNullBecauseFileIsEmpty() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
-        reader.setDataSourceReader(FileReaderType.CLASSLOADER.getReader("emptyFile.csv"));
+        reader.setDataSourceReader(CLASSLOADER.getReader("emptyFile.csv"));
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
     class AssertThat{

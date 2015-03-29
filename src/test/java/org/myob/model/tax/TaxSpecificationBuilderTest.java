@@ -25,18 +25,10 @@ public class TaxSpecificationBuilderTest {
         taxSpecificationBuilder = new TaxSpecificationBuilder();
 
         employeeBuilder = new EmployeeBuilder()
-                .withEndOfPaymentDate(31)
-                .withEndOfPaymentMonth(12)
-                .withEndOfPaymentYear(2015)
-                .withStartOfPaymentDate(1)
-                .withStartOfPaymentMonth(1)
-                .withStartOfPaymentYear(2015);
+                .withEndPaymentPeriod(2015, 12, 31)
+                .withStartPaymentPeriod(2015, 1, 1);
 
-        taxBuilder = new TaxBuilder()
-                .withStartingDay(1)
-                .withStartingMonth(1)
-                .withStartingYear(2015);
-
+        taxBuilder = new TaxBuilder().withStartPeriod(2015,1,1);
 
     }
 
@@ -55,18 +47,11 @@ public class TaxSpecificationBuilderTest {
     @Test
     public void shouldMatchTheCriteriaEmployeePayPeriodFallsWithinTaxStartDate(){
 
-        Employee employee = employeeBuilder.withSalary(10000)
-                .withStartOfPaymentDate(2)
-                .withStartOfPaymentMonth(4)
-                .withStartOfPaymentYear(2015)
+        Employee employee = employeeBuilder
+                .withStartPaymentPeriod(2015,1,1)
                 .build();
 
-        Tax tax = taxBuilder.withMinIncome(1000)
-                .withMaxIncome(20000)
-                .withStartingDay(1)
-                .withStartingMonth(4)
-                .withStartingYear(2015)
-                .build();
+        Tax tax = taxBuilder.withStartPeriod(2015,1,1).build();
 
         Specification<Tax> taxCriteria = taxSpecificationBuilder.withEmployee(employee).build();
         assertTrue(taxCriteria.match(tax));

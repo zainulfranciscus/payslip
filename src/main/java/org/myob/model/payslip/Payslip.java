@@ -25,13 +25,10 @@ public class Payslip {
     private final Employee employee;
     private final Tax tax;
 
-    private LocalDate startPeriod;
-    private LocalDate endPeriod;
 
-    public Payslip(LocalDate startPeriod, LocalDate endPeriod, Employee employee, Tax tax) {
+    public Payslip(Employee employee, Tax tax) {
 
-        this.startPeriod = startPeriod;
-        this.endPeriod = endPeriod;
+
         this.employee = employee;
         this.tax = tax;
     }
@@ -44,12 +41,12 @@ public class Payslip {
 
 
     public String getPaymentStartDate() {
-        return formatter.print(startPeriod);
+        return formatter.print(employee.getPaymentStartDate());
     }
 
 
     public String getPaymentEndDate() {
-        return formatter.print(endPeriod);
+        return formatter.print(employee.getPaymentEndDate());
     }
 
 
