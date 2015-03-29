@@ -12,7 +12,7 @@ import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.impl.PayslipRepositoryImpl;
-import org.myob.repository.specification.Specification;
+import org.myob.repository.specification.TaxSpecification;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ public class PayslipRepositoryTest {
         tax = new TaxBuilder().withMaxIncome(20000).withMinIncome(10).withBaseTax(2500).build();
 
         mockTaxRepository = mock(TaxRepository.class);
-        when(mockTaxRepository.find(Mockito.any(Specification.class))).thenReturn(tax);
+        when(mockTaxRepository.find(Mockito.any(TaxSpecification.class))).thenReturn(tax);
 
         payslipRepository = new PayslipRepositoryImpl();
         payslipRepository.setTaxRepository(mockTaxRepository);

@@ -13,6 +13,6 @@ public class EmployeeSpecificationBuilder {
     }
 
     public EmployeeSpecification build(){
-        return new EmployeeSpecificationImpl(maxNumberOfEmployeesThatCanBeLoadedToMemory);
+        return new EmployeeSpecification(maxNumberOfEmployeesThatCanBeLoadedToMemory);
     }
 }

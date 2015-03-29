@@ -1,22 +1,21 @@
-package org.myob.repository.specification.impl;
+package org.myob.repository.specification;
 
 import org.joda.time.LocalDate;
 import org.myob.model.employee.Employee;
 import org.myob.model.tax.Tax;
-import org.myob.repository.specification.Specification;
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.
  */
-public class TaxSpecificationImpl implements Specification<Tax> {
+public class TaxSpecification {
 
     private Employee employee;
 
-    public TaxSpecificationImpl(Employee employee) {
+    public TaxSpecification(Employee employee) {
         this.employee = employee;
     }
 
-    @Override
+
     public boolean match(Tax tax) {
         LocalDate taxStartDate = tax.getStartPeriod();
         return  tax.getMinIncome() <= employee.getSalary()

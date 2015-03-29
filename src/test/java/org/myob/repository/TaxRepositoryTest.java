@@ -6,14 +6,12 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
-import org.myob.model.tax.Tax;
-import org.myob.persistence.mapping.impl.TaxHeader;
-import org.myob.repository.specification.TaxSpecificationBuilder;
-import org.myob.persistence.row.specification.impl.TaxRowSpecification;
-import org.myob.persistence.row.TaxCsvRow;
 import org.myob.persistence.reader.Reader;
-import org.myob.repository.specification.Specification;
+import org.myob.persistence.row.TaxCsvRow;
+import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.impl.TaxRepositoryImpl;
+import org.myob.repository.specification.TaxSpecificationBuilder;
+import org.myob.repository.specification.TaxSpecification;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -32,7 +30,7 @@ public class TaxRepositoryTest {
     private int maxIncomeForThisTax;
     private int minIncomeForThisTax;
     private double taxPerDollarForThisTax;
-    private Specification<Tax> taxFor15000AsSalary;
+    private TaxSpecification taxFor15000AsSalary;
     private EmployeeBuilder employeeBuilder;
 
     @Before
@@ -83,7 +81,7 @@ public class TaxRepositoryTest {
     @Test
     public void shouldBeNullWhenSalaryIsAboveMaxIncomeForThisTax() throws Exception {
         Employee employee = employeeBuilder.withSalary(maxIncomeForThisTax + 2000).build();
-        Specification aboveMaxIncome = new TaxSpecificationBuilder().withEmployee(employee).build();
+        TaxSpecification aboveMaxIncome = new TaxSpecificationBuilder().withEmployee(employee).build();
         assertNull(taxRepository.find(aboveMaxIncome));
     }
 

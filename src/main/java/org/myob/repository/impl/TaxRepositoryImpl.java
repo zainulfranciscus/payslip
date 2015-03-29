@@ -6,7 +6,7 @@ import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.TaxRepository;
-import org.myob.repository.specification.Specification;
+import org.myob.repository.specification.TaxSpecification;
 
 import static org.myob.persistence.mapping.impl.TaxHeader.*;
 
@@ -18,7 +18,7 @@ public class TaxRepositoryImpl implements TaxRepository {
     private Reader reader;
 
     @Override
-    public Tax find(Specification<Tax> specification) throws Exception {
+    public Tax find(TaxSpecification specification) throws Exception {
         Row row = null;
         TaxRowSpecification rowSpecification = new TaxRowSpecification();
         while((row = reader.read(rowSpecification)) != null) {
