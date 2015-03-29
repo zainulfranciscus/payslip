@@ -1,0 +1,5 @@
+Min Income,Max Income,Base Tax,Tax per Dollar,Tax per Dollar Over,Start Date,Start Month,Start Year
+0,18200,0,0,0,1,July,2012
+18201,37000,0,19,18200,1,July,2012
+80001,180000,17547,37,80000,1,July,2012
+180001,-1,54547,45,180000,1,July,2012
