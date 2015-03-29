@@ -17,10 +17,6 @@ import static org.mockito.Mockito.verify;
  */
 public class EmployeeServiceTest {
 
-    private static final String EMPLOYEE_CSV_FILE = "employee/employee.csv";
-    private static final String TAX_CSV_FILE = "tax/tax.csv";
-    private static final String PAYSLIP_FILE = "payslip.csv";
-
     private EmployeeService employeeService;
     private PayslipService mockPayslipService;
 
@@ -37,7 +33,7 @@ public class EmployeeServiceTest {
         boolean exceptionThrown = false;
 
         try {
-            employeeService.createPayslips(EMPLOYEE_CSV_FILE, TAX_CSV_FILE, PAYSLIP_FILE);
+            employeeService.writePayslips();
 
         } catch (Exception ex) {
             ex.printStackTrace();

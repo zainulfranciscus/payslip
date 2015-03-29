@@ -2,7 +2,7 @@ package org.myob.service.builder.impl;
 
 import org.myob.repository.EmployeeRepository;
 import org.myob.repository.PayslipRepository;
-import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.service.builder.AbstractPayslipServiceBuilder;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
 import org.myob.persistence.writer.PayslipWriterImpl;
@@ -14,12 +14,13 @@ import java.io.FileWriter;
 /**
  * Created by Zainul Franciscus on 28/03/2015.
  */
-public class PayslipServiceBuilderImpl extends PayslipServiceBuilder {
+public class PayslipServiceBuilderImpl extends AbstractPayslipServiceBuilder {
 
     public PayslipServiceBuilderImpl(){
         this.taxReader = new TaxCSVReaderImpl();
         this.employeeReader = new EmployeeCSVFileReaderImpl();
     }
+
     @Override
     public PayslipRepository createPayslipRepository() throws Exception {
         PayslipRepository payslipRepository = super.createPayslipRepository();

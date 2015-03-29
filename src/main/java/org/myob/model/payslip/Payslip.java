@@ -25,20 +25,15 @@ public class Payslip {
     private final Employee employee;
     private final Tax tax;
 
-
     public Payslip(Employee employee, Tax tax) {
-
-
         this.employee = employee;
         this.tax = tax;
     }
 
 
     public String getPayPeriod() {
-
         return getPaymentStartDate() + " - " + getPaymentEndDate();
     }
-
 
     public String getPaymentStartDate() {
         return formatter.print(employee.getPaymentStartDate());

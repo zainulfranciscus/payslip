@@ -19,10 +19,17 @@
         <apache.common.csv.version>1.1</apache.common.csv.version>
         <apache.common.lang.version>3.3.2</apache.common.lang.version>
         <jodatime.version>2.7</jodatime.version>
-
+        <cliche.version>110413</cliche.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.googlecode.clichemaven</groupId>
+            <artifactId>cliche</artifactId>
+            <version>${cliche.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>joda-time</groupId>
@@ -60,8 +67,6 @@
             <version>${concordion.version}</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
 
@@ -72,8 +77,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
 

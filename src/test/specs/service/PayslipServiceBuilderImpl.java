@@ -1,6 +1,8 @@
 package service;
 
-import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.repository.PayslipRepository;
+import org.myob.repository.impl.PayslipRepositoryImpl;
+import org.myob.service.builder.AbstractPayslipServiceBuilder;
 import org.myob.repository.TaxRepository;
 import org.myob.repository.impl.EmployeeRepositoryImpl;
 import org.myob.repository.impl.TaxRepositoryImpl;
@@ -11,7 +13,8 @@ import java.io.FileNotFoundException;
 /**
  * Created by Zainul Franciscus on 29/03/2015.
  */
-public class PayslipServiceBuilderImpl extends PayslipServiceBuilder {
+public class PayslipServiceBuilderImpl extends AbstractPayslipServiceBuilder {
+
 
     @Override
     public TaxRepository createTaxRepository() throws FileNotFoundException {

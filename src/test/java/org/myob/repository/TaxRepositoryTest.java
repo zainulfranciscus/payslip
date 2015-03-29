@@ -79,10 +79,17 @@ public class TaxRepositoryTest {
     }
 
     @Test
-    public void shouldBeNullWhenSalaryIsAboveMaxIncomeForThisTax() throws Exception {
+    public void shouldReturnNoMatchingTax_WhenSalaryIsAboveMaxIncomeForThisTax() throws Exception {
         Employee employee = employeeBuilder.withSalary(maxIncomeForThisTax + 2000).build();
-        TaxSpecification aboveMaxIncome = new TaxSpecificationBuilder().withEmployee(employee).build();
-        assertNull(taxRepository.find(aboveMaxIncome));
+        TaxSpecification specification = new TaxSpecificationBuilder().withEmployee(employee).build();
+        assertNull(taxRepository.find(specification));
+    }
+
+    @Test
+    public void shouldReturnNoMatchingTax_WhenSalaryIsBelowMinIncomeForThisTax() throws Exception {
+        Employee employee = employeeBuilder.withSalary(minIncomeForThisTax - 1000).build();
+        TaxSpecification specification = new TaxSpecificationBuilder().withEmployee(employee).build();
+        assertNull(taxRepository.find(specification));
     }
 
     @Test

@@ -16,9 +16,6 @@ public class TaxBuilderTest {
     private double expectedMaxIncome;
     private double expectedTaxPerDollar;
     private double expectedBaseTax;
-    private int startingDay;
-    private int startingMonth;
-    private int startingYear;
 
     @Before
     public void setUp() throws Exception {
@@ -27,11 +24,6 @@ public class TaxBuilderTest {
         expectedTaxPerDollar = 20;
         expectedBaseTax = 3500.89;
 
-        LocalDate today = new LocalDate();
-
-        startingDay = today.getDayOfMonth();
-        startingMonth = today.getMonthOfYear();
-        startingYear = today.getYear();
     }
 
     @Test

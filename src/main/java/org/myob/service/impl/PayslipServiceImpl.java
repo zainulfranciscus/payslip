@@ -28,10 +28,14 @@ public class PayslipServiceImpl implements PayslipService {
 
         List<Employee> employees = new ArrayList<>();
 
+        payslipRepository.writeHeader();
+
         while((employees = employeeRepository.find(employeeSpecification)).size() > 0) {
             List<Payslip> payslips = createPayslips(employees);
             payslipRepository.savePayslips(payslips);
+            employeeSpecification.reset();
         }
+
     }
 
     @Override

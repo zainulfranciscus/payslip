@@ -40,7 +40,7 @@ public class ReaderImpl implements Reader {
 
     @Override
     public void setDataSourceReader(java.io.Reader reader) {
-
+        return;
     }
 
     public void add(Row row) {

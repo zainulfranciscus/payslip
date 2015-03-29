@@ -14,15 +14,17 @@ import java.util.Iterator;
 public abstract class AbstractCsvReader implements Reader {
 
     private java.io.Reader reader;
+    private Iterable<CSVRecord> records;
 
-    public void setDataSourceReader(java.io.Reader inputStreamReader){
+    public void setDataSourceReader(java.io.Reader inputStreamReader) throws IOException {
         this.reader = inputStreamReader;
+        records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
     }
 
     @Override
     public Row read(RowSpecification specification) throws IOException {
 
-        Iterable<CSVRecord> records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
+
         Iterator<CSVRecord> recordIterator = records.iterator();
 
         boolean hasRecord = recordIterator.hasNext();

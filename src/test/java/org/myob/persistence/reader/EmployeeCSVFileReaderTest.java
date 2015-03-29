@@ -29,7 +29,7 @@ public class EmployeeCSVFileReaderTest {
         reader = new EmployeeCSVFileReaderImpl();
         reader.setDataSourceReader(CLASSLOADER.getReader("employee/employee.csv"));
         row = reader.read(new EmployeeRowSpecification());
-
+        
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveFirstName("Joe")
                 .shouldHaveLastName("Blogg")
@@ -52,25 +52,26 @@ public class EmployeeCSVFileReaderTest {
         reader.setDataSourceReader(CLASSLOADER.getReader("emptyFile.csv"));
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
-    class AssertThat{
 
-        AssertThat shouldHaveFirstName(String expectedValue){
-            assertEquals(expectedValue,row.get(FIRST_NAME));
+    class AssertThat {
+
+        AssertThat shouldHaveFirstName(String expectedValue) {
+            assertEquals(expectedValue, row.get(FIRST_NAME));
             return this;
         }
 
-        AssertThat shouldHaveLastName(String expectedLastName){
-            assertEquals(expectedLastName,row.get(LAST_NAME));
+        AssertThat shouldHaveLastName(String expectedLastName) {
+            assertEquals(expectedLastName, row.get(LAST_NAME));
             return this;
         }
 
-        AssertThat shouldHaveSalary(String expectedSalary){
-            assertEquals(expectedSalary,row.get(ANNUAL_SALARY));
+        AssertThat shouldHaveSalary(String expectedSalary) {
+            assertEquals(expectedSalary, row.get(ANNUAL_SALARY));
             return this;
         }
 
-        AssertThat shouldHaveSuperRate(String expectedSuper){
-            assertEquals(expectedSuper,row.get(SUPER_RATE));
+        AssertThat shouldHaveSuperRate(String expectedSuper) {
+            assertEquals(expectedSuper, row.get(SUPER_RATE));
             return this;
         }
 

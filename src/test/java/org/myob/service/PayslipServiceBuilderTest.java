@@ -3,7 +3,7 @@ package org.myob.service;
 import org.junit.Test;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
-import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.service.builder.AbstractPayslipServiceBuilder;
 import org.myob.service.builder.impl.PayslipServiceBuilderImpl;
 
 import static junit.framework.TestCase.assertNotNull;
@@ -15,7 +15,7 @@ import static org.myob.persistence.reader.FileReaderType.CLASSLOADER;
  */
 public class PayslipServiceBuilderTest {
 
-    private PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
+    private AbstractPayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
 
     @Test
     public void shouldNotReturnNull_withACLassLoaderReader() throws Exception {

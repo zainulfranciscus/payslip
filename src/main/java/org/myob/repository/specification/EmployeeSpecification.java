@@ -28,4 +28,8 @@ public class EmployeeSpecification {
         return numberOfEmployeesThatHasBeenLoadedToMemory != 0 && numberOfEmployeesThatHasBeenLoadedToMemory % maxNumberOfEmployeesThatCanBeLoadedToMemory == 0;
     }
 
+    public void reset(){
+        numberOfEmployeesThatHasBeenLoadedToMemory = 0;
+    }
+
 }

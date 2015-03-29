@@ -12,14 +12,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private PayslipService payslipService;
 
     @Override
-    public void createPayslips(String employeeFileName,String taxFileName, String payslipFileName) throws Exception {
-
-        /*PayslipServiceBuilder builder = new PayslipServiceBuilderImpl();
-        builder.withFileReaderType(FileReaderType.CLASSLOADER);
-        builder.withEmployeeFileName(employeeFileName);
-        builder.withTaxFileName(taxFileName);
-        builder.withPayslipFileName(payslipFileName);*/
-
+    public void writePayslips() throws Exception {
         payslipService.writePayslips(new EmployeeSpecificationBuilder().build());
         payslipService.close();
     }

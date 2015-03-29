@@ -3,6 +3,7 @@ package org.myob.persistence.writer;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.myob.model.payslip.Payslip;
+import org.myob.persistence.mapping.impl.PayslipHeader;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -22,15 +23,31 @@ public class PayslipWriterImpl implements PayslipWriter {
 
     @Override
     public void write(Payslip payslip) throws IOException {
-        csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE));
+        csvPrinter = makePrinter();
         csvPrinter.printRecord(payslip.getEmployeeName(),
                 payslip.getPayPeriod(),
                 payslip.getGrossIncome(),
                 payslip.getIncomeTax(),
                 payslip.getNetIncome(),
                 payslip.getSuper());
-        csvPrinter.flush();
-        csvPrinter.close();
+
+    }
+
+    @Override
+    public void writeHeader() throws IOException {
+        csvPrinter = makePrinter();
+        String [] headers = PayslipHeader.getHeaderLabel();
+        csvPrinter.printRecord(headers);
+
+    }
+
+    private CSVPrinter makePrinter() throws IOException {
+        return  new CSVPrinter(writer, CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE));
+    }
+
+    public void close() throws IOException {
+        writer.flush();
+        writer.close();
 
     }
 }

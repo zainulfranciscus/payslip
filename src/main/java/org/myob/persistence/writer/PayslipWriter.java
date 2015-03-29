@@ -15,4 +15,8 @@ public interface PayslipWriter {
 
     void write(Payslip payslip) throws IOException;
 
+    void writeHeader() throws IOException;
+
+    void close() throws IOException;
+
 }

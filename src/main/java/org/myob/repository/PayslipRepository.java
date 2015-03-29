@@ -24,5 +24,7 @@ public interface PayslipRepository {
 
     void savePayslips(List<Payslip> payslips) throws IOException;
 
+    void writeHeader() throws IOException;
+
     void close() throws Exception;
 }

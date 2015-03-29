@@ -44,11 +44,19 @@ public class PayslipRepositoryImpl implements PayslipRepository {
                 .build();
     }
 
+
     @Override
     public void savePayslips(List<Payslip> payslips) throws IOException {
+
         for (Payslip payslip : payslips) {
             save(payslip);
         }
+
+    }
+
+    @Override
+    public void writeHeader() throws IOException {
+        payslipWriter.writeHeader();
     }
 
     @Override
@@ -70,5 +78,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
     @Override
     public void close() throws Exception {
         taxRepository.close();
+        payslipWriter.close();
+
     }
 }
