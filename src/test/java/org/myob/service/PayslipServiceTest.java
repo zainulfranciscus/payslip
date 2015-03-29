@@ -10,7 +10,7 @@ import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.payslip.Payslip;
 import org.myob.repository.EmployeeRepository;
 import org.myob.repository.PayslipRepository;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.impl.PayslipServiceImpl;
 
 import java.util.ArrayList;
@@ -51,14 +51,14 @@ public class PayslipServiceTest {
         when(mockPayslipRepository.createPayslips(Mockito.anyList())).thenReturn(payslips);
 
 
-        final EmployeeSpecification employeeSpecification = setNumberOfEmployeesThatCanBePutIntoMemory(numberOfEmployeesThatCanBeRetrievedIntoMemory);
-        when(mockEmployeeRepository.find(employeeSpecification)).thenReturn(employees,employees,employees,employees, new ArrayList<Employee>());
+        final SpecificationForReadingEmployeeData specificationForReadingEmployeeData = setNumberOfEmployeesThatCanBePutIntoMemory(numberOfEmployeesThatCanBeRetrievedIntoMemory);
+        when(mockEmployeeRepository.find(specificationForReadingEmployeeData)).thenReturn(employees,employees,employees,employees, new ArrayList<Employee>());
 
 
-        payslipService.writePayslips(employeeSpecification);
-        assertEquals(0, employeeSpecification.numberOfEmployeesLoadedToMemory());
+        payslipService.writePayslips(specificationForReadingEmployeeData);
+        assertEquals(0, specificationForReadingEmployeeData.numberOfEmployeesLoadedToMemory());
 
-        verify(mockEmployeeRepository,times(5)).find(employeeSpecification);
+        verify(mockEmployeeRepository,times(5)).find(specificationForReadingEmployeeData);
         verify(mockPayslipRepository,times(4)).savePayslips(payslips);
 
 
@@ -72,21 +72,21 @@ public class PayslipServiceTest {
     }
 
 
-    private EmployeeSpecification setNumberOfEmployeesThatCanBePutIntoMemory(final int maxNumberOfLines) throws Exception {
-        final EmployeeSpecification employeeSpecification = new EmployeeSpecification(maxNumberOfLines);
+    private SpecificationForReadingEmployeeData setNumberOfEmployeesThatCanBePutIntoMemory(final int maxNumberOfLines) throws Exception {
+        final SpecificationForReadingEmployeeData specificationForReadingEmployeeData = new SpecificationForReadingEmployeeData(maxNumberOfLines);
 
-        when(mockEmployeeRepository.find(employeeSpecification)).thenAnswer(new Answer() {
+        when(mockEmployeeRepository.find(specificationForReadingEmployeeData)).thenAnswer(new Answer() {
 
             @Override
             public Object answer(InvocationOnMock invocationOnMock) throws Throwable {
                 for(int i = 0; i < maxNumberOfLines; i++) {
-                    employeeSpecification.incrementNumberOfLineRead();
+                    specificationForReadingEmployeeData.incrementNumberOfEmployeeLoadedToMemory();
                 }
                 return null;
             }
         });
 
-        return employeeSpecification;
+        return specificationForReadingEmployeeData;
     }
 
 

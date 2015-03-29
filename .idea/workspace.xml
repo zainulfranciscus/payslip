@@ -2,12 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c086c9-8bab-47cb-8c52-b02e977d5ed9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/AbstractCsvReader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/AbstractCsvReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest$AssertThat.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest$AssertThat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/myob/repository/specification/SpecificationForReadingEmployeeDataTest.java" />
+      <change type="DELETED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\specification\EmployeeSpecificationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\specification\EmployeeSpecification.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\specification\EmployeeSpecificationTest.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\specification\EmployeeSpecification.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/repository/specification/SpecificationForReadingEmployeeData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/repository/EmployeeRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/repository/EmployeeRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/repository/impl/EmployeeRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/repository/impl/EmployeeRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/EmployeeRepositoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/EmployeeRepositoryTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/Main.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/MainTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/MainTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/repository/impl/PayslipRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/repository/impl/PayslipRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/service/PayslipService.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/service/PayslipService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/service/impl/PayslipServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/service/impl/PayslipServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest$1.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/payslip-1.0-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/payslip-1.0-jar-with-dependencies.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/payslip-1.0.jar" afterPath="$PROJECT_DIR$/target/payslip-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/repository/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/repository/EmployeeRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/EmployeeRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/EmployeeRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/repository/EmployeeRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/repository/EmployeeRepositoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/service/PayslipService.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/service/PayslipService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestForPayslipServiceFixture.xml" afterPath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestForPayslipServiceFixture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestForPayslipServiceFixture.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestForPayslipServiceFixture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestTheResultingPayslipCsvFixture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestTheResultingPayslipCsvFixture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.MainTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.MainTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxSpecificationBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxSpecificationBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.EmployeeRowSpecificationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.EmployeeRowSpecificationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.TaxCsvRowSpecificationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.TaxCsvRowSpecificationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.mapping.PayslipHeaderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.mapping.PayslipHeaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.EmployeeCSVFileReaderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.EmployeeCSVFileReaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.TaxCsvReaderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.TaxCsvReaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.TaxTaxCsvRowBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.TaxTaxCsvRowBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.writer.PayslipWriterTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.writer.PayslipWriterTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.EmployeeRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.EmployeeRepositoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipCalculatorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipCalculatorTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipRepositoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.TaxRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.TaxRepositoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.specification.EmployeeSpecificationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.specification.EmployeeSpecificationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" afterPath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TestForPayslipServiceFixture.txt" afterPath="$PROJECT_DIR$/target/failsafe-reports/TestForPayslipServiceFixture.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestForPayslipServiceFixture.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestForPayslipServiceFixture.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" afterPath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TestTheResultingPayslipCsvFixture.txt" afterPath="$PROJECT_DIR$/target/failsafe-reports/TestTheResultingPayslipCsvFixture.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestTheResultingPayslipCsvFixture.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestTheResultingPayslipCsvFixture.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.MainTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.MainTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.employee.EmployeeBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.employee.EmployeeBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxSpecificationBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxSpecificationBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.EmployeeRowSpecificationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.EmployeeRowSpecificationTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.TaxCsvRowSpecificationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.TaxCsvRowSpecificationTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.EmployeeCSVFileReaderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.EmployeeCSVFileReaderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.TaxCsvReaderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.TaxCsvReaderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.EmployeeRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.EmployeeRepositoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipRepositoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.TaxRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.TaxRepositoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.specification.EmployeeSpecificationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.specification.EmployeeSpecificationTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="payslip.iws" />
@@ -34,7 +106,7 @@
       <FILTER>org.myob.persistence.writer.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/payslip$All_in_payslip__2_.coverage" NAME="All in payslip (2) Coverage Results" MODIFIED="1427665833208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/payslip$All_in_payslip.coverage" NAME="All in payslip Coverage Results" MODIFIED="1427647462079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/payslip$All_in_payslip.coverage" NAME="All in payslip Coverage Results" MODIFIED="1427669271765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/payslip$All_in_payslip__1_.coverage" NAME="All in payslip (1) Coverage Results" MODIFIED="1427667447758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -49,57 +121,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TaxCSVReaderImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java">
+      <file leaf-file-name="EmployeeCsvRow.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeCSVFileReaderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1768">
-              <caret line="73" column="5" selection-start-line="66" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
-              <folding>
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaxCsvReaderTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.091093116" vertical-offset="1213" max-vertical-offset="2346">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding>
-                <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractCsvReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1207">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeCSVFileReaderImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/EmployeeCSVFileReaderImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.23017408" vertical-offset="0" max-vertical-offset="1156">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -113,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/myob/repository/TaxRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/model/tax/TaxSpecificationBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/service/impl/EmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/repository/specification/EmployeeSpecificationBuilderTest.java" />
@@ -124,8 +149,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/myob/model/payslip/PayslipBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/model/payslip/Payslip.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/writer/PayslipWriter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/service/PayslipService.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/specs/Employee.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java" />
@@ -133,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/test/java/org/myob/persistence/writer/PayslipWriterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/repository/PayslipRepositoryTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/writer/PayslipWriterImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/service/builder/impl/PayslipServiceBuilderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/service/builder/AbstractPayslipServiceBuilder.java" />
@@ -146,14 +168,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/TaxRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/specs/reader/ReaderImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipCalculatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/PayslipRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/writer/impl/PayslipWriterImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/specification/EmployeeSpecification.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/EmployeeRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/Reader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sample_employee.csv" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/service/builder/PayslipServiceBuilder.java" />
@@ -164,6 +183,13 @@
         <option value="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/service/PayslipService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/specification/EmployeeSpecification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/specification/SpecificationForReadingEmployeeData.java" />
       </list>
     </option>
   </component>
@@ -239,122 +265,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -460,45 +370,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
+              <option name="myItemId" value="row" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -571,20 +443,20 @@
       <recent name="org.myob.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in payslip (1)">
-    <configuration default="false" name="EmployeeCSVFileReaderTest.shouldNotReturnNull_BecauseThisCsvFileExistInResourceFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in payslip">
+    <configuration default="false" name="MainTest.shouldNotThrowException_WhenWritingPayslips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.myob.persistence.reader.*" />
+          <option name="PATTERN" value="org.myob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.myob.persistence.reader" />
-      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.reader.EmployeeCSVFileReaderTest" />
-      <option name="METHOD_NAME" value="shouldNotReturnNull_BecauseThisCsvFileExistInResourceFolder" />
+      <option name="PACKAGE_NAME" value="org.myob" />
+      <option name="MAIN_CLASS_NAME" value="org.myob.MainTest" />
+      <option name="METHOD_NAME" value="shouldNotThrowException_WhenWritingPayslips" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -600,20 +472,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeeCSVFileReaderTest.shouldReturnNull_BecauseThisCsvFileDoesNotExistInResourceFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.myob.persistence.reader.*" />
+          <option name="PATTERN" value="org.myob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.myob.persistence.reader" />
-      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.reader.EmployeeCSVFileReaderTest" />
-      <option name="METHOD_NAME" value="shouldReturnNull_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.myob" />
+      <option name="MAIN_CLASS_NAME" value="org.myob.MainTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -628,35 +500,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="EmployeeCSVFileReaderTest.shouldThrowFileNotFoundException_BecauseThisCsvFileDoesNotExistInResourceFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.myob.persistence.reader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.myob.persistence.reader" />
-      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.reader.EmployeeCSVFileReaderTest" />
-      <option name="METHOD_NAME" value="shouldThrowFileNotFoundException_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in payslip (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="All in payslip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -674,26 +518,23 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
-      <dir value="$PROJECT_DIR$/src/test/java/org/myob" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <patterns />
       <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="TaxCsvReaderTest.shouldNotReturnNull_BecauseItShouldLoadACsvFileInResourceFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.myob.persistence.reader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="All in payslip (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="payslip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.myob.persistence.reader" />
-      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.reader.TaxCsvReaderTest" />
-      <option name="METHOD_NAME" value="shouldNotReturnNull_BecauseItShouldLoadACsvFileInResourceFolder" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="directory" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -703,7 +544,30 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
+      <dir value="$PROJECT_DIR$/src/test/specs" />
       <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.myob.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.myob.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="payslip" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -1080,19 +944,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.package" />
       <item index="1" class="java.lang.String" itemvalue="Maven.integration-test" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldNotReturnNull_BecauseThisCsvFileExistInResourceFolder" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldReturnNull_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldThrowFileNotFoundException_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.All in payslip (1)" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TaxCsvReaderTest.shouldNotReturnNull_BecauseItShouldLoadACsvFileInResourceFolder" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.shouldNotThrowException_WhenWritingPayslips" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.All in payslip (2)" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TaxCsvReaderTest.shouldNotReturnNull_BecauseItShouldLoadACsvFileInResourceFolder" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldThrowFileNotFoundException_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldReturnNull_BecauseThisCsvFileDoesNotExistInResourceFolder" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeCSVFileReaderTest.shouldNotReturnNull_BecauseThisCsvFileExistInResourceFolder" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.shouldNotThrowException_WhenWritingPayslips" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in payslip (2)" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1113,45 +977,45 @@
       <workItem from="1427538699667" duration="605000" />
       <workItem from="1427552131185" duration="55870000" />
       <workItem from="1427629555090" duration="18215000" />
-      <workItem from="1427665732276" duration="1736000" />
+      <workItem from="1427665732276" duration="3709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266438000" />
+    <option name="totallyTimeSpent" value="268411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26953125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3033854" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15" sideWeight="0.5009346" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.264375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3671875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26953125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15" sideWeight="0.5009346" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.264375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2734375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1175,12 +1039,6 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java</url>
           <line>47</line>
           <properties />
           <option name="timeStamp" value="145" />
@@ -1191,11 +1049,17 @@
           <properties />
           <option name="timeStamp" value="153" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="159" />
+      <option name="time" value="160" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1204,23 +1068,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/powermock/powermock-module-junit4/1.5.1/powermock-module-junit4-1.5.1-sources.jar!/org/powermock/modules/junit4/internal/impl/PowerMockJUnit44RunnerDelegateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4168" max-vertical-offset="5508">
-          <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1108" max-vertical-offset="1904">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/org/apache/commons/lang3/StringUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20303605" vertical-offset="539" max-vertical-offset="43163">
@@ -1298,6 +1145,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.96387523" vertical-offset="161" max-vertical-offset="901">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,14 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7369439" vertical-offset="2033" max-vertical-offset="2550">
           <caret line="155" column="5" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/PayslipCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1328,6 +1171,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1335,6 +1179,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,6 +1200,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,6 +1237,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,13 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="884">
           <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/specification/EmployeeSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57253385" vertical-offset="95" max-vertical-offset="612">
-          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1420,6 +1260,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="935">
           <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1427,13 +1268,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1547">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76603776" vertical-offset="87" max-vertical-offset="1394">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1469,32 +1304,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1190">
-          <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="511" max-vertical-offset="969">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/impl/TaxRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="901">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/service/builder/PayslipServiceBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="892" max-vertical-offset="1632">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1550,14 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1156">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
@@ -1570,14 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1603,12 +1400,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.091093116" vertical-offset="1213" max-vertical-offset="2346">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1213" max-vertical-offset="2346">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="53" />
           <folding>
             <element signature="e#695#696#0" expanded="true" />
             <element signature="e#742#743#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/service/builder/PayslipServiceBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24444444" vertical-offset="1137" max-vertical-offset="1632">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82828283" vertical-offset="967" max-vertical-offset="1547">
+          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+          <folding>
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/PayslipCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0746888" vertical-offset="100" max-vertical-offset="1564">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1819">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60373443" vertical-offset="780" max-vertical-offset="1275">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/service/PayslipService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37777779" vertical-offset="0" max-vertical-offset="495">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/service/impl/PayslipServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="969">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/repository/specification/SpecificationForReadingEmployeeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52904564" vertical-offset="0" max-vertical-offset="612">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23017408" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

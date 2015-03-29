@@ -1,23 +1,19 @@
 package org.myob.repository.specification;
 
-import org.apache.commons.lang3.StringUtils;
-import org.myob.model.employee.Employee;
-import org.myob.repository.specification.EmployeeSpecification;
-
 /**
  * Created by Zainul Franciscus on 27/03/2015.
  */
-public class EmployeeSpecification {
+public class SpecificationForReadingEmployeeData {
 
     private final int maxNumberOfEmployeesThatCanBeLoadedToMemory;
 
     private int numberOfEmployeesThatHasBeenLoadedToMemory;
 
-    public EmployeeSpecification() {
+    public SpecificationForReadingEmployeeData() {
         this.maxNumberOfEmployeesThatCanBeLoadedToMemory = 10;
     }
 
-    public EmployeeSpecification(int maxNumberOfEmployeesThatCanBeLoadedToMemory) {
+    public SpecificationForReadingEmployeeData(int maxNumberOfEmployeesThatCanBeLoadedToMemory) {
         this.maxNumberOfEmployeesThatCanBeLoadedToMemory = maxNumberOfEmployeesThatCanBeLoadedToMemory;
     }
 
@@ -25,7 +21,7 @@ public class EmployeeSpecification {
         return numberOfEmployeesThatHasBeenLoadedToMemory;
     }
 
-    public void incrementNumberOfLineRead() {
+    public void incrementNumberOfEmployeeLoadedToMemory() {
         numberOfEmployeesThatHasBeenLoadedToMemory += 1;
     }
 

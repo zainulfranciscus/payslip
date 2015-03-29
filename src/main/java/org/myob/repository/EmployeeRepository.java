@@ -1,7 +1,7 @@
 package org.myob.repository;
 
 import org.myob.model.employee.Employee;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.persistence.reader.Reader;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public interface EmployeeRepository {
     void setReader(Reader reader);
 
-    List<Employee> find(EmployeeSpecification specification) throws Exception;
+    List<Employee> find(SpecificationForReadingEmployeeData specification) throws Exception;
 
     void close() throws Exception;
 }

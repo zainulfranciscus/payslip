@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
 import org.myob.model.payslip.PayslipBuilder;
 import org.myob.persistence.mapping.impl.PayslipHeader;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.PayslipServiceBuilder;
 
@@ -37,7 +37,7 @@ public class TestTheResultingPayslipCsvFixture extends AbstractFixture {
     public void writePayslip() throws Exception {
 
         PayslipService payslipService = builder.build();
-        payslipService.writePayslips(new EmployeeSpecification());
+        payslipService.writePayslips(new SpecificationForReadingEmployeeData());
         payslipService.close();
 
     }

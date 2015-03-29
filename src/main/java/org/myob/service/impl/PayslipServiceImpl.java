@@ -2,7 +2,7 @@ package org.myob.service.impl;
 
 import org.myob.model.employee.Employee;
 import org.myob.model.payslip.Payslip;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
 import org.myob.repository.EmployeeRepository;
 import org.myob.repository.PayslipRepository;
@@ -24,16 +24,16 @@ public class PayslipServiceImpl implements PayslipService {
     }
 
     @Override
-    public void writePayslips(EmployeeSpecification employeeSpecification) throws Exception {
+    public void writePayslips(SpecificationForReadingEmployeeData specificationForReadingEmployeeData) throws Exception {
 
         List<Employee> employees = new ArrayList<>();
 
         payslipRepository.writeHeader();
 
-        while((employees = employeeRepository.find(employeeSpecification)).size() > 0) {
+        while((employees = employeeRepository.find(specificationForReadingEmployeeData)).size() > 0) {
             List<Payslip> payslips = createPayslips(employees);
             payslipRepository.savePayslips(payslips);
-            employeeSpecification.reset();
+            specificationForReadingEmployeeData.reset();
         }
 
     }

@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7538"/>
+    <property name="idea.launcher.port" value="7542"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -66,8 +66,8 @@
   <testcase name="shouldReturnEndOfPaymentYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
   <testcase name="shouldBeExpectedPaymentDate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
   <testcase name="shouldReturnStartOfPaymentMonth" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
-  <testcase name="shouldBeExpectedSalary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0.001"/>
-  <testcase name="shouldReturnNullPaymentStartDate_BecauseDateIsInvalid" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
+  <testcase name="shouldBeExpectedSalary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
+  <testcase name="shouldReturnNullPaymentStartDate_BecauseDateIsInvalid" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0.001"/>
   <testcase name="shouldBeExpectedSuperRate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
   <testcase name="shouldBeExpectedFirstName" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>
   <testcase name="shouldReturnStartOfPaymentDate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowBuilderTest" time="0"/>

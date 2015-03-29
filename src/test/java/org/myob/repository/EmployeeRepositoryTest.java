@@ -9,7 +9,7 @@ import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 import org.myob.repository.impl.EmployeeRepositoryImpl;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class EmployeeRepositoryTest {
     private Reader mockReader;
     private Row mockRow;
     private List<Employee> employees;
-    private EmployeeSpecification employeeSpecification;
+    private SpecificationForReadingEmployeeData specificationForReadingEmployeeData;
 
     private int expectedSalary;
     private String expectedFirstName;
@@ -70,7 +70,7 @@ public class EmployeeRepositoryTest {
         employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(mockReader);
 
-        employeeSpecification = new  EmployeeSpecification(maxNumberOfEmployeesThatShouldBeRead);
+        specificationForReadingEmployeeData = new SpecificationForReadingEmployeeData(maxNumberOfEmployeesThatShouldBeRead);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class EmployeeRepositoryTest {
 
         int numberOfMockRows = 20;
         when(mockReader.read(Mockito.isA(RowSpecification.class))).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
-        employees = employeeRepository.find(employeeSpecification);
+        employees = employeeRepository.find(specificationForReadingEmployeeData);
 
         assertEquals(maxNumberOfEmployeesThatShouldBeRead, employees.size());
         for(Employee employee: employees){
@@ -91,13 +91,13 @@ public class EmployeeRepositoryTest {
                     .hasExpectedStartDate(employee)
                     .hasExpectedSuper(employee);
         }
-        assertEquals(maxNumberOfEmployeesThatShouldBeRead,employeeSpecification.numberOfEmployeesLoadedToMemory());
+        assertEquals(maxNumberOfEmployeesThatShouldBeRead, specificationForReadingEmployeeData.numberOfEmployeesLoadedToMemory());
     }
 
     @Test
     public void shouldHave0Employee_WhenReaderReturnsNull() throws Exception {
         when(mockReader.read(Mockito.isA(RowSpecification.class))).thenReturn(null);
-        employees = employeeRepository.find(employeeSpecification);
+        employees = employeeRepository.find(specificationForReadingEmployeeData);
         assertEquals(0, employees.size());
     }
 

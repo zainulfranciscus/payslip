@@ -13,6 +13,7 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
@@ -69,17 +70,19 @@ public class MainTest {
     }
 
     @Test
-    public void shouldNotThrowException_WhenWritingPayslips() {
-        boolean exceptionThrown = false;
-        try {
-            main.writePayslips();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            exceptionThrown = true;
-        }
+    public void shouldNotThrowException_WhenTax_Employee_AndPayslipFile_IsNull() throws CLIException {
+        main.taxFileName(null);
+        main.employeeFileName(null);
+        main.payslipFileName(null);
 
-        assertFalse(exceptionThrown);
+        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
     }
+    @Test
+    public void shouldNotThrowException_WhenWritingPayslips() throws CLIException {
+        main.payslipFileName("payslip.csv");
+        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
+    }
+
 
     @Test
     public void shouldNotThrowException_WhenExecutingMain() throws IOException {
@@ -92,6 +95,18 @@ public class MainTest {
         boolean exceptionThrown = false;
         try {
             Main.main(new String[0]);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            exceptionThrown = true;
+        }
+
+        assertFalse(exceptionThrown);
+    }
+
+    private void checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled(){
+        boolean exceptionThrown = false;
+        try {
+            main.writePayslips();
         } catch (Exception ex) {
             ex.printStackTrace();
             exceptionThrown = true;

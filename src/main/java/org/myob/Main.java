@@ -4,7 +4,7 @@ import asg.cliche.CLIException;
 import asg.cliche.Command;
 import asg.cliche.ShellFactory;
 import org.apache.commons.lang3.StringUtils;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.PayslipServiceBuilder;
 
@@ -50,13 +50,18 @@ public class Main {
     @Command(name = "writePayslip", abbrev = "w", description = "display the employee file name, tax, and payslip that you have entered")
     public void writePayslips() throws Exception {
 
+        if(StringUtils.isBlank(payslipFileName)){
+            System.out.println("Please specify a payslip file name before calling this command");
+            return;
+        }
+
         PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
         payslipServiceBuilder.withEmployeeFileName(employeeFileName);
         payslipServiceBuilder.withPayslipFileName(payslipFileName);
         payslipServiceBuilder.withTaxFileName(taxFileName);
 
         PayslipService payslipService = payslipServiceBuilder.build();
-        payslipService.writePayslips(new EmployeeSpecification());
+        payslipService.writePayslips(new SpecificationForReadingEmployeeData());
         payslipService.close();
 
     }

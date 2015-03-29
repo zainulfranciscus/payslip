@@ -60,12 +60,16 @@ public class PayslipRepositoryImpl implements PayslipRepository {
 
     @Override
     public void writeHeader() throws IOException {
-        payslipWriter.writeHeader();
+        if(payslipWriter != null) {
+            payslipWriter.writeHeader();
+        }
     }
 
     @Override
     public void save(Payslip payslip) throws IOException {
-        payslipWriter.write(payslip);
+        if(payslipWriter != null) {
+            payslipWriter.write(payslip);
+        }
 
     }
 
@@ -81,8 +85,13 @@ public class PayslipRepositoryImpl implements PayslipRepository {
 
     @Override
     public void close() throws Exception {
-        taxRepository.close();
-        payslipWriter.close();
+        if(taxRepository != null) {
+            taxRepository.close();
+        }
+
+        if(payslipWriter != null) {
+            payslipWriter.close();
+        }
 
     }
 }

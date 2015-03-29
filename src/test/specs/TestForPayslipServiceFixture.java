@@ -1,7 +1,7 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.PayslipServiceBuilder;
 import reader.ReaderImpl;
@@ -19,7 +19,7 @@ public class TestForPayslipServiceFixture extends AbstractFixture{
         payslipServiceBuilder.withReaderForTaxRepository(taxReader);
         PayslipService payslipService = payslipServiceBuilder.build();
 
-        return payslipService.createPayslips(payslipServiceBuilder.createEmployeeRepository().find(new EmployeeSpecification()));
+        return payslipService.createPayslips(payslipServiceBuilder.createEmployeeRepository().find(new SpecificationForReadingEmployeeData()));
     }
 
     public void cleanUpData() {

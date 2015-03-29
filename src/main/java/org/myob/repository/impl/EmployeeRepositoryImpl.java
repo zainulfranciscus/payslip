@@ -2,7 +2,7 @@ package org.myob.repository.impl;
 
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
-import org.myob.repository.specification.EmployeeSpecification;
+import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.reader.Reader;
@@ -26,7 +26,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> find(EmployeeSpecification specification) throws Exception {
+    public List<Employee> find(SpecificationForReadingEmployeeData specification) throws Exception {
         Row row = null;
 
         List<Employee> employees = new ArrayList<Employee>();
@@ -49,7 +49,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                     .build();
 
             employees.add(employee);
-            specification.incrementNumberOfLineRead();
+            specification.incrementNumberOfEmployeeLoadedToMemory();
         }
 
         return employees;
