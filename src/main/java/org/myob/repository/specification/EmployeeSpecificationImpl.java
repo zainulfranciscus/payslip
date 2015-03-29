@@ -31,28 +31,4 @@ public class EmployeeSpecificationImpl implements EmployeeSpecification{
         return numberOfEmployeesThatHasBeenLoadedToMemory != 0 &&  numberOfEmployeesThatHasBeenLoadedToMemory % maxNumberOfEmployeesThatCanBeLoadedToMemory == 0;
     }
 
-    @Override
-    public boolean match(Employee employee) {
-
-        boolean exceptionForGettingPaymentStartDate = false;
-
-        try {
-            employee.getPaymentStartDate();
-        }catch(Exception ex){
-            ex.printStackTrace();
-            exceptionForGettingPaymentStartDate = true;
-        }
-
-        boolean exceptionForGettingPaymentEndDate = false;
-
-        try{
-            employee.getPaymentEndDate();
-        }catch(Exception ex){
-            ex.printStackTrace();
-            exceptionForGettingPaymentEndDate = true;
-        }
-        return StringUtils.isNotBlank(employee.getFullName())
-                && !exceptionForGettingPaymentStartDate
-                && !exceptionForGettingPaymentEndDate;
-    }
 }

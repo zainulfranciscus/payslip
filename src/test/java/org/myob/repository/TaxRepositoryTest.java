@@ -43,7 +43,7 @@ public class TaxRepositoryTest {
         minIncomeForThisTax = 100;
         taxPerDollarForThisTax = 50;
 
-        employeeBuilder = new EmployeeBuilder().withStartOfPaymentDate(1)
+        employeeBuilder = new EmployeeBuilder()
                 .withEndPaymentPeriod(2015, 12, 31)
                 .withStartPaymentPeriod(2015, 1, 1);
 

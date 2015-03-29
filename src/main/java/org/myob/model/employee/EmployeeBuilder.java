@@ -13,12 +13,6 @@ public class EmployeeBuilder {
     private String lastName;
     private double salary;
     private double aSuper;
-    private int paymentStartDate;
-    private int paymentStartingMonth;
-    private int paymentStartingYear;
-    private int endOfPaymentYear;
-    private int endOfPaymentMonth;
-    private int endOfPaymentDate;
     private LocalDate paymentStartPeriod;
     private LocalDate paymentEndPeriod;
 
@@ -43,36 +37,6 @@ public class EmployeeBuilder {
         return this;
     }
 
-    public EmployeeBuilder withStartOfPaymentDate(int startDate) {
-        this.paymentStartDate = startDate;
-        return this;
-    }
-
-
-    public EmployeeBuilder withStartOfPaymentMonth(int startingMonth) {
-        this.paymentStartingMonth = startingMonth;
-        return this;
-    }
-
-    public EmployeeBuilder withStartOfPaymentYear(int startingYear) {
-        this.paymentStartingYear = startingYear;
-        return this;
-    }
-
-    public EmployeeBuilder withEndOfPaymentYear(int endOfPaymentYear) {
-        this.endOfPaymentYear = endOfPaymentYear;
-        return this;
-    }
-
-    public EmployeeBuilder withEndOfPaymentMonth(int endOfPaymentMonth) {
-        this.endOfPaymentMonth = endOfPaymentMonth;
-        return this;
-    }
-
-    public EmployeeBuilder withEndOfPaymentDate(int endOfPaymentDate) {
-        this.endOfPaymentDate = endOfPaymentDate;
-        return this;
-    }
 
     public EmployeeBuilder withSuperRate(String superRate) {
         superRate = StringUtils.replace(superRate, "%", "");

@@ -43,7 +43,7 @@ public class PayslipWriterTest {
         salary = 12000;
         superRate = 10;
 
-        employee = new EmployeeBuilder().withEndOfPaymentDate(thirty1stDec2015.getDayOfMonth())
+        employee = new EmployeeBuilder()
                 .withEndPaymentPeriod(thirty1stDec2015.getYear(),thirty1stDec2015.getMonthOfYear(), thirty1stDec2015.getDayOfMonth())
                 .withStartPaymentPeriod(firstJan2015.getYear(), firstJan2015.getMonthOfYear(), firstJan2015.getDayOfMonth())
                 .withFirstName(firstName)
