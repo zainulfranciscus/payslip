@@ -2,8 +2,8 @@ C:\workspace\payslip\src\test\java\org\myob\repository\PayslipRepositoryTest.jav
 C:\workspace\payslip\src\test\java\org\myob\repository\TaxRepositoryTest.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\TaxCsvRowSpecificationTest.java
 C:\workspace\payslip\src\test\java\org\myob\model\tax\TaxTest.java
-C:\workspace\payslip\src\test\specs\EmployeeFixture.java
 C:\workspace\payslip\src\test\java\org\myob\repository\specification\EmployeeSpecificationTest.java
+C:\workspace\payslip\src\test\specs\TestForPayslipServiceFixture.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\writer\PayslipWriterTest.java
 C:\workspace\payslip\src\test\java\org\myob\model\employee\EmployeeBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\model\employee\EmployeeTest.java
@@ -11,13 +11,13 @@ C:\workspace\payslip\src\test\java\org\myob\model\tax\TaxSpecificationBuilderTes
 C:\workspace\payslip\src\test\java\org\myob\service\PayslipServiceBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\MainTest.java
 C:\workspace\payslip\src\test\java\org\myob\service\PayslipServiceTest.java
-C:\workspace\payslip\src\test\specs\PayslipFixture.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\reader\TaxCsvReaderTest.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\mapping\PayslipHeaderTest.java
 C:\workspace\payslip\src\test\java\org\myob\model\tax\TaxBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\repository\PayslipCalculatorTest.java
 C:\workspace\payslip\src\test\java\org\myob\repository\EmployeeRepositoryTest.java
 C:\workspace\payslip\src\test\specs\reader\ReaderImpl.java
+C:\workspace\payslip\src\test\specs\TestTheResultingPayslipCsvFixture.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\reader\builder\TaxTaxCsvRowBuilderTest.java
 C:\workspace\payslip\src\test\java\org\myob\persistence\reader\builder\EmployeeCsvRowBuilderTest.java
 C:\workspace\payslip\src\test\specs\AbstractFixture.java

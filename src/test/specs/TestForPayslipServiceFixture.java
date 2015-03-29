@@ -10,7 +10,7 @@ import reader.ReaderImpl;
 import java.util.List;
 
 @RunWith(ConcordionRunner.class)
-public class PayslipFixture extends AbstractFixture{
+public class TestForPayslipServiceFixture extends AbstractFixture{
 
     public List<Payslip> payslip() throws Exception {
 

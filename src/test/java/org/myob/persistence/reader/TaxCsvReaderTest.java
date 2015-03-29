@@ -27,7 +27,9 @@ public class TaxCsvReaderTest {
     @Test
     public void shouldHave0ForMinIncome_MaxIncome_BaseTax_TaxPerDollar() throws Exception {
         reader = new TaxCSVReaderImpl();
+
         reader.setFileName(loadFromClassPath("tax/taxTableWithNonNumericalValues.csv"));
+        reader.initializeFileReader();
 
         row = reader.read(new TaxRowSpecification());
 
@@ -42,6 +44,7 @@ public class TaxCsvReaderTest {
     public void shouldHave100ForMinIncome_200ForMaxIncome_300ForBaseTax_400ForTaxPerDollar_500ForTaxPerDollarOver_1ForStartingDay_3ForStartingMonth_2015ForStartingYear() throws Exception {
         reader = new TaxCSVReaderImpl();
         reader.setFileName(loadFromClassPath("tax/tax.csv"));
+        reader.initializeFileReader();
         row = reader.read(new TaxRowSpecification());
 
         AssertThat assertThat = new AssertThat();
@@ -59,6 +62,7 @@ public class TaxCsvReaderTest {
     public void rowShouldBeNullBecauseCSVFileOnlyHasHeader() throws Exception {
         reader = new TaxCSVReaderImpl();
         reader.setFileName(loadFromClassPath("tax/onlyHaveTaxHeaders.csv"));
+        reader.initializeFileReader();
         assertNull(reader.read(new TaxRowSpecification()));
     }
 
@@ -66,6 +70,7 @@ public class TaxCsvReaderTest {
     public void rowShouldBeNullBecauseCSVFileIsEmpty() throws Exception {
         reader = new TaxCSVReaderImpl();
         reader.setFileName(loadFromClassPath("emptyFile.csv"));
+        reader.initializeFileReader();
         assertNull(reader.read(new TaxRowSpecification()));
     }
 
@@ -73,6 +78,7 @@ public class TaxCsvReaderTest {
     public void rowShouldBeNullBecauseMonthYearAndDate_IsInvalid() throws Exception {
         reader = new TaxCSVReaderImpl();
         reader.setFileName(loadFromClassPath("tax/taxWithInvalidDates.csv"));
+        reader.initializeFileReader();
         assertNull(reader.read(new TaxRowSpecification()));
     }
 

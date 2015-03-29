@@ -28,6 +28,7 @@ public class EmployeeCSVFileReaderTest {
     public void shouldHave_JoeAsFirstName_BloggAsLastName_12000AsSalary_10PercentAsSuperRate() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
         reader.setFileName(loadFromClassPath("employee/employee.csv"));
+        reader.initializeFileReader();
         row = reader.read(new EmployeeRowSpecification());
         
         AssertThat assertThat = new AssertThat();
@@ -42,7 +43,7 @@ public class EmployeeCSVFileReaderTest {
     public void rowShouldBeNullBecauseCSVOnlyHasHeader() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
         reader.setFileName(loadFromClassPath("employee/onlyHaveEmployeeHeader.csv"));
-
+        reader.initializeFileReader();
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
 
@@ -50,6 +51,7 @@ public class EmployeeCSVFileReaderTest {
     public void rowShouldBeNullBecauseFileIsEmpty() throws Exception {
         reader = new EmployeeCSVFileReaderImpl();
         reader.setFileName(loadFromClassPath("emptyFile.csv"));
+        reader.initializeFileReader();
         assertNull(reader.read(new EmployeeRowSpecification()));
     }
 

@@ -21,11 +21,11 @@ import java.util.List;
  * Created by Zainul Franciscus on 29/03/2015.
  */
 @RunWith(ConcordionRunner.class)
-public class EmployeeFixture extends AbstractFixture {
+public class TestTheResultingPayslipCsvFixture extends AbstractFixture {
 
     private PayslipServiceBuilder builder;
 
-    public EmployeeFixture() throws IOException {
+    public TestTheResultingPayslipCsvFixture() throws IOException {
 
         builder = new PayslipServiceBuilder()
                 .withReaderForEmployeeRepository(employeeReader)
