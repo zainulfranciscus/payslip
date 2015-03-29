@@ -4,8 +4,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
-import org.myob.service.builder.AbstractPayslipServiceBuilder;
-import org.myob.service.builder.impl.PayslipServiceBuilderImpl;
+import org.myob.service.builder.PayslipServiceBuilder;
 
 import static junit.framework.TestCase.assertNotNull;
 import static org.mockito.Mockito.*;
@@ -16,7 +15,7 @@ import static org.mockito.Mockito.*;
  */
 public class PayslipServiceBuilderTest {
 
-    private AbstractPayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
+    private PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
 
     @Test
     public void shouldReturnAPayslipService() throws Exception {

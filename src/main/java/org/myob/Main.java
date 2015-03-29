@@ -5,8 +5,7 @@ import asg.cliche.Command;
 import asg.cliche.ShellFactory;
 import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.AbstractPayslipServiceBuilder;
-import org.myob.service.builder.impl.PayslipServiceBuilderImpl;
+import org.myob.service.builder.PayslipServiceBuilder;
 
 import java.io.IOException;
 
@@ -49,7 +48,7 @@ public class Main {
     @Command(name = "writePayslip", abbrev = "w", description = "display the employee file name, tax, and payslip that you have entered")
     public void writePayslips() throws Exception {
 
-        AbstractPayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
+        PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
         payslipServiceBuilder.withEmployeeFileName(employeeFileName);
         payslipServiceBuilder.withPayslipFileName(payslipFileName);
         payslipServiceBuilder.withTaxFileName(taxFileName);

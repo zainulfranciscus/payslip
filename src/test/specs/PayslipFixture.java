@@ -1,12 +1,11 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
-import org.myob.service.PayslipCalculator;
 import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.AbstractPayslipServiceBuilder;
+import org.myob.service.builder.PayslipServiceBuilder;
 import reader.ReaderImpl;
-import service.PayslipServiceBuilderImpl;
+
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class PayslipFixture extends AbstractFixture{
 
     public List<Payslip> payslip() throws Exception {
 
-        AbstractPayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilderImpl();
+        PayslipServiceBuilder payslipServiceBuilder = new PayslipServiceBuilder();
         payslipServiceBuilder.withReaderForEmployeeRepository(employeeReader);
         payslipServiceBuilder.withReaderForTaxRepository(taxReader);
         PayslipService payslipService = payslipServiceBuilder.build();

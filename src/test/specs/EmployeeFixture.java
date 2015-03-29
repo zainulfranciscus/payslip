@@ -6,12 +6,9 @@ import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
 import org.myob.model.payslip.PayslipBuilder;
 import org.myob.persistence.mapping.impl.PayslipHeader;
-
 import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.AbstractPayslipServiceBuilder;
-
-import service.PayslipServiceBuilderImpl;
+import org.myob.service.builder.PayslipServiceBuilder;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,11 +23,11 @@ import java.util.List;
 @RunWith(ConcordionRunner.class)
 public class EmployeeFixture extends AbstractFixture {
 
-    private AbstractPayslipServiceBuilder builder;
+    private PayslipServiceBuilder builder;
 
     public EmployeeFixture() throws IOException {
 
-        builder = new PayslipServiceBuilderImpl()
+        builder = new PayslipServiceBuilder()
                 .withReaderForEmployeeRepository(employeeReader)
                 .withReaderForTaxRepository(taxReader)
                 .withPayslipFileName("target/test-classes/payslip.csv");

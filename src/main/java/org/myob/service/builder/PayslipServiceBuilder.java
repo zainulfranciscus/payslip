@@ -1,6 +1,9 @@
 package org.myob.service.builder;
 
+import org.apache.commons.lang3.StringUtils;
 import org.myob.persistence.reader.Reader;
+import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
+import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.persistence.writer.PayslipWriterImpl;
 import org.myob.repository.EmployeeRepository;
@@ -12,14 +15,14 @@ import org.myob.repository.impl.TaxRepositoryImpl;
 import org.myob.service.PayslipService;
 import org.myob.service.impl.PayslipServiceImpl;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 /**
  * Created by Zainul Franciscus on 29/03/2015.
  */
-public abstract class AbstractPayslipServiceBuilder {
-
+public class PayslipServiceBuilder {
 
     protected String employeeFileName;
     protected String taxFileName;
@@ -27,34 +30,43 @@ public abstract class AbstractPayslipServiceBuilder {
     protected Reader taxReader;
     protected Reader employeeReader;
 
-    public AbstractPayslipServiceBuilder withEmployeeFileName(String employeeFileName) {
+    public PayslipServiceBuilder(){
+        this.taxReader = new TaxCSVReaderImpl();
+        this.employeeReader = new EmployeeCSVFileReaderImpl();
+    }
+
+    public PayslipServiceBuilder withEmployeeFileName(String employeeFileName) {
         this.employeeFileName = employeeFileName;
         return this;
     }
 
-    public AbstractPayslipServiceBuilder withTaxFileName(String taxFileName) {
+    public PayslipServiceBuilder withTaxFileName(String taxFileName) {
         this.taxFileName = taxFileName;
         return this;
     }
 
-    public AbstractPayslipServiceBuilder withPayslipFileName(String payslipFileName) throws IOException {
+    public PayslipServiceBuilder withPayslipFileName(String payslipFileName) throws IOException {
         this.payslipFileName = payslipFileName;
         return this;
     }
 
 
-    public AbstractPayslipServiceBuilder withReaderForTaxRepository(Reader reader) {
+    public PayslipServiceBuilder withReaderForTaxRepository(Reader reader) {
         this.taxReader = reader;
         return this;
     }
 
-    public AbstractPayslipServiceBuilder withReaderForEmployeeRepository(Reader reader) {
+    public PayslipServiceBuilder withReaderForEmployeeRepository(Reader reader) {
         this.employeeReader = reader;
         return this;
     }
 
 
     public TaxRepository createTaxRepository() throws Exception {
+
+        if(StringUtils.isNotBlank(taxFileName)) {
+            this.taxReader.setDataSourceReader(new FileReader(taxFileName));
+        }
 
         TaxRepository taxRepository = new TaxRepositoryImpl();
         taxRepository.setReader(this.taxReader);
@@ -64,6 +76,10 @@ public abstract class AbstractPayslipServiceBuilder {
 
     public EmployeeRepository createEmployeeRepository() throws Exception {
 
+        if(StringUtils.isNotBlank(employeeFileName)) {
+            this.employeeReader.setDataSourceReader(new FileReader(employeeFileName));
+        }
+
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(this.employeeReader);
         return employeeRepository;
@@ -71,15 +87,13 @@ public abstract class AbstractPayslipServiceBuilder {
 
     public PayslipRepository createPayslipRepository() throws Exception {
 
-
         PayslipRepository payslipRepository = new PayslipRepositoryImpl();
         payslipRepository.setTaxRepository(createTaxRepository());
 
 
-        if (this.payslipFileName != null) {
+        if (StringUtils.isNotBlank(payslipFileName)) {
             PayslipWriter payslipWriter = new PayslipWriterImpl();
             payslipWriter.setWriter(new FileWriter(this.payslipFileName));
-
             payslipRepository.setWriter(payslipWriter);
         }
 

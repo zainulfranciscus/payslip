@@ -24,7 +24,6 @@ public abstract class AbstractCsvReader implements Reader {
     @Override
     public Row read(RowSpecification specification) throws IOException {
 
-
         Iterator<CSVRecord> recordIterator = records.iterator();
 
         boolean hasRecord = recordIterator.hasNext();
@@ -33,11 +32,9 @@ public abstract class AbstractCsvReader implements Reader {
             return null;
         }
 
-        CSVRecord record = null;
-        Row row = null;
+        Row row;
 
         while((row = make(recordIterator.next())) != null){
-
             if(specification.isValid(row)){
                 break;
             }
