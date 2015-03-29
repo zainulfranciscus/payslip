@@ -18,18 +18,8 @@ public class TaxSpecificationImpl implements Specification<Tax> {
 
     @Override
     public boolean match(Tax tax) {
-        LocalDate taxStartDate = null;
-        boolean isValidDate = true;
-
-        try {
-            taxStartDate = tax.getStartPeriod();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            isValidDate = false;
-        }
-
-        return isValidDate
-                && tax.getMinIncome() <= employee.getSalary()
+        LocalDate taxStartDate = tax.getStartPeriod();
+        return  tax.getMinIncome() <= employee.getSalary()
                 && tax.getMaxIncome() >= employee.getSalary()
                 && (employee.getPaymentStartDate().isAfter(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
     }
