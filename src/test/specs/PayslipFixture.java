@@ -1,13 +1,13 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
-import org.myob.application.service.PayslipServiceBuilder;
-import org.myob.domain.model.employee.EmployeeSpecificationBuilder;
-import org.myob.domain.model.employee.Payslip;
-import org.myob.domain.service.PayslipService;
-import org.myob.infrastructure.persistence.file.reader.builder.EmployeeCsvRowBuilder;
-import org.myob.infrastructure.persistence.file.reader.builder.TaxCsvRowBuilder;
-import org.myob.infrastructure.repository.TaxRepository;
-import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
+import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.repository.specification.EmployeeSpecificationBuilder;
+import org.myob.model.payslip.Payslip;
+import org.myob.service.PayslipService;
+import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
+import org.myob.persistence.row.builder.TaxCsvRowBuilder;
+import org.myob.repository.TaxRepository;
+import org.myob.repository.impl.TaxRepositoryImpl;
 import reader.ReaderImpl;
 import service.PayslipServiceBuilderImpl;
 

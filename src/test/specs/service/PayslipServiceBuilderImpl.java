@@ -1,10 +1,10 @@
 package service;
 
-import org.myob.application.service.PayslipServiceBuilder;
-import org.myob.infrastructure.repository.TaxRepository;
-import org.myob.infrastructure.repository.impl.EmployeeRepositoryImpl;
-import org.myob.infrastructure.repository.impl.TaxRepositoryImpl;
-import org.myob.infrastructure.service.EmployeeRepository;
+import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.repository.TaxRepository;
+import org.myob.repository.impl.EmployeeRepositoryImpl;
+import org.myob.repository.impl.TaxRepositoryImpl;
+import org.myob.repository.EmployeeRepository;
 
 import java.io.FileNotFoundException;
 

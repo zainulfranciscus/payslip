@@ -1,9 +1,8 @@
 package reader;
 
-import org.myob.infrastructure.persistence.file.TaxRowSpecification;
-import org.myob.infrastructure.persistence.file.reader.Row;
-import org.myob.infrastructure.repository.Reader;
-import org.myob.infrastructure.repository.RowSpecification;
+import org.myob.persistence.row.Row;
+import org.myob.persistence.reader.Reader;
+import org.myob.persistence.row.specification.RowSpecification;
 
 import java.util.ArrayList;
 import java.util.List;
