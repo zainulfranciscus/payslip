@@ -187,7 +187,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>org.myob.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

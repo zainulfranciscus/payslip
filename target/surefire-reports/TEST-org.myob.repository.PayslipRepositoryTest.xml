@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.myob.repository.PayslipRepositoryTest" time="0.03" tests="5" errors="1" skipped="0" failures="0">
+<testsuite name="org.myob.repository.PayslipRepositoryTest" time="0.019" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7534"/>
+    <property name="idea.launcher.port" value="7538"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -62,14 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="payslipWriterShouldBeCalledWhenSaveIsCalled" classname="org.myob.repository.PayslipRepositoryTest" time="0.011"/>
-  <testcase name="shouldCreateAListOfPayslips_With_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper" classname="org.myob.repository.PayslipRepositoryTest" time="0.003"/>
+  <testcase name="payslipWriterShouldBeCalledWhenSaveIsCalled" classname="org.myob.repository.PayslipRepositoryTest" time="0.014"/>
+  <testcase name="shouldCreateAListOfPayslips_With_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper" classname="org.myob.repository.PayslipRepositoryTest" time="0.002"/>
   <testcase name="payslipWriterShouldBeCalledWhenSavePayslipsIsCalled" classname="org.myob.repository.PayslipRepositoryTest" time="0.001"/>
   <testcase name="payslipShouldHaveTheRight_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper" classname="org.myob.repository.PayslipRepositoryTest" time="0.001"/>
-  <testcase name="shouldCallMockTaxRepositoryClose1Time" classname="org.myob.repository.PayslipRepositoryTest" time="0.014">
-    <error type="java.lang.NullPointerException:">java.lang.NullPointerException: null
-	at org.myob.repository.impl.PayslipRepositoryImpl.close(PayslipRepositoryImpl.java:81)
-	at org.myob.repository.PayslipRepositoryTest.shouldCallMockTaxRepositoryClose1Time(PayslipRepositoryTest.java:88)
-</error>
-  </testcase>
+  <testcase name="shouldCallMockTaxRepositoryClose1Time" classname="org.myob.repository.PayslipRepositoryTest" time="0.001"/>
 </testsuite>

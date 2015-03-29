@@ -9,6 +9,8 @@ import org.myob.model.tax.Tax;
  */
 public class TaxSpecification {
 
+    public static final int NO_MAXIMUM_INCOME = -1;
+
     private Employee employee;
 
     public TaxSpecification(Employee employee) {
@@ -19,7 +21,7 @@ public class TaxSpecification {
     public boolean match(Tax tax) {
         LocalDate taxStartDate = tax.getStartPeriod();
         return  tax.getMinIncome() <= employee.getSalary()
-                && tax.getMaxIncome() >= employee.getSalary()
+                && (tax.getMaxIncome() >= employee.getSalary() || tax.getMaxIncome() == NO_MAXIMUM_INCOME)
                 && (employee.getPaymentStartDate().isAfter(taxStartDate) || employee.getPaymentStartDate().isEqual(taxStartDate));
     }
 

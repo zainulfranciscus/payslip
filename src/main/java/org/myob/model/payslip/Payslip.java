@@ -87,7 +87,7 @@ public class Payslip {
     }
 
     public BigDecimal incomeTaxAsBigDecimal(){
-        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP).setScale(ZERO_ROUND_SCALE, ROUND_HALF_UP);
+        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP);
     }
 
     public int getNetIncome() {

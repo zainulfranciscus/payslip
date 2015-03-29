@@ -21,9 +21,9 @@ import java.io.IOException;
 public class Main {
 
 
-    private String employeeFileName = "c:\\temp\\employee.csv";
-    private String taxFileName = "c:\\temp\\tax.csv";
-    private String payslipFileName = "c:\\temp\\payslips3.csv";
+    private String employeeFileName;
+    private String taxFileName;
+    private String payslipFileName;
 
     public static void main(String[]args) throws IOException {
         ShellFactory.createConsoleShell("Payslip", "", new Main()).commandLoop();

@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7534"/>
+    <property name="idea.launcher.port" value="7538"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -62,8 +62,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="shouldBeFalse_BecauseMonthIsInvalid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0.001"/>
-  <testcase name="shouldBeFalse_BecauseDateIsInvalid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0.002"/>
+  <testcase name="shouldBeFalse_BecauseMonthIsInvalid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0"/>
+  <testcase name="shouldBeFalse_BecauseDateIsInvalid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0.003"/>
   <testcase name="shouldBeFalse_BecauseYearIsInvalid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0.001"/>
   <testcase name="shouldBeTrue_BecauseDay_Month_Year_IsValid" classname="org.myob.persistence.TaxCsvRowSpecificationTest" time="0"/>
 </testsuite>
