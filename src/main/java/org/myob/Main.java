@@ -3,12 +3,10 @@ package org.myob;
 import asg.cliche.CLIException;
 import asg.cliche.Command;
 import asg.cliche.ShellFactory;
-import org.myob.persistence.reader.FileReaderType;
-import org.myob.service.EmployeeService;
+import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.AbstractPayslipServiceBuilder;
 import org.myob.service.builder.impl.PayslipServiceBuilderImpl;
-import org.myob.service.impl.EmployeeServiceImpl;
 
 import java.io.IOException;
 
@@ -17,10 +15,9 @@ import java.io.IOException;
  */
 public class Main {
 
-
-    private String employeeFileName;
-    private String taxFileName;
-    private String payslipFileName;
+    String employeeFileName;
+    String taxFileName;
+    String payslipFileName;
 
     public static void main(String[]args) throws IOException {
         ShellFactory.createConsoleShell("Payslip", "", new Main()).commandLoop();
@@ -56,12 +53,10 @@ public class Main {
         payslipServiceBuilder.withEmployeeFileName(employeeFileName);
         payslipServiceBuilder.withPayslipFileName(payslipFileName);
         payslipServiceBuilder.withTaxFileName(taxFileName);
-        payslipServiceBuilder.withFileReaderType(FileReaderType.FILEREADER);
 
         PayslipService payslipService = payslipServiceBuilder.build();
-        EmployeeService employeeService = new EmployeeServiceImpl();
-        employeeService.setPayslipService(payslipService);
-        employeeService.writePayslips();
+        payslipService.writePayslips(new EmployeeSpecification());
+        payslipService.close();
 
     }
 }

@@ -10,6 +10,7 @@ import org.myob.repository.specification.EmployeeSpecification;
 public class EmployeeSpecification {
 
     private final int maxNumberOfEmployeesThatCanBeLoadedToMemory;
+
     private int numberOfEmployeesThatHasBeenLoadedToMemory;
 
     public EmployeeSpecification() {

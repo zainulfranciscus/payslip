@@ -1,22 +1,20 @@
-import domain.PayslipEntity;
-import domain.PayslipEntityBuilder;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.concordion.api.extension.Extensions;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
 import org.myob.model.payslip.PayslipBuilder;
 import org.myob.persistence.mapping.impl.PayslipHeader;
-import org.myob.persistence.reader.FileReaderType;
-import org.myob.service.EmployeeService;
+
+import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.AbstractPayslipServiceBuilder;
-import org.myob.service.impl.EmployeeServiceImpl;
+
 import service.PayslipServiceBuilderImpl;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,16 +38,16 @@ public class EmployeeFixture extends AbstractFixture {
     }
 
     public void writePayslip() throws Exception {
-        EmployeeService employeeService = new EmployeeServiceImpl();
-        employeeService.setPayslipService(builder.build());
 
-        employeeService.writePayslips();
+        PayslipService payslipService = builder.build();
+        payslipService.writePayslips(new EmployeeSpecification());
+        payslipService.close();
+
     }
 
     public List<Payslip> readPayslips() throws Exception {
 
-
-        Reader payslipCsvReader = FileReaderType.CLASSLOADER.getReader("payslip.csv");
+        Reader payslipCsvReader =  new InputStreamReader(getClass().getClassLoader().getResourceAsStream("payslip.csv"));
 
         Iterable<CSVRecord> records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(payslipCsvReader);
         Iterator<CSVRecord> recordIterator = records.iterator();

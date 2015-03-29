@@ -21,6 +21,8 @@
         <jodatime.version>2.7</jodatime.version>
         <cliche.version>110413</cliche.version>
         <java.version>1.8</java.version>
+        <powermock.mockito.version>1.6.1</powermock.mockito.version>
+        <powermock.junit.version>1.5.1</powermock.junit.version>
     </properties>
 
     <dependencies>
@@ -67,8 +69,36 @@
             <version>${concordion.version}</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>${powermock.mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>${powermock.junit.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.powermock</groupId>
+                    <artifactId>powermock-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.powermock</groupId>
+                    <artifactId>powermock-reflect</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <plugins>

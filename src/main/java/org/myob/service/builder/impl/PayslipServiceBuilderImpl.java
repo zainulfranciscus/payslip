@@ -9,6 +9,7 @@ import org.myob.persistence.writer.PayslipWriterImpl;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.TaxRepository;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
@@ -34,14 +35,14 @@ public class PayslipServiceBuilderImpl extends AbstractPayslipServiceBuilder {
 
     @Override
     public TaxRepository createTaxRepository() throws Exception {
-        this.taxReader.setDataSourceReader(readerType.getReader(taxFileName));
+        this.taxReader.setDataSourceReader(new FileReader(taxFileName));
         return super.createTaxRepository();
     }
 
     @Override
     public EmployeeRepository createEmployeeRepository() throws Exception {
 
-        this.employeeReader.setDataSourceReader(readerType.getReader(employeeFileName));
+        this.employeeReader.setDataSourceReader(new FileReader(employeeFileName));
         return super.createEmployeeRepository();
     }
 

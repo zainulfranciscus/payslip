@@ -43,9 +43,10 @@ public class EmployeeCsvRow extends Row {
             date =  format().parseLocalDate(get(START_PAYMENT_DATE) + " " + get(START_PAYMENT_MONTH) + " " + get(START_PAYMENT_YEAR));
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            return date;
         }
 
-        return date;
     }
 
     public LocalDate getPaymentEndDate(){
@@ -55,8 +56,10 @@ public class EmployeeCsvRow extends Row {
             date =  format().parseLocalDate(get(END_PAYMENT_DATE) + " " + get(END_PAYMENT_MONTH) + " " + get(END_PAYMENT_YEAR));
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            return date;
         }
 
-        return date;
+
     }
 }

@@ -37,6 +37,7 @@ public class PayslipRepositoryTest {
     private LocalDate endDate;
     private Payslip payslip;
     private Tax tax;
+    private PayslipWriter mockWriter;
 
     @Before
     public void setup() throws Exception {
@@ -61,6 +62,9 @@ public class PayslipRepositoryTest {
 
         payslipRepository = new PayslipRepositoryImpl();
         payslipRepository.setTaxRepository(mockTaxRepository);
+
+        mockWriter = mock(PayslipWriter.class);
+        payslipRepository.setWriter(mockWriter);
 
     }
 
@@ -121,17 +125,21 @@ public class PayslipRepositoryTest {
     }
 
     @Test
-    public void payslipWriterShouldBeCalledWhenSavePayslipsIsCalled() throws IOException {
-        PayslipWriter mockWriter = mock(PayslipWriter.class);
+    public void payslipWriterShouldBeCalledOnceWhenSavePayslipsIsCalled() throws IOException {
 
         doNothing().when(mockWriter).write(payslip);
-        payslipRepository.setWriter(mockWriter);
-
         List<Payslip> payslips = new ArrayList<Payslip>();
         payslips.add(new PayslipBuilder().withName("Joe").withGrossIncome(1000).build());
 
         payslipRepository.savePayslips(payslips);
         verify(mockWriter, times(1)).write(payslips.get(0));
+    }
+
+    @Test
+    public void payslipWriterShouldBeCalledOnceWhenWritingHeader() throws IOException {
+        doNothing().when(mockWriter).writeHeader();
+        payslipRepository.writeHeader();
+        verify(mockWriter, times(1)).writeHeader();
     }
 
     class AssertThat {
