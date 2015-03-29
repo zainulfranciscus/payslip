@@ -8,21 +8,19 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by Zainul Franciscus on 27/03/2015.
  */
-public class EmployeeSpecificationBuilderTest {
-    private EmployeeSpecificationBuilder employeeSpecificationBuilder = new EmployeeSpecificationBuilder();
+public class EmployeeSpecificationTest {
 
     @Test
     public void numberOfEmployeesLoadedToMemoryShouldBe0(){
-        assertEquals(0, employeeSpecificationBuilder.build().numberOfEmployeesLoadedToMemory());
+        assertEquals(0, new EmployeeSpecification().numberOfEmployeesLoadedToMemory());
     }
 
     @Test
     public void hasReadTheAllowedNumberOfLinesIsTrue_BecauseThereCanOnlyBe1EmployeeLoadedIntoMemory(){
 
-        EmployeeSpecification employeeSpecification = employeeSpecificationBuilder
-                .withMaxNumberOfEmployeesThatCanBePutIntoMemory(1)
-                .build();
+        EmployeeSpecification employeeSpecification = new EmployeeSpecification(1);
         employeeSpecification.incrementNumberOfLineRead();
+
         assertTrue(employeeSpecification.hasReadTheAllowedNumberOfLines());
     }
 

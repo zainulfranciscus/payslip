@@ -7,11 +7,10 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
-import org.myob.repository.specification.EmployeeSpecificationBuilder;
 import org.myob.model.payslip.Payslip;
-import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.repository.EmployeeRepository;
 import org.myob.repository.PayslipRepository;
+import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.impl.PayslipServiceImpl;
 
 import java.util.ArrayList;
@@ -74,7 +73,7 @@ public class PayslipServiceTest {
 
 
     private EmployeeSpecification setNumberOfEmployeesThatCanBePutIntoMemory(final int maxNumberOfLines) throws Exception {
-        final EmployeeSpecification employeeSpecification = new EmployeeSpecificationBuilder().withMaxNumberOfEmployeesThatCanBePutIntoMemory(maxNumberOfLines).build();
+        final EmployeeSpecification employeeSpecification = new EmployeeSpecification(maxNumberOfLines);
 
         when(mockEmployeeRepository.find(employeeSpecification)).thenAnswer(new Answer() {
 

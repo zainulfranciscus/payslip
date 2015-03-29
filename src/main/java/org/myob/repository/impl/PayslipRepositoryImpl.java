@@ -7,7 +7,7 @@ import org.myob.model.tax.Tax;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.repository.PayslipRepository;
 import org.myob.repository.TaxRepository;
-import org.myob.repository.specification.TaxSpecificationBuilder;
+import org.myob.repository.specification.TaxSpecification;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
     @Override
     public Payslip create(Employee employee) throws Exception {
 
-        Tax tax = taxRepository.find(new TaxSpecificationBuilder().withEmployee(employee).build());
+        Tax tax = taxRepository.find(new TaxSpecification(employee));
 
         return new PayslipBuilder()
                 .withEmployee(employee)

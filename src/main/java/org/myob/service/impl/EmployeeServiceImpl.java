@@ -1,7 +1,7 @@
 package org.myob.service.impl;
 
+import org.myob.repository.specification.EmployeeSpecification;
 import org.myob.service.EmployeeService;
-import org.myob.repository.specification.EmployeeSpecificationBuilder;
 import org.myob.service.PayslipService;
 
 /**
@@ -13,7 +13,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void writePayslips() throws Exception {
-        payslipService.writePayslips(new EmployeeSpecificationBuilder().build());
+        payslipService.writePayslips(new EmployeeSpecification());
         payslipService.close();
     }
 

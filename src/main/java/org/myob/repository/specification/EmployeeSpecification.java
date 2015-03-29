@@ -12,6 +12,10 @@ public class EmployeeSpecification {
     private final int maxNumberOfEmployeesThatCanBeLoadedToMemory;
     private int numberOfEmployeesThatHasBeenLoadedToMemory;
 
+    public EmployeeSpecification() {
+        this.maxNumberOfEmployeesThatCanBeLoadedToMemory = 10;
+    }
+
     public EmployeeSpecification(int maxNumberOfEmployeesThatCanBeLoadedToMemory) {
         this.maxNumberOfEmployeesThatCanBeLoadedToMemory = maxNumberOfEmployeesThatCanBeLoadedToMemory;
     }

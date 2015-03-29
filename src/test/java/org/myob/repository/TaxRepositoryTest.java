@@ -10,7 +10,6 @@ import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.TaxCsvRow;
 import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.impl.TaxRepositoryImpl;
-import org.myob.repository.specification.TaxSpecificationBuilder;
 import org.myob.repository.specification.TaxSpecification;
 
 import static org.junit.Assert.assertEquals;
@@ -46,7 +45,7 @@ public class TaxRepositoryTest {
                 .withStartPaymentPeriod(2015, 1, 1);
 
         Employee employeeWithSalaryOf15000 = employeeBuilder.withSalary(15000).build();
-        taxFor15000AsSalary = new TaxSpecificationBuilder().withEmployee(employeeWithSalaryOf15000).build();
+        taxFor15000AsSalary = new TaxSpecification(employeeWithSalaryOf15000);
 
         setMockRowBehavior();
 
@@ -81,14 +80,14 @@ public class TaxRepositoryTest {
     @Test
     public void shouldReturnNoMatchingTax_WhenSalaryIsAboveMaxIncomeForThisTax() throws Exception {
         Employee employee = employeeBuilder.withSalary(maxIncomeForThisTax + 2000).build();
-        TaxSpecification specification = new TaxSpecificationBuilder().withEmployee(employee).build();
+        TaxSpecification specification = new TaxSpecification(employee);
         assertNull(taxRepository.find(specification));
     }
 
     @Test
     public void shouldReturnNoMatchingTax_WhenSalaryIsBelowMinIncomeForThisTax() throws Exception {
         Employee employee = employeeBuilder.withSalary(minIncomeForThisTax - 1000).build();
-        TaxSpecification specification = new TaxSpecificationBuilder().withEmployee(employee).build();
+        TaxSpecification specification = new TaxSpecification(employee);
         assertNull(taxRepository.find(specification));
     }
 

@@ -5,12 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.myob.model.employee.Employee;
-import org.myob.repository.specification.EmployeeSpecificationBuilder;
-import org.myob.repository.specification.EmployeeSpecification;
-import org.myob.persistence.row.Row;
 import org.myob.persistence.reader.Reader;
+import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 import org.myob.repository.impl.EmployeeRepositoryImpl;
+import org.myob.repository.specification.EmployeeSpecification;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -71,7 +70,7 @@ public class EmployeeRepositoryTest {
         employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(mockReader);
 
-        employeeSpecification = new  EmployeeSpecificationBuilder().withMaxNumberOfEmployeesThatCanBePutIntoMemory(maxNumberOfEmployeesThatShouldBeRead).build();
+        employeeSpecification = new  EmployeeSpecification(maxNumberOfEmployeesThatShouldBeRead);
     }
 
     @Test

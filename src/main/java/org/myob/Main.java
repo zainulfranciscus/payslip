@@ -4,14 +4,11 @@ import asg.cliche.CLIException;
 import asg.cliche.Command;
 import asg.cliche.ShellFactory;
 import org.myob.persistence.reader.FileReaderType;
-import org.myob.repository.specification.EmployeeSpecification;
-import org.myob.repository.specification.EmployeeSpecificationBuilder;
 import org.myob.service.EmployeeService;
 import org.myob.service.PayslipService;
 import org.myob.service.builder.AbstractPayslipServiceBuilder;
 import org.myob.service.builder.impl.PayslipServiceBuilderImpl;
 import org.myob.service.impl.EmployeeServiceImpl;
-import org.myob.service.impl.PayslipServiceImpl;
 
 import java.io.IOException;
 
