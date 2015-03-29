@@ -64,8 +64,9 @@ public abstract class AbstractCsvReader implements Reader {
 
     @Override
     public void close() throws IOException {
-        reader.close();
-
+        if(reader != null) {
+            reader.close();
+        }
     }
 
     public abstract Row make(CSVRecord record) throws IOException;
