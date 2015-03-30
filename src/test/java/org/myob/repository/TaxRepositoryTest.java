@@ -3,12 +3,10 @@ package org.myob.repository;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.TaxCsvRow;
-import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.impl.TaxRepositoryImpl;
 import org.myob.repository.specification.TaxSpecification;
 
@@ -50,7 +48,7 @@ public class TaxRepositoryTest {
         setMockRowBehavior();
 
         mockReader = mock(Reader.class);
-        when(mockReader.read(Mockito.isA(TaxRowSpecification.class))).thenReturn(mockRow,null);
+        when(mockReader.read()).thenReturn(mockRow,null);
 
         taxRepository = new TaxRepositoryImpl();
         taxRepository.setReader(mockReader);

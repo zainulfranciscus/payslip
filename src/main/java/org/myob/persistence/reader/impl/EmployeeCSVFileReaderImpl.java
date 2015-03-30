@@ -2,8 +2,10 @@ package org.myob.persistence.reader.impl;
 
 import org.apache.commons.csv.CSVRecord;
 import org.myob.persistence.reader.AbstractCsvReader;
+import org.myob.persistence.row.EmployeeCsvRow;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
+import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 
 import java.io.InputStreamReader;
 
@@ -23,7 +25,7 @@ public class EmployeeCSVFileReaderImpl extends AbstractCsvReader {
 
     @Override
     public Row make(CSVRecord record) {
-        return new EmployeeCsvRowBuilder()
+        EmployeeCsvRow row =  new EmployeeCsvRowBuilder()
                 .withFirstName(record.get(FIRST_NAME.getLabel()))
                 .withLastName(record.get(LAST_NAME.getLabel()))
                 .withSalary(record.get(ANNUAL_SALARY.getLabel()))
@@ -35,5 +37,7 @@ public class EmployeeCSVFileReaderImpl extends AbstractCsvReader {
                 .withEndOfPaymentMonth(record.get(END_PAYMENT_MONTH.getLabel()))
                 .withEndOfPaymentYear(record.get(END_PAYMENT_YEAR.getLabel()))
                 .build();
+
+        return row;
     }
 }

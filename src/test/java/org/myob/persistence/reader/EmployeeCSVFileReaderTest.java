@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.row.Row;
-import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
+import org.myob.persistence.row.specification.RowSpecification;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,6 +13,8 @@ import java.io.IOException;
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
 //import static org.myob.persistence.reader.FileReaderType.*;
 
@@ -38,7 +40,7 @@ public class EmployeeCSVFileReaderTest {
 
         reader.setFileName(loadFromClassPath("employee/employee.csv"));
         reader.initializeFileReader();
-        row = reader.read(new EmployeeRowSpecification());
+        row = reader.read();
         
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveFirstName("Joe")
@@ -53,7 +55,7 @@ public class EmployeeCSVFileReaderTest {
 
         reader.setFileName(loadFromClassPath("employee/onlyHaveEmployeeHeader.csv"));
         reader.initializeFileReader();
-        assertNull(reader.read(new EmployeeRowSpecification()));
+        assertNull(reader.read());
     }
 
     @Test
@@ -61,7 +63,7 @@ public class EmployeeCSVFileReaderTest {
 
         reader.setFileName(loadFromClassPath("emptyFile.csv"));
         reader.initializeFileReader();
-        assertNull(reader.read(new EmployeeRowSpecification()));
+        assertNull(reader.read());
     }
 
     @Test
@@ -72,6 +74,21 @@ public class EmployeeCSVFileReaderTest {
         assertNotNull(reader.loadCsvFileFromClasspath());
 
     }
+
+    @Test
+    public void shouldReturnNull_BecauseThisCsvHasInvalidDates() throws IOException {
+
+        RowSpecification mockSpecification = mock(RowSpecification.class);
+        when(mockSpecification.isValid(row)).thenReturn(false);
+
+        reader.initializeFileReader();
+        reader.setFileName(loadFromClassPath("employee/employeeCsvWithInvalidDates.csv"));
+        reader.setSpecification(mockSpecification);
+        assertNull(reader.read());
+
+    }
+
+
 
     @Test(expected=FileNotFoundException.class)
     public void shouldThrowFileNotFoundException_BecauseThisCsvFileDoesNotExistInResourceFolder() throws IOException {

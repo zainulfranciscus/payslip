@@ -19,6 +19,7 @@ public abstract class AbstractCsvReader implements Reader {
     protected String csvFileName;
     protected java.io.Reader reader;
     protected Iterable<CSVRecord> records;
+    private RowSpecification specification;
 
     @Override
     public void setFileName(String csvFileName) throws IOException {
@@ -37,30 +38,23 @@ public abstract class AbstractCsvReader implements Reader {
 
     }
 
-    protected abstract InputStreamReader loadCsvFileFromClasspath();
-
-
     @Override
-    public Row read(RowSpecification specification) throws IOException {
+    public Row read() throws IOException {
 
         Iterator<CSVRecord> recordIterator = records.iterator();
 
-        boolean hasRecord = recordIterator.hasNext();
+        while(recordIterator.hasNext()){
 
-        if(!hasRecord){
-            return null;
-        }
+            Row aRow = make(recordIterator.next());
 
-        Row row;
-
-        while((row = make(recordIterator.next())) != null){
-            if(specification.isValid(row)){
-                break;
+            if(this.specification == null || aRow.matchesSpecification(specification)){
+                return aRow;
             }
         }
 
-        return row;
+        return null;
     }
+
 
     @Override
     public void close() throws IOException {
@@ -68,6 +62,13 @@ public abstract class AbstractCsvReader implements Reader {
             reader.close();
         }
     }
+
+    @Override
+    public void setSpecification(RowSpecification specification) {
+        this.specification = specification;
+    }
+
+    protected abstract InputStreamReader loadCsvFileFromClasspath();
 
     public abstract Row make(CSVRecord record) throws IOException;
 

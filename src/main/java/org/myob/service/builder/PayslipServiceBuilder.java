@@ -4,6 +4,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.myob.persistence.reader.Reader;
 import org.myob.persistence.reader.impl.EmployeeCSVFileReaderImpl;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
+import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
+import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.persistence.writer.PayslipWriter;
 import org.myob.persistence.writer.impl.PayslipWriterImpl;
 import org.myob.repository.EmployeeRepository;
@@ -64,6 +66,7 @@ public class PayslipServiceBuilder {
 
         this.employeeReader.setFileName(employeeFileName);
         this.employeeReader.initializeFileReader();
+        this.employeeReader.setSpecification(new EmployeeRowSpecification());
 
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
         employeeRepository.setReader(this.employeeReader);
@@ -83,6 +86,7 @@ public class PayslipServiceBuilder {
 
         this.taxReader.setFileName(taxFileName);
         this.taxReader.initializeFileReader();
+        this.taxReader.setSpecification(new TaxRowSpecification());
 
         TaxRepository taxRepository = new TaxRepositoryImpl();
         taxRepository.setReader(this.taxReader);

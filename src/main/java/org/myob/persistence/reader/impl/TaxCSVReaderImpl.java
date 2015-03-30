@@ -40,11 +40,6 @@ public class TaxCSVReaderImpl extends AbstractCsvReader {
                 .withStartingYear(record.get(TaxHeader.STARTING_YEAR.getLabel()))
                 .build();
 
-        TaxRowSpecification specification = new TaxRowSpecification();
-        if (!specification.isValid(row)) {
-            return null;
-        }
-
         return row;
     }
 }

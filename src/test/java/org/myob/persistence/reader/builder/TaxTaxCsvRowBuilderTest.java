@@ -57,7 +57,9 @@ public class TaxTaxCsvRowBuilderTest {
                 .shouldHaveTheExpectedMaxIncome()
                 .shouldHaveTheExpectedMinIncome()
                 .shouldHaveTheExpectedTaxPerDollar()
-                .shouldHaveTheExpectedMonth();
+                .shouldHaveTheExpectedMonth()
+                .shouldHaveTheExpectedDate()
+                .shouldHaveTheExpectedYear();
 
     }
 
@@ -84,6 +86,16 @@ public class TaxTaxCsvRowBuilderTest {
 
         public AssertThat shouldHaveTheExpectedMonth() {
             assertEquals(expectedStartingMonthAsInt,row.getMonthAsInt(STARTING_MONTH));
+            return this;
+        }
+
+        public AssertThat shouldHaveTheExpectedDate(){
+            assertEquals(expectedStartingDay,row.get(STARTING_DAY));
+            return this;
+        }
+
+        public AssertThat shouldHaveTheExpectedYear(){
+            assertEquals(expectedStartingYear,row.get(STARTING_YEAR));
             return this;
         }
     }

@@ -3,7 +3,6 @@ package org.myob.repository.impl;
 import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.repository.specification.SpecificationForReadingEmployeeData;
-import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.reader.Reader;
 import org.myob.repository.EmployeeRepository;
@@ -31,7 +30,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         List<Employee> employees = new ArrayList<Employee>();
 
-        while((row = reader.read(new EmployeeRowSpecification())) != null && !specification.hasLoadTheAllowedNumberOfEmployeesToMemory()) {
+        while((row = reader.read()) != null && !specification.hasLoadTheAllowedNumberOfEmployeesToMemory()) {
 
             Employee employee = new EmployeeBuilder()
                     .withStartPaymentPeriod(

@@ -3,11 +3,9 @@ package org.myob.repository;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import org.myob.model.employee.Employee;
 import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.Row;
-import org.myob.persistence.row.specification.RowSpecification;
 import org.myob.repository.impl.EmployeeRepositoryImpl;
 import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 
@@ -77,7 +75,7 @@ public class EmployeeRepositoryTest {
     public void shouldHaveTheExpected_StartDate_EndDate_FirstName_LastName_Super_Salary_ForAll10Employees() throws Exception {
 
         int numberOfMockRows = 20;
-        when(mockReader.read(Mockito.isA(RowSpecification.class))).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
+        when(mockReader.read()).thenReturn(mockRow, listOfRowsWithNullObjectAsTheLastRow(numberOfMockRows));
         employees = employeeRepository.find(specificationForReadingEmployeeData);
 
         assertEquals(maxNumberOfEmployeesThatShouldBeRead, employees.size());
@@ -96,7 +94,7 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void shouldHave0Employee_WhenReaderReturnsNull() throws Exception {
-        when(mockReader.read(Mockito.isA(RowSpecification.class))).thenReturn(null);
+        when(mockReader.read()).thenReturn(null);
         employees = employeeRepository.find(specificationForReadingEmployeeData);
         assertEquals(0, employees.size());
     }

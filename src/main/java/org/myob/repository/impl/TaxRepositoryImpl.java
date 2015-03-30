@@ -23,7 +23,7 @@ public class TaxRepositoryImpl implements TaxRepository {
         Row row;
         Tax matchingTax = null;
         TaxRowSpecification rowSpecification = new TaxRowSpecification();
-        while((row = reader.read(rowSpecification)) != null) {
+        while((row = reader.read()) != null) {
 
             Tax tax = new TaxBuilder().withBaseTax(row.getInt(BASE_TAX))
                     .withMaxIncome(row.getInt(MAX_INCOME))

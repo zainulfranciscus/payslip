@@ -5,13 +5,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.myob.persistence.reader.impl.TaxCSVReaderImpl;
 import org.myob.persistence.row.Row;
-import org.myob.persistence.row.specification.impl.TaxRowSpecification;
+import org.myob.persistence.row.specification.RowSpecification;
 
 import java.io.IOException;
 
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.myob.persistence.mapping.impl.TaxHeader.*;
 
 
@@ -39,7 +41,7 @@ public class TaxCsvReaderTest {
         reader.setFileName(loadFromClassPath("tax/taxTableWithNonNumericalValues.csv"));
         reader.initializeFileReader();
 
-        row = reader.read(new TaxRowSpecification());
+        row = reader.read();
 
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveBaseTax(0)
@@ -53,7 +55,7 @@ public class TaxCsvReaderTest {
 
         reader.setFileName(loadFromClassPath("tax/tax.csv"));
         reader.initializeFileReader();
-        row = reader.read(new TaxRowSpecification());
+        row = reader.read();
 
         AssertThat assertThat = new AssertThat();
         assertThat.shouldHaveBaseTax(300.87)
@@ -71,7 +73,7 @@ public class TaxCsvReaderTest {
 
         reader.setFileName(loadFromClassPath("tax/onlyHaveTaxHeaders.csv"));
         reader.initializeFileReader();
-        assertNull(reader.read(new TaxRowSpecification()));
+        assertNull(reader.read());
     }
 
     @Test
@@ -79,15 +81,20 @@ public class TaxCsvReaderTest {
 
         reader.setFileName(loadFromClassPath("emptyFile.csv"));
         reader.initializeFileReader();
-        assertNull(reader.read(new TaxRowSpecification()));
+        assertNull(reader.read());
     }
 
     @Test
     public void rowShouldBeNullBecauseMonthYearAndDate_IsInvalid() throws Exception {
 
+        RowSpecification mockSpecification = mock(RowSpecification.class);
+        when(mockSpecification.isValid(row)).thenReturn(false);
+
         reader.setFileName(loadFromClassPath("tax/taxWithInvalidDates.csv"));
         reader.initializeFileReader();
-        assertNull(reader.read(new TaxRowSpecification()));
+        reader.setSpecification(mockSpecification);
+
+        assertNull(reader.read());
     }
 
     @Test

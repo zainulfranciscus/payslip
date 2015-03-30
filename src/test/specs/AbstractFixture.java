@@ -1,11 +1,13 @@
 import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
 import org.myob.persistence.row.builder.TaxCsvRowBuilder;
+import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
+import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.TaxRepository;
 import org.myob.repository.impl.TaxRepositoryImpl;
 import reader.ReaderImpl;
 
 /**
- * Created by Lenovo on 29/03/2015.
+ * Created by Zainul Franciscus on 29/03/2015.
  */
 public abstract class AbstractFixture {
 
@@ -34,9 +36,8 @@ public abstract class AbstractFixture {
 
 
         taxReader.add(taxCsvRowBuilder.build());
+        taxReader.setSpecification(new TaxRowSpecification());
 
-        TaxRepository taxRepository = new TaxRepositoryImpl();
-        taxRepository.setReader(taxReader);
 
     }
 
@@ -64,6 +65,7 @@ public abstract class AbstractFixture {
                 .withSalary(annualSalary)
                 .withSuper(superRate);
 
+        employeeReader.setSpecification(new EmployeeRowSpecification());
         employeeReader.add(employeeCsvRowBuilder.build());
     }
 

@@ -1,10 +1,13 @@
 package org.myob.persistence.row;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.myob.persistence.mapping.RowHeader;
+import org.myob.persistence.row.specification.RowSpecification;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -49,5 +52,20 @@ public abstract class Row {
         return DateTimeFormat.forPattern(DATE_FORMAT_DD_MMM_YYYY);
     }
 
+    public boolean matchesSpecification(RowSpecification specification){
+        return specification.isValid(this);
+    }
+
+    protected LocalDate toLocalDate(String day, String month, String year) {
+        LocalDate date = null;
+
+        try {
+            date = format().parseLocalDate(day + " " + StringUtils.upperCase(month) + " " + year);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return date;
+        }
+    }
 
 }

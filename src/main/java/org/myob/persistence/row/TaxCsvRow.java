@@ -30,19 +30,6 @@ public class TaxCsvRow extends Row {
     }
 
     public LocalDate getDate(){
-
-        LocalDate date = null;
-
-        try {
-            date =  format().parseLocalDate(get(STARTING_DAY) + " " + get(STARTING_MONTH) + " " + get(STARTING_YEAR));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return date;
-
+        return toLocalDate(get(STARTING_DAY),get(STARTING_MONTH),get(STARTING_YEAR));
     }
-
-
-
 }

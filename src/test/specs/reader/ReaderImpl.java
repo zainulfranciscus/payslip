@@ -16,9 +16,10 @@ public class ReaderImpl implements Reader {
 
     private List<Row> rows = new ArrayList<>();
     private int index = 0;
+    private RowSpecification specification;
 
     @Override
-    public Row read(RowSpecification specification) throws Exception {
+    public Row read() throws Exception {
 
         if (index >= rows.size()) {
             return null;
@@ -26,7 +27,7 @@ public class ReaderImpl implements Reader {
 
         Row row = rows.get(index);
 
-        if(!specification.isValid(row)){
+        if (!specification.isValid(row)) {
             return null;
         }
         index += 1;
@@ -47,10 +48,16 @@ public class ReaderImpl implements Reader {
 
     @Override
     public void initializeFileReader() throws IOException {
-        index=0;
+        index = 0;
     }
 
     public void add(Row row) {
         rows.add(row);
+    }
+
+
+    @Override
+    public void setSpecification(RowSpecification specification) {
+        this.specification = specification;
     }
 }
