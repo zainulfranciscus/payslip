@@ -3,8 +3,8 @@ import org.junit.runner.RunWith;
 import org.myob.model.payslip.Payslip;
 import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.PayslipServiceBuilder;
-import reader.ReaderImpl;
+import org.myob.service.PayslipServiceBuilder;
+import reader.InMemoryReader;
 
 
 import java.util.List;
@@ -23,12 +23,12 @@ public class TestForPayslipServiceFixture extends AbstractFixture{
     }
 
     public void cleanUpData() {
-        taxReader = new ReaderImpl();
+        taxReader = new InMemoryReader();
         cleanUpEmployeeData();
     }
 
     public void cleanUpEmployeeData() {
-        employeeReader = new ReaderImpl();
+        employeeReader = new InMemoryReader();
     }
 
 

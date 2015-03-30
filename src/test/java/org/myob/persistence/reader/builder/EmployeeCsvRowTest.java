@@ -84,10 +84,6 @@ public class EmployeeCsvRowTest {
         assertEquals(expectedSuperRate,csvRow.get(SUPER_RATE));
     }
 
-    @Test
-    public void shouldBeExpectedPaymentDate(){
-        assertEquals(expectedPaymentDate, csvRow.get(PAYMENT_DATE));
-    }
 
     @Test
     public void shouldReturnStartOfPaymentDate(){

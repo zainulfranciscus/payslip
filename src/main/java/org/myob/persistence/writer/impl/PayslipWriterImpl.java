@@ -37,7 +37,12 @@ public class PayslipWriterImpl implements PayslipWriter {
     @Override
     public void writeHeader() throws IOException {
         csvPrinter = makePrinter();
-        String [] headers = PayslipHeader.getHeaderLabel();
+        PayslipHeader [] payslipHeaderEnums = PayslipHeader.values();
+        String [] headers = new String[payslipHeaderEnums.length];
+
+        for(int i = 0; i <payslipHeaderEnums.length;i++){
+            headers[i] = payslipHeaderEnums[i].toString();
+        }
         csvPrinter.printRecord(headers);
 
     }

@@ -38,13 +38,13 @@ public class PayslipServiceTest {
     }
 
     @Test
-    public void savePayslip_ShouldBeCalled4times() throws Exception {
+    public void savePayslip_ShouldBeCalled4times_BecauseEmployeeRepositoryReturn20Employees() throws Exception {
 
         int numberOfEmployeesThatCanBeRetrievedIntoMemory = 5;
 
-        List<Employee> employees = new ArrayList<>();
+        List<Employee> fiveEmployees = new ArrayList<>();
         for(int i = 0; i < numberOfEmployeesThatCanBeRetrievedIntoMemory;i++){
-            employees.add(new EmployeeBuilder().build());
+            fiveEmployees.add(new EmployeeBuilder().build());
         }
 
         ArrayList<Payslip> payslips = new ArrayList<>();
@@ -52,7 +52,12 @@ public class PayslipServiceTest {
 
 
         final SpecificationForReadingEmployeeData specificationForReadingEmployeeData = setNumberOfEmployeesThatCanBePutIntoMemory(numberOfEmployeesThatCanBeRetrievedIntoMemory);
-        when(mockEmployeeRepository.find(specificationForReadingEmployeeData)).thenReturn(employees,employees,employees,employees, new ArrayList<Employee>());
+
+        when(mockEmployeeRepository.find(specificationForReadingEmployeeData))
+                .thenReturn(fiveEmployees,
+                fiveEmployees,
+                fiveEmployees,
+                fiveEmployees, new ArrayList<>());
 
 
         payslipService.writePayslips(specificationForReadingEmployeeData);

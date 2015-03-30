@@ -3,6 +3,9 @@ package org.myob.persistence.reader;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
+import org.myob.model.employee.Employee;
+import org.myob.persistence.mapping.RowHeader;
+import org.myob.persistence.mapping.impl.EmployeeHeader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 
@@ -32,9 +35,10 @@ public abstract class AbstractCsvReader implements Reader {
         if(StringUtils.isNotBlank(csvFileName)) {
             this.reader = new FileReader(csvFileName);
         }else{
-            this.reader =  loadCsvFileFromClasspath();
+            this.reader =  new InputStreamReader(getClass().getClassLoader().getResourceAsStream(csvFileFromClasspath()));
         }
-        records = CSVFormat.EXCEL.withHeader().withSkipHeaderRecord().parse(reader);
+
+        records = CSVFormat.EXCEL.withHeader(headers()).withSkipHeaderRecord().parse(reader);
 
     }
 
@@ -45,7 +49,14 @@ public abstract class AbstractCsvReader implements Reader {
 
         while(recordIterator.hasNext()){
 
-            Row aRow = make(recordIterator.next());
+            CSVRecord csvRecord = recordIterator.next();
+
+            if(!csvRecord.isConsistent()){
+                System.out.println(csvFileName + " does not have all the required fields. File will not be processed");
+                return null;
+            }
+
+            Row aRow = make(csvRecord);
 
             if(this.specification == null || aRow.matchesSpecification(specification)){
                 return aRow;
@@ -68,8 +79,10 @@ public abstract class AbstractCsvReader implements Reader {
         this.specification = specification;
     }
 
-    protected abstract InputStreamReader loadCsvFileFromClasspath();
+    protected abstract String csvFileFromClasspath();
 
     public abstract Row make(CSVRecord record) throws IOException;
+
+    protected abstract String[] headers();
 
 }

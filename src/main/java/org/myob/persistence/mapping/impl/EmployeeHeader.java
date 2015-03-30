@@ -11,7 +11,6 @@ public enum EmployeeHeader implements RowHeader {
     LAST_NAME("last name"),
     ANNUAL_SALARY("annual salary"),
     SUPER_RATE("super rate"),
-    PAYMENT_DATE("payment start date"),
     START_PAYMENT_DATE("payment start date"),
     START_PAYMENT_MONTH("payment start month"),
     START_PAYMENT_YEAR("payment start year"),
@@ -26,7 +25,7 @@ public enum EmployeeHeader implements RowHeader {
     }
 
     @Override
-    public String getLabel() {
+    public String toString() {
         return label;
     }
 }

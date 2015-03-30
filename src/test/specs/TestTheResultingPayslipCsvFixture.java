@@ -8,7 +8,7 @@ import org.myob.model.payslip.PayslipBuilder;
 import org.myob.persistence.mapping.impl.PayslipHeader;
 import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.service.PayslipServiceBuilder;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -54,12 +54,12 @@ public class TestTheResultingPayslipCsvFixture extends AbstractFixture {
         while (recordIterator.hasNext()) {
             CSVRecord record = recordIterator.next();
             Payslip payslip = new PayslipBuilder()
-                    .withGrossIncome(NumberUtils.toInt(record.get(PayslipHeader.GROSS_INCOME.getLabel())))
-                    .withIncomeTax(NumberUtils.toInt(record.get(PayslipHeader.INCOME_TAX.getLabel())))
-                    .withName(record.get(PayslipHeader.NAME.getLabel()))
-                    .withNetIncome(NumberUtils.toInt(record.get(PayslipHeader.NET_INCOME.getLabel())))
-                    .withPayPeriod(record.get(PayslipHeader.PAY_PERIOD.getLabel()))
-                    .withSuper(NumberUtils.toInt(record.get(PayslipHeader.SUPER.getLabel())))
+                    .withGrossIncome(NumberUtils.toInt(record.get(PayslipHeader.GROSS_INCOME.toString())))
+                    .withIncomeTax(NumberUtils.toInt(record.get(PayslipHeader.INCOME_TAX.toString())))
+                    .withName(record.get(PayslipHeader.NAME.toString()))
+                    .withNetIncome(NumberUtils.toInt(record.get(PayslipHeader.NET_INCOME.toString())))
+                    .withPayPeriod(record.get(PayslipHeader.PAY_PERIOD.toString()))
+                    .withSuper(NumberUtils.toInt(record.get(PayslipHeader.SUPER.toString())))
                     .build();
             payslipRecords.add(payslip);
 

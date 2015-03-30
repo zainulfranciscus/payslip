@@ -67,21 +67,6 @@ public class MainTest {
     }
 
     @Test
-    public void shouldNotThrowException_WhenTax_Employee_AndPayslipFile_IsNull() throws CLIException {
-        main.taxFileName(null);
-        main.employeeFileName(null);
-        main.payslipFileName(null);
-
-        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
-    }
-    @Test
-    public void shouldNotThrowException_WhenWritingPayslips() throws CLIException {
-        main.payslipFileName("payslip.csv");
-        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
-    }
-
-
-    @Test
     public void shouldNotThrowException_WhenExecutingMain() throws IOException {
 
         PowerMockito.mockStatic(ShellFactory.class);
@@ -98,6 +83,20 @@ public class MainTest {
         }
 
         assertFalse(exceptionThrown);
+    }
+
+    @Test
+    public void shouldNotThrowException_WhenTax_Employee_AndPayslipFile_IsNull() throws CLIException {
+        main.taxFileName(null);
+        main.employeeFileName(null);
+        main.payslipFileName(null);
+
+        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
+    }
+    @Test
+    public void shouldNotThrowException_WhenWritingPayslips() throws CLIException {
+        main.payslipFileName("payslip.csv");
+        checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled();
     }
 
     private void checkThatNoExceptionIsThrownWhenWritePayslipsIsCalled(){

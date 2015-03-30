@@ -18,7 +18,8 @@ public class SpecificationForReadingEmployeeDataTest {
     @Test
     public void hasReadTheAllowedNumberOfLinesIsTrue_BecauseThereCanOnlyBe1EmployeeLoadedIntoMemory(){
 
-        SpecificationForReadingEmployeeData specificationForReadingEmployeeData = new SpecificationForReadingEmployeeData(1);
+        int maxNumberOfEmployeesThatCanBeLoadedToMemory = 1;
+        SpecificationForReadingEmployeeData specificationForReadingEmployeeData = new SpecificationForReadingEmployeeData(maxNumberOfEmployeesThatCanBeLoadedToMemory);
         specificationForReadingEmployeeData.incrementNumberOfEmployeeLoadedToMemory();
 
         assertTrue(specificationForReadingEmployeeData.hasLoadTheAllowedNumberOfEmployeesToMemory());

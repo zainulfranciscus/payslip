@@ -6,7 +6,7 @@ import asg.cliche.ShellFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.myob.repository.specification.SpecificationForReadingEmployeeData;
 import org.myob.service.PayslipService;
-import org.myob.service.builder.PayslipServiceBuilder;
+import org.myob.service.PayslipServiceBuilder;
 
 import java.io.IOException;
 

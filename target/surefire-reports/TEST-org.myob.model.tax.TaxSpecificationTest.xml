@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.myob.model.tax.TaxSpecificationTest" time="0" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="org.myob.model.tax.TaxSpecificationTest" time="0.005" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
+    <property name="idea.launcher.port" value="7546"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -64,9 +64,9 @@
   </properties>
   <testcase name="shouldNotMatchTheCriteriaEmployeeStartPeriodIsBeforeTaxStartDate" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
   <testcase name="shouldNotMatchTaxBecauseSalaryIsAboveMaxIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
-  <testcase name="shouldMatchTheCriteriaEmployeeStartPeriodIsEqualToTaxStartDate" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
+  <testcase name="shouldMatchTheCriteriaEmployeeStartPeriodIsEqualToTaxStartDate" classname="org.myob.model.tax.TaxSpecificationTest" time="0.003"/>
   <testcase name="shouldMatchThisSalaryBecauseTaxHasNoMaximumIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
-  <testcase name="shouldBeTrueBecauseSalaryIsEqualToMaxIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
+  <testcase name="shouldBeTrueBecauseSalaryIsEqualToMaxIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0.002"/>
   <testcase name="shouldBeTrueBecauseSalaryIsBetweenMinIncomeAndMaxIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
   <testcase name="shouldBeTrueBecauseSalaryIsEqualToMinIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>
   <testcase name="shouldNotMatchTaxBecauseSalaryIsBelowMinIncome" classname="org.myob.model.tax.TaxSpecificationTest" time="0"/>

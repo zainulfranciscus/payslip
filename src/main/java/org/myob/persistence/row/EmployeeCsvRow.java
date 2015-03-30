@@ -23,7 +23,6 @@ public class EmployeeCsvRow extends Row {
 
         put(FIRST_NAME, firstName);
         put(LAST_NAME, lastName);
-        put(PAYMENT_DATE, paymentDate);
         put(ANNUAL_SALARY, salary);
         put(SUPER_RATE, superRate);
         put(START_PAYMENT_DATE, startOfPaymentDate);

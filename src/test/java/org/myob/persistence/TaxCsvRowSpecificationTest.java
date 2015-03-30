@@ -17,29 +17,20 @@ public class TaxCsvRowSpecificationTest {
 
     @Test
     public void shouldBeFalse_BecauseMonthIsInvalid() {
-
         taxCsvRowBuilder.withStartingMonth("13");
-
         assertFalse(rowSpecification.isValid(taxCsvRowBuilder.build()));
-
     }
 
     @Test
     public void shouldBeFalse_BecauseDateIsInvalid() {
-
         taxCsvRowBuilder.withStartingDay("32");
-
         assertFalse(rowSpecification.isValid(taxCsvRowBuilder.build()));
-
     }
 
     @Test
     public void shouldBeFalse_BecauseYearIsInvalid() {
-
         taxCsvRowBuilder.withStartingDay("2000 A.D");
-
         assertFalse(rowSpecification.isValid(taxCsvRowBuilder.build()));
-
     }
 
     @Test
@@ -47,9 +38,6 @@ public class TaxCsvRowSpecificationTest {
         taxCsvRowBuilder.withStartingDay("1")
                 .withStartingMonth("October")
                 .withStartingYear("2015");
-
         assertTrue(rowSpecification.isValid(taxCsvRowBuilder.build()));
-
-
     }
 }

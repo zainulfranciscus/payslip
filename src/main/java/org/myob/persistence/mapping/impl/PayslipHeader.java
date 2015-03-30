@@ -21,19 +21,9 @@ public enum PayslipHeader implements RowHeader {
     }
 
     @Override
-    public String getLabel() {
+    public String toString() {
         return label;
     }
 
-    public static String[] getHeaderLabel(){
-        PayslipHeader [] headers = PayslipHeader.values();
-
-        String [] labels = new String[headers.length];
-        for(int i = 0; i < headers.length; i++){
-            labels[i] = headers[i].getLabel();
-        }
-
-        return labels;
-    }
 
 }

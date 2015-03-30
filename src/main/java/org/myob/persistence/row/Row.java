@@ -21,7 +21,7 @@ public abstract class Row {
     protected String DATE_FORMAT_DD_MMM_YYYY = "dd MMM yyyy";
     protected String MONTH_FORMAT_MMM = "MMM";
 
-    private final Map<RowHeader, String> values = new HashMap<RowHeader, String>();
+    private final Map<RowHeader, String> values = new HashMap<>();
 
     public String get(RowHeader header) {
         return values.get(header);

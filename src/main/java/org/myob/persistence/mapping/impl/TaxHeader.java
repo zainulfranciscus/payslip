@@ -24,7 +24,7 @@ public enum TaxHeader implements RowHeader {
     }
 
     @Override
-    public String getLabel() {
+    public String toString() {
         return label;
     }
 }

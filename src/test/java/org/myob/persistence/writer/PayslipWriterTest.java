@@ -76,8 +76,10 @@ public class PayslipWriterTest {
     @Test
     public void shouldWritePayslipHeaders() throws IOException {
 
-        String expectedOutput = StringUtils.join(PayslipHeader.getHeaderLabel(),
-                COMMA_DELIMITER).concat(NEW_LINE);
+        String expectedOutput = StringUtils
+                .join(PayslipHeader.values(),
+                COMMA_DELIMITER)
+                .concat(NEW_LINE);
 
         payslipWriter.writeHeader();
 

@@ -7,7 +7,6 @@ import org.myob.model.employee.Employee;
 import org.myob.model.employee.EmployeeBuilder;
 import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
-import org.myob.repository.PayslipCalculator;
 
 import java.math.BigDecimal;
 
@@ -49,14 +48,14 @@ public class PayslipCalculatorTest {
 
         AssertThat assertThat = new AssertThat();
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
-                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedDown())
+                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedHalfUp())
                 .taxableIncomeShouldBe(salaryMinusMinTaxableIncome())
                 .taxOnEachDollarShouldBe(tax.taxDollarInCentsAsBigDecimal().divide(DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR))
                 .taxForEachTaxableDollarShouldBe(payslip.getAmountOfTaxableIncome().multiply(payslip.taxPerDollarInBigDecimal()))
                 .taxOnSalaryShouldBe(payslip.taxForEachTaxableDollar().add(tax.baseTaxAsBigDecimal()))
                 .incomeTaxShouldBe(taxOnSalaryDividedByTwelveMonths_RoundedUp())
                 .netIncomeShouldBe(grossIncomeMinusIncomeTax())
-                .superShouldBe(grossIncomeMultiplyBySuper_RoundedDown())
+                .superShouldBe(grossIncomeMultiplyBySuper_RoundedHalfUp())
                 .startPeriodShouldBe(formatter.print(startPeriod))
                 .endPeriodShouldBe(formatter.print(endPeriod));
     }
@@ -69,25 +68,43 @@ public class PayslipCalculatorTest {
         AssertThat assertThat = new AssertThat();
 
         assertThat.nameOnPayslipShouldBe(employee.getFullName())
-                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedDown())
+                .grossIncomeShouldBe(salaryDividedBy12Months_RoundedHalfUp())
                 .taxableIncomeShouldBe(ZERO_TAX)
                 .taxOnEachDollarShouldBe(ZERO_TAX)
                 .taxOnSalaryShouldBe(ZERO_TAX)
                 .incomeTaxShouldBe(ZERO_TAX.intValue())
                 .netIncomeShouldBe(grossIncomeMinusIncomeTax())
-                .superShouldBe(grossIncomeMultiplyBySuper_RoundedDown());
+                .superShouldBe(grossIncomeMultiplyBySuper_RoundedHalfUp());
     }
 
-    private int salaryDividedBy12Months_RoundedDown() {
-        return employee.salaryAsBigDecimal().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
+    @Test
+    public void shouldHave0Tax_WhenSalaryIs0(){
+
+        employee = new EmployeeBuilder().withSalary(0).build();
+
+        payslip =  new PayslipCalculator(employee,tax);
+
+        AssertThat assertThat = new AssertThat();
+
+        assertThat
+                .grossIncomeShouldBe(0)
+                .taxableIncomeShouldBe(ZERO_TAX)
+                .taxOnSalaryShouldBe(ZERO_TAX)
+                .incomeTaxShouldBe(ZERO_TAX.intValue())
+                .netIncomeShouldBe(0)
+                .superShouldBe(0);
+    }
+
+    private int salaryDividedBy12Months_RoundedHalfUp() {
+        return employee.salaryAsBigDecimal().divide(TWELVE_MONTHS, Employee.ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
     }
 
     private int grossIncomeMinusIncomeTax(){
         return employee.grossIncomeAsBigDecimal().subtract(payslip.incomeTaxAsBigDecimal()).intValue();
     }
 
-    private int grossIncomeMultiplyBySuper_RoundedDown(){
-        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
+    private int grossIncomeMultiplyBySuper_RoundedHalfUp(){
+        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(Employee.ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
     }
 
     private BigDecimal salaryMinusMinTaxableIncome(){
@@ -95,7 +112,7 @@ public class PayslipCalculatorTest {
     }
 
     private int taxOnSalaryDividedByTwelveMonths_RoundedUp(){
-        return payslip.taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
+        return payslip.taxOnSalary().divide(TWELVE_MONTHS, Employee.ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
     }
 
     class AssertThat {

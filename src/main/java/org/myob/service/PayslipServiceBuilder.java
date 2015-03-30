@@ -1,4 +1,4 @@
-package org.myob.service.builder;
+package org.myob.service;
 
 import org.apache.commons.lang3.StringUtils;
 import org.myob.persistence.reader.Reader;
@@ -14,7 +14,6 @@ import org.myob.repository.TaxRepository;
 import org.myob.repository.impl.EmployeeRepositoryImpl;
 import org.myob.repository.impl.PayslipRepositoryImpl;
 import org.myob.repository.impl.TaxRepositoryImpl;
-import org.myob.service.PayslipService;
 import org.myob.service.impl.PayslipServiceImpl;
 
 import java.io.FileWriter;

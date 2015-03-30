@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
 import static org.myob.repository.PayslipCalculator.TWELVE_MONTHS;
-import static org.myob.repository.PayslipCalculator.ZERO_ROUND_SCALE;
 
 /**
  * Created by Zainul Franciscus on 25/03/2015.
@@ -15,6 +14,7 @@ import static org.myob.repository.PayslipCalculator.ZERO_ROUND_SCALE;
 public class Employee {
 
     public static final BigDecimal DIVISOR_FOR_SUPER_RATE = new BigDecimal(100);
+    public static final int ZERO_ROUND_SCALE = 0;
 
     private final String firstName;
     private final String lastName;
@@ -49,7 +49,7 @@ public class Employee {
     }
 
     public String getFullName() {
-        return StringUtils.trimToEmpty(StringUtils.trimToEmpty(firstName) + " " + StringUtils.trimToEmpty(lastName));
+        return StringUtils.trimToEmpty(String.format("%s %s",StringUtils.trimToEmpty(firstName),StringUtils.trimToEmpty(lastName)));
     }
 
     public double getSalary() {

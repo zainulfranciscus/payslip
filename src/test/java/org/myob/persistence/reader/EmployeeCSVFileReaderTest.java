@@ -71,7 +71,7 @@ public class EmployeeCSVFileReaderTest {
 
         reader.initializeFileReader();
         reader.setFileName(loadFromClassPath("emptyFile.csv"));
-        assertNotNull(reader.loadCsvFileFromClasspath());
+        assertNotNull(reader.csvFileFromClasspath());
 
     }
 
@@ -95,8 +95,17 @@ public class EmployeeCSVFileReaderTest {
 
         reader.setFileName("non_existing_file");
         reader.initializeFileReader();
-        assertNull(reader.loadCsvFileFromClasspath());
+        assertNull(reader.csvFileFromClasspath());
     }
+
+    @Test
+     public void shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns() throws IOException {
+
+        reader.setFileName(loadFromClassPath("employee/employeeCsvWithMissingColumns.csv"));
+        reader.initializeFileReader();
+        assertNull(reader.read());
+    }
+
 
     class AssertThat {
 

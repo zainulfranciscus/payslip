@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.myob.persistence.mapping.PayslipHeaderTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.myob.persistence.mapping.PayslipHeaderTest

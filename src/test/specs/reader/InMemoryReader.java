@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Zainul Franciscus on 28/03/2015.
  */
-public class ReaderImpl implements Reader {
+public class InMemoryReader implements Reader {
 
     private List<Row> rows = new ArrayList<>();
     private int index = 0;

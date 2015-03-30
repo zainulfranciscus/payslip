@@ -15,7 +15,6 @@ import static java.math.BigDecimal.ROUND_HALF_UP;
  */
 public class PayslipCalculator {
 
-    public static final int ZERO_ROUND_SCALE = 0;
     public static final String DATE_FORMAT_DD_MMMM_YYYY = "dd MMMM YYYY";
     public static final DateTimeFormatter formatter = DateTimeFormat.forPattern(DATE_FORMAT_DD_MMMM_YYYY);
     public static final BigDecimal DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR = new BigDecimal(100);
@@ -32,7 +31,7 @@ public class PayslipCalculator {
 
 
     public String getPayPeriod() {
-        return getPaymentStartDate() + " - " + getPaymentEndDate();
+        return String.format("%s - %s",getPaymentStartDate(),getPaymentEndDate());
     }
 
     public String getPaymentStartDate() {
@@ -87,7 +86,7 @@ public class PayslipCalculator {
     }
 
     public BigDecimal incomeTaxAsBigDecimal(){
-        return taxOnSalary().divide(TWELVE_MONTHS, ZERO_ROUND_SCALE, ROUND_HALF_UP);
+        return taxOnSalary().divide(TWELVE_MONTHS, Employee.ZERO_ROUND_SCALE, ROUND_HALF_UP);
     }
 
     public int getNetIncome() {
@@ -95,7 +94,7 @@ public class PayslipCalculator {
     }
 
     public int getSuper() {
-        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
+        return employee.grossIncomeAsBigDecimal().multiply(employee.getSuperRate()).setScale(Employee.ZERO_ROUND_SCALE, ROUND_HALF_UP).intValue();
     }
 
     public String getEmployeeName() {

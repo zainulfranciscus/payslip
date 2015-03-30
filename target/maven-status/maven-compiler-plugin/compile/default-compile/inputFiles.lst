@@ -3,7 +3,6 @@ C:\workspace\payslip\src\main\java\org\myob\repository\PayslipCalculator.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\row\builder\TaxCsvRowBuilder.java
 C:\workspace\payslip\src\main\java\org\myob\repository\impl\EmployeeRepositoryImpl.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\row\EmployeeCsvRow.java
-C:\workspace\payslip\src\main\java\org\myob\service\builder\PayslipServiceBuilder.java
 C:\workspace\payslip\src\main\java\org\myob\repository\specification\SpecificationForReadingEmployeeData.java
 C:\workspace\payslip\src\main\java\org\myob\model\employee\EmployeeBuilder.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\reader\AbstractCsvReader.java
@@ -25,6 +24,7 @@ C:\workspace\payslip\src\main\java\org\myob\model\tax\Tax.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\mapping\impl\PayslipHeader.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\row\specification\impl\EmployeeRowSpecification.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\row\TaxCsvRow.java
+C:\workspace\payslip\src\main\java\org\myob\service\PayslipServiceBuilder.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\reader\impl\EmployeeCSVFileReaderImpl.java
 C:\workspace\payslip\src\main\java\org\myob\repository\TaxRepository.java
 C:\workspace\payslip\src\main\java\org\myob\persistence\reader\impl\TaxCSVReaderImpl.java

@@ -98,8 +98,16 @@ public class TaxCsvReaderTest {
     }
 
     @Test
+    public void shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns() throws IOException {
+
+        reader.setFileName(loadFromClassPath("tax/taxWithMissingColumns.csv"));
+        reader.initializeFileReader();
+        assertNull(reader.read());
+    }
+
+    @Test
     public void shouldNotReturnNull_BecauseItShouldLoadACsvFileInResourceFolder() throws IOException {
-        assertNotNull(reader.loadCsvFileFromClasspath());
+        assertNotNull(reader.csvFileFromClasspath());
     }
 
     class AssertThat {
@@ -115,6 +123,7 @@ public class TaxCsvReaderTest {
         }
 
         AssertThat shouldHaveBaseTax(double expectedValue){
+
             assertEquals(new Double(expectedValue),new Double(row.getDouble(BASE_TAX)));
             return this;
         }

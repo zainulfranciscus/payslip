@@ -13,10 +13,12 @@ import static org.junit.Assert.assertEquals;
 public class EmployeeTest {
 
     private EmployeeBuilder employeeBuilder;
+    private LocalDate jan1st2015;
 
     @Before
     public void setup(){
         employeeBuilder = new EmployeeBuilder();
+        jan1st2015 = new LocalDate(2015,1,1);
     }
 
     @Test
@@ -45,20 +47,20 @@ public class EmployeeTest {
     }
 
     @Test
-    public void shouldCreateEmployeeWithTheExpectedStartDate(){
-        int date = 1;
-        int month = 1;
-        int year = 2015;
-        assertEquals(new LocalDate(2015,1,1), employeeBuilder.withStartPaymentPeriod(year,month,date).build().getPaymentStartDate());
+    public void shouldCreateEmployeeWithTheExpectedJan1st2015AsStartDate(){
+
+        assertEquals(jan1st2015, employeeBuilder
+                .withStartPaymentPeriod(jan1st2015.getYear(), jan1st2015.getMonthOfYear(), jan1st2015.getDayOfMonth())
+                .build()
+                .getPaymentStartDate());
     }
 
     @Test
-    public void shouldCreateEmployeeWithTheExpectedEndDate(){
-        int date = 1;
-        int month = 1;
-        int year = 2014;
-
-        assertEquals(new LocalDate(2014,1,1), employeeBuilder.withEndPaymentPeriod(year,month,date).build().getPaymentEndDate());
+    public void shouldCreateEmployeeWithTheExpectedJan1st2015AsEndDate(){
+        assertEquals(jan1st2015, employeeBuilder
+                .withEndPaymentPeriod(jan1st2015.getYear(), jan1st2015.getMonthOfYear(), jan1st2015.getDayOfMonth())
+                .build()
+                .getPaymentEndDate());
     }
 
 

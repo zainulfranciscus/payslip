@@ -40,15 +40,19 @@ public class PayslipRepositoryTest {
 
         employeeBuilder = new EmployeeBuilder();
 
-        employee = employeeBuilder.withFirstName("Joe")
+        employee = employeeBuilder
+                .withFirstName("Joe")
                 .withLastName("Blogg")
                 .withSalary(12000)
                 .withEndPaymentPeriod(2015, 12, 31)
                 .withStartPaymentPeriod(2015, 1, 1)
                 .build();
 
-
-        tax = new TaxBuilder().withMaxIncome(20000).withMinIncome(10).withBaseTax(2500).build();
+        tax = new TaxBuilder()
+                .withMaxIncome(20000)
+                .withMinIncome(10)
+                .withBaseTax(2500)
+                .build();
 
         mockTaxRepository = mock(TaxRepository.class);
         when(mockTaxRepository.find(Mockito.any(TaxSpecification.class))).thenReturn(tax);
@@ -82,7 +86,7 @@ public class PayslipRepositoryTest {
 
 
     @Test
-    public void shouldCallMockTaxRepositoryClose1Time() throws Exception {
+    public void shouldCallMockTaxRepository_Close1Time() throws Exception {
         PayslipWriter mockWriter = mock(PayslipWriter.class);
 
         payslipRepository.setWriter(mockWriter);
