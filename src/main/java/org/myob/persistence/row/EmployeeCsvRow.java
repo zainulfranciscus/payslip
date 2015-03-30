@@ -48,12 +48,12 @@ public class EmployeeCsvRow extends Row {
     }
 
 
-    public boolean isPaymentsInSameYear() {
+    public boolean arePaymentDatesInTheSameYear() {
         return getPaymentStartDate().getYear() == getPaymentEndDate().getYear();
     }
 
     public boolean paymentDatesInALeapYear() {
-        return isPaymentsInSameYear() && getPaymentStartDate().year().isLeap();
+        return arePaymentDatesInTheSameYear() && getPaymentStartDate().year().isLeap();
 
     }
 
@@ -65,7 +65,7 @@ public class EmployeeCsvRow extends Row {
         return  getPaymentStartDate().dayOfMonth().getMinimumValue() == getPaymentStartDate().getDayOfMonth() &&
                 getPaymentStartDate().dayOfMonth().getMaximumValue() == getPaymentEndDate().getDayOfMonth() &&
                 getPaymentEndDate().getMonthOfYear() == getPaymentStartDate().getMonthOfYear() &&
-                isPaymentsInSameYear();
+                arePaymentDatesInTheSameYear();
     }
 
 

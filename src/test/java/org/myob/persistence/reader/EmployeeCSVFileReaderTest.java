@@ -16,7 +16,7 @@ import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.myob.persistence.mapping.impl.EmployeeHeader.*;
-//import static org.myob.persistence.reader.FileReaderType.*;
+
 
 /**
  * Created by Zainul Franciscus on 26/03/2015.

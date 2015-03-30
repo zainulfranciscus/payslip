@@ -48,10 +48,6 @@ public abstract class Row {
         return instance.getMonthOfYear();
     }
 
-    public DateTimeFormatter format(){
-        return DateTimeFormat.forPattern(DATE_FORMAT_DD_MMM_YYYY);
-    }
-
     public boolean matchesSpecification(RowSpecification specification){
         return specification.isValid(this);
     }
@@ -60,7 +56,7 @@ public abstract class Row {
         LocalDate date = null;
 
         try {
-            date = format().parseLocalDate(day + " " + StringUtils.upperCase(month) + " " + year);
+            date = DateTimeFormat.forPattern(DATE_FORMAT_DD_MMM_YYYY).parseLocalDate(day + " " + StringUtils.upperCase(month) + " " + year);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

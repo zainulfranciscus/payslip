@@ -166,7 +166,7 @@ public class EmployeeCsvRowTest {
 
         employeeCsvRowBuilder.withStartOfPaymentYear("2016");
         employeeCsvRowBuilder.withEndOfPaymentYear("2016");
-        assertTrue(employeeCsvRowBuilder.build().isPaymentsInSameYear());
+        assertTrue(employeeCsvRowBuilder.build().arePaymentDatesInTheSameYear());
     }
 
     @Test
@@ -174,7 +174,7 @@ public class EmployeeCsvRowTest {
 
         employeeCsvRowBuilder.withStartOfPaymentYear("2015");
         employeeCsvRowBuilder.withEndOfPaymentYear("2013");
-        assertFalse(employeeCsvRowBuilder.build().isPaymentsInSameYear());
+        assertFalse(employeeCsvRowBuilder.build().arePaymentDatesInTheSameYear());
     }
 
     @Test
