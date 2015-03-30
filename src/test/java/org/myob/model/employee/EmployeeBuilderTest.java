@@ -13,12 +13,10 @@ import static org.junit.Assert.assertEquals;
 public class EmployeeBuilderTest {
 
     private EmployeeBuilder employeeBuilder;
-    private LocalDate localDate;
 
     @Before
     public void setup(){
         employeeBuilder = new EmployeeBuilder();
-        localDate = new LocalDate();
     }
 
     @Test
@@ -71,8 +69,14 @@ public class EmployeeBuilderTest {
     }
 
     @Test
-    public void shouldReturnZeroWhenSuperIsBlank(){
+    public void shouldReturnZeroWhenSuperIsEmptyString(){
         String superRate = "";
+        assertEquals(new Double(0),new Double(employeeBuilder.withSuperRate(superRate).build().getSuper()));
+    }
+
+    @Test
+    public void shouldReturnZeroWhenSuperIsWhiteSpace(){
+        String superRate = " ";
         assertEquals(new Double(0),new Double(employeeBuilder.withSuperRate(superRate).build().getSuper()));
     }
 

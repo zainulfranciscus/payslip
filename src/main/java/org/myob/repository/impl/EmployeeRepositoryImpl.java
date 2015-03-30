@@ -30,7 +30,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         List<Employee> employees = new ArrayList<Employee>();
 
-        while((row = reader.read()) != null && !specification.hasLoadTheAllowedNumberOfEmployeesToMemory()) {
+        while(!specification.hasLoadTheAllowedNumberOfEmployeesToMemory() &&(row = reader.read()) != null) {
 
             Employee employee = new EmployeeBuilder()
                     .withStartPaymentPeriod(

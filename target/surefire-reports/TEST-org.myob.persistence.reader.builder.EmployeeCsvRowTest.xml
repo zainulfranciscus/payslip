@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.myob.repository.specification.EmployeeSpecificationTest" time="0" tests="2" errors="0" skipped="0" failures="0">
+<testsuite name="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.013" tests="25" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7542"/>
+    <property name="idea.launcher.port" value="7536"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -62,6 +62,29 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="hasReadTheAllowedNumberOfLinesIsTrue_BecauseThereCanOnlyBe1EmployeeLoadedIntoMemory" classname="org.myob.repository.specification.EmployeeSpecificationTest" time="0"/>
-  <testcase name="numberOfEmployeesLoadedToMemoryShouldBe0" classname="org.myob.repository.specification.EmployeeSpecificationTest" time="0"/>
+  <testcase name="shouldReturnNullPaymentStartDate_BecausePaymentDateIsInvalid" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldReturnEndOfPaymentDate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnEndOfPaymentYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnNullPaymentStartDate_BecausePaymentYearIsInvalid" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldBeExpectedPaymentDate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeFalse_BecausePaymentDatesAreMoreThan1YearApart" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnStartOfPaymentMonth" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeExpectedSalary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeFalse_BecausePaymentDatesAreInDifferentYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeTrue_BecausePaymentMonthsIsInFebruary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeTrue_BecausePaymentDatesAreInTheSameYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldReturnNullPaymentStartDate_BecausePaymentMonthIsInvalid" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.002"/>
+  <testcase name="shouldBeTrue_BecausePaymentDates1MonthApart" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeTrue_BecausePaymentAreWithin1MonthInALeapYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.002"/>
+  <testcase name="shouldBeFalse_BecausePaymentStartMonthsIsNotFebruary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldBeTrue_Because2012IsNotALeapYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.002"/>
+  <testcase name="shouldBeExpectedSuperRate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeFalse_BecausePaymentDatesAreLessThan1Month" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldBeExpectedFirstName" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnStartOfPaymentDate" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnStartOfPaymentYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldReturnEndOfPaymentMonth" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeExpectedLastName" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
+  <testcase name="shouldBeFalse_BecausePaymentEndMonthsIsNotFebruary" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0"/>
+  <testcase name="shouldBeFalse_Because2015IsNotALeapYear" classname="org.myob.persistence.reader.builder.EmployeeCsvRowTest" time="0.001"/>
 </testsuite>

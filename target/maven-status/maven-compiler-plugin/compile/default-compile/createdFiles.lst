@@ -3,6 +3,7 @@ org\myob\persistence\reader\Reader.class
 org\myob\repository\impl\TaxRepositoryImpl.class
 org\myob\model\employee\Employee.class
 org\myob\persistence\row\specification\impl\EmployeeRowSpecification.class
+org\myob\repository\specification\SpecificationForReadingEmployeeData.class
 org\myob\model\payslip\Payslip.class
 org\myob\repository\impl\EmployeeRepositoryImpl.class
 org\myob\service\builder\PayslipServiceBuilder.class
@@ -32,6 +33,5 @@ org\myob\persistence\mapping\RowHeader.class
 org\myob\persistence\mapping\impl\EmployeeHeader.class
 org\myob\persistence\row\builder\TaxCsvRowBuilder.class
 org\myob\repository\specification\TaxSpecification.class
-org\myob\repository\specification\EmployeeSpecification.class
 org\myob\service\impl\PayslipServiceImpl.class
 org\myob\persistence\row\EmployeeCsvRow.class

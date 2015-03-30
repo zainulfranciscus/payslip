@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.myob.model.employee.EmployeeBuilderTest" time="0.055" tests="10" errors="0" skipped="0" failures="0">
+<testsuite name="org.myob.model.employee.EmployeeBuilderTest" time="0.042" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7542"/>
+    <property name="idea.launcher.port" value="7536"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -62,14 +62,15 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="shouldCreateEmployeeWithTheExpectedLastName" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.046"/>
-  <testcase name="shouldCreateEmployeeWithTheExpectedEndDate" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
-  <testcase name="shouldCreateEmployeeWithTheExpectedStartDate" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
+  <testcase name="shouldCreateEmployeeWithTheExpectedLastName" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
+  <testcase name="shouldCreateEmployeeWithTheExpectedEndDate" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.034"/>
+  <testcase name="shouldCreateEmployeeWithTheExpectedStartDate" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
+  <testcase name="shouldReturnZeroWhenSuperIsWhiteSpace" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.004"/>
   <testcase name="shouldCreateEmployeeWithTheExpectedSuper" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
-  <testcase name="superRateShouldBe20AndHalfPercent_IgnoringWhiteSpaces" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.007"/>
-  <testcase name="shouldReturnZeroWhenSuperIsBlank" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
+  <testcase name="superRateShouldBe20AndHalfPercent_IgnoringWhiteSpaces" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
   <testcase name="shouldCreateEmployeeWithTheExpectedSalary" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
-  <testcase name="shouldReturnZeroWhenSuperIsNotANumber" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
-  <testcase name="shouldCreateEmployeeWithTheExpectedFirstName" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
-  <testcase name="shouldReturnTheNumericalValueOfTheExpectedSuper" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
+  <testcase name="shouldReturnZeroWhenSuperIsNotANumber" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
+  <testcase name="shouldCreateEmployeeWithTheExpectedFirstName" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
+  <testcase name="shouldReturnZeroWhenSuperIsEmptyString" classname="org.myob.model.employee.EmployeeBuilderTest" time="0.001"/>
+  <testcase name="shouldReturnTheNumericalValueOfTheExpectedSuper" classname="org.myob.model.employee.EmployeeBuilderTest" time="0"/>
 </testsuite>

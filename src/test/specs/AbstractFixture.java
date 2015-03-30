@@ -2,8 +2,6 @@ import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
 import org.myob.persistence.row.builder.TaxCsvRowBuilder;
 import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
 import org.myob.persistence.row.specification.impl.TaxRowSpecification;
-import org.myob.repository.TaxRepository;
-import org.myob.repository.impl.TaxRepositoryImpl;
 import reader.ReaderImpl;
 
 /**

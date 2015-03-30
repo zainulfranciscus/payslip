@@ -1,9 +1,7 @@
 package org.myob.persistence.reader.builder;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.myob.persistence.mapping.impl.TaxHeader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.builder.TaxCsvRowBuilder;
 

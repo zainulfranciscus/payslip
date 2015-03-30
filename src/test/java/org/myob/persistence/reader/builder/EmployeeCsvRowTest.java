@@ -2,7 +2,6 @@ package org.myob.persistence.reader.builder;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.myob.persistence.mapping.impl.EmployeeHeader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
 

@@ -12,11 +12,10 @@ org\myob\repository\PayslipCalculatorTest.class
 org\myob\repository\PayslipRepositoryTest.class
 org\myob\MainTest.class
 AbstractFixture.class
+org\myob\model\tax\TaxSpecificationTest.class
 org\myob\persistence\mapping\PayslipHeaderTest.class
 org\myob\model\tax\TaxTest.class
 org\myob\persistence\reader\builder\TaxTaxCsvRowBuilderTest$AssertThat.class
-org\myob\repository\specification\EmployeeSpecificationTest.class
-org\myob\model\tax\TaxSpecificationBuilderTest.class
 org\myob\model\employee\EmployeeBuilderTest.class
 org\myob\persistence\EmployeeRowSpecificationTest.class
 org\myob\persistence\reader\EmployeeCSVFileReaderTest.class
@@ -24,9 +23,10 @@ org\myob\repository\PayslipRepositoryTest$AssertThat.class
 org\myob\repository\PayslipCalculatorTest$AssertThat.class
 reader\ReaderImpl.class
 org\myob\service\PayslipServiceBuilderTest.class
+org\myob\repository\specification\SpecificationForReadingEmployeeDataTest.class
 TestForPayslipServiceFixture.class
 org\myob\persistence\reader\TaxCsvReaderTest$AssertThat.class
+org\myob\persistence\reader\builder\EmployeeCsvRowTest.class
 org\myob\repository\TaxRepositoryTest.class
 org\myob\model\tax\TaxBuilderTest.class
 org\myob\service\PayslipServiceTest.class
-org\myob\persistence\reader\builder\EmployeeCsvRowBuilderTest.class

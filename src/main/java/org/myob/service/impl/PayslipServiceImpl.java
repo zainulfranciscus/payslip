@@ -45,8 +45,7 @@ public class PayslipServiceImpl implements PayslipService {
 
     @Override
     public List<Payslip> createPayslips(List<Employee> employees) throws Exception {
-        List<Payslip> payslips = payslipRepository.createPayslips(employees);
-        return payslips;
+        return payslipRepository.createPayslips(employees);
     }
 
     @Override

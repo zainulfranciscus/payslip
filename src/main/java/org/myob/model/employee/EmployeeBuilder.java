@@ -40,8 +40,7 @@ public class EmployeeBuilder {
 
     public EmployeeBuilder withSuperRate(String superRate) {
         superRate = StringUtils.replace(superRate, "%", "");
-        double superAsDouble = NumberUtils.toDouble(superRate);
-        this.aSuper = superAsDouble;
+        this.aSuper = NumberUtils.toDouble(superRate);
         return this;
     }
 

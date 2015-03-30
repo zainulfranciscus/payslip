@@ -1,6 +1,5 @@
 package org.myob.repository;
 
-import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -32,17 +31,12 @@ public class PayslipRepositoryTest {
     private TaxRepository mockTaxRepository;
     private EmployeeBuilder employeeBuilder = new EmployeeBuilder();
     private Employee employee;
-    private LocalDate startDate;
-    private LocalDate endDate;
     private Payslip payslip;
     private Tax tax;
     private PayslipWriter mockWriter;
 
     @Before
     public void setup() throws Exception {
-
-        startDate = new LocalDate(2015, 01, 01);
-        endDate = new LocalDate(2015, 10, 01);
 
         employeeBuilder = new EmployeeBuilder();
 

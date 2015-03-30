@@ -1,6 +1,5 @@
 package org.myob.repository;
 
-import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.myob.model.employee.Employee;

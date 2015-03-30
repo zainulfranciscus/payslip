@@ -11,9 +11,6 @@ public class TaxBuilder {
     private double maxIncome;
     private double taxPerDollar;
     private double baseTax;
-    private int startingDay;
-    private int startingMonth;
-    private int startingYear;
     private double taxPerDollarOver;
     private LocalDate startPeriod;
 
@@ -49,21 +46,6 @@ public class TaxBuilder {
     public TaxBuilder withStartPeriod(int year, int month, int date){
         this.startPeriod = new LocalDate(year,month,date);
         return  this;
-    }
-
-    public TaxBuilder withStartingDay(int startingDay) {
-        this.startingDay = startingDay;
-        return this;
-    }
-
-    public TaxBuilder withStartingMonth(int startingMonth) {
-        this.startingMonth = startingMonth;
-        return this;
-    }
-
-    public TaxBuilder withStartingYear(int startingYear) {
-        this.startingYear = startingYear;
-        return this;
     }
 
     public TaxBuilder withTaxPerDollarOver(double taxPerDollarOver) {

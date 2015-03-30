@@ -3,7 +3,6 @@ package org.myob.persistence.reader;
 import org.myob.persistence.row.Row;
 import org.myob.persistence.row.specification.RowSpecification;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**

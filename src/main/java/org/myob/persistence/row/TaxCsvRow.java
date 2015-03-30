@@ -1,7 +1,6 @@
 package org.myob.persistence.row;
 
 import org.joda.time.LocalDate;
-import org.myob.persistence.mapping.impl.TaxHeader;
 
 import static org.myob.persistence.mapping.impl.TaxHeader.*;
 

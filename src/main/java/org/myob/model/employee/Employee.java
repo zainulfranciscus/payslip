@@ -14,14 +14,14 @@ import static org.myob.repository.PayslipCalculator.ZERO_ROUND_SCALE;
  */
 public class Employee {
 
-    public static BigDecimal DIVISOR_FOR_SUPER_RATE = new BigDecimal(100);
+    public static final BigDecimal DIVISOR_FOR_SUPER_RATE = new BigDecimal(100);
 
     private final String firstName;
     private final String lastName;
     private final double salary;
     private final double aSuper;
-    private LocalDate startPaymentDate;
-    private LocalDate endPaymentDate;
+    private final LocalDate startPaymentDate;
+    private final LocalDate endPaymentDate;
 
     public Employee(String firstName,
                     String lastName,
