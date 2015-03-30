@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface PayslipRepository {
 
-    Payslip create(Employee employee) throws Exception;
+    Payslip createPayslipForThisEmployee(Employee employee) throws Exception;
 
     void save(Payslip payslip) throws IOException;
 

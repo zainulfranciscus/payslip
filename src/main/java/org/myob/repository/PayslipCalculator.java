@@ -17,7 +17,8 @@ import static java.math.BigDecimal.ROUND_HALF_UP;
 public class PayslipCalculator {
 
     public static final int ZERO_ROUND_SCALE = 0;
-    public static final DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMMM YYYY");
+    public static final String DATE_FORMAT_DD_MMMM_YYYY = "dd MMMM YYYY";
+    public static final DateTimeFormatter formatter = DateTimeFormat.forPattern(DATE_FORMAT_DD_MMMM_YYYY);
     public static final BigDecimal DIVISOR_TO_CONVERT_CENTS_TO_DOLLAR = new BigDecimal(100);
     public static final BigDecimal TWELVE_MONTHS = new BigDecimal(12);
     public static final BigDecimal ZERO_TAX = new BigDecimal(0) ;
@@ -52,7 +53,7 @@ public class PayslipCalculator {
 
     public BigDecimal minIncomeAsBigDecimal(){
         if(tax == null){
-            return new BigDecimal(0);
+            return ZERO_TAX;
         }
         return new BigDecimal(tax.getTaxPerDollarOver());
     }

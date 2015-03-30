@@ -20,14 +20,10 @@ public class EmployeeRowSpecificationTest {
     public void setup() {
         employeeCsvRowBuilder = new EmployeeCsvRowBuilder();
         employeeCsvRowSpecification = new EmployeeRowSpecification();
-
-
     }
 
     @Test
     public void shouldBeFalse_BecausePaymentStartPeriodHasInvalidDates() {
-
-
         employeeCsvRowBuilder.withStartOfPaymentDate("first Of july");
         employeeCsvRowBuilder.withStartOfPaymentMonth("third month of this year");
         employeeCsvRowBuilder.withStartOfPaymentYear("2000 A.D");
@@ -114,7 +110,5 @@ public class EmployeeRowSpecificationTest {
         employeeCsvRowBuilder.withEndOfPaymentYear("2012");
         assertTrue(employeeCsvRowSpecification.isValid(employeeCsvRowBuilder.build()));
     }
-
-
 
 }

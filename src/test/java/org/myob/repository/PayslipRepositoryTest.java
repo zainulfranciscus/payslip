@@ -101,7 +101,7 @@ public class PayslipRepositoryTest {
     @Test
     public void payslipShouldHaveTheRight_Name_PayPeriod_GrossIncome_IncomeTax_NetIncome_AndSuper() throws Exception {
 
-        payslip = payslipRepository.create(employee);
+        payslip = payslipRepository.createPayslipForThisEmployee(employee);
 
         AssertThat assertThat = new AssertThat();
         assertThat.hasGrossIncome(payslip.getGrossIncome())

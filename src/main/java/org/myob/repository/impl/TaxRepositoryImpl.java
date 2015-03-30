@@ -4,7 +4,6 @@ import org.myob.model.tax.Tax;
 import org.myob.model.tax.TaxBuilder;
 import org.myob.persistence.reader.Reader;
 import org.myob.persistence.row.Row;
-import org.myob.persistence.row.specification.impl.TaxRowSpecification;
 import org.myob.repository.TaxRepository;
 import org.myob.repository.specification.TaxSpecification;
 
@@ -22,18 +21,19 @@ public class TaxRepositoryImpl implements TaxRepository {
 
         Row row;
         Tax matchingTax = null;
-        TaxRowSpecification rowSpecification = new TaxRowSpecification();
+
         while((row = reader.read()) != null) {
 
-            Tax tax = new TaxBuilder().withBaseTax(row.getInt(BASE_TAX))
-                    .withMaxIncome(row.getInt(MAX_INCOME))
-                    .withMinIncome(row.getInt(MIN_INCOME))
+            Tax tax = new TaxBuilder()
+                    .withBaseTax(row.getDouble(BASE_TAX))
+                    .withMaxIncome(row.getDouble(MAX_INCOME))
+                    .withMinIncome(row.getDouble(MIN_INCOME))
                     .withTaxPerDollar(row.getDouble(TAX_PER_DOLLAR))
                     .withStartPeriod(
                             row.getInt(STARTING_YEAR),
                             row.getMonthAsInt(STARTING_MONTH),
                             row.getInt(STARTING_DAY))
-                    .withTaxPerDollarOver(row.getInt(TAX_PER_DOLLAR_OVER))
+                    .withTaxPerDollarOver(row.getDouble(TAX_PER_DOLLAR_OVER))
                     .build();
             if (specification.match(tax)) {
                 matchingTax = tax;

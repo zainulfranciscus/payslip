@@ -28,10 +28,10 @@ public class EmployeeRepositoryTest {
     private List<Employee> employees;
     private SpecificationForReadingEmployeeData specificationForReadingEmployeeData;
 
-    private int expectedSalary;
+    private double expectedSalary;
     private String expectedFirstName;
     private String expectedLastName;
-    private int expectedSuper;
+    private double expectedSuper;
 
     private LocalDate firstJanuary2014;
     private LocalDate dec31st2015;
@@ -44,14 +44,14 @@ public class EmployeeRepositoryTest {
         firstJanuary2014 = new LocalDate(2014,1,1);
         dec31st2015 = new LocalDate(2015, 12,31);
 
-        expectedSalary = 12000;
+        expectedSalary = 12000.79;
         expectedFirstName = "Joe";
         expectedLastName = "Blogg";
-        expectedSuper = 10;
+        expectedSuper = 10.54;
 
         mockRow = mock(Row.class);
 
-        when(mockRow.getInt(ANNUAL_SALARY)).thenReturn(expectedSalary);
+        when(mockRow.getDouble(ANNUAL_SALARY)).thenReturn(expectedSalary);
         when(mockRow.getInt(END_PAYMENT_DATE)).thenReturn(dec31st2015.getDayOfMonth());
         when(mockRow.getMonthAsInt(END_PAYMENT_MONTH)).thenReturn(dec31st2015.getMonthOfYear());
         when(mockRow.getInt(END_PAYMENT_YEAR)).thenReturn(dec31st2015.getYear());

@@ -23,9 +23,9 @@ public class TaxRepositoryTest {
     private TaxRepository taxRepository;
     private Reader mockReader;
     private TaxCsvRow mockRow;
-    private int baseTax;
-    private int maxIncomeForThisTax;
-    private int minIncomeForThisTax;
+    private double baseTax;
+    private double maxIncomeForThisTax;
+    private double minIncomeForThisTax;
     private double taxPerDollarForThisTax;
     private TaxSpecification taxFor15000AsSalary;
     private EmployeeBuilder employeeBuilder;
@@ -33,10 +33,10 @@ public class TaxRepositoryTest {
     @Before
     public void setup() throws Exception {
 
-        baseTax = 1000;
-        maxIncomeForThisTax = 20000;
-        minIncomeForThisTax = 100;
-        taxPerDollarForThisTax = 50;
+        baseTax = 1000.51;
+        maxIncomeForThisTax = 20000.76;
+        minIncomeForThisTax = 100.56;
+        taxPerDollarForThisTax = 5.2;
 
         employeeBuilder = new EmployeeBuilder()
                 .withEndPaymentPeriod(2015, 12, 31)
@@ -98,9 +98,9 @@ public class TaxRepositoryTest {
     private void setMockRowBehavior(){
 
         mockRow = mock(TaxCsvRow.class);
-        when(mockRow.getInt(BASE_TAX)).thenReturn(baseTax);
-        when(mockRow.getInt(MAX_INCOME)).thenReturn(maxIncomeForThisTax);
-        when(mockRow.getInt(MIN_INCOME)).thenReturn(minIncomeForThisTax);
+        when(mockRow.getDouble(BASE_TAX)).thenReturn(baseTax);
+        when(mockRow.getDouble(MAX_INCOME)).thenReturn(maxIncomeForThisTax);
+        when(mockRow.getDouble(MIN_INCOME)).thenReturn(minIncomeForThisTax);
         when(mockRow.getDouble(TAX_PER_DOLLAR)).thenReturn(taxPerDollarForThisTax);
         when(mockRow.getInt(STARTING_DAY)).thenReturn(1);
         when(mockRow.getMonthAsInt(STARTING_MONTH)).thenReturn(1);

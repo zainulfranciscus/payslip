@@ -53,7 +53,7 @@ public class TestTheResultingPayslipCsvFixture extends AbstractFixture {
 
         while (recordIterator.hasNext()) {
             CSVRecord record = recordIterator.next();
-            Payslip entity = new PayslipBuilder()
+            Payslip payslip = new PayslipBuilder()
                     .withGrossIncome(NumberUtils.toInt(record.get(PayslipHeader.GROSS_INCOME.getLabel())))
                     .withIncomeTax(NumberUtils.toInt(record.get(PayslipHeader.INCOME_TAX.getLabel())))
                     .withName(record.get(PayslipHeader.NAME.getLabel()))
@@ -61,7 +61,7 @@ public class TestTheResultingPayslipCsvFixture extends AbstractFixture {
                     .withPayPeriod(record.get(PayslipHeader.PAY_PERIOD.getLabel()))
                     .withSuper(NumberUtils.toInt(record.get(PayslipHeader.SUPER.getLabel())))
                     .build();
-            payslipRecords.add(entity);
+            payslipRecords.add(payslip);
 
         }
 

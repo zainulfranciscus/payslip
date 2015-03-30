@@ -43,7 +43,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                             row.getInt(END_PAYMENT_DATE))
                     .withFirstName(row.get(FIRST_NAME))
                     .withLastName(row.get(LAST_NAME))
-                    .withSalary(row.getInt(ANNUAL_SALARY))
+                    .withSalary(row.getDouble(ANNUAL_SALARY))
                     .withSuperRate(row.get(SUPER_RATE))
                     .build();
 

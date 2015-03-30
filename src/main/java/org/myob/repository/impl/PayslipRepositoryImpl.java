@@ -27,7 +27,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
 
         List<Payslip> payslips = new ArrayList<>();
         for (Employee employee : employees) {
-            payslips.add(create(employee));
+            payslips.add(createPayslipForThisEmployee(employee));
         }
 
         return payslips;
@@ -35,7 +35,7 @@ public class PayslipRepositoryImpl implements PayslipRepository {
 
 
     @Override
-    public Payslip create(Employee employee) throws Exception {
+    public Payslip createPayslipForThisEmployee(Employee employee) throws Exception {
 
         Tax tax = taxRepository.find(new TaxSpecification(employee));
 
