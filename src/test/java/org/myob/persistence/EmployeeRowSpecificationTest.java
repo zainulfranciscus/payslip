@@ -87,6 +87,19 @@ public class EmployeeRowSpecificationTest {
         assertFalse(employeeCsvRowSpecification.isValid(employeeCsvRowBuilder.build()));
     }
 
+
+    @Test
+    public void shouldBeFalse_BecauseFeb2012LastDayIs29() {
+
+        employeeCsvRowBuilder.withStartOfPaymentDate("01");
+        employeeCsvRowBuilder.withStartOfPaymentMonth("February");
+        employeeCsvRowBuilder.withStartOfPaymentYear("2012");
+        employeeCsvRowBuilder.withEndOfPaymentDate("28");
+        employeeCsvRowBuilder.withEndOfPaymentMonth("February");
+        employeeCsvRowBuilder.withEndOfPaymentYear("2012");
+        assertFalse(employeeCsvRowSpecification.isValid(employeeCsvRowBuilder.build()));
+    }
+
     @Test
     public void shouldBeTrue_BecausePaymentAreWithin1MonthInALeapYear() {
 
@@ -96,6 +109,18 @@ public class EmployeeRowSpecificationTest {
         employeeCsvRowBuilder.withEndOfPaymentDate("29");
         employeeCsvRowBuilder.withEndOfPaymentMonth("February");
         employeeCsvRowBuilder.withEndOfPaymentYear("2012");
+        assertTrue(employeeCsvRowSpecification.isValid(employeeCsvRowBuilder.build()));
+    }
+
+    @Test
+    public void shouldBeTrue_BecausePaymentAreWithinTheMonthOfFebruary_InANonLeapYear() {
+
+        employeeCsvRowBuilder.withStartOfPaymentDate("01");
+        employeeCsvRowBuilder.withStartOfPaymentMonth("February");
+        employeeCsvRowBuilder.withStartOfPaymentYear("2013");
+        employeeCsvRowBuilder.withEndOfPaymentDate("28");
+        employeeCsvRowBuilder.withEndOfPaymentMonth("February");
+        employeeCsvRowBuilder.withEndOfPaymentYear("2013");
         assertTrue(employeeCsvRowSpecification.isValid(employeeCsvRowBuilder.build()));
     }
 

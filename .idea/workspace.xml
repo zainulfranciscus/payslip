@@ -2,131 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c086c9-8bab-47cb-8c52-b02e977d5ed9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/employee/employeeCsvWithMissingColumns.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/tax/taxWithMissingColumns.csv" />
       <change type="DELETED" beforePath="C:\workspace\payslip\payslip.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\payslips.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\mapping\PayslipHeaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\service\builder\PayslipServiceBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.model.employee.EmployeeBuilderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.model.tax.TaxBuilderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.mapping.PayslipHeaderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.model.employee.EmployeeBuilderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.model.tax.TaxBuilderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.mapping.PayslipHeaderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\mapping\PayslipHeaderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\reader\ReaderImpl.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\service\builder\PayslipServiceBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/service/PayslipServiceBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\specs\reader\ReaderImpl.java" afterPath="$PROJECT_DIR$/src/test/specs/reader/InMemoryReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/AbstractCsvReader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/AbstractCsvReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AbstractFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/AbstractFixture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/model/employee/Employee.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/model/employee/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/impl/EmployeeCSVFileReaderImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/impl/EmployeeCSVFileReaderImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest$AssertThat.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest$AssertThat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/EmployeeCSVFileReaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/row/EmployeeCsvRow.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/row/EmployeeCsvRow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/builder/EmployeeCsvRowTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/builder/EmployeeCsvRowTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/EmployeeHeader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/EmployeeHeader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/model/employee/EmployeeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/model/employee/EmployeeTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/Main.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/MainTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/MainTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/model/payslip/Payslip.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/model/payslip/Payslip.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/repository/PayslipCalculator.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/repository/PayslipCalculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipCalculatorTest$AssertThat.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipCalculatorTest$AssertThat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipCalculatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipCalculatorTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/PayslipHeader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/PayslipHeader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipRepositoryTest$AssertThat.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipRepositoryTest$AssertThat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipRepositoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/PayslipRepositoryTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceBuilderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceBuilderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest$1.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/service/PayslipServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/writer/impl/PayslipWriterImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/writer/impl/PayslipWriterImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/writer/PayslipWriterTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/writer/PayslipWriterTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/RowHeader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/RowHeader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/repository/specification/SpecificationForReadingEmployeeDataTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/repository/specification/SpecificationForReadingEmployeeDataTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/impl/TaxCSVReaderImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/reader/impl/TaxCSVReaderImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/TaxCsvReaderTest$AssertThat.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/TaxCsvReaderTest$AssertThat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/TaxCsvReaderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/reader/TaxCsvReaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/TaxCsvRowSpecificationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/TaxCsvRowSpecificationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/TaxHeader.class" afterPath="$PROJECT_DIR$/target/classes/org/myob/persistence/mapping/impl/TaxHeader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\payslip-1.0-jar-with-dependencies.jar" afterPath="C:\workspace\payslip\target\payslip-1.0-jar-with-dependencies.jar" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\payslip-1.0.jar" afterPath="C:\workspace\payslip\target\payslip-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/AbstractCsvReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/AbstractFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/AbstractFixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/model/employee/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/model/employee/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/EmployeeCSVFileReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/EmployeeCSVFileReaderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/EmployeeCSVFileReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/EmployeeCsvRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/builder/EmployeeCsvRowTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/builder/EmployeeCsvRowTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/EmployeeHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/EmployeeHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/model/employee/EmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/model/employee/EmployeeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/model/payslip/Payslip.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/model/payslip/Payslip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/repository/PayslipCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/repository/PayslipCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/repository/PayslipCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/repository/PayslipCalculatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/PayslipHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/PayslipHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/repository/PayslipRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/repository/PayslipRepositoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/service/PayslipServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/writer/impl/PayslipWriterImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/writer/impl/PayslipWriterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/writer/PayslipWriterTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/writer/PayslipWriterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/Row.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/Row.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/RowHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/RowHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/repository/specification/SpecificationForReadingEmployeeDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/repository/specification/SpecificationForReadingEmployeeDataTest.java" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\failsafe-reports\TEST-TestForPayslipServiceFixture.xml" afterPath="C:\workspace\payslip\target\failsafe-reports\TEST-TestForPayslipServiceFixture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestForPayslipServiceFixture.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestForPayslipServiceFixture.xml" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\failsafe-reports\TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="C:\workspace\payslip\target\failsafe-reports\TEST-TestTheResultingPayslipCsvFixture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestTheResultingPayslipCsvFixture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.MainTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.MainTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.employee.EmployeeTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.model.tax.TaxTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.EmployeeRowSpecificationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.EmployeeRowSpecificationTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.TaxCsvRowSpecificationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.TaxCsvRowSpecificationTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.EmployeeCSVFileReaderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.EmployeeCSVFileReaderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.TaxCsvReaderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.TaxCsvReaderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.EmployeeCsvRowTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.persistence.reader.builder.EmployeeCsvRowTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.EmployeeRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.EmployeeRepositoryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipCalculatorTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipCalculatorTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.PayslipRepositoryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.TaxRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.repository.TaxRepositoryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceBuilderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.myob.service.PayslipServiceTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/reader/impl/TaxCSVReaderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/reader/TaxCsvReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/TaxCsvRowSpecificationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/TaxCsvRowSpecificationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/TaxHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/myob/persistence/mapping/impl/TaxHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestForPayslipService.html" afterPath="$PROJECT_DIR$/src/test/specs/TestForPayslipService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" afterPath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\failsafe-reports\TestForPayslipServiceFixture.txt" afterPath="C:\workspace\payslip\target\failsafe-reports\TestForPayslipServiceFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestForPayslipServiceFixture.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestForPayslipServiceFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsv.html" afterPath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" afterPath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\failsafe-reports\TestTheResultingPayslipCsvFixture.txt" afterPath="C:\workspace\payslip\target\failsafe-reports\TestTheResultingPayslipCsvFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestTheResultingPayslipCsvFixture.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestTheResultingPayslipCsvFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.MainTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.MainTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.employee.EmployeeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.employee.EmployeeTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.model.tax.TaxTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.EmployeeRowSpecificationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.EmployeeRowSpecificationTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.TaxCsvRowSpecificationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.TaxCsvRowSpecificationTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.EmployeeCSVFileReaderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.EmployeeCSVFileReaderTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.builder.EmployeeCsvRowTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.reader.builder.EmployeeCsvRowTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.writer.PayslipWriterTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.persistence.writer.PayslipWriterTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.EmployeeRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.EmployeeRepositoryTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipCalculatorTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipCalculatorTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.PayslipRepositoryTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.TaxRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.repository.TaxRepositoryTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceBuilderTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/org.myob.service.PayslipServiceTest.txt" />
-      <change type="MODIFICATION" beforePath="C:\workspace\payslip\target\maven-archiver\pom.properties" afterPath="C:\workspace\payslip\target\maven-archiver\pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/EmployeeRowSpecificationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/myob/persistence/EmployeeRowSpecificationTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="payslip.iws" />
@@ -156,7 +34,7 @@
       <FILTER>org.myob.persistence.reader.builder.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/payslip$All_in_payslip__2_.coverage" NAME="All in payslip (2) Coverage Results" MODIFIED="1427719750146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/payslip$All_in_payslip.coverage" NAME="All in payslip Coverage Results" MODIFIED="1427720094731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/payslip$All_in_payslip.coverage" NAME="All in payslip Coverage Results" MODIFIED="1427723303381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/payslip$All_in_payslip__1_.coverage" NAME="All in payslip (1) Coverage Results" MODIFIED="1427667447758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -208,11 +86,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestForPayslipService.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestForPayslipService.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/specs/TestForPayslipService.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26741573" vertical-offset="1377" max-vertical-offset="20604">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="1377" max-vertical-offset="20604">
               <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.8965516" vertical-offset="3608" max-vertical-offset="4063">
+              <caret line="224" column="37" selection-start-line="224" selection-start-column="37" selection-end-line="224" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -228,6 +116,18 @@
                 <element signature="e#461#462#0" expanded="true" />
                 <element signature="e#507#508#0" expanded="true" />
                 <element signature="e#535#536#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeRowSpecificationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17802198" vertical-offset="1466" max-vertical-offset="2465">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -264,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/myob/model/tax/TaxSpecificationBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/model/tax/TaxSpecificationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/PayslipRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/service/builder/PayslipServiceBuilder.java" />
@@ -315,6 +214,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/myob/persistence/row/Row.java" />
         <option value="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsv.html" />
         <option value="$PROJECT_DIR$/src/test/specs/TestForPayslipService.html" />
+        <option value="$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java" />
       </list>
     </option>
   </component>
@@ -437,308 +337,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="row" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="row" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payslip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -806,7 +404,7 @@
       <recent name="org.myob.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestForPayslipServiceFixture">
+  <component name="RunManager" selected="JUnit.All in payslip (1)">
     <configuration default="false" name="All in payslip (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="payslip" />
@@ -828,66 +426,6 @@
       <dir value="$PROJECT_DIR$/src/test/specs" />
       <patterns />
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in payslip (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="directory" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <dir value="$PROJECT_DIR$/src/test/java/org/myob" />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TaxCsvReaderTest.shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.myob.persistence.reader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="payslip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.myob.persistence.reader" />
-      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.reader.TaxCsvReaderTest" />
-      <option name="METHOD_NAME" value="shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -924,6 +462,62 @@
       <option name="MAIN_CLASS_NAME" value="TestForPayslipServiceFixture" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeRowSpecificationTest.shouldBeTrue_BecausePaymentAreWithinTheMonthOfFebruary_InANonLeapYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.myob.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.myob.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.EmployeeRowSpecificationTest" />
+      <option name="METHOD_NAME" value="shouldBeTrue_BecausePaymentAreWithinTheMonthOfFebruary_InANonLeapYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeRowSpecificationTest.shouldBeFalse_BecauseFeb2012LastDayIs29" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.myob.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="payslip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.myob.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.myob.persistence.EmployeeRowSpecificationTest" />
+      <option name="METHOD_NAME" value="shouldBeFalse_BecauseFeb2012LastDayIs29" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1311,18 +905,18 @@
       <item index="0" class="java.lang.String" itemvalue="Maven.package" />
       <item index="1" class="java.lang.String" itemvalue="Maven.integration-test" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in payslip (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All in payslip (2)" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TaxCsvReaderTest.shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.All in payslip" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestForPayslipServiceFixture" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestForPayslipServiceFixture" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.EmployeeRowSpecificationTest.shouldBeTrue_BecausePaymentAreWithinTheMonthOfFebruary_InANonLeapYear" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.EmployeeRowSpecificationTest.shouldBeFalse_BecauseFeb2012LastDayIs29" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestForPayslipServiceFixture" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in payslip (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in payslip" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TaxCsvReaderTest.shouldReturnNull_WhenCsvFileDoesNotHaveAllTheRequiredColumns" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in payslip (2)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in payslip (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in payslip" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeRowSpecificationTest.shouldBeFalse_BecauseFeb2012LastDayIs29" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeRowSpecificationTest.shouldBeTrue_BecausePaymentAreWithinTheMonthOfFebruary_InANonLeapYear" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestForPayslipServiceFixture" />
       </list>
     </recent_temporary>
   </component>
@@ -1344,12 +938,12 @@
       <workItem from="1427552131185" duration="55870000" />
       <workItem from="1427629555090" duration="18215000" />
       <workItem from="1427665732276" duration="30878000" />
-      <workItem from="1427711914739" duration="9153000" />
+      <workItem from="1427711914739" duration="11137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304733000" />
+    <option name="totallyTimeSpent" value="306717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1373,10 +967,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26953125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.213125" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.213125" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5104167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1415,14 +1009,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/persistence/row/builder/TaxCsvRowBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1258">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/myob/model/tax/TaxBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="1037">
@@ -1589,14 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="986">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1938">
-          <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -1828,11 +1406,11 @@
         <state vertical-scroll-proportion="0.33207548" vertical-offset="385" max-vertical-offset="1139">
           <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#958#959#0" expanded="false" />
+            <element signature="e#1014#1015#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1113#1114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1902,9 +1480,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/specs/TestForPayslipService.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26741573" vertical-offset="1377" max-vertical-offset="20604">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="1377" max-vertical-offset="20604">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8965516" vertical-offset="3608" max-vertical-offset="4063">
+          <caret line="224" column="37" selection-start-line="224" selection-start-column="37" selection-end-line="224" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17802198" vertical-offset="1466" max-vertical-offset="2465">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
