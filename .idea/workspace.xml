@@ -2,191 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c086c9-8bab-47cb-8c52-b02e977d5ed9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__com_beust_jcommander_1_30.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__com_opencsv_opencsv_bundle_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__com_opencsv_opencsv_bundle_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__net_sf_opencsv_opencsv_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__net_sf_supercsv_super_csv_2_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\.idea\libraries\Maven__org_concordion_concordion_embed_extension_1_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\employee\Employee.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\employee\EmployeeBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\payslip\Payslip.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\payslip\PayslipBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\tax\Tax.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\model\tax\TaxBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\mapping\RowHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\mapping\impl\EmployeeHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\mapping\impl\PayslipHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\mapping\impl\TaxHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\reader\AbstractCsvReader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\reader\Reader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\reader\impl\EmployeeCSVFileReaderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\reader\impl\TaxCSVReaderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\EmployeeCsvRow.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\Row.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\TaxCsvRow.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\builder\EmployeeCsvRowBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\builder\TaxCsvRowBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\specification\RowSpecification.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\specification\impl\EmployeeRowSpecification.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\row\specification\impl\TaxRowSpecification.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\writer\PayslipWriter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\persistence\writer\impl\PayslipWriterImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\EmployeeRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\PayslipCalculator.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\PayslipRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\TaxRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\impl\EmployeeRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\impl\PayslipRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\impl\TaxRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\specification\SpecificationForReadingEmployeeData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\repository\specification\TaxSpecification.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\service\PayslipService.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\service\PayslipServiceBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\classes\org\myob\service\impl\PayslipServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\maven-archiver\pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-TestForPayslipServiceFixture.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.MainTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.model.employee.EmployeeTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.model.tax.TaxSpecificationTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.model.tax.TaxTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.EmployeeRowSpecificationTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.TaxCsvRowSpecificationTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.reader.EmployeeCSVFileReaderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.reader.TaxCsvReaderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.reader.builder.EmployeeCsvRowTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.reader.builder.TaxTaxCsvRowBuilderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.persistence.writer.PayslipWriterTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.repository.EmployeeRepositoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.repository.PayslipCalculatorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.repository.PayslipRepositoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.repository.TaxRepositoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.repository.specification.SpecificationForReadingEmployeeDataTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.service.PayslipServiceBuilderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TEST-org.myob.service.PayslipServiceTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TestForPayslipServiceFixture.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\TestTheResultingPayslipCsvFixture.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.MainTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.model.employee.EmployeeTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.model.tax.TaxSpecificationTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.model.tax.TaxTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.EmployeeRowSpecificationTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.TaxCsvRowSpecificationTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.reader.EmployeeCSVFileReaderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.reader.TaxCsvReaderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.reader.builder.EmployeeCsvRowTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.reader.builder.TaxTaxCsvRowBuilderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.persistence.writer.PayslipWriterTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.repository.EmployeeRepositoryTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.repository.PayslipCalculatorTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.repository.PayslipRepositoryTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.repository.TaxRepositoryTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.repository.specification.SpecificationForReadingEmployeeDataTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.service.PayslipServiceBuilderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\surefire-reports\org.myob.service.PayslipServiceTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\MainTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\model\employee\EmployeeTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\model\tax\TaxSpecificationTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\model\tax\TaxTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\EmployeeRowSpecificationTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\TaxCsvRowSpecificationTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\EmployeeCSVFileReaderTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\EmployeeCSVFileReaderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\TaxCsvReaderTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\TaxCsvReaderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\builder\EmployeeCsvRowTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\builder\TaxTaxCsvRowBuilderTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\reader\builder\TaxTaxCsvRowBuilderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\persistence\writer\PayslipWriterTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\EmployeeRepositoryTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\EmployeeRepositoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\PayslipCalculatorTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\PayslipCalculatorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\PayslipRepositoryTest$AssertThat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\PayslipRepositoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\TaxRepositoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\repository\specification\SpecificationForReadingEmployeeDataTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\service\PayslipServiceBuilderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\service\PayslipServiceTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\payslip\target\test-classes\org\myob\service\PayslipServiceTest.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/Main.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\employee\Employee.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/employee/Employee.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\employee\EmployeeBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/employee/EmployeeBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\payslip\Payslip.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/payslip/Payslip.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\payslip\PayslipBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/payslip/PayslipBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\tax\Tax.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/tax/Tax.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\model\tax\TaxBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/model/tax/TaxBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\mapping\RowHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/mapping/RowHeader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\mapping\impl\EmployeeHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/mapping/impl/EmployeeHeader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\mapping\impl\PayslipHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/mapping/impl/PayslipHeader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\mapping\impl\TaxHeader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/mapping/impl/TaxHeader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\reader\AbstractCsvReader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/AbstractCsvReader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\reader\Reader.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/Reader.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\reader\impl\EmployeeCSVFileReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/impl/EmployeeCSVFileReaderImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\reader\impl\TaxCSVReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/impl/TaxCSVReaderImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\EmployeeCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/EmployeeCsvRow.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\Row.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/Row.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\TaxCsvRow.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/TaxCsvRow.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\builder\EmployeeCsvRowBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/builder/EmployeeCsvRowBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\builder\TaxCsvRowBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/builder/TaxCsvRowBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\specification\RowSpecification.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/specification/RowSpecification.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\specification\impl\EmployeeRowSpecification.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/specification/impl/EmployeeRowSpecification.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\row\specification\impl\TaxRowSpecification.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/row/specification/impl/TaxRowSpecification.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\writer\PayslipWriter.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/writer/PayslipWriter.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\persistence\writer\impl\PayslipWriterImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/persistence/writer/impl/PayslipWriterImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/EmployeeRepository.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\PayslipCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/PayslipCalculator.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\PayslipRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/PayslipRepository.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\TaxRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/TaxRepository.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\impl\EmployeeRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/impl/EmployeeRepositoryImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\impl\PayslipRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/impl/PayslipRepositoryImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\impl\TaxRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/impl/TaxRepositoryImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\specification\SpecificationForReadingEmployeeData.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/specification/SpecificationForReadingEmployeeData.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\repository\specification\TaxSpecification.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/repository/specification/TaxSpecification.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\service\PayslipService.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/service/PayslipService.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\service\PayslipServiceBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/service/PayslipServiceBuilder.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\main\java\org\myob\service\impl\PayslipServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/accounting/service/impl/PayslipServiceImpl.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\MainTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/MainTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\model\employee\EmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/model/employee/EmployeeTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\model\tax\TaxSpecificationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/model/tax/TaxSpecificationTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\model\tax\TaxTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/model/tax/TaxTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\EmployeeRowSpecificationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/EmployeeRowSpecificationTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\TaxCsvRowSpecificationTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/TaxCsvRowSpecificationTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\reader\EmployeeCSVFileReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/reader/EmployeeCSVFileReaderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\reader\TaxCsvReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/reader/TaxCsvReaderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\reader\builder\EmployeeCsvRowTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/reader/builder/EmployeeCsvRowTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\reader\builder\TaxTaxCsvRowBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/reader/builder/TaxTaxCsvRowBuilderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\persistence\writer\PayslipWriterTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/persistence/writer/PayslipWriterTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\EmployeeRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/repository/EmployeeRepositoryTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\PayslipCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/repository/PayslipCalculatorTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\PayslipRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/repository/PayslipRepositoryTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\TaxRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/repository/TaxRepositoryTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\repository\specification\SpecificationForReadingEmployeeDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/repository/specification/SpecificationForReadingEmployeeDataTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\service\PayslipServiceBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/service/PayslipServiceBuilderTest.java" />
-      <change type="MOVED" beforePath="C:\workspace\payslip\src\test\java\org\myob\service\PayslipServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/accounting/service/PayslipServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AbstractFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/AbstractFixture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/reader/InMemoryReader.class" afterPath="$PROJECT_DIR$/target/test-classes/reader/InMemoryReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestForPayslipServiceFixture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" afterPath="$PROJECT_DIR$/target/test-classes/TestTheResultingPayslipCsvFixture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/AbstractFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/AbstractFixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/reader/InMemoryReader.java" afterPath="$PROJECT_DIR$/src/test/specs/reader/InMemoryReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestForPayslipServiceFixture.xml" afterPath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestForPayslipServiceFixture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestTheResultingPayslipCsvFixture.xml" afterPath="$PROJECT_DIR$/target/failsafe-reports/TEST-TestTheResultingPayslipCsvFixture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" afterPath="$PROJECT_DIR$/target/specs/TestForPayslipService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestForPayslipServiceFixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TestForPayslipServiceFixture.txt" afterPath="$PROJECT_DIR$/target/failsafe-reports/TestForPayslipServiceFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" afterPath="$PROJECT_DIR$/target/specs/TestTheResultingPayslipCsv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" afterPath="$PROJECT_DIR$/src/test/specs/TestTheResultingPayslipCsvFixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/failsafe-reports/TestTheResultingPayslipCsvFixture.txt" afterPath="$PROJECT_DIR$/target/failsafe-reports/TestTheResultingPayslipCsvFixture.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="payslip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -230,16 +46,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EmployeeCSVFileReaderImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/impl/EmployeeCSVFileReaderImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="816">
-              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AbstractCsvReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/accounting/persistence/reader/AbstractCsvReader.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -328,13 +134,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52087915" vertical-offset="1" max-vertical-offset="4063">
+            <state vertical-scroll-proportion="-8.172414" vertical-offset="1" max-vertical-offset="4063">
               <caret line="14" column="10" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44522145" vertical-offset="285" max-vertical-offset="714">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -346,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/myob/service/builder/PayslipServiceBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/repository/TaxRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/myob/repository/impl/TaxRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/myob/repository/EmployeeRepositoryTest.java" />
@@ -397,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/test/java/org/myob/persistence/EmployeeRowSpecificationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/accounting/model/payslip/PayslipBuilder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1121,16 +940,16 @@
       <workItem from="1427711914739" duration="11741000" />
       <workItem from="1427762274048" duration="862000" />
       <workItem from="1427882226320" duration="655000" />
-      <workItem from="1427923418920" duration="201000" />
+      <workItem from="1427923418920" duration="481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309039000" />
+    <option name="totallyTimeSpent" value="309319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1143,10 +962,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1192,13 +1011,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/accounting/persistence/TaxCsvRowSpecificationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="748">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/accounting/repository/specification/SpecificationForReadingEmployeeDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
@@ -1570,10 +1382,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52087915" vertical-offset="1" max-vertical-offset="4063">
+        <state vertical-scroll-proportion="-8.172414" vertical-offset="1" max-vertical-offset="4063">
           <caret line="14" column="10" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="10" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44522145" vertical-offset="285" max-vertical-offset="714">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>

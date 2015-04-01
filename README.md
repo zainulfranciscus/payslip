@@ -20,13 +20,13 @@ And an employee whom annual salary is 60,050, super rate is 9%, how much will th
 Input for this program must be a csv file such as this:
 
 Input (first name, last name, annual salary, super rate (%), payment start date): <br/>
-David,Rudd,60050,9%,01 March – 31 March <br/>
-Ryan,Chen,120000,10%,01 March – 31 March <br/>
+Mark,J,60050,9%,01 March – 31 March <br/>
+Tom,L,120000,10%,01 March – 31 March <br/>
 
 And the output will be a csv file such as this:
 Output (name, pay period, gross income, income tax, net income, super):<br/>
-David Rudd,01 March – 31 March,5004,922,4082,450 <br/>
-Ryan Chen,01 March – 31 March,10000,2696,7304,1000 <br/>
+Mark J,01 March – 31 March,5004,922,4082,450 <br/>
+Tom L,01 March – 31 March,10000,2696,7304,1000 <br/>
 
 The calculation details will be the following: <br/>
 •       pay period = per calendar month <br/>
