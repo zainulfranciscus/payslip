@@ -28,9 +28,9 @@ Output (name, pay period, gross income, income tax, net income, super):<br/>
 David Rudd,01 March – 31 March,5004,922,4082,450 <br/>
 Ryan Chen,01 March – 31 March,10000,2696,7304,1000 <br/>
 
-The calculation details will be the following:
-•       pay period = per calendar month
-•       gross income = annual salary / 12 months
-•       income tax = based on the tax table provide below
-•       net income = gross income - income tax
-•       super = gross income x super rate
+The calculation details will be the following: <br/>
+•       pay period = per calendar month <br/>
+•       gross income = annual salary / 12 months <br/>
+•       income tax = based on the tax table provide below <br/>
+•       net income = gross income - income tax <br/>
+•       super = gross income x super rate <br/>
