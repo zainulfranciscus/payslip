@@ -1,7 +1,7 @@
-import org.myob.persistence.row.builder.EmployeeCsvRowBuilder;
-import org.myob.persistence.row.builder.TaxCsvRowBuilder;
-import org.myob.persistence.row.specification.impl.EmployeeRowSpecification;
-import org.myob.persistence.row.specification.impl.TaxRowSpecification;
+import org.accounting.persistence.row.builder.EmployeeCsvRowBuilder;
+import org.accounting.persistence.row.builder.TaxCsvRowBuilder;
+import org.accounting.persistence.row.specification.impl.EmployeeRowSpecification;
+import org.accounting.persistence.row.specification.impl.TaxRowSpecification;
 import reader.InMemoryReader;
 
 /**

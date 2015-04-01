@@ -3,12 +3,12 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
-import org.myob.model.payslip.Payslip;
-import org.myob.model.payslip.PayslipBuilder;
-import org.myob.persistence.mapping.impl.PayslipHeader;
-import org.myob.repository.specification.SpecificationForReadingEmployeeData;
-import org.myob.service.PayslipService;
-import org.myob.service.PayslipServiceBuilder;
+import org.accounting.model.payslip.Payslip;
+import org.accounting.model.payslip.PayslipBuilder;
+import org.accounting.persistence.mapping.impl.PayslipHeader;
+import org.accounting.repository.specification.SpecificationForReadingEmployeeData;
+import org.accounting.service.PayslipService;
+import org.accounting.service.PayslipServiceBuilder;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

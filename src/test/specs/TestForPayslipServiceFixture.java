@@ -1,9 +1,9 @@
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
-import org.myob.model.payslip.Payslip;
-import org.myob.repository.specification.SpecificationForReadingEmployeeData;
-import org.myob.service.PayslipService;
-import org.myob.service.PayslipServiceBuilder;
+import org.accounting.model.payslip.Payslip;
+import org.accounting.repository.specification.SpecificationForReadingEmployeeData;
+import org.accounting.service.PayslipService;
+import org.accounting.service.PayslipServiceBuilder;
 import reader.InMemoryReader;
 
 

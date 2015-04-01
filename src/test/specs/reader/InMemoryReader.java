@@ -1,8 +1,8 @@
 package reader;
 
-import org.myob.persistence.row.Row;
-import org.myob.persistence.reader.Reader;
-import org.myob.persistence.row.specification.RowSpecification;
+import org.accounting.persistence.row.Row;
+import org.accounting.persistence.reader.Reader;
+import org.accounting.persistence.row.specification.RowSpecification;
 
 import java.io.IOException;
 import java.util.ArrayList;
